@@ -4,7 +4,7 @@
 
 **Date:** 2026-08-07
 
-**Phase:** Design only; no UiPath assets have been created
+**Phase:** Design only; no implementation artifacts are created by this phase. The user-prepared buckets, Context Grounding index, IXP project shell, and Studio Web solution are approved dependencies.
 
 **Delivery model:** UiPath Automation Cloud
 
@@ -28,7 +28,7 @@ The demonstration is intentionally not a purchase-order matching workflow. A lig
 6. Reuse one Coded Action App for Reviewer and Manager task modes.
 7. Store structured records in Data Fabric and binary documents in Storage Buckets.
 8. Treat all seeded expected findings as evaluation fixtures, never runtime constants.
-9. Use fictional names in configuration and case data; never hard-code customer names in reusable logic.
+9. Use fictional names in configuration and invoice data; never hard-code customer names in reusable logic.
 10. Apply UiPath Apollo Vertex design guidance first and the `uipath-brand-ui-jmr` guidance second.
 
 ## 3. Logical architecture
@@ -40,6 +40,30 @@ The logical solution has three deployment boundaries:
 - An independently deployed reusable Coded Action App.
 
 This is a known platform-packaging distinction: Coded Apps are part of the logical solution but are not registered inside the `.uipx` package.
+
+### Approved Automation Cloud target
+
+| Setting | Approved value |
+|---|---|
+| Automation Cloud base URL | `https://cloud.uipath.com/` |
+| Organization | `uipathlabs` |
+| Tenant | `Playground` |
+| Orchestrator folder path | `AMER Presales/HLS` |
+| Orchestrator numeric folder ID | `2036001` |
+| Orchestrator folder GUID/key | `79d872b0-bee1-4264-a6de-3e780f4e4239` |
+| Studio Web solution | `Healthcare Invoice Assurance` |
+| Uploaded-package bucket | `healthcare-invoice-assurance-uploadedInvoices` |
+| Contract-library bucket | `healthcare-invoice-assurance-contractFiles` |
+| Contract Context Grounding index | `healthcare-invoice-assurance-contractsIndex` |
+| IXP project title | `Healthcare Invoice Assurance` |
+| IXP project name | `healthcare-invoice-assurance-51392a38-ixp` |
+| IXP project ID | `43a0c85c-5d97-80f8-9f1f-2ac01bae3742` |
+
+The numeric folder ID is retained for APIs that require the Orchestrator organization-unit ID; the GUID/key is used by CLI and SDK operations that require a folder key. Resource identifiers must be configuration or deployment bindings, not runtime constants embedded in analysis logic. Build and deployment operations use the builder's user-delegated UiPath permissions.
+
+The custom IXP project is the approved extraction surface for the mixed invoice package. The Flow will bind to a published version from this project rather than directly to a generic out-of-the-box invoice extractor. This is necessary because the package includes a primary invoice, subcontractor invoices, receipts, and a cost register that must normalize into one canonical package.
+
+Current discovery shows an empty taxonomy, model version `0`, no published/pinned version, and no deployment tag. Implementation must configure and validate the taxonomy, publish a model version, and make that model available to the target folder before the Flow binding is finalized. The extraction contract must cover document type, invoice header data, charge lines, supporting-document metadata and lines, register totals and lines, confidence, and source coordinates. Expected findings and answer-key values remain excluded from IXP inputs and instructions.
 
 ```mermaid
 flowchart LR
@@ -68,7 +92,7 @@ flowchart LR
 2. The user uploads the invoice and supporting receipts.
 3. The user selects an account/project and its contract profile.
 4. The contract profile resolves a pre-hosted Storage Bucket and Context Grounding index.
-5. Submit creates the Assurance Case and starts the Maestro Flow.
+5. Submit creates an `HLS_InvoiceAssurance_Main` header record and starts the Maestro Flow.
 6. The Main App shows live progress through extraction, reconciliation, contract analysis, and calculation.
 7. Maestro creates a Reviewer Action Center task.
 8. The Main App finds the task for the process instance and embeds it in the workspace.
@@ -82,7 +106,7 @@ flowchart LR
 
 ## 5. Contract-analysis boundary
 
-The selected contract profile identifies the contract family, index, precedence policy, tolerances, and review groups. Runtime analysis must:
+The selected contract profile identifies the contract family, index, precedence policy, tolerances, and task-routing policy. Runtime analysis must:
 
 - Filter candidate documents to those effective on the invoice date.
 - Apply configured document precedence.
@@ -94,8 +118,8 @@ The reviewer may enter a text-only governing-context override. The override:
 
 - Applies only to the already indexed document set.
 - Requires a reason.
-- Is stored as a Human Decision.
-- Is prominently labeled in downstream findings and audit events.
+- Is stored in the latest `FindingsJson` snapshot and appended to `HLS_InvoiceAssurance_Activity` with the actor, reason, and analysis version.
+- Is prominently labeled in downstream findings and activity events.
 - Is never presented as contract evidence.
 
 ## 6. Generic financial evaluator
@@ -155,7 +179,7 @@ The small-tools oracle deliberately uses the contract-defined submitted eligible
 
 ## 8. Human-in-the-loop model
 
-Every invoice requires separate Reviewer and Manager approval roles. For the live demo, one signed-in account may belong to both groups so the presenter can complete both tasks in one session. A production configuration must preserve separate identities and segregation of duties.
+Every invoice requires separate Reviewer and Manager decisions. For the live demo, both Action Center tasks are created unassigned so any eligible user with access to the folder can claim them. Reviewer or Manager mode is determined by the task type, not a directory-group assignment. A production configuration must replace this open-pool policy with separate identities and segregation of duties.
 
 The Reviewer task remains open while the reviewer collects evidence. The reusable Action App supports:
 
@@ -175,19 +199,21 @@ The Manager mode supports:
 
 ## 9. Data and audit model
 
-Data Fabric stores:
+The demo uses three Data Fabric entities. All three must be created as **folder-scoped entities in `AMER Presales/HLS`** (numeric folder ID `2036001`; folder GUID/key `79d872b0-bee1-4264-a6de-3e780f4e4239`). They must not be created as tenant-scoped entities.
 
-- Contract Profile.
-- Assurance Case.
-- Source Document metadata.
-- Analysis Run.
-- Charge.
-- Finding.
-- Evidence Request.
-- Human Decision.
-- Audit Event.
+| Entity | Purpose | Representative fields |
+|---|---|---|
+| `HLS_InvoiceAssurance_Main` | One header record per submitted invoice package; current process state and current analysis summary | `CorrelationId`, `ProcessingStatus`, `InvoiceNumber`, `SupplierName`, `InvoiceDate`, `AccountId`, `ProjectId`, `ContractProfileId`, `SubmittedTotal`, `AdjustmentTotal`, `PayableTotal`, `OpenFindingCount`, `AwaitingEvidence`, `FindingsJson`, `DocumentReferencesJson`, `ProcessInstanceId`, `AnalysisVersion` |
+| `HLS_InvoiceAssurance_LineItems` | One record per extracted invoice or register charge line, including extraction and reconciliation detail | `InvoiceRecordId`, source document/type, description/category, quantity/unit, submitted rate/amount, IXP confidence and coordinates, external record/match status/amount, variance, allowed amount, adjustment, evaluation status |
+| `HLS_InvoiceAssurance_Activity` | Append-only timeline of automated and human actions | `InvoiceRecordId`, event timestamp/type, actor, source component, summary, analysis version, `PayloadJson` |
 
-Storage Buckets store immutable uploaded packages, evidence, and contract libraries. Each source document has a checksum and versioned bucket reference. Every submission receives a correlation ID shared by Maestro, tasks, documents, analysis runs, and audit events. Re-analysis creates a new Analysis Run and never overwrites the prior result.
+`InvoiceRecordId` is a simple string reference from line-item and activity rows to the system ID of `HLS_InvoiceAssurance_Main`; the demo does not require formal Data Fabric relationship fields. `FindingsJson` contains the latest structured findings, citations, evidence state, reviewer dispositions, and calculation traces. Queryable header fields support the portfolio and status views without parsing JSON.
+
+This is deliberate demo-grade denormalization. Contract Profile options are static solution/app configuration, not a Data Fabric entity. Uploaded package and evidence binaries remain in `healthcare-invoice-assurance-uploadedInvoices`; the header stores versioned references and checksums in `DocumentReferencesJson`. Action Center remains the task system of record. Re-analysis increments `AnalysisVersion`, updates the current header/line-item view, and appends prior analysis, evidence, correction, decision, and final-disposition detail to `HLS_InvoiceAssurance_Activity` rather than creating separate run, finding, evidence, decision, or audit entities.
+
+Every submission receives a correlation ID shared by Maestro, Action Center tasks, stored documents, and all three Data Fabric entities. Evaluation expected values never enter runtime records.
+
+All design-time bindings and runtime Data Fabric reads/writes must resolve these entities from the `AMER Presales/HLS` folder context. An entity with the same name at tenant scope or in another folder is not an acceptable substitute.
 
 ## 10. User experience and visual system
 
@@ -196,7 +222,7 @@ The Main App contains:
 - Portfolio.
 - New Analysis.
 - Processing.
-- Case Workspace.
+- Invoice Workspace.
 - Contract Library.
 
 Apollo Vertex is the first-priority design system:
@@ -264,7 +290,8 @@ These are source-document corrections, not runtime special cases.
 - [Reusable Coded Action App](invoice-assurance-action-app-sdd.md)
 - [Financial Rules Evaluator](financial-rules-evaluator-sdd.md)
 - [Project Cost Lookup API Workflow](project-cost-lookup-api-sdd.md)
+- [Codex implementation goal handoff](healthcare-invoice-assurance-implementation-goal.md)
 
 ## 15. Planning boundary
 
-This document and the linked SDDs define architecture only. They do not contain an implementation task list and do not authorize creation, publishing, or deployment of UiPath assets.
+This document and the linked SDDs define architecture only. The companion `/goal` prompt is an implementation handoff, not a UiPath runtime artifact, and remains inactive until the user explicitly invokes it. These files do not by themselves authorize creation, publishing, or deployment of UiPath assets.
