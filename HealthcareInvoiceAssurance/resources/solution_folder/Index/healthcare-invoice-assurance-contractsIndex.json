@@ -1,0 +1,38 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "healthcare-invoice-assurance-contractsIndex",
+    "kind": "index",
+    "apiVersion": "ecs.uipath.com/v2",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "Bucket",
+        "name": "healthcare-invoice-assurance-contractFiles"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "healthcare-invoice-assurance-contractsIndex",
+      "description": "",
+      "storageBucketReference": {
+        "name": "healthcare-invoice-assurance-contractFiles",
+        "key": "6dfc0608-733a-4465-9811-59e87d5095cb",
+        "folderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239"
+      },
+      "fileNameGlob": "All",
+      "dataSourceType": "StorageBucket",
+      "includeSubfolders": true,
+      "ingestionType": "Advanced",
+      "encrypted": false
+    },
+    "locks": [],
+    "key": "5eaf632f-2960-4ea7-82eb-08def3f771f8",
+    "files": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "Result": "Success",
+  "Code": "ConnectionList",
+  "Data": [
+    {
+      "Id": "2f092dbc-13ce-4576-85eb-381a7c243fdf",
+      "Name": "joseph.rumpza@uipath.com",
+      "ConnectorKey": "uipath-uipath-dataservice",
+      "ConnectorName": "UiPath Data Fabric",
+      "State": "Enabled",
+      "Owner": "joseph.rumpza@uipath.com",
+      "IsDefault": "Yes",
+      "ByoaConnection": "No",
+      "ElementInstanceId": 452272,
+      "Folder": "HLS",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "Created": "2026-08-09T19:21:24.420Z",
+      "Updated": "2026-08-09T19:26:31.423Z"
+    }
+  ]
+}

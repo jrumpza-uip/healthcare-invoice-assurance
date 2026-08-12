@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "InvoiceAssurancePersistence",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "195cca7e-da3a-4dfe-9844-a9f4a142fb8e",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "InvoiceAssurancePersistence"
+    },
+    "locks": [],
+    "key": "291b7762-0b5f-49eb-9f5f-6af603887c9c",
+    "files": []
+  }
+}

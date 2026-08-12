@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "ContractComplianceAgent",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "8d0f28bd-b8df-4e55-b859-1c62743af736",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "ContractComplianceAgent"
+    },
+    "locks": [],
+    "key": "993d50bd-ab74-4324-b33b-20e5bf6c30b5",
+    "files": []
+  }
+}

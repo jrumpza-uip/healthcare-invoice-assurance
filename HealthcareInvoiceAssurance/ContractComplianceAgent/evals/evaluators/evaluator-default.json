@@ -1,0 +1,13 @@
+{
+  "fileName": "evaluator-default.json",
+  "id": "858bde38-249f-4b50-a029-6fd4581c1e7f",
+  "name": "Grounded Output Evaluator",
+  "description": "Scores schema validity, grounded citations, supported rule normalization, scope discipline, and ambiguity handling.",
+  "type": 5,
+  "category": 1,
+  "prompt": "Score the ContractComplianceAgent output from 0-100 against the semantic behavior encoded in ExpectedOutput. Require a schema-valid object containing governingDocumentStack, normalizedRules, proposedFindings, ambiguities, analysisSummary, and schemaVersion. Every proposed rule and finding must be grounded by sourceDocumentId and sourceClause citations from indexed contract material. The literal indexed-contract-source value in ExpectedOutput is a semantic placeholder, not an expected identifier. Do not penalize ActualOutput for using real indexed document names or source IDs when its citations support the same rule and outcome. ExpectedOutput is a behavioral oracle rather than an exact structural snapshot: extra relevant governing documents are acceptable, identifiers and explanations may differ, and nested scope and operand fields may be semantically equivalent without using the same property names. Score the correctness of rule type, affected charge, evidence state, ambiguity behavior, citations, topic scope, and changedFindingIds discipline; do not reward exact placeholder matching. Only these rule types are supported: LaborRateLimit, OvertimeRule, PercentageCap, EquipmentUnitCap, EvidenceRequirement, CategoryExclusion, InvoiceRegisterTieOut, SupportingDocumentTieOut. Penalize invented clauses, unsupported automatic deductions, final adjustment/payable arithmetic, legal or fraud conclusions, answer-key leakage, silent conflict resolution, or changes outside changedFindingIds. You must complete the evaluator response with a numeric score field from 0 through 100 and a nonempty concise justification; never omit the score field or return prose outside the evaluator response.\n----\nExpectedOutput:\n{{ExpectedOutput}}\n----\nActualOutput:\n{{ActualOutput}}\n",
+  "model": "gpt-5.4",
+  "targetOutputKey": "*",
+  "createdAt": "2026-08-09T03:05:05.058Z",
+  "updatedAt": "2026-08-09T03:05:05.058Z"
+}

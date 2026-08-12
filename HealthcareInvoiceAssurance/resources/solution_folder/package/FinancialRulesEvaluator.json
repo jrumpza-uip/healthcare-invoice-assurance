@@ -1,0 +1,32 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "FinancialRulesEvaluator",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": "FinancialRulesEvaluator.0.0.1.nupkg",
+      "fileReference": "FinancialRulesEvaluator_0.0.1",
+      "name": "FinancialRulesEvaluator"
+    },
+    "locks": [],
+    "key": "FinancialRulesEvaluator:0.0.1",
+    "files": [
+      {
+        "key": "FinancialRulesEvaluator_0.0.1",
+        "name": "FinancialRulesEvaluator.0.0.1.nupkg",
+        "url": "https://cloud.uipath.com/uipathlabs/Playground/orchestrator_/odata/Processes/UiPath.Server.Configuration.OData.DownloadPackage(key='FinancialRulesEvaluator:0.0.1')?feedId=93949a13-9388-45bb-af90-5783a67e1b33",
+        "kind": "Package",
+        "version": "0.0.1"
+      }
+    ]
+  }
+}

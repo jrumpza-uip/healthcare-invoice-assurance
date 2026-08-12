@@ -1,0 +1,121 @@
+:root {
+  --uipath-robotic-orange: #fa4616;
+  --uipath-deep-blue: #182126;
+  --uipath-agentic-teal: #0ba2b3;
+  --uipath-offset-orange: #a32200;
+  --uipath-bright-white: #ffffff;
+
+  /* Surfaces */
+  --bg-canvas: #f6f6f6;
+  --bg-card: #ffffff;
+  --bg-hover: #f0fafb;
+  --bg-input: #ffffff;
+  --bg-primary: #ffffff;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f6f6f6;
+  --evidence-bg: #eefbfc;
+
+  /* Text */
+  --text-primary: #182126;
+  --text-secondary: #616161;
+  --text-muted: #8a8a8a;
+
+  /* Borders */
+  --border-color: #d9d9d9;
+  --border-strong: #b9b9b9;
+  --border-focus: #0b7280;
+  --danger-color: #a32200;
+
+  /* Accent (blue) */
+  --accent-color: #fa4616;
+  --accent-hover: #ce340b;
+  --accent-soft: #fb6b45;
+  --accent-cyan: #0ba2b3;
+  --accent-text: #ffffff;
+  --accent-bg: rgba(250, 70, 22, 0.1);
+  --accent-grad: linear-gradient(135deg, #182126 0%, #182126 100%);
+  --accent-grad-vivid: linear-gradient(135deg, #182126 0%, #182126 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(24, 33, 38, 0.08);
+  --shadow-md: 0 8px 24px rgba(24, 33, 38, 0.1);
+  --shadow-lg: 0 18px 48px rgba(24, 33, 38, 0.16);
+  --shadow-accent: 0 8px 20px rgba(250, 70, 22, 0.25);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  --sans: 'Inter', Arial, system-ui, sans-serif;
+  --heading: 'Poppins', 'Inter', Arial, sans-serif;
+  --font-display: var(--heading);
+
+  font-family: var(--sans);
+  color-scheme: light dark;
+  color: var(--text-primary);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark,
+.dark {
+  --bg-canvas: #10171a;
+  --bg-card: #182126;
+  --bg-hover: #263238;
+  --bg-input: #202b30;
+  --bg-primary: #182126;
+  --bg-secondary: #1f292e;
+  --bg-tertiary: #263238;
+  --evidence-bg: #12363b;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d9d9d9;
+  --text-muted: #b9b9b9;
+
+  --border-color: #484848;
+  --border-strong: #616161;
+  --border-focus: #3cb5c2;
+
+  --accent-color: #fb6b45;
+  --accent-hover: #fa4616;
+  --accent-soft: #fb6b45;
+  --accent-cyan: #3cb5c2;
+  --accent-text: #ffffff;
+  --accent-bg: rgba(250, 70, 22, 0.18);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.6);
+  --shadow-accent: 0 8px 22px rgba(37, 99, 235, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: var(--bg-canvas);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+}

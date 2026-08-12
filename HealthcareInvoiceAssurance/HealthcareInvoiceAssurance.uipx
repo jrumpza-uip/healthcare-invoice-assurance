@@ -1,0 +1,27 @@
+{
+    "DocVersion": "1.0.0",
+    "StudioMinVersion": "2025.10.0",
+    "SolutionId": "21add0e6-ab52-4269-fdac-08def4e47b11",
+    "Projects": [
+        {
+            "Type": "Api",
+            "ProjectRelativePath": "ProjectCostLookupApi/project.uiproj",
+            "Id": "87f9ef68-824e-425d-b057-50c228f7a1ec"
+        },
+        {
+            "Type": "Agent",
+            "ProjectRelativePath": "ContractComplianceAgent/project.uiproj",
+            "Id": "8d0f28bd-b8df-4e55-b859-1c62743af736"
+        },
+        {
+            "Type": "Flow",
+            "ProjectRelativePath": "InvoiceAssuranceFlow/project.uiproj",
+            "Id": "b30c905f-ec14-446b-be66-cacca3860b52"
+        },
+        {
+            "Type": "Process",
+            "ProjectRelativePath": "InvoiceAssurancePersistence/project.uiproj",
+            "Id": "195cca7e-da3a-4dfe-9844-a9f4a142fb8e"
+        }
+    ]
+}

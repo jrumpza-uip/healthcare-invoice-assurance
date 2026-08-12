@@ -1,0 +1,671 @@
+{
+    "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+    "$id": "entry-points.json",
+    "entryPoints": [
+        {
+            "filePath": "main",
+            "uniqueId": "a1a4d89e-8e59-425b-a2ca-ea5b1119e1c5",
+            "type": "function",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "correlationId": {
+                        "title": "Correlationid",
+                        "type": "string"
+                    },
+                    "invoiceRecordId": {
+                        "title": "Invoicerecordid",
+                        "type": "string"
+                    },
+                    "analysisVersion": {
+                        "title": "Analysisversion",
+                        "type": "integer"
+                    },
+                    "mode": {
+                        "enum": [
+                            "initial",
+                            "targeted"
+                        ],
+                        "title": "Mode",
+                        "type": "string"
+                    },
+                    "currency": {
+                        "title": "Currency",
+                        "type": "string"
+                    },
+                    "invoiceSubmittedTotal": {
+                        "anyOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                "type": "string"
+                            }
+                        ],
+                        "title": "Invoicesubmittedtotal"
+                    },
+                    "canonicalCharges": {
+                        "items": {
+                            "properties": {
+                                "chargeId": {
+                                    "title": "Chargeid",
+                                    "type": "string"
+                                },
+                                "category": {
+                                    "title": "Category",
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "default": "",
+                                    "title": "Description",
+                                    "type": "string"
+                                },
+                                "serviceDate": {
+                                    "type": "string"
+                                },
+                                "quantity": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "default": "0",
+                                    "title": "Quantity"
+                                },
+                                "unit": {
+                                    "default": "",
+                                    "title": "Unit",
+                                    "type": "string"
+                                },
+                                "unitRate": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "default": "0",
+                                    "title": "Unitrate"
+                                },
+                                "submittedAmount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Submittedamount"
+                                },
+                                "evidenceTypes": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "title": "Evidencetypes",
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "chargeId",
+                                "category",
+                                "submittedAmount"
+                            ],
+                            "title": "Charge",
+                            "type": "object"
+                        },
+                        "title": "Canonicalcharges",
+                        "type": "array"
+                    },
+                    "normalizedRules": {
+                        "items": {
+                            "properties": {
+                                "ruleId": {
+                                    "title": "Ruleid",
+                                    "type": "string"
+                                },
+                                "ruleType": {
+                                    "title": "Ruletype",
+                                    "type": "string"
+                                },
+                                "scope": {
+                                    "additionalProperties": true,
+                                    "title": "Scope",
+                                    "type": "object"
+                                },
+                                "operands": {
+                                    "additionalProperties": true,
+                                    "title": "Operands",
+                                    "type": "object"
+                                },
+                                "effectivePeriod": {
+                                    "additionalProperties": true,
+                                    "title": "Effectiveperiod",
+                                    "type": "object"
+                                },
+                                "sourceDocumentId": {
+                                    "title": "Sourcedocumentid",
+                                    "type": "string"
+                                },
+                                "sourceClause": {
+                                    "title": "Sourceclause",
+                                    "type": "string"
+                                },
+                                "confidence": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "default": "0",
+                                    "title": "Confidence"
+                                }
+                            },
+                            "required": [
+                                "ruleId",
+                                "ruleType",
+                                "sourceDocumentId",
+                                "sourceClause"
+                            ],
+                            "title": "Rule",
+                            "type": "object"
+                        },
+                        "title": "Normalizedrules",
+                        "type": "array"
+                    },
+                    "proposedFindings": {
+                        "items": {
+                            "properties": {
+                                "findingId": {
+                                    "title": "Findingid",
+                                    "type": "string"
+                                },
+                                "chargeId": {
+                                    "title": "Chargeid",
+                                    "type": "string"
+                                },
+                                "ruleId": {
+                                    "title": "Ruleid",
+                                    "type": "string"
+                                },
+                                "evidenceState": {
+                                    "default": "",
+                                    "title": "Evidencestate",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "findingId",
+                                "chargeId",
+                                "ruleId"
+                            ],
+                            "title": "FindingProposal",
+                            "type": "object"
+                        },
+                        "title": "Proposedfindings",
+                        "type": "array"
+                    },
+                    "reconciliationResult": {
+                        "additionalProperties": true,
+                        "title": "Reconciliationresult",
+                        "type": "object"
+                    },
+                    "previousSnapshot": {
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "changedFindingIds": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Changedfindingids",
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "correlationId",
+                    "invoiceRecordId",
+                    "analysisVersion",
+                    "mode",
+                    "currency",
+                    "invoiceSubmittedTotal",
+                    "canonicalCharges",
+                    "normalizedRules",
+                    "proposedFindings",
+                    "reconciliationResult"
+                ],
+                "title": "Input"
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "enum": [
+                            "valid",
+                            "invalid",
+                            "technicalError"
+                        ],
+                        "title": "Status",
+                        "type": "string"
+                    },
+                    "authoritativeFindings": {
+                        "items": {
+                            "properties": {
+                                "findingId": {
+                                    "title": "Findingid",
+                                    "type": "string"
+                                },
+                                "chargeId": {
+                                    "title": "Chargeid",
+                                    "type": "string"
+                                },
+                                "ruleId": {
+                                    "title": "Ruleid",
+                                    "type": "string"
+                                },
+                                "ruleType": {
+                                    "title": "Ruletype",
+                                    "type": "string"
+                                },
+                                "status": {
+                                    "title": "Status",
+                                    "type": "string"
+                                },
+                                "submittedAmount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Submittedamount"
+                                },
+                                "allowedAmount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Allowedamount"
+                                },
+                                "adjustment": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Adjustment"
+                                },
+                                "sourceDocumentId": {
+                                    "title": "Sourcedocumentid",
+                                    "type": "string"
+                                },
+                                "sourceClause": {
+                                    "title": "Sourceclause",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "findingId",
+                                "chargeId",
+                                "ruleId",
+                                "ruleType",
+                                "status",
+                                "submittedAmount",
+                                "allowedAmount",
+                                "adjustment",
+                                "sourceDocumentId",
+                                "sourceClause"
+                            ],
+                            "title": "AuthoritativeFinding",
+                            "type": "object"
+                        },
+                        "title": "Authoritativefindings",
+                        "type": "array"
+                    },
+                    "calculationLines": {
+                        "items": {
+                            "properties": {
+                                "findingId": {
+                                    "title": "Findingid",
+                                    "type": "string"
+                                },
+                                "chargeId": {
+                                    "title": "Chargeid",
+                                    "type": "string"
+                                },
+                                "ruleId": {
+                                    "title": "Ruleid",
+                                    "type": "string"
+                                },
+                                "ruleType": {
+                                    "title": "Ruletype",
+                                    "type": "string"
+                                },
+                                "operands": {
+                                    "additionalProperties": true,
+                                    "title": "Operands",
+                                    "type": "object"
+                                },
+                                "submittedAmount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Submittedamount"
+                                },
+                                "allowedAmount": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Allowedamount"
+                                },
+                                "adjustment": {
+                                    "anyOf": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "title": "Adjustment"
+                                },
+                                "trace": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "title": "Trace",
+                                    "type": "array"
+                                }
+                            },
+                            "required": [
+                                "findingId",
+                                "chargeId",
+                                "ruleId",
+                                "ruleType",
+                                "operands",
+                                "submittedAmount",
+                                "allowedAmount",
+                                "adjustment",
+                                "trace"
+                            ],
+                            "title": "CalculationLine",
+                            "type": "object"
+                        },
+                        "title": "Calculationlines",
+                        "type": "array"
+                    },
+                    "financialSnapshot": {
+                        "properties": {
+                            "submittedTotal": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    }
+                                ],
+                                "title": "Submittedtotal"
+                            },
+                            "totalAdjustment": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    }
+                                ],
+                                "title": "Totaladjustment"
+                            },
+                            "proposedPayable": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    }
+                                ],
+                                "title": "Proposedpayable"
+                            },
+                            "currency": {
+                                "title": "Currency",
+                                "type": "string"
+                            },
+                            "version": {
+                                "title": "Version",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "submittedTotal",
+                            "totalAdjustment",
+                            "proposedPayable",
+                            "currency",
+                            "version"
+                        ],
+                        "title": "FinancialSnapshot",
+                        "type": "object"
+                    },
+                    "reconciliationState": {
+                        "properties": {
+                            "invoiceRegisterStatus": {
+                                "default": "",
+                                "title": "Invoiceregisterstatus",
+                                "type": "string"
+                            },
+                            "invoiceTotal": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ],
+                                "default": null,
+                                "title": "Invoicetotal"
+                            },
+                            "registerTotal": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ],
+                                "default": null,
+                                "title": "Registertotal"
+                            },
+                            "invoiceRegisterVariance": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "pattern": "^(?!^[-+.]*$)[+-]?0*\\d*\\.?\\d*$",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "null"
+                                    }
+                                ],
+                                "default": null,
+                                "title": "Invoiceregistervariance"
+                            },
+                            "supportingDocumentComparisons": {
+                                "items": {
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "title": "Supportingdocumentcomparisons",
+                                "type": "array"
+                            }
+                        },
+                        "title": "ReconciliationState",
+                        "type": "object"
+                    },
+                    "validationErrors": {
+                        "items": {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "title": "Validationerrors",
+                        "type": "array"
+                    },
+                    "preservedFindingIds": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Preservedfindingids",
+                        "type": "array"
+                    },
+                    "traceVersion": {
+                        "default": "1.0",
+                        "title": "Traceversion",
+                        "type": "string"
+                    },
+                    "errorType": {
+                        "default": "",
+                        "title": "Errortype",
+                        "type": "string"
+                    },
+                    "errorMessage": {
+                        "default": "",
+                        "title": "Errormessage",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "status"
+                ],
+                "title": "Output"
+            },
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "main.py:132",
+                        "name": "financial_rules_evaluator",
+                        "type": "function",
+                        "metadata": {
+                            "file": "main.py"
+                        }
+                    },
+                    {
+                        "id": "main.py:28",
+                        "name": "money",
+                        "type": "function",
+                        "metadata": {
+                            "file": "main.py"
+                        }
+                    }
+                ],
+                "edges": [
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    },
+                    {
+                        "source": "main.py:132",
+                        "target": "main.py:28"
+                    }
+                ]
+            }
+        }
+    ]
+}

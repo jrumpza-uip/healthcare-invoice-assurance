@@ -1,0 +1,127 @@
+{
+  "name": "InvoiceAssurancePersistence",
+  "projectId": "42a20320-477f-46ba-9264-cf11bcd1ed15",
+  "description": "Folder-scoped Data Fabric persistence adapter for Healthcare Invoice Assurance",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.System.Activities": "[26.6.2]",
+    "UiPath.DataService.Activities": "26.4.5-preview",
+    "UiPath.WebAPI.Activities": "2.5.2"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.198.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": false,
+    "isAttended": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "775469ae-a86b-4b76-abf8-5cdee7aeaedc",
+      "input": [
+        {
+          "name": "in_Operation",
+          "type": "System.String",
+          "required": true
+        },
+        {
+          "name": "in_InvoiceRecordId",
+          "type": "System.String",
+          "required": true
+        },
+        {
+          "name": "in_CorrelationId",
+          "type": "System.String",
+          "required": true
+        },
+        {
+          "name": "in_MainRecordJson",
+          "type": "System.String",
+          "required": true
+        },
+        {
+          "name": "in_LineRecordsJson",
+          "type": "System.String",
+          "required": true
+        },
+        {
+          "name": "in_ActivityRecordJson",
+          "type": "System.String",
+          "required": true
+        }
+      ],
+      "output": [
+        {
+          "name": "out_Success",
+          "type": "System.Boolean"
+        },
+        {
+          "name": "out_InvoiceRecordId",
+          "type": "System.String"
+        },
+        {
+          "name": "out_CorrelationId",
+          "type": "System.String"
+        },
+        {
+          "name": "out_Operation",
+          "type": "System.String"
+        },
+        {
+          "name": "out_ActivityRecordId",
+          "type": "System.String"
+        },
+        {
+          "name": "out_CreatedCount",
+          "type": "System.Int32"
+        },
+        {
+          "name": "out_UpdatedCount",
+          "type": "System.Int32"
+        },
+        {
+          "name": "out_ErrorCode",
+          "type": "System.String"
+        },
+        {
+          "name": "out_ErrorMessage",
+          "type": "System.String"
+        }
+      ]
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

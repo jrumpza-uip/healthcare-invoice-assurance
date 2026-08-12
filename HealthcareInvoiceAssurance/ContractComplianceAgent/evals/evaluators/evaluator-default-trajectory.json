@@ -1,0 +1,13 @@
+{
+  "fileName": "evaluator-default-trajectory.json",
+  "id": "02495e0a-becb-464d-93d5-4752beedb41b",
+  "name": "Grounded Trajectory Evaluator",
+  "description": "Scores retrieval-first behavior, topic-specific precedence, targeted scope, and stop discipline.",
+  "type": 7,
+  "category": 3,
+  "prompt": "Score the ContractComplianceAgent trajectory from 0-100. The agent must retrieve relevant clauses from SelectedContractIndex before asserting rules, limit retrieval to the selected contract family, use invoice date and topic-specific precedence, cite retrieved sources, and stop once every proposal is grounded or marked ambiguous. It must not use non-contract or expected-results text, calculate final adjustments/payable totals, silently resolve conflicts, or reconsider findings outside changedFindingIds. Account for reasonable query variations. You must complete the evaluator response with a numeric score field from 0 through 100 and a nonempty concise justification; never omit the score field or return prose outside the evaluator response.\n----\nUserOrSyntheticInputGivenToAgent:\n{{UserOrSyntheticInput}}\n----\nSimulationInstructions:\n{{SimulationInstructions}}\n----\nExpectedAgentBehavior:\n{{ExpectedAgentBehavior}}\n----\nAgentRunHistory:\n{{AgentRunHistory}}\n",
+  "model": "gpt-5.4",
+  "targetOutputKey": "*",
+  "createdAt": "2026-08-09T03:05:05.058Z",
+  "updatedAt": "2026-08-09T03:05:05.058Z"
+}

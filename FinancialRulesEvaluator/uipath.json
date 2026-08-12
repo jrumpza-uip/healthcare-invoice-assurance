@@ -1,0 +1,5 @@
+{
+  "functions": {
+    "main": "main.py:financial_rules_evaluator"
+  }
+}

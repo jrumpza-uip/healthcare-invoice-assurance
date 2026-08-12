@@ -1,0 +1,42 @@
+{
+  "correlationId": "local-smoke-correlation",
+  "invoiceRecordId": "local-smoke-record",
+  "analysisVersion": 1,
+  "mode": "initial",
+  "currency": "USD",
+  "invoiceSubmittedTotal": "100.00",
+  "canonicalCharges": [
+    {
+      "chargeId": "local-charge",
+      "category": "excluded-category",
+      "submittedAmount": "100.00"
+    }
+  ],
+  "normalizedRules": [
+    {
+      "ruleId": "local-rule",
+      "ruleType": "CategoryExclusion",
+      "scope": {
+        "categories": [
+          "excluded-category"
+        ]
+      },
+      "sourceDocumentId": "local-contract",
+      "sourceClause": "Local grounded exclusion"
+    }
+  ],
+  "proposedFindings": [
+    {
+      "findingId": "local-finding",
+      "chargeId": "local-charge",
+      "ruleId": "local-rule"
+    }
+  ],
+  "reconciliationResult": {
+    "invoiceRegisterStatus": "Tied",
+    "invoiceTotal": "100.00",
+    "registerTotal": "100.00",
+    "invoiceRegisterVariance": "0.00",
+    "supportingDocumentComparisons": []
+  }
+}

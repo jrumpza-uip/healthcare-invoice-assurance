@@ -1,0 +1,25 @@
+{
+  "$resourceType": "context",
+  "id": "6320d00b-9af6-4ca5-acba-052d75353ca3",
+  "referenceKey": null,
+  "name": "SelectedContractIndex",
+  "description": "Governed fictional contract family selected by the Healthcare Invoice Assurance Contract Profile.",
+  "contextType": "index",
+  "folderPath": "AMER Presales/HLS",
+  "indexName": "healthcare-invoice-assurance-contractsIndex",
+  "settings": {
+    "retrievalMode": "semantic",
+    "query": {
+      "variant": "dynamic",
+      "description": "Retrieve effective clauses by invoice date, charge topic, evidence state, and topic-specific precedence."
+    },
+    "folderPathPrefix": {
+      "variant": "static"
+    },
+    "fileExtension": {
+      "value": "pdf"
+    },
+    "threshold": 0,
+    "resultCount": 8
+  }
+}

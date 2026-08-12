@@ -1,0 +1,734 @@
+{
+  "ExportedBy": "StudioWeb",
+  "BundleHash": "AJkirxJpQVvWJFqJL9zPgxtT1ZixXiJcffgZXv1bYM",
+  "Version": "1.0.0.0",
+  "JitAssemblyCompilerCommands": [
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "UserType": {
+              "Name": "UserType",
+              "Properties": [],
+              "Attributes": {
+                "Values": [
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.WebAppVisibleAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": []
+                  }
+                ]
+              },
+              "IsEnum": true,
+              "Values": [
+                {
+                  "Value": "2",
+                  "Name": "Robot"
+                },
+                {
+                  "Value": "1",
+                  "Name": "Group"
+                },
+                {
+                  "Value": "0",
+                  "Name": "User"
+                },
+                {
+                  "Value": "3",
+                  "Name": "Application"
+                }
+              ],
+              "BaseType": null
+            },
+            "SystemUser": {
+              "Name": "SystemUser",
+              "Properties": [
+                {
+                  "Name": "CreateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Id",
+                  "Type": {
+                    "ClrType": "System.Guid, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Type",
+                  "Type": {
+                    "DefinitionName": "UserType"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "IsActive",
+                  "Type": {
+                    "ClrType": "System.Boolean, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Name",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                }
+              ],
+              "ImplementedInterfaces": [
+                {
+                  "ClrType": "UiPath.DataService.Definition.IEntity, UiPath.DataService.Definition"
+                }
+              ],
+              "Attributes": {
+                "Values": [
+                  {
+                    "Type": {
+                      "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": [
+                      {
+                        "Name": "Name",
+                        "Value": {
+                          "Value": "\"System Users\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Description",
+                        "Value": {
+                          "Value": "\"Contains Automation Cloud users and groups that have ever had roles assigned, or accessed Data Service\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.KeyValueAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [
+                      {
+                        "Value": "\"EntitySchema\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      },
+                      {
+                        "Value": "\"{\\n  \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n  \\\"Name\\\": \\\"SystemUser\\\",\\n  \\\"DisplayName\\\": \\\"System Users\\\",\\n  \\\"Description\\\": \\\"Contains Automation Cloud users and groups that have ever had roles assigned, or accessed Data Service\\\",\\n  \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.483Z\\\",\\n  \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.483Z\\\",\\n  \\\"Fields\\\": [\\n    {\\n      \\\"Id\\\": \\\"9781eeb7-cf84-456e-a350-04cb363b2a35\\\",\\n      \\\"Name\\\": \\\"CreateTime\\\",\\n      \\\"DisplayName\\\": \\\"CreateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"be685518-516f-4e9f-8423-36928ed33f6b\\\",\\n      \\\"Name\\\": \\\"Id\\\",\\n      \\\"DisplayName\\\": \\\"Id\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"69a0584e-3b34-453f-bcd2-41553680e63c\\\",\\n      \\\"Name\\\": \\\"Type\\\",\\n      \\\"DisplayName\\\": \\\"Type\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"INT\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": 9007199254740991.0,\\n        \\\"MinValue\\\": -9007199254740991.0,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"ChoiceSetSingle\\\",\\n      \\\"ReferenceChoiceSet\\\": {\\n        \\\"Name\\\": \\\"UserType\\\",\\n        \\\"Id\\\": \\\"704e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d029083c-3505-4ed7-b4a5-4e5b79c5186d\\\",\\n      \\\"Name\\\": \\\"Email\\\",\\n      \\\"DisplayName\\\": \\\"E-mail\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 512,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"dbda9b21-d0d3-47a6-bd51-79317a0f91a9\\\",\\n      \\\"Name\\\": \\\"IsActive\\\",\\n      \\\"DisplayName\\\": \\\"IsActive\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"BIT\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\",\\n      \\\"Name\\\": \\\"Name\\\",\\n      \\\"DisplayName\\\": \\\"Name\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 512,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"b834d983-aea6-4649-a6bf-f167fd212bf0\\\",\\n      \\\"Name\\\": \\\"UpdateTime\\\",\\n      \\\"DisplayName\\\": \\\"UpdateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"UpdateTime\\\": \\\"2023-01-17T14:54:56.547Z\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    }\\n  ],\\n  \\\"RecordCount\\\": 0,\\n  \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\",\\n  \\\"EntityType\\\": \\\"SystemEntity\\\",\\n  \\\"EntityClass\\\": null\\n}\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      }
+                    ],
+                    "NamedArguments": []
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.WebAppVisibleAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": []
+                  }
+                ]
+              },
+              "Values": [],
+              "BaseType": null
+            },
+            "HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4": {
+              "Name": "HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4",
+              "Properties": [
+                {
+                  "Name": "EventName",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Summary",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "InvoiceRecordId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "PayloadJson",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CorrelationId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "EventType",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "EventTimestamp",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CreatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                },
+                {
+                  "Name": "Id",
+                  "Type": {
+                    "ClrType": "System.Guid, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CreateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "EventSource",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                }
+              ],
+              "ImplementedInterfaces": [
+                {
+                  "ClrType": "UiPath.DataService.Definition.IEntity, UiPath.DataService.Definition"
+                }
+              ],
+              "Attributes": {
+                "Values": [
+                  {
+                    "Type": {
+                      "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": [
+                      {
+                        "Name": "Name",
+                        "Value": {
+                          "Value": "\"HLS_InvoiceAssurance_Activity\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Description",
+                        "Value": {
+                          "Value": "\"Append-only timeline of automation and human events for invoice-assurance packages.\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.KeyValueAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [
+                      {
+                        "Value": "\"EntitySchema\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      },
+                      {
+                        "Value": "\"{\\n  \\\"Id\\\": \\\"c5d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n  \\\"Name\\\": \\\"HLS_InvoiceAssurance_Activity\\\",\\n  \\\"DisplayName\\\": \\\"Healthcare Invoice Assurance Activity\\\",\\n  \\\"Description\\\": \\\"Append-only timeline of automation and human events for invoice-assurance packages.\\\",\\n  \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.15\\\",\\n  \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.41\\\",\\n  \\\"Fields\\\": [\\n    {\\n      \\\"Id\\\": \\\"d2d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"EventName\\\",\\n      \\\"DisplayName\\\": \\\"EventName\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.357\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.357\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d5d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Summary\\\",\\n      \\\"DisplayName\\\": \\\"Summary\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.393\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.393\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"cfd31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"InvoiceRecordId\\\",\\n      \\\"DisplayName\\\": \\\"InvoiceRecordId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.307\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.307\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 36,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d6d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"PayloadJson\\\",\\n      \\\"DisplayName\\\": \\\"PayloadJson\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.407\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.407\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"MULTILINE\\\",\\n        \\\"LengthLimit\\\": 10000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d0d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"CorrelationId\\\",\\n      \\\"DisplayName\\\": \\\"CorrelationId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.317\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.317\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d3d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"EventType\\\",\\n      \\\"DisplayName\\\": \\\"EventType\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.37\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.37\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d1d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"EventTimestamp\\\",\\n      \\\"DisplayName\\\": \\\"EventTimestamp\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.333\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.333\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"c5804927-8c54-45e4-8ede-16ddab9cdccc\\\",\\n      \\\"Name\\\": \\\"UpdateTime\\\",\\n      \\\"DisplayName\\\": \\\"UpdateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fe4a07ef-78f4-479a-b873-c81e6a2e2ee4\\\",\\n      \\\"Name\\\": \\\"CreatedBy\\\",\\n      \\\"DisplayName\\\": \\\"CreatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"30352cfa-21da-48b3-9ef0-436aa2eea4a9\\\",\\n      \\\"Name\\\": \\\"Id\\\",\\n      \\\"DisplayName\\\": \\\"Id\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fa7c47cb-69ab-4bad-bedb-c60e84a72629\\\",\\n      \\\"Name\\\": \\\"CreateTime\\\",\\n      \\\"DisplayName\\\": \\\"CreateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d4d31b2f-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"EventSource\\\",\\n      \\\"DisplayName\\\": \\\"EventSource\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.38\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.38\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 200,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"df3b586d-4ea1-4ea9-91b9-275168b61d2b\\\",\\n      \\\"Name\\\": \\\"UpdatedBy\\\",\\n      \\\"DisplayName\\\": \\\"UpdatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:17.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    }\\n  ],\\n  \\\"RecordCount\\\": 0,\\n  \\\"FolderId\\\": \\\"79d872b0-bee1-4264-a6de-3e780f4e4239\\\",\\n  \\\"EntityType\\\": \\\"Entity\\\",\\n  \\\"EntityClass\\\": null\\n}\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      }
+                    ],
+                    "NamedArguments": []
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.WebAppVisibleAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": []
+                  }
+                ]
+              },
+              "Values": [],
+              "BaseType": null
+            },
+            "HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4": {
+              "Name": "HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4",
+              "Properties": [
+                {
+                  "Name": "OpenFindingCount",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "DocumentReferencesJson",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "InvoiceNumber",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AccountId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "SubmittedTotal",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ProjectId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ProcessInstanceId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ProcessingStatus",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CorrelationId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AdjustmentTotal",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AwaitingEvidence",
+                  "Type": {
+                    "ClrType": "System.Boolean, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "InvoiceDate",
+                  "Type": {
+                    "ClrType": "System.DateTime, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AnalysisVersion",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "PayableTotal",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "FindingsJson",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "SupplierName",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ContractProfileId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                },
+                {
+                  "Name": "CreateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Id",
+                  "Type": {
+                    "ClrType": "System.Guid, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CreatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                }
+              ],
+              "ImplementedInterfaces": [
+                {
+                  "ClrType": "UiPath.DataService.Definition.IEntity, UiPath.DataService.Definition"
+                }
+              ],
+              "Attributes": {
+                "Values": [
+                  {
+                    "Type": {
+                      "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": [
+                      {
+                        "Name": "Name",
+                        "Value": {
+                          "Value": "\"HLS_InvoiceAssurance_Main\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Description",
+                        "Value": {
+                          "Value": "\"Current header, workflow state, and financial snapshot for one invoice-assurance package.\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.KeyValueAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [
+                      {
+                        "Value": "\"EntitySchema\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      },
+                      {
+                        "Value": "\"{\\n  \\\"Id\\\": \\\"d0fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n  \\\"Name\\\": \\\"HLS_InvoiceAssurance_Main\\\",\\n  \\\"DisplayName\\\": \\\"Healthcare Invoice Assurance Main\\\",\\n  \\\"Description\\\": \\\"Current header, workflow state, and financial snapshot for one invoice-assurance package.\\\",\\n  \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.587\\\",\\n  \\\"UpdateTime\\\": \\\"2026-08-09T02:51:01\\\",\\n  \\\"Fields\\\": [\\n    {\\n      \\\"Id\\\": \\\"e6fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"OpenFindingCount\\\",\\n      \\\"DisplayName\\\": \\\"OpenFindingCount\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 0\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e9fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"DocumentReferencesJson\\\",\\n      \\\"DisplayName\\\": \\\"DocumentReferencesJson\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.967\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.967\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"MULTILINE\\\",\\n        \\\"LengthLimit\\\": 10000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"dcfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"InvoiceNumber\\\",\\n      \\\"DisplayName\\\": \\\"InvoiceNumber\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.82\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.82\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"dffed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AccountId\\\",\\n      \\\"DisplayName\\\": \\\"AccountId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.853\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.853\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e3fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SubmittedTotal\\\",\\n      \\\"DisplayName\\\": \\\"SubmittedTotal\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.9\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.9\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e0fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ProjectId\\\",\\n      \\\"DisplayName\\\": \\\"ProjectId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.863\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.863\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"dbfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ProcessInstanceId\\\",\\n      \\\"DisplayName\\\": \\\"ProcessInstanceId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.807\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.807\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e2fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ProcessingStatus\\\",\\n      \\\"DisplayName\\\": \\\"ProcessingStatus\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.89\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.89\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"dafed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"CorrelationId\\\",\\n      \\\"DisplayName\\\": \\\"CorrelationId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.79\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.79\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e4fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AdjustmentTotal\\\",\\n      \\\"DisplayName\\\": \\\"AdjustmentTotal\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.91\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.91\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e7fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AwaitingEvidence\\\",\\n      \\\"DisplayName\\\": \\\"AwaitingEvidence\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.94\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.94\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"BIT\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"defed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"InvoiceDate\\\",\\n      \\\"DisplayName\\\": \\\"InvoiceDate\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.843\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.843\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATE\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"eafed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AnalysisVersion\\\",\\n      \\\"DisplayName\\\": \\\"AnalysisVersion\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.99\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.99\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 1.0,\\n        \\\"DecimalPrecision\\\": 0\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e5fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"PayableTotal\\\",\\n      \\\"DisplayName\\\": \\\"PayableTotal\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.92\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.92\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e8fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"FindingsJson\\\",\\n      \\\"DisplayName\\\": \\\"FindingsJson\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.953\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.953\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"MULTILINE\\\",\\n        \\\"LengthLimit\\\": 10000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"ddfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SupplierName\\\",\\n      \\\"DisplayName\\\": \\\"SupplierName\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.83\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.83\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 200,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e1fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ContractProfileId\\\",\\n      \\\"DisplayName\\\": \\\"ContractProfileId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.873\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.873\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"0fbc067a-3cf7-4376-89ae-0a603777f998\\\",\\n      \\\"Name\\\": \\\"UpdateTime\\\",\\n      \\\"DisplayName\\\": \\\"UpdateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"4ecf05c0-a610-4af0-b5f6-4e21f445b761\\\",\\n      \\\"Name\\\": \\\"UpdatedBy\\\",\\n      \\\"DisplayName\\\": \\\"UpdatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"0e65528e-00ab-409e-84cf-6d8cb78fda45\\\",\\n      \\\"Name\\\": \\\"CreateTime\\\",\\n      \\\"DisplayName\\\": \\\"CreateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"0715abfe-d203-471d-abf3-92e75dad0a5e\\\",\\n      \\\"Name\\\": \\\"Id\\\",\\n      \\\"DisplayName\\\": \\\"Id\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"e4953316-4f96-4560-9e6c-a7f845776c96\\\",\\n      \\\"Name\\\": \\\"CreatedBy\\\",\\n      \\\"DisplayName\\\": \\\"CreatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:00.613\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    }\\n  ],\\n  \\\"RecordCount\\\": 0,\\n  \\\"FolderId\\\": \\\"79d872b0-bee1-4264-a6de-3e780f4e4239\\\",\\n  \\\"EntityType\\\": \\\"Entity\\\",\\n  \\\"EntityClass\\\": null\\n}\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      }
+                    ],
+                    "NamedArguments": []
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.WebAppVisibleAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": []
+                  }
+                ]
+              },
+              "Values": [],
+              "BaseType": null
+            },
+            "HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4": {
+              "Name": "HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4",
+              "Properties": [
+                {
+                  "Name": "SubmittedAmount",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ExternalRecordId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "SourceDocumentId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Category",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "SubmittedRate",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ExternalMatchStatus",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AllowedAmount",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "AnalysisVersion",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Variance",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "EvaluationStatus",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Unit",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "IxpConfidence",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "SourceDocumentType",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Quantity",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "InvoiceRecordId",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Description",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Adjustment",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "Id",
+                  "Type": {
+                    "ClrType": "System.Guid, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CreateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdateTime",
+                  "Type": {
+                    "ClrType": "System.DateTimeOffset, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "UpdatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                },
+                {
+                  "Name": "SourceCoordinatesJson",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "ExternalAmount",
+                  "Type": {
+                    "ClrType": "System.Decimal, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "CreatedBy",
+                  "Type": {
+                    "DefinitionName": "SystemUser"
+                  }
+                }
+              ],
+              "ImplementedInterfaces": [
+                {
+                  "ClrType": "UiPath.DataService.Definition.IEntity, UiPath.DataService.Definition"
+                }
+              ],
+              "Attributes": {
+                "Values": [
+                  {
+                    "Type": {
+                      "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": [
+                      {
+                        "Name": "Name",
+                        "Value": {
+                          "Value": "\"HLS_InvoiceAssurance_LineItems\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      },
+                      {
+                        "Name": "Description",
+                        "Value": {
+                          "Value": "\"Current extracted, reconciled, and evaluated charge-line view for invoice-assurance packages.\"",
+                          "Type": {
+                            "ClrType": "System.String, System.Private.CoreLib"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.KeyValueAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [
+                      {
+                        "Value": "\"EntitySchema\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      },
+                      {
+                        "Value": "\"{\\n  \\\"Id\\\": \\\"ecfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n  \\\"Name\\\": \\\"HLS_InvoiceAssurance_LineItems\\\",\\n  \\\"DisplayName\\\": \\\"Healthcare Invoice Assurance Line Items\\\",\\n  \\\"Description\\\": \\\"Current extracted, reconciled, and evaluated charge-line view for invoice-assurance packages.\\\",\\n  \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.913\\\",\\n  \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.253\\\",\\n  \\\"Fields\\\": [\\n    {\\n      \\\"Id\\\": \\\"fefed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SubmittedAmount\\\",\\n      \\\"DisplayName\\\": \\\"SubmittedAmount\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.137\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.137\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"01ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ExternalRecordId\\\",\\n      \\\"DisplayName\\\": \\\"ExternalRecordId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.18\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.18\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 200,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"f7fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SourceDocumentId\\\",\\n      \\\"DisplayName\\\": \\\"SourceDocumentId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.053\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.053\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 200,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fafed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Category\\\",\\n      \\\"DisplayName\\\": \\\"Category\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.1\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.1\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 100,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fdfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SubmittedRate\\\",\\n      \\\"DisplayName\\\": \\\"SubmittedRate\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.127\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.127\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 4\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"02ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ExternalMatchStatus\\\",\\n      \\\"DisplayName\\\": \\\"ExternalMatchStatus\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.19\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.19\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"05ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AllowedAmount\\\",\\n      \\\"DisplayName\\\": \\\"AllowedAmount\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.223\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.223\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"08ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"AnalysisVersion\\\",\\n      \\\"DisplayName\\\": \\\"AnalysisVersion\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.253\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.253\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 1.0,\\n        \\\"DecimalPrecision\\\": 0\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"04ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Variance\\\",\\n      \\\"DisplayName\\\": \\\"Variance\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.213\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.213\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": -1000000000000.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"07ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"EvaluationStatus\\\",\\n      \\\"DisplayName\\\": \\\"EvaluationStatus\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.243\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.243\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fcfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Unit\\\",\\n      \\\"DisplayName\\\": \\\"Unit\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.12\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.12\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 40,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fffed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"IxpConfidence\\\",\\n      \\\"DisplayName\\\": \\\"IxpConfidence\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.15\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.15\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 4\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"f8fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SourceDocumentType\\\",\\n      \\\"DisplayName\\\": \\\"SourceDocumentType\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.067\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.067\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 80,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"fbfed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Quantity\\\",\\n      \\\"DisplayName\\\": \\\"Quantity\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.11\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.11\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 4\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"f6fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"InvoiceRecordId\\\",\\n      \\\"DisplayName\\\": \\\"InvoiceRecordId\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.03\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.03\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 36,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"f9fed526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Description\\\",\\n      \\\"DisplayName\\\": \\\"Description\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.08\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.08\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"NVARCHAR\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"06ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"Adjustment\\\",\\n      \\\"DisplayName\\\": \\\"Adjustment\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.237\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.237\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d3026df0-c095-45fb-8739-156406de6b4b\\\",\\n      \\\"Name\\\": \\\"Id\\\",\\n      \\\"DisplayName\\\": \\\"Id\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"37a479e1-decf-44c0-b044-43f1e247b93e\\\",\\n      \\\"Name\\\": \\\"CreateTime\\\",\\n      \\\"DisplayName\\\": \\\"CreateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"d41699d2-821e-4b02-9973-c1e31e58a8ab\\\",\\n      \\\"Name\\\": \\\"UpdateTime\\\",\\n      \\\"DisplayName\\\": \\\"UpdateTime\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DATETIMEOFFSET\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"ea76bc25-5daf-46c6-817c-a82f4f618da9\\\",\\n      \\\"Name\\\": \\\"UpdatedBy\\\",\\n      \\\"DisplayName\\\": \\\"UpdatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"00ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"SourceCoordinatesJson\\\",\\n      \\\"DisplayName\\\": \\\"SourceCoordinatesJson\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.163\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.163\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"MULTILINE\\\",\\n        \\\"LengthLimit\\\": 10000,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"03ffd526-9d93-f111-9b32-000d3ab5d4c4\\\",\\n      \\\"Name\\\": \\\"ExternalAmount\\\",\\n      \\\"DisplayName\\\": \\\"ExternalAmount\\\",\\n      \\\"Description\\\": \\\"\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:09.203\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:09.203\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"DECIMAL\\\",\\n        \\\"LengthLimit\\\": 1000,\\n        \\\"MaxValue\\\": 1000000000000.0,\\n        \\\"MinValue\\\": 0.0,\\n        \\\"DecimalPrecision\\\": 2\\n      },\\n      \\\"IsSystemField\\\": false,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": false,\\n      \\\"ReferenceEntity\\\": null,\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Basic\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": null,\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    },\\n    {\\n      \\\"Id\\\": \\\"4029a97d-d713-4ef8-bf54-6b2913bd1f0e\\\",\\n      \\\"Name\\\": \\\"CreatedBy\\\",\\n      \\\"DisplayName\\\": \\\"CreatedBy\\\",\\n      \\\"Description\\\": \\\"System built-in field\\\",\\n      \\\"CreateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"UpdateTime\\\": \\\"2026-08-09T02:51:08.927\\\",\\n      \\\"SqlType\\\": {\\n        \\\"Name\\\": \\\"UNIQUEIDENTIFIER\\\",\\n        \\\"LengthLimit\\\": null,\\n        \\\"MaxValue\\\": null,\\n        \\\"MinValue\\\": null,\\n        \\\"DecimalPrecision\\\": null\\n      },\\n      \\\"IsSystemField\\\": true,\\n      \\\"IsEncrypted\\\": false,\\n      \\\"IsRequired\\\": true,\\n      \\\"ReferenceEntity\\\": {\\n        \\\"Name\\\": \\\"SystemUser\\\",\\n        \\\"Id\\\": \\\"774e0be7-7696-ed11-9f5f-0022489f9140\\\",\\n        \\\"FolderId\\\": \\\"00000000-0000-0000-0000-000000000000\\\"\\n      },\\n      \\\"ReferenceType\\\": \\\"ManyToOne\\\",\\n      \\\"FieldDisplayType\\\": \\\"Relationship\\\",\\n      \\\"ReferenceChoiceSet\\\": null,\\n      \\\"ReferenceField\\\": {\\n        \\\"Id\\\": \\\"60d817e5-8e64-4757-a9d1-b0efb8909114\\\"\\n      },\\n      \\\"IsAttachment\\\": false,\\n      \\\"IsExternalField\\\": false,\\n      \\\"ExternalFieldMappingDetail\\\": null,\\n      \\\"Searchability\\\": null,\\n      \\\"Orderable\\\": true\\n    }\\n  ],\\n  \\\"RecordCount\\\": 0,\\n  \\\"FolderId\\\": \\\"79d872b0-bee1-4264-a6de-3e780f4e4239\\\",\\n  \\\"EntityType\\\": \\\"Entity\\\",\\n  \\\"EntityClass\\\": null\\n}\"",
+                        "Type": {
+                          "ClrType": "System.String, System.Private.CoreLib"
+                        }
+                      }
+                    ],
+                    "NamedArguments": []
+                  },
+                  {
+                    "Type": {
+                      "ClrType": "System.Activities.ViewModels.WebAppVisibleAttribute, System.Activities.ViewModels"
+                    },
+                    "ConstructorArguments": [],
+                    "NamedArguments": []
+                  }
+                ]
+              },
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "e1574d10-8eb9-4aa7-b184-d909b63b3622"
+          },
+          "Version": 1
+        },
+        "Hash": "2I06HcoxOTU7s03G5ixQd+TFwppfCFmYXow5Bp8slzQ=",
+        "BundleName": "DataFabric.Entities"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities",
+        "Hash": "MkkwNkhjb3hPVFU3czAzRzVpeFFkK1RGd3BwZkNGbVlYb3c1QnA4c2x6UT0",
+        "AssemblyName": "DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02"
+      }
+    }
+  ]
+}

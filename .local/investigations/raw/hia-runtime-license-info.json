@@ -1,0 +1,10 @@
+{
+  "Result": "Success",
+  "Code": "LicenseInfo",
+  "Data": {
+    "IsExpired": false,
+    "SubscriptionPlan": "ENTERPRISE",
+    "Allowed": { "NonProduction": 2, "Unattended": 19 },
+    "Used": { "NonProduction": 0, "Unattended": 1 }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Result": "Success",
+  "Code": "DocsAIAsk",
+  "QueryId": "8f97199d-ae54-4af6-934b-d0df167cbb48",
+  "Finding": "Folder-level entities cannot be accessed from Data Fabric connectors or Maestro/API-based workflows.",
+  "SupportedSurface": "Studio Web automation workflows using Data Service activities and Solutions packaging/deployment.",
+  "Sources": [
+    "https://docs.uipath.com/data-service/automation-cloud/latest/user-guide/known-limitations",
+    "https://docs.uipath.com/data-service/automation-cloud/latest/user-guide/using-folder-level-entities-in-studio-web",
+    "https://docs.uipath.com/data-service/automation-cloud/latest/release-notes/april-2026"
+  ]
+}

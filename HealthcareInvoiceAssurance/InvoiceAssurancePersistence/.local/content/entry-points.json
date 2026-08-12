@@ -1,0 +1,70 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "775469ae-a86b-4b76-abf8-5cdee7aeaedc",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_Operation": {
+            "type": "string"
+          },
+          "in_InvoiceRecordId": {
+            "type": "string"
+          },
+          "in_CorrelationId": {
+            "type": "string"
+          },
+          "in_MainRecordJson": {
+            "type": "string"
+          },
+          "in_LineRecordsJson": {
+            "type": "string"
+          },
+          "in_ActivityRecordJson": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_Success": {
+            "type": "boolean"
+          },
+          "out_InvoiceRecordId": {
+            "type": "string"
+          },
+          "out_CorrelationId": {
+            "type": "string"
+          },
+          "out_Operation": {
+            "type": "string"
+          },
+          "out_ActivityRecordId": {
+            "type": "string"
+          },
+          "out_CreatedCount": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "out_UpdatedCount": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          },
+          "out_ErrorCode": {
+            "type": "string"
+          },
+          "out_ErrorMessage": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ]
+}

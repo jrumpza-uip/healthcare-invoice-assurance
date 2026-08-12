@@ -1,0 +1,103 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "InvoiceAssuranceFlow",
+    "kind": "process",
+    "type": "flow",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "b30c905f-ec14-446b-be66-cacca3860b52",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "InvoiceAssuranceFlow"
+      }
+    ],
+    "runtimeDependencies": [
+      {
+        "bindingType": "ixpDeployment",
+        "bindingKey": "3994ca7a-2b93-807c-8f96-75602d7b1c47",
+        "bindingValues": {
+          "folderPath": {
+            "defaultValue": "AMER Presales/HLS",
+            "isExpression": false
+          },
+          "name": {
+            "defaultValue": "Healthcare Invoice Assurance",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Extract package",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true"
+        },
+        "resourceKind": "IxpDeployment",
+        "resourceKey": "3994ca7a-2b93-807c-8f96-75602d7b1c47",
+        "resourceName": "Healthcare Invoice Assurance",
+        "folderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "8cb92544-1799-40af-91b2-6e2f3085fe69",
+        "bindingValues": {
+          "folderPath": {
+            "defaultValue": "",
+            "isExpression": false
+          },
+          "name": {
+            "defaultValue": "ProjectCostLookupApi",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Lookup project cost",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true"
+        },
+        "resourceKind": "Process"
+      },
+      {
+        "bindingType": "process",
+        "bindingKey": "7147dad8-2ef2-4d99-9af6-bafbc4c24a91",
+        "bindingValues": {
+          "folderPath": {
+            "defaultValue": "",
+            "isExpression": false
+          },
+          "name": {
+            "defaultValue": "ContractComplianceAgent",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "activityName": "Lookup project cost",
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true"
+        },
+        "resourceKind": "Process"
+      }
+    ],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Flow",
+      "name": "InvoiceAssuranceFlow",
+      "package": {
+        "key": "d5f44d52-f763-4b03-93cb-07ace16a57ac"
+      },
+      "packageName": "HealthcareInvoiceAssurance.flow.InvoiceAssuranceFlow",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "d2d0e27d-5657-448b-82c3-66eb4b73b900",
+    "files": []
+  }
+}

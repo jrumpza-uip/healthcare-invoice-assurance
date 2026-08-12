@@ -1,0 +1,23 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "InvoiceAssuranceFlow",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "b30c905f-ec14-446b-be66-cacca3860b52",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "name": "InvoiceAssuranceFlow"
+    },
+    "locks": [],
+    "key": "d5f44d52-f763-4b03-93cb-07ace16a57ac",
+    "files": []
+  }
+}

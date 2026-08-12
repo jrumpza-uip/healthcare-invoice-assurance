@@ -1,0 +1,32 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "invoiceassuranceactionapp",
+    "kind": "package",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "fileName": "invoiceassuranceactionapp.1.0.1.nupkg",
+      "fileReference": "invoiceassuranceactionapp_1.0.1",
+      "name": "invoiceassuranceactionapp"
+    },
+    "locks": [],
+    "key": "invoiceassuranceactionapp:1.0.1",
+    "files": [
+      {
+        "key": "invoiceassuranceactionapp_1.0.1",
+        "name": "invoiceassuranceactionapp.1.0.1.nupkg",
+        "url": "https://cloud.uipath.com/uipathlabs/Playground/orchestrator_/odata/Processes/UiPath.Server.Configuration.OData.DownloadPackage(key='invoiceassuranceactionapp:1.0.1')?feedId=93949a13-9388-45bb-af90-5783a67e1b33",
+        "kind": "Package",
+        "version": "1.0.1"
+      }
+    ]
+  }
+}

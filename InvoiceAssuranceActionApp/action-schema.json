@@ -1,0 +1,168 @@
+{
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "taskMode": { "type": "string", "required": true },
+      "invoiceRecordId": { "type": "string", "required": true },
+      "correlationId": { "type": "string", "required": true },
+      "analysisVersion": { "type": "integer", "required": true },
+      "reviewCycle": { "type": "integer", "required": true },
+      "processingStatus": { "type": "string", "required": true },
+      "invoiceSummary": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "invoiceNumber": { "type": "string", "required": true },
+          "invoiceDate": { "type": "string", "format": "date", "required": true },
+          "supplierName": { "type": "string", "required": true },
+          "accountName": { "type": "string", "required": true },
+          "projectName": { "type": "string", "required": true },
+          "contractProfileId": { "type": "string", "required": true },
+          "submittedTotal": { "type": "number", "required": true },
+          "currentAdjustment": { "type": "number", "required": true },
+          "currentPayable": { "type": "number", "required": true },
+          "openFindingCount": { "type": "integer", "required": true },
+          "awaitingEvidence": { "type": "boolean", "required": true }
+        }
+      },
+      "findings": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "findingId": { "type": "string", "required": true },
+            "chargeId": { "type": "string", "required": true },
+            "ruleId": { "type": "string", "required": true },
+            "severity": { "type": "string", "required": true },
+            "category": { "type": "string", "required": true },
+            "title": { "type": "string", "required": true },
+            "explanation": { "type": "string", "required": true },
+            "financialEffect": { "type": "number", "required": true },
+            "status": { "type": "string", "required": true },
+            "confidence": { "type": "number", "required": true },
+            "evidenceState": { "type": "string", "required": true },
+            "contractDocumentTitle": { "type": "string", "required": true },
+            "contractClause": { "type": "string", "required": true },
+            "contractExcerptSummary": { "type": "string", "required": true },
+            "applicabilityExplanation": { "type": "string", "required": true },
+            "sourceDocumentId": { "type": "string", "required": true }
+          }
+        }
+      },
+      "charges": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "chargeId": { "type": "string", "required": true },
+            "sourceDocumentId": { "type": "string", "required": true },
+            "category": { "type": "string", "required": true },
+            "description": { "type": "string", "required": true },
+            "quantity": { "type": "number", "required": true },
+            "unit": { "type": "string", "required": true },
+            "submittedRate": { "type": "number", "required": true },
+            "submittedAmount": { "type": "number", "required": true },
+            "allowedAmount": { "type": "number", "required": true },
+            "adjustment": { "type": "number", "required": true },
+            "evaluationStatus": { "type": "string", "required": true },
+            "sourceReference": { "type": "string", "required": true }
+          }
+        }
+      },
+      "documents": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "type": "object",
+          "properties": {
+            "documentId": { "type": "string", "required": true },
+            "bucketId": { "type": "integer", "required": true },
+            "bucketPath": { "type": "string", "required": true },
+            "displayName": { "type": "string", "required": true },
+            "documentType": { "type": "string", "required": true },
+            "checksum": { "type": "string", "required": true }
+          }
+        }
+      },
+      "activity": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "eventTimestamp": { "type": "string", "required": true },
+            "eventName": { "type": "string", "required": true },
+            "eventType": { "type": "string", "required": true },
+            "summary": { "type": "string", "required": true }
+          }
+        }
+      },
+      "priorManagerRationale": { "type": "string", "required": false }
+    }
+  },
+  "outputs": {
+    "type": "object",
+    "properties": {
+      "submittedMode": { "type": "string", "required": true },
+      "reviewReady": { "type": "boolean", "required": true },
+      "correctionApplied": { "type": "boolean", "required": true },
+      "completedAt": { "type": "string", "required": true },
+      "decisionSummary": { "type": "string", "required": false }
+    }
+  },
+  "inOuts": {
+    "type": "object",
+    "properties": {
+      "correctedRegisterAmount": { "type": "number", "required": false },
+      "registerCorrectionReason": { "type": "string", "required": false },
+      "evidenceRequestNote": { "type": "string", "required": false },
+      "evidenceStatus": { "type": "string", "required": false },
+      "uploadedEvidence": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "evidenceId": { "type": "string", "required": true },
+            "bucketPath": { "type": "string", "required": true },
+            "displayName": { "type": "string", "required": true },
+            "contentType": { "type": "string", "required": true },
+            "size": { "type": "integer", "required": true },
+            "checksum": { "type": "string", "required": true },
+            "uploadedAt": { "type": "string", "required": true }
+          }
+        }
+      },
+      "findingDispositions": {
+        "type": "array",
+        "required": false,
+        "items": {
+          "type": "object",
+          "properties": {
+            "findingId": { "type": "string", "required": true },
+            "status": { "type": "string", "required": true },
+            "notes": { "type": "string", "required": false }
+          }
+        }
+      },
+      "reviewerNotes": { "type": "string", "required": false },
+      "managerRationale": { "type": "string", "required": false },
+      "changedFindingIds": {
+        "type": "array",
+        "required": false,
+        "items": { "type": "string" }
+      }
+    }
+  },
+  "outcomes": {
+    "type": "object",
+    "properties": {
+      "SubmitReview": { "type": "string" },
+      "Approve": { "type": "string" },
+      "ReturnToReviewer": { "type": "string" },
+      "Reject": { "type": "string" }
+    }
+  }
+}

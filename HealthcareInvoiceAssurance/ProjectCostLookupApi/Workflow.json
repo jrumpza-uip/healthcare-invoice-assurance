@@ -1,0 +1,154 @@
+{
+  "document": {
+    "dsl": "1.0.0",
+    "name": "ProjectCostLookupApi",
+    "tags": {
+      "projectId": "f709d334-91fa-4f85-b56a-87765b33b90c"
+    },
+    "version": "0.0.1",
+    "namespace": "healthcare-invoice-assurance",
+    "metadata": {
+      "variables": {
+        "schema": {
+          "format": "json",
+          "document": {
+            "type": "object",
+            "properties": {},
+            "title": "Variables"
+          }
+        }
+      }
+    }
+  },
+  "input": {
+    "schema": {
+      "format": "json",
+      "document": {
+        "type": "object",
+        "properties": {
+          "correlationId": { "type": "string" },
+          "invoiceRecordId": { "type": "string" },
+          "contractProfileId": { "type": "string" },
+          "accountId": { "type": "string" },
+          "projectId": { "type": "string" },
+          "supplier": { "type": "object" },
+          "invoice": { "type": "object" },
+          "register": { "type": ["object", "null"] },
+          "supportingInvoices": { "type": "array", "default": [] },
+          "simulateSearchUnavailable": { "type": "boolean", "default": false }
+        },
+        "required": [
+          "correlationId",
+          "invoiceRecordId",
+          "contractProfileId",
+          "accountId",
+          "projectId",
+          "supplier",
+          "invoice"
+        ],
+        "title": "Inputs"
+      }
+    }
+  },
+  "output": {
+    "schema": {
+      "format": "json",
+      "document": {
+        "type": "object",
+        "properties": {
+          "searchStatus": { "type": "string", "enum": ["Found", "NotFound", "SearchIncomplete"] },
+          "supplierMatch": { "type": "object" },
+          "projectMatch": { "type": "object" },
+          "invoiceRecord": { "type": ["object", "null"] },
+          "invoiceRegisterComparison": { "type": "object" },
+          "supportingDocumentComparisons": { "type": "array" },
+          "searchesAttempted": { "type": "array" },
+          "warnings": { "type": "array" },
+          "errorType": { "type": "string" },
+          "errorMessage": { "type": "string" }
+        },
+        "required": [
+          "searchStatus",
+          "supplierMatch",
+          "projectMatch",
+          "invoiceRecord",
+          "invoiceRegisterComparison",
+          "supportingDocumentComparisons",
+          "searchesAttempted",
+          "warnings",
+          "errorType",
+          "errorMessage"
+        ],
+        "title": "Outputs"
+      }
+    }
+  },
+  "do": [
+    {
+      "Sequence_1": {
+        "do": [
+          {
+            "WorkflowStart": {
+              "set": "${Object.entries($workflow.definition?.document?.metadata?.variables?.schema?.document?.properties || {}).reduce((acc, [name, def]) => ({ ...acc, [name]: def?.default }), {}) }",
+              "output": {
+                "as": "${$input}"
+              },
+              "export": {
+                "as": "{ ...$context, variables: { ...$context.variables, ...$output } }"
+              },
+              "metadata": {
+                "activityType": "Assign",
+                "displayName": "Workflow start",
+                "fullName": "Assign",
+                "isTransparent": true
+              }
+            }
+          },
+          {
+            "Javascript_EvaluateLookup": {
+              "run": {
+                "script": {
+                  "code": "const request = $workflow.input ?? {}; const normalize = (value) => String(value ?? '').toLowerCase().replace(/[^a-z0-9]/g, ''); const isMoney = (value) => typeof value === 'number' && Number.isFinite(value) && value >= 0; const roundMoney = (value) => Math.round((value + Number.EPSILON) * 100) / 100; const supplierName = request.supplier?.name ?? ''; const invoiceNumber = request.invoice?.number ?? ''; const emptySupplierMatch = { matched: false, suppliedName: supplierName, normalizedSuppliedName: normalize(supplierName), matchedSupplierId: '', matchedSupplierName: '' }; const emptyProjectMatch = { matched: false, accountId: request.accountId ?? '', projectId: request.projectId ?? '', contractProfileId: request.contractProfileId ?? '', projectName: '' }; const emptyComparison = { status: 'NotCompared', invoiceTotal: isMoney(request.invoice?.total) ? roundMoney(request.invoice.total) : null, registerTotal: null, variance: null }; const baseResult = { searchStatus: 'SearchIncomplete', supplierMatch: emptySupplierMatch, projectMatch: emptyProjectMatch, invoiceRecord: null, invoiceRegisterComparison: emptyComparison, supportingDocumentComparisons: [], searchesAttempted: [], warnings: [], errorType: '', errorMessage: '' }; const validationErrors = []; for (const field of ['correlationId', 'invoiceRecordId', 'contractProfileId', 'accountId', 'projectId']) { if (typeof request[field] !== 'string' || request[field].trim() === '') validationErrors.push(field + ' is required'); } if (typeof supplierName !== 'string' || supplierName.trim() === '') validationErrors.push('supplier.name is required'); if (typeof invoiceNumber !== 'string' || invoiceNumber.trim() === '') validationErrors.push('invoice.number is required'); if (!isMoney(request.invoice?.total)) validationErrors.push('invoice.total must be a non-negative decimal'); if (request.register !== undefined && request.register !== null) { if (typeof request.register !== 'object' || !isMoney(request.register.total)) validationErrors.push('register.total must be a non-negative decimal'); if (!Array.isArray(request.register?.lines)) validationErrors.push('register.lines must be an array'); } if (request.supportingInvoices !== undefined && !Array.isArray(request.supportingInvoices)) validationErrors.push('supportingInvoices must be an array'); const registerLines = Array.isArray(request.register?.lines) ? request.register.lines : []; const lineIds = registerLines.map((line) => String(line?.lineId ?? '').trim()).filter(Boolean); if (new Set(lineIds).size !== lineIds.length) validationErrors.push('duplicate register line IDs are not allowed'); for (const line of registerLines) { if (line?.amount !== undefined && !isMoney(line.amount)) validationErrors.push('register line amounts must be non-negative decimals'); } if (validationErrors.length > 0) return { ...baseResult, errorType: 'ValidationError', errorMessage: validationErrors.join('; ') }; const approvedProfile = request.contractProfileId === 'profile-west-pavilion' && request.accountId === 'account-lakeshore-regional-health-system' && request.projectId === 'project-west-pavilion-renovation'; const searchesAttempted = ['project-profile']; if (!approvedProfile) return { ...baseResult, searchStatus: 'NotFound', searchesAttempted, errorType: 'ProfileNotFound', errorMessage: 'No configured project profile matched the supplied identifiers.' }; const projectMatch = { matched: true, accountId: request.accountId, projectId: request.projectId, contractProfileId: request.contractProfileId, projectName: 'West Pavilion Renovation' }; if (request.simulateSearchUnavailable === true) return { ...baseResult, projectMatch, searchesAttempted, warnings: [{ code: 'SearchUnavailable', message: 'The project-cost search is temporarily unavailable.', retryable: true }], errorType: 'SearchUnavailable', errorMessage: 'The project-cost search did not complete.' }; searchesAttempted.push('supplier'); const supplierConfig = { id: 'supplier-northbridge-general-contractors', name: 'Northbridge General Contractors', aliases: ['Northbridge General Contractors', 'Northbridge General Contractors LLC', 'Northbridge GC'] }; const normalizedSupplier = normalize(supplierName); const supplierMatched = supplierConfig.aliases.some((alias) => normalize(alias) === normalizedSupplier); const supplierMatch = { matched: supplierMatched, suppliedName: supplierName, normalizedSuppliedName: normalizedSupplier, matchedSupplierId: supplierMatched ? supplierConfig.id : '', matchedSupplierName: supplierMatched ? supplierConfig.name : '' }; const registerComparison = request.register === undefined || request.register === null ? { status: 'NoRegister', invoiceTotal: roundMoney(request.invoice.total), registerTotal: null, variance: null } : (() => { const invoiceTotal = roundMoney(request.invoice.total); const registerTotal = roundMoney(request.register.total); const variance = roundMoney(invoiceTotal - registerTotal); return { status: variance === 0 ? 'Tied' : 'Variance', invoiceTotal, registerTotal, variance }; })(); if (request.register !== undefined && request.register !== null) searchesAttempted.push('invoice-register'); const supportingInvoices = Array.isArray(request.supportingInvoices) ? request.supportingInvoices : []; const supportingDocumentComparisons = registerLines.map((line) => { const normalizedLineInvoice = normalize(line?.invoiceNumber); const normalizedLineSupplier = normalize(line?.supplier); const supporting = supportingInvoices.find((document) => { const candidateNumber = document?.invoice?.number ?? document?.invoiceNumber; const candidateSupplier = document?.supplier?.name ?? document?.supplier; return normalize(candidateNumber) === normalizedLineInvoice && (!normalizedLineSupplier || normalize(candidateSupplier) === normalizedLineSupplier); }); const submittedAmount = isMoney(line?.amount) ? roundMoney(line.amount) : null; if (!supporting) return { registerLineId: String(line?.lineId ?? ''), invoiceNumber: String(line?.invoiceNumber ?? ''), supplier: String(line?.supplier ?? ''), supportingDocumentId: '', submittedAmount, supportingInvoiceTotal: null, variance: null, status: 'MissingSupportingInvoice' }; const supportingTotalRaw = supporting?.invoice?.total ?? supporting?.total; const supportingTotal = isMoney(supportingTotalRaw) ? roundMoney(supportingTotalRaw) : null; const variance = submittedAmount !== null && supportingTotal !== null ? roundMoney(submittedAmount - supportingTotal) : null; return { registerLineId: String(line?.lineId ?? ''), invoiceNumber: String(line?.invoiceNumber ?? ''), supplier: String(line?.supplier ?? ''), supportingDocumentId: String(supporting?.documentId ?? ''), submittedAmount, supportingInvoiceTotal: supportingTotal, variance, status: supportingTotal === null ? 'InvalidSupportingAmount' : variance === 0 ? 'Matched' : 'Variance' }; }); if (registerLines.length > 0) searchesAttempted.push('supporting-invoices'); if (!supplierMatched) return { ...baseResult, searchStatus: 'NotFound', supplierMatch, projectMatch, invoiceRegisterComparison: registerComparison, supportingDocumentComparisons, searchesAttempted, errorType: 'SupplierNotFound', errorMessage: 'The supplier is not configured for the selected project.' }; searchesAttempted.splice(2, 0, 'normalized-invoice-number'); const invoiceRecords = [{ externalRecordId: 'cost-invoice-nbg-0726-01', invoiceNumber: 'NBG-0726-01', normalizedInvoiceNumber: 'nbg072601', supplierId: supplierConfig.id, recordedTotal: 63024.9, currency: 'USD' }]; const invoiceRecord = invoiceRecords.find((record) => record.normalizedInvoiceNumber === normalize(invoiceNumber)) ?? null; return { searchStatus: invoiceRecord ? 'Found' : 'NotFound', supplierMatch, projectMatch, invoiceRecord, invoiceRegisterComparison: registerComparison, supportingDocumentComparisons, searchesAttempted, warnings: [], errorType: invoiceRecord ? '' : 'InvoiceNotFound', errorMessage: invoiceRecord ? '' : 'The completed search found no matching invoice record.' };",
+                  "language": "javascript",
+                  "arguments": "${{ \"$context\": $context, \"$workflow\": $workflow, \"$input\": $input }}"
+                }
+              },
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"Javascript_EvaluateLookup\": $output } }"
+              },
+              "metadata": {
+                "activityType": "JsInvoke",
+                "displayName": "Evaluate project-cost lookup",
+                "fullName": "JsInvoke"
+              }
+            }
+          },
+          {
+            "Response_ProjectCostLookup": {
+              "response": "${$context.outputs.Javascript_EvaluateLookup}",
+              "markJobAsFailed": false,
+              "then": "end",
+              "export": {
+                "as": "{ ...$context, outputs: { ...$context?.outputs, \"Response_ProjectCostLookup\": $output } }"
+              },
+              "metadata": {
+                "activityType": "Response",
+                "displayName": "Return reconciliation facts",
+                "fullName": "Response"
+              }
+            }
+          }
+        ],
+        "metadata": {
+          "activityType": "Sequence",
+          "displayName": "Project cost lookup",
+          "fullName": "Sequence"
+        }
+      }
+    }
+  ],
+  "evaluate": {
+    "mode": "strict",
+    "language": "javascript"
+  }
+}

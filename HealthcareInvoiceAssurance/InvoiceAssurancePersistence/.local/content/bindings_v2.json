@@ -1,0 +1,53 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "activityDisplayName": "Get Main Record",
+      "resource": "Entity",
+      "key": "HLS_InvoiceAssurance_Main",
+      "id": "EntityHLS_InvoiceAssurance_MainHLS_InvoiceAssurance_MainFalse",
+      "value": {
+        "name": {
+          "defaultValue": "HLS_InvoiceAssurance_Main",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Scope": "Folder"
+      }
+    },
+    {
+      "activityDisplayName": "Query Entity Records for Invoice Lines",
+      "resource": "Entity",
+      "key": "HLS_InvoiceAssurance_LineItems",
+      "id": "EntityHLS_InvoiceAssurance_LineItemsHLS_InvoiceAssurance_LineItemsFalse",
+      "value": {
+        "name": {
+          "defaultValue": "HLS_InvoiceAssurance_LineItems",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Scope": "Folder"
+      }
+    },
+    {
+      "activityDisplayName": "Append Activity Record",
+      "resource": "Entity",
+      "key": "HLS_InvoiceAssurance_Activity",
+      "id": "EntityHLS_InvoiceAssurance_ActivityHLS_InvoiceAssurance_ActivityFalse",
+      "value": {
+        "name": {
+          "defaultValue": "HLS_InvoiceAssurance_Activity",
+          "isExpression": false
+        }
+      },
+      "metadata": {
+        "BindingsVersion": "2.2",
+        "Scope": "Folder"
+      }
+    }
+  ]
+}

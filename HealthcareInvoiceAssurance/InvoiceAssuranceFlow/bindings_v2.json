@@ -1,0 +1,74 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "ixpDeployment",
+      "key": "3994ca7a-2b93-807c-8f96-75602d7b1c47",
+      "id": "ixpDeployment3994ca7a-2b93-807c-8f96-75602d7b1c47",
+      "value": {
+        "folderPath": {
+          "defaultValue": "AMER Presales/HLS",
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "Healthcare Invoice Assurance",
+          "isExpression": false,
+          "displayName": "IXP model"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Extract package",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "8cb92544-1799-40af-91b2-6e2f3085fe69",
+      "id": "process8cb92544-1799-40af-91b2-6e2f3085fe69",
+      "value": {
+        "folderPath": {
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "ProjectCostLookupApi",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Lookup project cost",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Api"
+      }
+    },
+    {
+      "resource": "process",
+      "key": "7147dad8-2ef2-4d99-9af6-bafbc4c24a91",
+      "id": "process7147dad8-2ef2-4d99-9af6-bafbc4c24a91",
+      "value": {
+        "folderPath": {
+          "isExpression": false,
+          "displayName": "Folder path"
+        },
+        "name": {
+          "defaultValue": "ContractComplianceAgent",
+          "isExpression": false,
+          "displayName": "Process name"
+        }
+      },
+      "metadata": {
+        "ActivityName": "Lookup project cost",
+        "BindingsVersion": "2.2",
+        "DisplayLabel": "name",
+        "SolutionsSupport": "true",
+        "subType": "Agent"
+      }
+    }
+  ]
+}

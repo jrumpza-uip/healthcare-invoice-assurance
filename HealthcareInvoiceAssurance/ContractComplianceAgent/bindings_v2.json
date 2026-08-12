@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "resources": [
+    {
+      "resource": "index",
+      "key": "healthcare-invoice-assurance-contractsIndex",
+      "value": {
+        "name": {
+          "defaultValue": "healthcare-invoice-assurance-contractsIndex",
+          "isExpression": false,
+          "displayName": "Index Name"
+        },
+        "folderPath": {
+          "defaultValue": "AMER Presales/HLS",
+          "isExpression": false,
+          "displayName": "Folder path"
+        }
+      },
+      "metadata": {
+        "bindingsVersion": "2.2",
+        "solutionsSupport": "true"
+      }
+    }
+  ]
+}

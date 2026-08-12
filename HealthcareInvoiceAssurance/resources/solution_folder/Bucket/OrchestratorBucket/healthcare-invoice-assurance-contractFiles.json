@@ -1,0 +1,25 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "healthcare-invoice-assurance-contractFiles",
+    "kind": "bucket",
+    "type": "orchestratorBucket",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "isOverridable": true,
+    "dependencies": [],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Orchestrator",
+      "name": "healthcare-invoice-assurance-contractFiles",
+      "tags": []
+    },
+    "locks": [],
+    "key": "6dfc0608-733a-4465-9811-59e87d5095cb",
+    "files": []
+  }
+}

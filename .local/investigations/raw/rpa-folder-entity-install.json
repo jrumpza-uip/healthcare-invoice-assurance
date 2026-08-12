@@ -1,0 +1,14 @@
+{
+  "Result": "Failure",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix",
+  "serviceDocument": ".entities/EntitiesStore.json",
+  "entities": [],
+  "notInstalled": [
+    "HLS_InvoiceAssurance_Main",
+    "HLS_InvoiceAssurance_LineItems",
+    "HLS_InvoiceAssurance_Activity"
+  ],
+  "success": false,
+  "errorMessage": "The requested HLS folder entities were not found in the connected Data Fabric tenant by the headless RPA entity installer. UiPath documents folder-entity selection through Studio Web solution context."
+}

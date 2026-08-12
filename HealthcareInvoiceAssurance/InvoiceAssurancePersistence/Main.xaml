@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core"
+ xmlns:udacsdeb="clr-namespace:UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle;assembly=DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Operation" Type="InArgument(x:String)" />
+    <x:Property Name="in_InvoiceRecordId" Type="InArgument(x:String)" />
+    <x:Property Name="in_CorrelationId" Type="InArgument(x:String)" />
+    <x:Property Name="in_MainRecordJson" Type="InArgument(x:String)" />
+    <x:Property Name="in_LineRecordsJson" Type="InArgument(x:String)" />
+    <x:Property Name="in_ActivityRecordJson" Type="InArgument(x:String)" />
+    <x:Property Name="out_Success" Type="OutArgument(x:Boolean)" />
+    <x:Property Name="out_InvoiceRecordId" Type="OutArgument(x:String)" />
+    <x:Property Name="out_CorrelationId" Type="OutArgument(x:String)" />
+    <x:Property Name="out_Operation" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ActivityRecordId" Type="OutArgument(x:String)" />
+    <x:Property Name="out_CreatedCount" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_UpdatedCount" Type="OutArgument(x:Int32)" />
+    <x:Property Name="out_ErrorCode" Type="OutArgument(x:String)" />
+    <x:Property Name="out_ErrorMessage" Type="OutArgument(x:String)" />
+  </x:Members>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
+      <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Invoice Assurance Persistence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:Guid" Name="invoiceGuid" />
+      <Variable x:TypeArguments="njl:JObject" Name="mainPayload" />
+      <Variable x:TypeArguments="njl:JArray" Name="linePayload" />
+      <Variable x:TypeArguments="njl:JObject" Name="activityPayload" />
+      <Variable x:TypeArguments="x:Boolean" Name="writesStarted" Default="False" />
+      <Variable x:TypeArguments="x:String" Name="errorStage" Default="Validation" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" Name="mainRecord" />
+      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="existingLines" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Name="lineRecord" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Name="existingLine" />
+      <Variable x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="linesToCreate" />
+      <Variable x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="linesToUpdate" />
+      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="createdLineRecords" />
+      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="updatedLineRecords" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" Name="activityRecord" />
+      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4)" Name="createdActivityRecords" />
+    </Sequence.Variables>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <Assign x:TypeArguments="x:Boolean" DisplayName="Initialize Success" To="[out_Success]" Value="False" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Invoice Id" To="[out_InvoiceRecordId]" Value="[in_InvoiceRecordId]" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Correlation Id" To="[out_CorrelationId]" Value="[in_CorrelationId]" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Operation" To="[out_Operation]" Value="[in_Operation]" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Activity Id" To="[out_ActivityRecordId]" Value="[String.Empty]" />
+    <Assign x:TypeArguments="x:Int32" DisplayName="Initialize Created Count" To="[out_CreatedCount]" Value="0" />
+    <Assign x:TypeArguments="x:Int32" DisplayName="Initialize Updated Count" To="[out_UpdatedCount]" Value="0" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Error Code" To="[out_ErrorCode]" Value="[String.Empty]" />
+    <Assign x:TypeArguments="x:String" DisplayName="Initialize Error Message" To="[out_ErrorMessage]" Value="[String.Empty]" />
+    <TryCatch DisplayName="Validate and Persist">
+      <TryCatch.Try>
+        <Sequence DisplayName="Try Persistence">
+          <If DisplayName="Validate Operation" Condition="[String.IsNullOrWhiteSpace(in_Operation) OrElse Not New String() { &quot;MarkProcessing&quot;, &quot;PersistInitial&quot;, &quot;PersistReviewer&quot;, &quot;PersistReevaluation&quot;, &quot;Finalize&quot; }.Contains(in_Operation)]">
+            <If.Then>
+              <Sequence DisplayName="Reject Unsupported Operation">
+                <Throw DisplayName="Unsupported Operation" Exception="[New ArgumentException(&quot;ValidationError: unsupported operation&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <If DisplayName="Validate Identifiers" Condition="[String.IsNullOrWhiteSpace(in_InvoiceRecordId) OrElse Not Guid.TryParse(in_InvoiceRecordId, invoiceGuid) OrElse String.IsNullOrWhiteSpace(in_CorrelationId) OrElse in_CorrelationId.Length &gt; 100]">
+            <If.Then>
+              <Sequence DisplayName="Reject Invalid Identifiers">
+                <Throw DisplayName="Invalid Identifiers" Exception="[New ArgumentException(&quot;ValidationError: invalid invoiceRecordId or correlationId&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <Assign x:TypeArguments="s:Guid" DisplayName="Parse Invoice Record Id" To="[invoiceGuid]" Value="[Guid.Parse(in_InvoiceRecordId)]" />
+          <Assign x:TypeArguments="njl:JObject" DisplayName="Parse Main Payload" To="[mainPayload]" Value="[JObject.Parse(in_MainRecordJson)]" />
+          <Assign x:TypeArguments="njl:JArray" DisplayName="Parse Line Payload" To="[linePayload]" Value="[JArray.Parse(in_LineRecordsJson)]" />
+          <Assign x:TypeArguments="njl:JObject" DisplayName="Parse Activity Payload" To="[activityPayload]" Value="[JObject.Parse(in_ActivityRecordJson)]" />
+          <If DisplayName="Validate Main Payload" Condition="[Not mainPayload.Properties().Any() OrElse mainPayload.Properties().Any(Function(p) Not New String() { &quot;OpenFindingCount&quot;, &quot;DocumentReferencesJson&quot;, &quot;InvoiceNumber&quot;, &quot;AccountId&quot;, &quot;SubmittedTotal&quot;, &quot;ProjectId&quot;, &quot;ProcessInstanceId&quot;, &quot;ProcessingStatus&quot;, &quot;CorrelationId&quot;, &quot;AdjustmentTotal&quot;, &quot;AwaitingEvidence&quot;, &quot;InvoiceDate&quot;, &quot;AnalysisVersion&quot;, &quot;PayableTotal&quot;, &quot;FindingsJson&quot;, &quot;SupplierName&quot;, &quot;ContractProfileId&quot; }.Contains(p.Name)) OrElse (mainPayload(&quot;FindingsJson&quot;) IsNot Nothing AndAlso mainPayload(&quot;FindingsJson&quot;).ToString.Length &gt; 10000) OrElse (mainPayload(&quot;DocumentReferencesJson&quot;) IsNot Nothing AndAlso mainPayload(&quot;DocumentReferencesJson&quot;).ToString.Length &gt; 10000)]">
+            <If.Then>
+              <Sequence DisplayName="Reject Invalid Main Payload">
+                <Throw DisplayName="Invalid Main Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid mainRecordJson&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <If DisplayName="Validate Line Payload" Condition="[linePayload.Cast(Of JObject)().Any(Function(item) String.IsNullOrWhiteSpace(If(item(&quot;ExternalRecordId&quot;) Is Nothing, String.Empty, item(&quot;ExternalRecordId&quot;).ToString)) OrElse (item(&quot;SourceCoordinatesJson&quot;) IsNot Nothing AndAlso item(&quot;SourceCoordinatesJson&quot;).ToString.Length &gt; 10000))]">
+            <If.Then>
+              <Sequence DisplayName="Reject Invalid Line Payload">
+                <Throw DisplayName="Invalid Line Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid lineRecordsJson&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <If DisplayName="Reject Duplicate Line Keys" Condition="[linePayload.Cast(Of JObject)().GroupBy(Function(item) in_InvoiceRecordId &amp; &quot;|&quot; &amp; item(&quot;ExternalRecordId&quot;).ToString).Any(Function(group) group.Count() &gt; 1)]">
+            <If.Then>
+              <Sequence DisplayName="Duplicate Line Key">
+                <Throw DisplayName="DuplicateLineKey" Exception="[New ArgumentException(&quot;DuplicateLineKey: duplicate InvoiceRecordId and ExternalRecordId&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <If DisplayName="Validate Activity Payload" Condition="[New String() { &quot;InvoiceRecordId&quot;, &quot;CorrelationId&quot;, &quot;EventTimestamp&quot;, &quot;EventName&quot;, &quot;EventType&quot;, &quot;EventSource&quot;, &quot;Summary&quot; }.Any(Function(fieldName) activityPayload(fieldName) Is Nothing OrElse String.IsNullOrWhiteSpace(activityPayload(fieldName).ToString)) OrElse activityPayload(&quot;InvoiceRecordId&quot;).ToString &lt;&gt; in_InvoiceRecordId OrElse activityPayload(&quot;CorrelationId&quot;).ToString &lt;&gt; in_CorrelationId OrElse activityPayload(&quot;InvoiceRecordId&quot;).ToString.Length &gt; 36 OrElse activityPayload(&quot;CorrelationId&quot;).ToString.Length &gt; 100 OrElse activityPayload(&quot;EventName&quot;).ToString.Length &gt; 80 OrElse activityPayload(&quot;EventType&quot;).ToString.Length &gt; 80 OrElse activityPayload(&quot;EventSource&quot;).ToString.Length &gt; 200 OrElse activityPayload(&quot;Summary&quot;).ToString.Length &gt; 1000 OrElse (activityPayload(&quot;PayloadJson&quot;) IsNot Nothing AndAlso activityPayload(&quot;PayloadJson&quot;).ToString.Length &gt; 10000)]">
+            <If.Then>
+              <Sequence DisplayName="Reject Invalid Activity Payload">
+                <Throw DisplayName="Invalid Activity Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid activityRecordJson&quot;)]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <Assign x:TypeArguments="x:String" DisplayName="Set Main Lookup Stage" To="[errorStage]" Value="[&quot;MainLookup&quot;]" />
+          <uda:GetEntityRecordById x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" ContinueOnError="False" DisplayName="Get Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" OutputEntity="[mainRecord]" RecordId="[invoiceGuid]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000" />
+          <Assign x:TypeArguments="x:String" DisplayName="Set Write Stage" To="[errorStage]" Value="[&quot;DataFabricWrite&quot;]" />
+          <Assign x:TypeArguments="x:Boolean" DisplayName="Mark Writes Started" To="[writesStarted]" Value="True" />
+          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply OpenFindingCount" To="[mainRecord.OpenFindingCount]" Value="[If(mainPayload(&quot;OpenFindingCount&quot;) Is Nothing, mainRecord.OpenFindingCount, mainPayload.Value(Of Decimal)(&quot;OpenFindingCount&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply DocumentReferencesJson" To="[mainRecord.DocumentReferencesJson]" Value="[If(mainPayload(&quot;DocumentReferencesJson&quot;) Is Nothing, mainRecord.DocumentReferencesJson, mainPayload.Value(Of String)(&quot;DocumentReferencesJson&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply InvoiceNumber" To="[mainRecord.InvoiceNumber]" Value="[If(mainPayload(&quot;InvoiceNumber&quot;) Is Nothing, mainRecord.InvoiceNumber, mainPayload.Value(Of String)(&quot;InvoiceNumber&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply AccountId" To="[mainRecord.AccountId]" Value="[If(mainPayload(&quot;AccountId&quot;) Is Nothing, mainRecord.AccountId, mainPayload.Value(Of String)(&quot;AccountId&quot;))]" />
+          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply SubmittedTotal" To="[mainRecord.SubmittedTotal]" Value="[If(mainPayload(&quot;SubmittedTotal&quot;) Is Nothing, mainRecord.SubmittedTotal, mainPayload.Value(Of Decimal)(&quot;SubmittedTotal&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply ProjectId" To="[mainRecord.ProjectId]" Value="[If(mainPayload(&quot;ProjectId&quot;) Is Nothing, mainRecord.ProjectId, mainPayload.Value(Of String)(&quot;ProjectId&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply ProcessInstanceId" To="[mainRecord.ProcessInstanceId]" Value="[If(mainPayload(&quot;ProcessInstanceId&quot;) Is Nothing, mainRecord.ProcessInstanceId, mainPayload.Value(Of String)(&quot;ProcessInstanceId&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply ProcessingStatus" To="[mainRecord.ProcessingStatus]" Value="[If(mainPayload(&quot;ProcessingStatus&quot;) Is Nothing, mainRecord.ProcessingStatus, mainPayload.Value(Of String)(&quot;ProcessingStatus&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply CorrelationId" To="[mainRecord.CorrelationId]" Value="[If(mainPayload(&quot;CorrelationId&quot;) Is Nothing, mainRecord.CorrelationId, mainPayload.Value(Of String)(&quot;CorrelationId&quot;))]" />
+          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply AdjustmentTotal" To="[mainRecord.AdjustmentTotal]" Value="[If(mainPayload(&quot;AdjustmentTotal&quot;) Is Nothing, mainRecord.AdjustmentTotal, mainPayload.Value(Of Decimal)(&quot;AdjustmentTotal&quot;))]" />
+          <Assign x:TypeArguments="x:Boolean" DisplayName="Apply AwaitingEvidence" To="[mainRecord.AwaitingEvidence]" Value="[If(mainPayload(&quot;AwaitingEvidence&quot;) Is Nothing, mainRecord.AwaitingEvidence, mainPayload.Value(Of Boolean)(&quot;AwaitingEvidence&quot;))]" />
+          <Assign x:TypeArguments="s:DateTime" DisplayName="Apply InvoiceDate" To="[mainRecord.InvoiceDate]" Value="[If(mainPayload(&quot;InvoiceDate&quot;) Is Nothing, mainRecord.InvoiceDate, mainPayload.Value(Of DateTime)(&quot;InvoiceDate&quot;))]" />
+          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply AnalysisVersion" To="[mainRecord.AnalysisVersion]" Value="[If(mainPayload(&quot;AnalysisVersion&quot;) Is Nothing, mainRecord.AnalysisVersion, mainPayload.Value(Of Decimal)(&quot;AnalysisVersion&quot;))]" />
+          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply PayableTotal" To="[mainRecord.PayableTotal]" Value="[If(mainPayload(&quot;PayableTotal&quot;) Is Nothing, mainRecord.PayableTotal, mainPayload.Value(Of Decimal)(&quot;PayableTotal&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply FindingsJson" To="[mainRecord.FindingsJson]" Value="[If(mainPayload(&quot;FindingsJson&quot;) Is Nothing, mainRecord.FindingsJson, mainPayload.Value(Of String)(&quot;FindingsJson&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply SupplierName" To="[mainRecord.SupplierName]" Value="[If(mainPayload(&quot;SupplierName&quot;) Is Nothing, mainRecord.SupplierName, mainPayload.Value(Of String)(&quot;SupplierName&quot;))]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Apply ContractProfileId" To="[mainRecord.ContractProfileId]" Value="[If(mainPayload(&quot;ContractProfileId&quot;) Is Nothing, mainRecord.ContractProfileId, mainPayload.Value(Of String)(&quot;ContractProfileId&quot;))]" />
+          <uda:UpdateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Update Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[New List(Of HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4) From { mainRecord }]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000" />
+          <uda:QueryEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueOnError="False" DisplayName="Query Entity Records for Invoice Lines" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" OutputRecords="[existingLines]" QueriedEntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ScopeValue="Folder" Skip="0" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" SortAscending="True" TimeoutInMs="30000" Top="1000">
+            <uda:QueryEntityRecords.FilterArguments>
+              <uda:FilterArgument FilterActivityType="{x:Null}">
+                <uda:FilterArgument.Filter>
+                  <uda:GroupFilter Index="0" Operator="AND">
+                    <uda:GroupFilter.Filters>
+                      <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="1">
+                        <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="InvoiceRecordId" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="0" />
+                      </scg:List>
+                    </uda:GroupFilter.Filters>
+                    <uda:GroupFilter.Groups>
+                      <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                    </uda:GroupFilter.Groups>
+                  </uda:GroupFilter>
+                </uda:FilterArgument.Filter>
+              </uda:FilterArgument>
+            </uda:QueryEntityRecords.FilterArguments>
+            <uda:QueryEntityRecords.FilterValues>
+              <scg:List x:TypeArguments="InArgument" Capacity="1">
+                <InArgument x:TypeArguments="x:String">[in_InvoiceRecordId]</InArgument>
+              </scg:List>
+            </uda:QueryEntityRecords.FilterValues>
+            <uda:QueryEntityRecords.RequiredForReadFieldNames>
+              <scg:List x:TypeArguments="x:String" Capacity="0" />
+            </uda:QueryEntityRecords.RequiredForReadFieldNames>
+          </uda:QueryEntityRecords>
+          <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Initialize Lines to Create" To="[linesToCreate]" Value="[New List(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)]" />
+          <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Initialize Lines to Update" To="[linesToUpdate]" Value="[New List(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)]" />
+          <ui:ForEach x:TypeArguments="njl:JToken" DisplayName="Upsert Line Records">
+            <ui:ForEach.Values>
+              <InArgument x:TypeArguments="sc:IEnumerable">[linePayload]</InArgument>
+            </ui:ForEach.Values>
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="njl:JToken">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="njl:JToken" Name="lineToken" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Upsert One Line">
+                  <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Deserialize Line Record" To="[lineRecord]" Value="[Newtonsoft.Json.JsonConvert.DeserializeObject(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)(lineToken.ToString)]" />
+                  <Assign x:TypeArguments="x:String" DisplayName="Set Line Invoice Id" To="[lineRecord.InvoiceRecordId]" Value="[in_InvoiceRecordId]" />
+                  <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Find Existing Line" To="[existingLine]" Value="[existingLines.FirstOrDefault(Function(candidate) candidate.InvoiceRecordId = in_InvoiceRecordId AndAlso candidate.ExternalRecordId = lineRecord.ExternalRecordId)]" />
+                  <If DisplayName="Create or Update Line" Condition="[existingLine Is Nothing]">
+                    <If.Then>
+                      <Sequence DisplayName="Create Line">
+                        <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Queue Missing Line" To="[linesToCreate]" Value="[linesToCreate.Concat(New HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() { lineRecord }).ToList]" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Update Line">
+                        <Assign x:TypeArguments="s:Guid" DisplayName="Preserve Line Record Id" To="[lineRecord.Id]" Value="[existingLine.Id]" />
+                        <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Queue Existing Line" To="[linesToUpdate]" Value="[linesToUpdate.Concat(New HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() { lineRecord }).ToList]" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+          </ui:ForEach>
+          <If DisplayName="Create Missing Line Records" Condition="[linesToCreate.Any]">
+            <If.Then>
+              <Sequence DisplayName="Create Line Batch">
+                <uda:CreateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Create Missing Line Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[linesToCreate]" OutputRecords="[createdLineRecords]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000" />
+                <Assign x:TypeArguments="x:Int32" DisplayName="Return Created Count" To="[out_CreatedCount]" Value="[createdLineRecords.Count]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <If DisplayName="Update Existing Line Records" Condition="[linesToUpdate.Any]">
+            <If.Then>
+              <Sequence DisplayName="Update Line Batch">
+                <uda:UpdateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Update Existing Line Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[linesToUpdate]" OutputRecords="[updatedLineRecords]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000" />
+                <Assign x:TypeArguments="x:Int32" DisplayName="Return Updated Count" To="[out_UpdatedCount]" Value="[updatedLineRecords.Count]" />
+              </Sequence>
+            </If.Then>
+          </If>
+          <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Deserialize Activity Record" To="[activityRecord]" Value="[Newtonsoft.Json.JsonConvert.DeserializeObject(Of HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4)(activityPayload.ToString)]" />
+          <uda:CreateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Append Activity Record" EntityId="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[New List(Of HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4) From { activityRecord }]" OutputRecords="[createdActivityRecords]" ScopeValue="Folder" SolutionEntityKey="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Activity" TimeoutInMs="30000" />
+          <Assign x:TypeArguments="x:String" DisplayName="Return Activity Record Id" To="[out_ActivityRecordId]" Value="[createdActivityRecords.First.Id.ToString]" />
+          <Assign x:TypeArguments="x:Boolean" DisplayName="Return Success" To="[out_Success]" Value="True" />
+          <Assign x:TypeArguments="x:String" DisplayName="Clear Error Code" To="[out_ErrorCode]" Value="[String.Empty]" />
+          <Assign x:TypeArguments="x:String" DisplayName="Clear Error Message" To="[out_ErrorMessage]" Value="[String.Empty]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Return Typed Failure">
+              <Assign x:TypeArguments="x:Boolean" DisplayName="Return Failure" To="[out_Success]" Value="False" />
+              <Assign x:TypeArguments="x:String" DisplayName="Classify Error" To="[out_ErrorCode]" Value="[If(exception.Message.StartsWith(&quot;DuplicateLineKey:&quot;), &quot;DuplicateLineKey&quot;, If(errorStage = &quot;MainLookup&quot;, &quot;MainNotFound&quot;, If(writesStarted, &quot;DataFabricWriteFailed&quot;, &quot;ValidationError&quot;)))]" />
+              <Assign x:TypeArguments="x:String" DisplayName="Return Safe Error" To="[out_ErrorMessage]" Value="[If(String.IsNullOrWhiteSpace(exception.Message), out_ErrorCode, exception.Message)]" />
+              <ui:LogMessage DisplayName="Log Persistence Failure" Level="Error" Message="[String.Format(&quot;Invoice persistence failed. CorrelationId={0}; Operation={1}; Code={2}&quot;, in_CorrelationId, in_Operation, out_ErrorCode)]" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

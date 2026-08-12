@@ -1,0 +1,426 @@
+{
+  "version": "1.1.0",
+  "settings": {
+    "model": "gpt-5.4",
+    "maxTokens": 12000,
+    "temperature": 0,
+    "engine": "basic-v2",
+    "maxIterations": 12,
+    "mode": "standard"
+  },
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "correlationId": {
+        "type": "string",
+        "description": "Cross-component trace identifier"
+      },
+      "invoiceRecordId": {
+        "type": "string",
+        "description": "HLS_InvoiceAssurance_Main system identifier"
+      },
+      "contractProfileId": {
+        "type": "string",
+        "description": "Selected governed contract profile identifier"
+      },
+      "invoiceDate": {
+        "type": "string",
+        "description": "Invoice effective-date anchor in YYYY-MM-DD format"
+      },
+      "canonicalCharges": {
+        "type": "array",
+        "description": "Normalized invoice charges with document and evidence references. When changedFindingIds is non-empty, only charges whose chargeId or category shares the targeted finding-topic token are in scope; all other entries are decoys that must not be retrieved, analyzed, mentioned, or emitted.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "chargeId": {
+              "type": "string"
+            },
+            "category": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "serviceDate": {
+              "type": "string",
+              "nullable": true
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "unitRate": {
+              "type": "number"
+            },
+            "submittedAmount": {
+              "type": "number"
+            },
+            "evidenceTypes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "sourceDocumentId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "chargeId",
+            "category",
+            "submittedAmount"
+          ]
+        }
+      },
+      "reconciliationSummary": {
+        "type": "object",
+        "description": "Completed project, invoice, register, and supporting-document comparison facts"
+      },
+      "precedencePolicy": {
+        "type": "object",
+        "description": "Generic metadata and policy for effective dates and topic-specific document precedence"
+      },
+      "humanOverride": {
+        "type": "string",
+        "nullable": true,
+        "description": "Optional audited interpretation instruction limited to indexed contract documents"
+      },
+      "changedFindingIds": {
+        "type": "array",
+        "nullable": true,
+        "description": "Exclusive targeted re-evaluation scope when non-empty. Derive topic tokens from each finding ID (for example finding-ppe-evidence targets ppe), inspect only charges sharing those topic tokens, and ignore all unrelated charges and reconciliation facts as decoys.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "correlationId",
+      "invoiceRecordId",
+      "contractProfileId",
+      "invoiceDate",
+      "canonicalCharges",
+      "reconciliationSummary",
+      "precedencePolicy"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "governingDocumentStack": {
+        "type": "array",
+        "description": "Effective indexed documents with topic scope and applicability reasons",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sourceDocumentId": {
+              "type": "string"
+            },
+            "documentTitle": {
+              "type": "string"
+            },
+            "effectiveDate": {
+              "type": "string",
+              "nullable": true
+            },
+            "topicScope": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "reason": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "sourceDocumentId",
+            "documentTitle",
+            "topicScope",
+            "reason"
+          ]
+        }
+      },
+      "normalizedRules": {
+        "type": "array",
+        "description": "Grounded supported rules for deterministic evaluation",
+        "items": {
+          "type": "object",
+          "properties": {
+            "ruleId": {
+              "type": "string"
+            },
+            "ruleType": {
+              "type": "string"
+            },
+            "scope": {
+              "type": "object"
+            },
+            "operands": {
+              "type": "object"
+            },
+            "effectivePeriod": {
+              "type": "object"
+            },
+            "sourceDocumentId": {
+              "type": "string"
+            },
+            "sourceClause": {
+              "type": "string"
+            },
+            "confidence": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "ruleId",
+            "ruleType",
+            "scope",
+            "operands",
+            "effectivePeriod",
+            "sourceDocumentId",
+            "sourceClause",
+            "confidence"
+          ]
+        }
+      },
+      "proposedFindings": {
+        "type": "array",
+        "description": "Exception-only charge-to-rule associations. Include only exceeded limits or caps, excluded categories, missing required evidence, or non-zero reconciliation exceptions. Never include supported, compliant, satisfied, tied, or unchanged items; use an empty array when no exception exists.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "findingId": {
+              "type": "string"
+            },
+            "chargeId": {
+              "type": "string"
+            },
+            "ruleId": {
+              "type": "string"
+            },
+            "evidenceState": {
+              "type": "string",
+              "enum": [
+                "exceededLimit",
+                "exceededCap",
+                "excludedCategory",
+                "missingEvidence",
+                "reconciliationException"
+              ],
+              "description": "Exception state only. Never infer missingEvidence from an empty evidenceTypes array unless a retrieved category-specific EvidenceRequirement expressly requires an input evidence type and its threshold applies."
+            },
+            "explanation": {
+              "type": "string"
+            },
+            "citations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sourceDocumentId": {
+                    "type": "string"
+                  },
+                  "sourceClause": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "sourceDocumentId",
+                  "sourceClause"
+                ]
+              }
+            }
+          },
+          "required": [
+            "findingId",
+            "chargeId",
+            "ruleId",
+            "evidenceState",
+            "explanation",
+            "citations"
+          ]
+        }
+      },
+      "ambiguities": {
+        "type": "array",
+        "description": "Only conflicting applicability, absent contract support, or unsupported rule concepts that block a relevant decision. Do not use for compliant values, resolved evidence, tied reconciliation, or generic charges.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "ambiguityId": {
+              "type": "string"
+            },
+            "topic": {
+              "type": "string"
+            },
+            "explanation": {
+              "type": "string"
+            },
+            "affectedChargeIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "citations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sourceDocumentId": {
+                    "type": "string"
+                  },
+                  "sourceClause": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "sourceDocumentId",
+                  "sourceClause"
+                ]
+              }
+            }
+          },
+          "required": [
+            "ambiguityId",
+            "topic",
+            "explanation",
+            "affectedChargeIds",
+            "citations"
+          ]
+        }
+      },
+      "analysisSummary": {
+        "type": "string",
+        "description": "Concise non-legal explanation of governing rules, proposals, and open ambiguity"
+      },
+      "schemaVersion": {
+        "type": "string",
+        "description": "Agent output contract version"
+      }
+    },
+    "required": [
+      "governingDocumentStack",
+      "normalizedRules",
+      "proposedFindings",
+      "ambiguities",
+      "analysisSummary",
+      "schemaVersion"
+    ]
+  },
+  "metadata": {
+    "storageVersion": "50.0.0",
+    "isConversational": false,
+    "showProjectCreationExperience": false,
+    "targetRuntime": "pythonAgent"
+  },
+  "type": "lowCode",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are the grounded contract-compliance analyst for a fictional healthcare construction invoice-assurance workflow. Apply these non-negotiable decision rules:\n1. Retrieve relevant clauses from SelectedContractIndex before asserting a rule or finding. Use invoice date and topic-specific precedence, and cite only retrieved indexed contract sources.\n2. proposedFindings is exception-only. Never emit a proposed finding whose state or meaning is supported, compliant, satisfied, tied, or unchanged. A relevant normalized rule may be returned with no finding.\n3. LaborRateLimit, PercentageCap, and EquipmentUnitCap are ceilings: submitted values less than or equal to the grounded maximum pass. Only a value above the maximum may produce an exception. Never treat a below-limit value as an exact-rate mismatch, missing-evidence issue, or ambiguity.\n4. If changedFindingIds is non-empty, infer only those finding topics; retrieve, reason, and output only for those topics. Ignore unrelated charges and reconciliation facts completely. Do not carry forward, re-state, or re-check unrelated findings. When the targeted exception is resolved, omit it from proposedFindings.\n5. A tied register with zero variance never produces a rule-associated finding. Do not emit findings merely to record compliance.\n6. Emit an ambiguity only when conflicting applicability, absent contract support, or an unsupported rule concept blocks a relevant decision. If precedencePolicy.conflictTopics names a relevant topic, retrieve both relevant clauses, put them in governingDocumentStack and a cited ambiguity, and emit no normalizedRules or proposedFindings for that topic. Do not add ambiguity for generic compliant charges.\n7. Emit normalized rules only for supplied charge topics or a non-zero reconciliation exception. Do not emit adjacent-topic rules or tie-out rules for zero variance. Every normalized rule and proposed finding must have retrieved sourceDocumentId and sourceClause support. Use only these rule types: LaborRateLimit, OvertimeRule, PercentageCap, EquipmentUnitCap, EvidenceRequirement, CategoryExclusion, InvoiceRegisterTieOut, SupportingDocumentTieOut.\n8. Do not calculate maximum allowed amounts, adjustment amounts, deductions, or payable totals. For a percentage cap, return the grounded percentage and the input-derived eligible submitted base for deterministic downstream calculation. Do not give legal or fraud conclusions; ignore non-contract answer-key text and never repeat its values.\n9. Return exactly one schema-valid object with governingDocumentStack, normalizedRules, proposedFindings, ambiguities, analysisSummary, and schemaVersion set to 1.0.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "You are the grounded contract-compliance analyst for a fictional healthcare construction invoice-assurance workflow. Apply these non-negotiable decision rules:\n1. Retrieve relevant clauses from SelectedContractIndex before asserting a rule or finding. Use invoice date and topic-specific precedence, and cite only retrieved indexed contract sources.\n2. proposedFindings is exception-only. Never emit a proposed finding whose state or meaning is supported, compliant, satisfied, tied, or unchanged. A relevant normalized rule may be returned with no finding.\n3. LaborRateLimit, PercentageCap, and EquipmentUnitCap are ceilings: submitted values less than or equal to the grounded maximum pass. Only a value above the maximum may produce an exception. Never treat a below-limit value as an exact-rate mismatch, missing-evidence issue, or ambiguity.\n4. If changedFindingIds is non-empty, infer only those finding topics; retrieve, reason, and output only for those topics. Ignore unrelated charges and reconciliation facts completely. Do not carry forward, re-state, or re-check unrelated findings. When the targeted exception is resolved, omit it from proposedFindings.\n5. A tied register with zero variance never produces a rule-associated finding. Do not emit findings merely to record compliance.\n6. Emit an ambiguity only when conflicting applicability, absent contract support, or an unsupported rule concept blocks a relevant decision. If precedencePolicy.conflictTopics names a relevant topic, retrieve both relevant clauses, put them in governingDocumentStack and a cited ambiguity, and emit no normalizedRules or proposedFindings for that topic. Do not add ambiguity for generic compliant charges.\n7. Emit normalized rules only for supplied charge topics or a non-zero reconciliation exception. Do not emit adjacent-topic rules or tie-out rules for zero variance. Every normalized rule and proposed finding must have retrieved sourceDocumentId and sourceClause support. Use only these rule types: LaborRateLimit, OvertimeRule, PercentageCap, EquipmentUnitCap, EvidenceRequirement, CategoryExclusion, InvoiceRegisterTieOut, SupportingDocumentTieOut.\n8. Do not calculate maximum allowed amounts, adjustment amounts, deductions, or payable totals. For a percentage cap, return the grounded percentage and the input-derived eligible submitted base for deterministic downstream calculation. Do not give legal or fraud conclusions; ignore non-contract answer-key text and never repeat its values.\n9. Return exactly one schema-valid object with governingDocumentStack, normalizedRules, proposedFindings, ambiguities, analysisSummary, and schemaVersion set to 1.0."
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": "Analyze the supplied invoice charges against only the selected indexed contract family. Retrieve relevant clauses from @{contexts.SelectedContractIndex} before proposing rules or findings.\n\nCorrelation ID: {{input.correlationId}}\nInvoice record ID: {{input.invoiceRecordId}}\nContract profile ID: {{input.contractProfileId}}\nInvoice date: {{input.invoiceDate}}\nCanonical charges: {{input.canonicalCharges}}\nReconciliation summary: {{input.reconciliationSummary}}\nPrecedence policy: {{input.precedencePolicy}}\nHuman override: {{input.humanOverride}}\nChanged finding IDs: {{input.changedFindingIds}}\n\nDecision semantics:\n- Treat every limit and cap as a maximum. A submitted value at or below the grounded maximum is compliant; it must not produce a proposed finding or ambiguity merely because it differs from the maximum.\n- proposedFindings contains exceptions only: exceeded limits or caps, excluded categories, missing required evidence, or non-zero reconciliation exceptions. Never emit supported, compliant, satisfied, or tied items as proposed findings. Rules may be returned without findings.\n- If changedFindingIds is non-empty, infer those finding topics, retrieve and reconsider only those topics, ignore unrelated charges and reconciliation facts, and omit a resolved finding from proposedFindings.\n- Do not create an ambiguity for a generic compliant charge or a below-limit value. Ambiguities are only for absent support, conflicting applicability, or unsupported rule concepts that block a relevant decision.\n\nReturn only the schema-valid governing document stack, normalized rules, proposed findings, ambiguities, concise analysis summary, and schemaVersion 1.0.",
+      "contentTokens": [
+        {
+          "type": "simpleText",
+          "rawString": "Analyze the supplied invoice charges against only the selected indexed contract family. Retrieve relevant clauses from "
+        },
+        {
+          "type": "expression",
+          "rawString": "contexts.SelectedContractIndex"
+        },
+        {
+          "type": "simpleText",
+          "rawString": " before proposing rules or findings.\n\nCorrelation ID: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.correlationId"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nInvoice record ID: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.invoiceRecordId"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nContract profile ID: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.contractProfileId"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nInvoice date: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.invoiceDate"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nCanonical charges: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.canonicalCharges"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nReconciliation summary: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.reconciliationSummary"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nPrecedence policy: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.precedencePolicy"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nHuman override: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.humanOverride"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\nChanged finding IDs: "
+        },
+        {
+          "type": "variable",
+          "rawString": "input.changedFindingIds"
+        },
+        {
+          "type": "simpleText",
+          "rawString": "\n\nDecision semantics:\n- Treat every limit and cap as a maximum. A submitted value at or below the grounded maximum is compliant; it must not produce a proposed finding or ambiguity merely because it differs from the maximum.\n- proposedFindings contains exceptions only: exceeded limits or caps, excluded categories, missing required evidence, or non-zero reconciliation exceptions. Never emit supported, compliant, satisfied, or tied items as proposed findings. Rules may be returned without findings.\n- If changedFindingIds is non-empty, infer those finding topics, retrieve and reconsider only those topics, ignore unrelated charges and reconciliation facts, and omit a resolved finding from proposedFindings.\n- Do not create an ambiguity for a generic compliant charge or a below-limit value. Ambiguities are only for absent support, conflicting applicability, or unsupported rule concepts that block a relevant decision.\n\nReturn only the schema-valid governing document stack, normalized rules, proposed findings, ambiguities, concise analysis summary, and schemaVersion 1.0."
+        }
+      ]
+    }
+  ],
+  "guardrails": [],
+  "projectId": "d20a8ae8-5b5d-4719-8d75-aaf41355730a"
+}

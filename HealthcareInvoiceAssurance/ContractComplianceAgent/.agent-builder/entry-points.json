@@ -1,0 +1,315 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "/content/agent.json",
+      "uniqueId": "433f465a-070e-456b-9307-a3f7d6dd6de9",
+      "type": "agent",
+      "input": {
+        "type": "object",
+        "properties": {
+          "correlationId": {
+            "type": "string",
+            "description": "Cross-component trace identifier"
+          },
+          "invoiceRecordId": {
+            "type": "string",
+            "description": "HLS_InvoiceAssurance_Main system identifier"
+          },
+          "contractProfileId": {
+            "type": "string",
+            "description": "Selected governed contract profile identifier"
+          },
+          "invoiceDate": {
+            "type": "string",
+            "description": "Invoice effective-date anchor in YYYY-MM-DD format"
+          },
+          "canonicalCharges": {
+            "type": "array",
+            "description": "Normalized invoice charges with document and evidence references. When changedFindingIds is non-empty, only charges whose chargeId or category shares the targeted finding-topic token are in scope; all other entries are decoys that must not be retrieved, analyzed, mentioned, or emitted.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "chargeId": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "serviceDate": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "quantity": {
+                  "type": "number"
+                },
+                "unit": {
+                  "type": "string"
+                },
+                "unitRate": {
+                  "type": "number"
+                },
+                "submittedAmount": {
+                  "type": "number"
+                },
+                "evidenceTypes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "sourceDocumentId": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "chargeId",
+                "category",
+                "submittedAmount"
+              ]
+            }
+          },
+          "reconciliationSummary": {
+            "type": "object",
+            "description": "Completed project, invoice, register, and supporting-document comparison facts"
+          },
+          "precedencePolicy": {
+            "type": "object",
+            "description": "Generic metadata and policy for effective dates and topic-specific document precedence"
+          },
+          "humanOverride": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional audited interpretation instruction limited to indexed contract documents"
+          },
+          "changedFindingIds": {
+            "type": "array",
+            "nullable": true,
+            "description": "Exclusive targeted re-evaluation scope when non-empty. Derive topic tokens from each finding ID (for example finding-ppe-evidence targets ppe), inspect only charges sharing those topic tokens, and ignore all unrelated charges and reconciliation facts as decoys.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "correlationId",
+          "invoiceRecordId",
+          "contractProfileId",
+          "invoiceDate",
+          "canonicalCharges",
+          "reconciliationSummary",
+          "precedencePolicy"
+        ]
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "governingDocumentStack": {
+            "type": "array",
+            "description": "Effective indexed documents with topic scope and applicability reasons",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sourceDocumentId": {
+                  "type": "string"
+                },
+                "documentTitle": {
+                  "type": "string"
+                },
+                "effectiveDate": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "topicScope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "reason": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "sourceDocumentId",
+                "documentTitle",
+                "topicScope",
+                "reason"
+              ]
+            }
+          },
+          "normalizedRules": {
+            "type": "array",
+            "description": "Grounded supported rules for deterministic evaluation",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ruleId": {
+                  "type": "string"
+                },
+                "ruleType": {
+                  "type": "string"
+                },
+                "scope": {
+                  "type": "object"
+                },
+                "operands": {
+                  "type": "object"
+                },
+                "effectivePeriod": {
+                  "type": "object"
+                },
+                "sourceDocumentId": {
+                  "type": "string"
+                },
+                "sourceClause": {
+                  "type": "string"
+                },
+                "confidence": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "ruleId",
+                "ruleType",
+                "scope",
+                "operands",
+                "effectivePeriod",
+                "sourceDocumentId",
+                "sourceClause",
+                "confidence"
+              ]
+            }
+          },
+          "proposedFindings": {
+            "type": "array",
+            "description": "Exception-only charge-to-rule associations. Include only exceeded limits or caps, excluded categories, missing required evidence, or non-zero reconciliation exceptions. Never include supported, compliant, satisfied, tied, or unchanged items; use an empty array when no exception exists.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "findingId": {
+                  "type": "string"
+                },
+                "chargeId": {
+                  "type": "string"
+                },
+                "ruleId": {
+                  "type": "string"
+                },
+                "evidenceState": {
+                  "type": "string",
+                  "enum": [
+                    "exceededLimit",
+                    "exceededCap",
+                    "excludedCategory",
+                    "missingEvidence",
+                    "reconciliationException"
+                  ],
+                  "description": "Exception state only. Never infer missingEvidence from an empty evidenceTypes array unless a retrieved category-specific EvidenceRequirement expressly requires an input evidence type and its threshold applies."
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "citations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sourceDocumentId": {
+                        "type": "string"
+                      },
+                      "sourceClause": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "sourceDocumentId",
+                      "sourceClause"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "findingId",
+                "chargeId",
+                "ruleId",
+                "evidenceState",
+                "explanation",
+                "citations"
+              ]
+            }
+          },
+          "ambiguities": {
+            "type": "array",
+            "description": "Only conflicting applicability, absent contract support, or unsupported rule concepts that block a relevant decision. Do not use for compliant values, resolved evidence, tied reconciliation, or generic charges.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "ambiguityId": {
+                  "type": "string"
+                },
+                "topic": {
+                  "type": "string"
+                },
+                "explanation": {
+                  "type": "string"
+                },
+                "affectedChargeIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "citations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sourceDocumentId": {
+                        "type": "string"
+                      },
+                      "sourceClause": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "sourceDocumentId",
+                      "sourceClause"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "ambiguityId",
+                "topic",
+                "explanation",
+                "affectedChargeIds",
+                "citations"
+              ]
+            }
+          },
+          "analysisSummary": {
+            "type": "string",
+            "description": "Concise non-legal explanation of governing rules, proposals, and open ambiguity"
+          },
+          "schemaVersion": {
+            "type": "string",
+            "description": "Agent output contract version"
+          }
+        },
+        "required": [
+          "governingDocumentStack",
+          "normalizedRules",
+          "proposedFindings",
+          "ambiguities",
+          "analysisSummary",
+          "schemaVersion"
+        ]
+      }
+    }
+  ]
+}

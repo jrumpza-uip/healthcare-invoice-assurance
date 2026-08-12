@@ -1,0 +1,42 @@
+{
+  "packRoot": "docs/Healthcare_Invoice_Assurance_Demo_Pack",
+  "runtimeSources": [
+    "01_Contract_Library/00_Contract_Library_Index.pdf",
+    "01_Contract_Library/01_Master_Construction_Services_Agreement.pdf",
+    "01_Contract_Library/02_Revised_and_Restated_Agreement.pdf",
+    "01_Contract_Library/03_Amendment_01_Labor_Rates.pdf",
+    "01_Contract_Library/04_Amendment_02_Equipment_Rates.pdf",
+    "01_Contract_Library/05_Amendment_03_Evidence_and_Eligibility.pdf",
+    "01_Contract_Library/06_July_2026_Project_Addendum.pdf",
+    "02_Invoice_Package/01_Northbridge_GC_Invoice_NBG-0726-01.pdf",
+    "02_Invoice_Package/02_Apex_Electrical_Invoice_AE-7742.pdf",
+    "02_Invoice_Package/03_Summit_Interiors_Invoice_SI-4421.pdf",
+    "03_Receipts_and_Support/01_Metro_Equipment_Rental_MER-2026-7741.pdf",
+    "03_Receipts_and_Support/02_Metro_Building_Supply_MBS-44192.pdf",
+    "03_Receipts_and_Support/03_Park_and_Pine_Bistro_PPB-99118.pdf",
+    "03_Receipts_and_Support/04_Summit_Interior_Supply_SIS-6107.pdf",
+    "03_Receipts_and_Support/05_July_2026_Cost_Register.pdf"
+  ],
+  "contractIndexSources": [
+    "01_Contract_Library/00_Contract_Library_Index.pdf",
+    "01_Contract_Library/01_Master_Construction_Services_Agreement.pdf",
+    "01_Contract_Library/02_Revised_and_Restated_Agreement.pdf",
+    "01_Contract_Library/03_Amendment_01_Labor_Rates.pdf",
+    "01_Contract_Library/04_Amendment_02_Equipment_Rates.pdf",
+    "01_Contract_Library/05_Amendment_03_Evidence_and_Eligibility.pdf",
+    "01_Contract_Library/06_July_2026_Project_Addendum.pdf"
+  ],
+  "ixpSources": [
+    "02_Invoice_Package/01_Northbridge_GC_Invoice_NBG-0726-01.pdf",
+    "02_Invoice_Package/02_Apex_Electrical_Invoice_AE-7742.pdf",
+    "02_Invoice_Package/03_Summit_Interiors_Invoice_SI-4421.pdf",
+    "03_Receipts_and_Support/01_Metro_Equipment_Rental_MER-2026-7741.pdf",
+    "03_Receipts_and_Support/02_Metro_Building_Supply_MBS-44192.pdf",
+    "03_Receipts_and_Support/03_Park_and_Pine_Bistro_PPB-99118.pdf",
+    "03_Receipts_and_Support/04_Summit_Interior_Supply_SIS-6107.pdf",
+    "03_Receipts_and_Support/05_July_2026_Cost_Register.pdf"
+  ],
+  "excludedSources": [
+    "04_Demo_Guide/Demo_Guide_and_Expected_Findings.pdf"
+  ]
+}

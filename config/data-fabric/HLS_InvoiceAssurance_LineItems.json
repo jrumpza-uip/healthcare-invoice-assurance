@@ -1,0 +1,25 @@
+{
+  "displayName": "Healthcare Invoice Assurance Line Items",
+  "description": "Current extracted, reconciled, and evaluated charge-line view for invoice-assurance packages.",
+  "fields": [
+    { "fieldName": "InvoiceRecordId", "type": "STRING", "isRequired": true, "lengthLimit": 36 },
+    { "fieldName": "SourceDocumentId", "type": "STRING", "isRequired": true, "lengthLimit": 200 },
+    { "fieldName": "SourceDocumentType", "type": "STRING", "isRequired": true, "lengthLimit": 80 },
+    { "fieldName": "Description", "type": "STRING", "isRequired": true, "lengthLimit": 1000 },
+    { "fieldName": "Category", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "Quantity", "type": "DECIMAL", "decimalPrecision": 4, "minValue": 0 },
+    { "fieldName": "Unit", "type": "STRING", "lengthLimit": 40 },
+    { "fieldName": "SubmittedRate", "type": "DECIMAL", "decimalPrecision": 4, "minValue": 0 },
+    { "fieldName": "SubmittedAmount", "type": "DECIMAL", "isRequired": true, "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "IxpConfidence", "type": "DECIMAL", "decimalPrecision": 4, "minValue": 0, "maxValue": 1 },
+    { "fieldName": "SourceCoordinatesJson", "type": "MULTILINE_TEXT", "lengthLimit": 10000 },
+    { "fieldName": "ExternalRecordId", "type": "STRING", "lengthLimit": 200 },
+    { "fieldName": "ExternalMatchStatus", "type": "STRING", "lengthLimit": 80 },
+    { "fieldName": "ExternalAmount", "type": "DECIMAL", "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "Variance", "type": "DECIMAL", "decimalPrecision": 2 },
+    { "fieldName": "AllowedAmount", "type": "DECIMAL", "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "Adjustment", "type": "DECIMAL", "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "EvaluationStatus", "type": "STRING", "isRequired": true, "defaultValue": "Pending", "lengthLimit": 80 },
+    { "fieldName": "AnalysisVersion", "type": "DECIMAL", "isRequired": true, "defaultValue": "1", "decimalPrecision": 0, "minValue": 1 }
+  ]
+}

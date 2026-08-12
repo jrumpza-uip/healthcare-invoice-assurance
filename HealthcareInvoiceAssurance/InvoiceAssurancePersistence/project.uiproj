@@ -1,0 +1,6 @@
+{
+  "Name": "InvoiceAssurancePersistence",
+  "ProjectType": "Process",
+  "Description": "Folder-scoped Data Fabric persistence adapter for Healthcare Invoice Assurance",
+  "MainFile": "Main.xaml"
+}

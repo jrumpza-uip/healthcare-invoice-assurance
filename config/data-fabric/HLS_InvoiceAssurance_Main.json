@@ -1,0 +1,23 @@
+{
+  "displayName": "Healthcare Invoice Assurance Main",
+  "description": "Current header, workflow state, and financial snapshot for one invoice-assurance package.",
+  "fields": [
+    { "fieldName": "CorrelationId", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "ProcessInstanceId", "type": "STRING", "lengthLimit": 100 },
+    { "fieldName": "InvoiceNumber", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "SupplierName", "type": "STRING", "isRequired": true, "lengthLimit": 200 },
+    { "fieldName": "InvoiceDate", "type": "DATE", "isRequired": true },
+    { "fieldName": "AccountId", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "ProjectId", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "ContractProfileId", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "ProcessingStatus", "type": "STRING", "isRequired": true, "lengthLimit": 80 },
+    { "fieldName": "SubmittedTotal", "type": "DECIMAL", "isRequired": true, "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "AdjustmentTotal", "type": "DECIMAL", "isRequired": true, "defaultValue": "0", "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "PayableTotal", "type": "DECIMAL", "isRequired": true, "defaultValue": "0", "decimalPrecision": 2, "minValue": 0 },
+    { "fieldName": "OpenFindingCount", "type": "DECIMAL", "isRequired": true, "defaultValue": "0", "decimalPrecision": 0, "minValue": 0 },
+    { "fieldName": "AwaitingEvidence", "type": "BOOLEAN", "isRequired": true, "defaultValue": "false" },
+    { "fieldName": "FindingsJson", "type": "MULTILINE_TEXT", "lengthLimit": 10000 },
+    { "fieldName": "DocumentReferencesJson", "type": "MULTILINE_TEXT", "isRequired": true, "lengthLimit": 10000 },
+    { "fieldName": "AnalysisVersion", "type": "DECIMAL", "isRequired": true, "defaultValue": "1", "decimalPrecision": 0, "minValue": 1 }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "ProjectCostLookupApi",
+    "kind": "process",
+    "type": "api",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "87f9ef68-824e-425d-b057-50c228f7a1ec",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "ProjectCostLookupApi"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Api",
+      "name": "ProjectCostLookupApi",
+      "package": {
+        "key": "c8aab9b1-b5d4-4340-a07f-82b1071621b8"
+      },
+      "packageName": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "8cb92544-1799-40af-91b2-6e2f3085fe69",
+    "files": []
+  }
+}

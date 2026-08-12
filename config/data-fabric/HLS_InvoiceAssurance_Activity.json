@@ -1,0 +1,14 @@
+{
+  "displayName": "Healthcare Invoice Assurance Activity",
+  "description": "Append-only timeline of automation and human events for invoice-assurance packages.",
+  "fields": [
+    { "fieldName": "InvoiceRecordId", "type": "STRING", "isRequired": true, "lengthLimit": 36 },
+    { "fieldName": "CorrelationId", "type": "STRING", "isRequired": true, "lengthLimit": 100 },
+    { "fieldName": "EventTimestamp", "type": "DATETIME_WITH_TZ", "isRequired": true },
+    { "fieldName": "EventName", "type": "STRING", "isRequired": true, "lengthLimit": 80 },
+    { "fieldName": "EventType", "type": "STRING", "isRequired": true, "lengthLimit": 80 },
+    { "fieldName": "EventSource", "type": "STRING", "isRequired": true, "lengthLimit": 200 },
+    { "fieldName": "Summary", "type": "STRING", "isRequired": true, "lengthLimit": 1000 },
+    { "fieldName": "PayloadJson", "type": "MULTILINE_TEXT", "lengthLimit": 10000 }
+  ]
+}

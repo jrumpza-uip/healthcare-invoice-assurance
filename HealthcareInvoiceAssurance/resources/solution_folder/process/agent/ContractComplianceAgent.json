@@ -1,0 +1,62 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "ContractComplianceAgent",
+    "kind": "process",
+    "type": "agent",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "8d0f28bd-b8df-4e55-b859-1c62743af736",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "ContractComplianceAgent"
+      }
+    ],
+    "runtimeDependencies": [
+      {
+        "bindingType": "index",
+        "bindingKey": "healthcare-invoice-assurance-contractsIndex",
+        "bindingValues": {
+          "name": {
+            "defaultValue": "healthcare-invoice-assurance-contractsIndex",
+            "isExpression": false
+          },
+          "folderPath": {
+            "defaultValue": "AMER Presales/HLS",
+            "isExpression": false
+          }
+        },
+        "bindingMetadata": {
+          "bindingsVersion": "2.2",
+          "solutionsSupport": "true"
+        },
+        "resourceKind": "Index",
+        "resourceKey": "5eaf632f-2960-4ea7-82eb-08def3f771f8",
+        "resourceName": "healthcare-invoice-assurance-contractsIndex",
+        "folderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239"
+      }
+    ],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Agent",
+      "name": "ContractComplianceAgent",
+      "package": {
+        "key": "993d50bd-ab74-4324-b33b-20e5bf6c30b5"
+      },
+      "packageName": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+      "targetFrameworkValue": "Portable",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "7147dad8-2ef2-4d99-9af6-bafbc4c24a91",
+    "files": []
+  }
+}

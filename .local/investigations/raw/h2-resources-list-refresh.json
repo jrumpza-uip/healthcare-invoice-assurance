@@ -1,0 +1,3579 @@
+{
+  "Result": "Success",
+  "Code": "ResourceList",
+  "Data": [
+    {
+      "Name": "CareerPaths",
+      "DisplayName": "CareerPaths",
+      "Path": "/CareerPaths",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "dhsHqAppsCalculator",
+      "DisplayName": "dhsHqAppsCalculator",
+      "Path": "/dhsHqAppsCalculator",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EventNotification",
+      "DisplayName": "EventNotification",
+      "Path": "/EventNotification",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UiLabsUser",
+      "DisplayName": "UiLabsUser",
+      "Path": "/UiLabsUser",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SkyTravelBookings",
+      "DisplayName": "SkyTravelBookings",
+      "Path": "/SkyTravelBookings",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2TemplateTestResult",
+      "DisplayName": "MRS2TemplateTestResult",
+      "Path": "/MRS2TemplateTestResult",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CPASUserInput",
+      "DisplayName": "CPASUserInput",
+      "Path": "/CPASUserInput",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "budgetApproval",
+      "DisplayName": "budgetApproval",
+      "Path": "/budgetApproval",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Customer",
+      "DisplayName": "Customer",
+      "Path": "/Customer",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CanaryEntity",
+      "DisplayName": "CanaryEntity",
+      "Path": "/CanaryEntity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PubSecBenefitsApplicants",
+      "DisplayName": "PubSecBenefitsApplicants",
+      "Path": "/PubSecBenefitsApplicants",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CDM",
+      "DisplayName": "CDM",
+      "Path": "/CDM",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MedicalDenialAuditLogsV2",
+      "DisplayName": "MedicalDenialAuditLogsV2",
+      "Path": "/MedicalDenialAuditLogsV2",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSTemplateTestResultOutput",
+      "DisplayName": "MRSTemplateTestResultOutput",
+      "Path": "/MRSTemplateTestResultOutput",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BTBCMv01",
+      "DisplayName": "BTBCMv01",
+      "Path": "/BTBCMv01",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CG4380ATemplate",
+      "DisplayName": "CG4380ATemplate",
+      "Path": "/CG4380ATemplate",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGWasteType",
+      "DisplayName": "ESGWasteType",
+      "Path": "/ESGWasteType",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Profiles",
+      "DisplayName": "Profiles",
+      "Path": "/Profiles",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EmployeeExpertise",
+      "DisplayName": "EmployeeExpertise",
+      "Path": "/EmployeeExpertise",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "VFormDD2875",
+      "DisplayName": "VFormDD2875",
+      "Path": "/VFormDD2875",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PaymemtApplication",
+      "DisplayName": "PaymemtApplication",
+      "Path": "/PaymemtApplication",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "QADecision",
+      "DisplayName": "QADecision",
+      "Path": "/QADecision",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PayerGroupDraftStateDemo",
+      "DisplayName": "PayerGroupDraftStateDemo",
+      "Path": "/PayerGroupDraftStateDemo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "snowflakeIntegration",
+      "DisplayName": "snowflakeIntegration",
+      "Path": "/snowflakeIntegration",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "APInvoice",
+      "DisplayName": "APInvoice",
+      "Path": "/APInvoice",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Employee",
+      "DisplayName": "Employee",
+      "Path": "/Employee",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGValueChainSubCtg",
+      "DisplayName": "ESGValueChainSubCtg",
+      "Path": "/ESGValueChainSubCtg",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "QueryEntityRecords_V3",
+      "DisplayName": "Query Entity Records (V3)",
+      "Path": "/v3/QueryEntityRecords/query",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RequestInformation",
+      "DisplayName": "RequestInformation",
+      "Path": "/RequestInformation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_Exception",
+      "DisplayName": "PLDQ_Exception",
+      "Path": "/PLDQ_Exception",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "QueryMultipleEntityRecords",
+      "DisplayName": "Query Multiple Entity Records",
+      "Path": "/targetEntity1/{primaryEntityName}/targetEntity2/{secondaryEntityName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SourcingCase",
+      "DisplayName": "SourcingCase",
+      "Path": "/SourcingCase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "apDashboardPage",
+      "DisplayName": "apDashboardPage",
+      "Path": "/apDashboardPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestDocument",
+      "DisplayName": "TestDocument",
+      "Path": "/TestDocument",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UploadFileToRecordField",
+      "DisplayName": "UploadFileToRecordField",
+      "Path": "/Attachment/{entityName}/{recordId}/{fieldName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSCustomStatus",
+      "DisplayName": "MRSCustomStatus",
+      "Path": "/MRSCustomStatus",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RFPResponseList",
+      "DisplayName": "RFPResponseList",
+      "Path": "/RFPResponseList",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2TemplateVersion",
+      "DisplayName": "MRS2TemplateVersion",
+      "Path": "/MRS2TemplateVersion",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "QueryEntityRecords",
+      "DisplayName": "Query Entity Records (Deprecated)",
+      "Path": "/{objectName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDataEmissions",
+      "DisplayName": "ESGDataEmissions",
+      "Path": "/ESGDataEmissions",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "QueryEntityRecordsCurated",
+      "DisplayName": "Query Entity Records",
+      "Path": "/v2/{entityName}/qer",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSPacketSamples",
+      "DisplayName": "MRSPacketSamples",
+      "Path": "/MRSPacketSamples",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2TemplateReviewer",
+      "DisplayName": "MRS2TemplateReviewer",
+      "Path": "/MRS2TemplateReviewer",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "cabankproduct",
+      "DisplayName": "cabankproduct",
+      "Path": "/cabankproduct",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ExpenseApps",
+      "DisplayName": "ExpenseApps",
+      "Path": "/ExpenseApps",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionAutoLead",
+      "DisplayName": "DSFProvisionAutoLead",
+      "Path": "/DSFProvisionAutoLead",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Email",
+      "DisplayName": "Email",
+      "Path": "/Email",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGModeOfTransport",
+      "DisplayName": "ESGModeOfTransport",
+      "Path": "/ESGModeOfTransport",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "OrderDetails",
+      "DisplayName": "OrderDetails",
+      "Path": "/OrderDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "rjctest01",
+      "DisplayName": "rjctest01",
+      "Path": "/rjctest01",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSTemplateInitialPrompts",
+      "DisplayName": "MRSTemplateInitialPrompts",
+      "Path": "/MRSTemplateInitialPrompts",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FinBank",
+      "DisplayName": "FinBank",
+      "Path": "/FinBank",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UpdateEntityRecord",
+      "DisplayName": "Update Entity Record - /{objectName}/{id}",
+      "Path": "/{objectName}/{id}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360EvvVisit",
+      "DisplayName": "PI360EvvVisit",
+      "Path": "/PI360EvvVisit",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EntityTriggers_V3",
+      "DisplayName": "Entity Triggers V3",
+      "Path": "/EntityTriggers_V3",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "deploymentAvailabilityDashboar",
+      "DisplayName": "deploymentAvailabilityDashboar",
+      "Path": "/deploymentAvailabilityDashboar",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteFileFromRecordField",
+      "DisplayName": "DeleteFileFromRecordField",
+      "Path": "/Attachment/{entityName}/{recordId}/{fieldName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "customHtmlContent",
+      "DisplayName": "customHtmlContent",
+      "Path": "/customHtmlContent",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AOCSTRTickets",
+      "DisplayName": "AOCSTRTickets",
+      "Path": "/AOCSTRTickets",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MENJCollegePOCDisciplines",
+      "DisplayName": "MENJCollegePOCDisciplines",
+      "Path": "/MENJCollegePOCDisciplines",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GreatEasternLifeQuotationRequest",
+      "DisplayName": "GreatEasternLifeQuotationRequest",
+      "Path": "/GreatEasternLifeQuotationRequest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_ControlRun",
+      "DisplayName": "PLDQ_ControlRun",
+      "Path": "/PLDQ_ControlRun",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDataSource",
+      "DisplayName": "ESGDataSource",
+      "Path": "/ESGDataSource",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ssTQLCarriedIDLookup",
+      "DisplayName": "ssTQLCarriedIDLookup",
+      "Path": "/ssTQLCarriedIDLookup",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BAAWContracts",
+      "DisplayName": "BAAWContracts",
+      "Path": "/BAAWContracts",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "APInvoiceLineItem",
+      "DisplayName": "APInvoiceLineItem",
+      "Path": "/APInvoiceLineItem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GetEntityRecordByIdCurated",
+      "DisplayName": "Get Entity Record by ID - /v2/{entityName}/GetEntityRecord",
+      "Path": "/v2/{entityName}/GetEntityRecord",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestDataService",
+      "DisplayName": "TestDataService",
+      "Path": "/TestDataService",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitCandidates",
+      "DisplayName": "RecruitCandidates",
+      "Path": "/RecruitCandidates",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2ManualBatchFile",
+      "DisplayName": "MRS2ManualBatchFile",
+      "Path": "/MRS2ManualBatchFile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CustomerTicket",
+      "DisplayName": "CustomerTicket",
+      "Path": "/CustomerTicket",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2TemplateInitialPrompts",
+      "DisplayName": "MRS2TemplateInitialPrompts",
+      "Path": "/MRS2TemplateInitialPrompts",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSApplicationConfig",
+      "DisplayName": "MRSApplicationConfig",
+      "Path": "/MRSApplicationConfig",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsRestaurantDataRD",
+      "DisplayName": "HealthBrandsRestaurantDataRD",
+      "Path": "/HealthBrandsRestaurantDataRD",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AMSNewUsers",
+      "DisplayName": "AMSNewUsers",
+      "Path": "/AMSNewUsers",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SerialNumber",
+      "DisplayName": "SerialNumber",
+      "Path": "/SerialNumber",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2Output",
+      "DisplayName": "MRS2Output",
+      "Path": "/MRS2Output",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GrantApplications",
+      "DisplayName": "GrantApplications",
+      "Path": "/GrantApplications",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "vendorOnboarding",
+      "DisplayName": "vendorOnboarding",
+      "Path": "/vendorOnboarding",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "snowflaketest",
+      "DisplayName": "snowflaketest",
+      "Path": "/snowflaketest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360Attendant",
+      "DisplayName": "PI360Attendant",
+      "Path": "/PI360Attendant",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "validationApp",
+      "DisplayName": "validationApp",
+      "Path": "/validationApp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MENJCollegePOCEDT",
+      "DisplayName": "MENJCollegePOCEDT",
+      "Path": "/MENJCollegePOCEDT",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2Template",
+      "DisplayName": "MRS2Template",
+      "Path": "/MRS2Template",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360InvestigationAction",
+      "DisplayName": "PI360InvestigationAction",
+      "Path": "/PI360InvestigationAction",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2ApplicationConfig",
+      "DisplayName": "MRS2ApplicationConfig",
+      "Path": "/MRS2ApplicationConfig",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BCtest",
+      "DisplayName": "BCtest",
+      "Path": "/BCtest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeliveryPackaging",
+      "DisplayName": "DeliveryPackaging",
+      "Path": "/DeliveryPackaging",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsRestaurantData",
+      "DisplayName": "HealthBrandsRestaurantData",
+      "Path": "/HealthBrandsRestaurantData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSFeedbackInsights",
+      "DisplayName": "MRSFeedbackInsights",
+      "Path": "/MRSFeedbackInsights",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UpdateEntityRecord_V3",
+      "DisplayName": "Update Entity Record (V3)",
+      "Path": "/v3/UpdateEntityRecord/update",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CCMTest",
+      "DisplayName": "CCMTest",
+      "Path": "/CCMTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EmailAttachment",
+      "DisplayName": "EmailAttachment",
+      "Path": "/EmailAttachment",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SEtoPostSalesHandoff",
+      "DisplayName": "SEtoPostSalesHandoff",
+      "Path": "/SEtoPostSalesHandoff",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CreateEntityRecord",
+      "DisplayName": "Create Entity Record - /{objectName}",
+      "Path": "/{objectName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "customReports",
+      "DisplayName": "customReports",
+      "Path": "/customReports",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GreatEasternProductList",
+      "DisplayName": "GreatEasternProductList",
+      "Path": "/GreatEasternProductList",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "LegalRevisor",
+      "DisplayName": "LegalRevisor",
+      "Path": "/LegalRevisor",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_ExtractedEvidence",
+      "DisplayName": "PLDQ_ExtractedEvidence",
+      "Path": "/PLDQ_ExtractedEvidence",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitIDCard",
+      "DisplayName": "RecruitIDCard",
+      "Path": "/RecruitIDCard",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "doctorAppPage",
+      "DisplayName": "doctorAppPage",
+      "Path": "/doctorAppPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CRFCorp2025BusinessPage",
+      "DisplayName": "CRFCorp2025BusinessPage",
+      "Path": "/CRFCorp2025BusinessPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Delivery",
+      "DisplayName": "Delivery",
+      "Path": "/Delivery",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "generalForm1",
+      "DisplayName": "generalForm1",
+      "Path": "/generalForm1",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "changeImpactAnalysis",
+      "DisplayName": "changeImpactAnalysis",
+      "Path": "/changeImpactAnalysis",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_Loan",
+      "DisplayName": "PLDQ_Loan",
+      "Path": "/PLDQ_Loan",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsUserData",
+      "DisplayName": "HealthBrandsUserData",
+      "Path": "/HealthBrandsUserData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestA",
+      "DisplayName": "TestA",
+      "Path": "/TestA",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Loans",
+      "DisplayName": "Loans",
+      "Path": "/Loans",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGValueChainCategory",
+      "DisplayName": "ESGValueChainCategory",
+      "Path": "/ESGValueChainCategory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "forgottenPasswordForm",
+      "DisplayName": "forgottenPasswordForm",
+      "Path": "/forgottenPasswordForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Policies",
+      "DisplayName": "Policies",
+      "Path": "/Policies",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitDocMetadata",
+      "DisplayName": "RecruitDocMetadata",
+      "Path": "/RecruitDocMetadata",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "IngestionState",
+      "DisplayName": "IngestionState",
+      "Path": "/IngestionState",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "calocationcity",
+      "DisplayName": "calocationcity",
+      "Path": "/calocationcity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CSPitchClaims",
+      "DisplayName": "CSPitchClaims",
+      "Path": "/CSPitchClaims",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteFileFromRecordField_V3",
+      "DisplayName": "Delete File from Record Field (V3)",
+      "Path": "/v3/DeleteFileFromRecordField/delete",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EventRemoval",
+      "DisplayName": "EventRemoval",
+      "Path": "/EventRemoval",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ssTQLLoadInfoLookUp",
+      "DisplayName": "ssTQLLoadInfoLookUp",
+      "Path": "/ssTQLLoadInfoLookUp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "actionAppAlert",
+      "DisplayName": "actionAppAlert",
+      "Path": "/actionAppAlert",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestB",
+      "DisplayName": "TestB",
+      "Path": "/TestB",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "documentUnderstandingApp",
+      "DisplayName": "documentUnderstandingApp",
+      "Path": "/documentUnderstandingApp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TreatmentPlanProblem",
+      "DisplayName": "TreatmentPlanProblem",
+      "Path": "/TreatmentPlanProblem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CreateEntityRecord_V3",
+      "DisplayName": "Create Entity Record (V3)",
+      "Path": "/v3/CreateEntityRecord/insert",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UiLabsSandboxDetails",
+      "DisplayName": "UiLabsSandboxDetails",
+      "Path": "/UiLabsSandboxDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EmployeeData",
+      "DisplayName": "EmployeeData",
+      "Path": "/EmployeeData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TreatmentPlanReview",
+      "DisplayName": "TreatmentPlanReview",
+      "Path": "/TreatmentPlanReview",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Evaluations",
+      "DisplayName": "Evaluations",
+      "Path": "/Evaluations",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "volunteerTemplate",
+      "DisplayName": "volunteerTemplate",
+      "Path": "/volunteerTemplate",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "userDetails",
+      "DisplayName": "userDetails",
+      "Path": "/userDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CSPitchExistingPolicies",
+      "DisplayName": "CSPitchExistingPolicies",
+      "Path": "/CSPitchExistingPolicies",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DemoEmployeeDetails",
+      "DisplayName": "DemoEmployeeDetails",
+      "Path": "/DemoEmployeeDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "demoLandingApp",
+      "DisplayName": "demoLandingApp",
+      "Path": "/demoLandingApp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "JDAutoClaim",
+      "DisplayName": "JDAutoClaim",
+      "Path": "/JDAutoClaim",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGBusinessTravel",
+      "DisplayName": "ESGBusinessTravel",
+      "Path": "/ESGBusinessTravel",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "VAEFaxDocumentLedger",
+      "DisplayName": "VAEFaxDocumentLedger",
+      "Path": "/VAEFaxDocumentLedger",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BCBSMUserProfile",
+      "DisplayName": "BCBSMUserProfile",
+      "Path": "/BCBSMUserProfile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CMFHostnames",
+      "DisplayName": "CMFHostnames",
+      "Path": "/CMFHostnames",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BurstAppUsers",
+      "DisplayName": "BurstAppUsers",
+      "Path": "/BurstAppUsers",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BenefitClaimsCase",
+      "DisplayName": "BenefitClaimsCase",
+      "Path": "/BenefitClaimsCase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteEntityRecord_V3",
+      "DisplayName": "Delete Entity Record (V3)",
+      "Path": "/v3/DeleteEntityRecord/delete",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "OnboardingTask",
+      "DisplayName": "OnboardingTask",
+      "Path": "/OnboardingTask",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "salesInventoryDashboard",
+      "DisplayName": "salesInventoryDashboard",
+      "Path": "/salesInventoryDashboard",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "loanApplicationForm",
+      "DisplayName": "loanApplicationForm",
+      "Path": "/loanApplicationForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DownloadFileFromRecordFieldV2",
+      "DisplayName": "Download File from Record Field",
+      "Path": "/v2/Attachment/{entityName}/DownloadFile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AACompany",
+      "DisplayName": "AACompany",
+      "Path": "/AACompany",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ProductA",
+      "DisplayName": "ProductA",
+      "Path": "/ProductA",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionRunItLive",
+      "DisplayName": "DSFProvisionRunItLive",
+      "Path": "/DSFProvisionRunItLive",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSAssignmentHistory",
+      "DisplayName": "MRSAssignmentHistory",
+      "Path": "/MRSAssignmentHistory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSWorkflow",
+      "DisplayName": "MRSWorkflow",
+      "Path": "/MRSWorkflow",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "USDINRexchangeRate",
+      "DisplayName": "USDINRexchangeRate",
+      "Path": "/USDINRexchangeRate",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DownloadFileFromRecordField",
+      "DisplayName": "DownloadFileFromRecordField",
+      "Path": "/Attachment/{entityName}/{recordId}/{fieldName}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "contactForm1",
+      "DisplayName": "contactForm1",
+      "Path": "/contactForm1",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "studentLoanApplicationForm",
+      "DisplayName": "studentLoanApplicationForm",
+      "Path": "/studentLoanApplicationForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSManualBatch",
+      "DisplayName": "MRSManualBatch",
+      "Path": "/MRSManualBatch",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TOCITInput",
+      "DisplayName": "TOCITInput",
+      "Path": "/TOCITInput",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Grants",
+      "DisplayName": "Grants",
+      "Path": "/Grants",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ChildWelfareCases",
+      "DisplayName": "ChildWelfareCases",
+      "Path": "/ChildWelfareCases",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "deaTranscript",
+      "DisplayName": "deaTranscript",
+      "Path": "/deaTranscript",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SourcingReviewEvent",
+      "DisplayName": "SourcingReviewEvent",
+      "Path": "/SourcingReviewEvent",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "capabilityNeedSection",
+      "DisplayName": "capabilityNeedSection",
+      "Path": "/capabilityNeedSection",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "entity",
+      "DisplayName": "entity",
+      "Path": "/entity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSExternalFileReference",
+      "DisplayName": "MRSExternalFileReference",
+      "Path": "/MRSExternalFileReference",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TemplateVersion",
+      "DisplayName": "TemplateVersion",
+      "Path": "/TemplateVersion",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360ProgramIntegrityCase",
+      "DisplayName": "PI360ProgramIntegrityCase",
+      "Path": "/PI360ProgramIntegrityCase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestCB",
+      "DisplayName": "TestCB",
+      "Path": "/TestCB",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CorporateInfo",
+      "DisplayName": "CorporateInfo",
+      "Path": "/CorporateInfo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UploadFileToRecordFieldV2",
+      "DisplayName": "Upload File to Record Field",
+      "Path": "/v2/Attachment/{entityName}/UploadFile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ServiceNowEntity",
+      "DisplayName": "ServiceNowEntity",
+      "Path": "/ServiceNowEntity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "utilityBillDashboard",
+      "DisplayName": "utilityBillDashboard",
+      "Path": "/utilityBillDashboard",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "generalForm",
+      "DisplayName": "generalForm",
+      "Path": "/generalForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "KanbanBoardDocument",
+      "DisplayName": "KanbanBoardDocument",
+      "Path": "/KanbanBoardDocument",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DemoDFAgent",
+      "DisplayName": "DemoDFAgent",
+      "Path": "/DemoDFAgent",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGUnitOfMeasurement",
+      "DisplayName": "ESGUnitOfMeasurement",
+      "Path": "/ESGUnitOfMeasurement",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UiLabsTemplateType",
+      "DisplayName": "UiLabsTemplateType",
+      "Path": "/UiLabsTemplateType",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "passportData",
+      "DisplayName": "passportData",
+      "Path": "/passportData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionCLevel",
+      "DisplayName": "DSFProvisionCLevel",
+      "Path": "/DSFProvisionCLevel",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PurchaseOrders",
+      "DisplayName": "PurchaseOrders",
+      "Path": "/PurchaseOrders",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360Claim",
+      "DisplayName": "PI360Claim",
+      "Path": "/PI360Claim",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ITTicketHistory",
+      "DisplayName": "ITTicketHistory",
+      "Path": "/ITTicketHistory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2ManualBatch",
+      "DisplayName": "MRS2ManualBatch",
+      "Path": "/MRS2ManualBatch",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "entity3",
+      "DisplayName": "entity3",
+      "Path": "/entity3",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGEnergyConsumptionC",
+      "DisplayName": "ESGEnergyConsumptionC",
+      "Path": "/ESGEnergyConsumptionC",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "entity1",
+      "DisplayName": "entity1",
+      "Path": "/entity1",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CustomerRecord",
+      "DisplayName": "CustomerRecord",
+      "Path": "/CustomerRecord",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "entity2",
+      "DisplayName": "entity2",
+      "Path": "/entity2",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SAPNewUsers",
+      "DisplayName": "SAPNewUsers",
+      "Path": "/SAPNewUsers",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "migrationConfigurationPage",
+      "DisplayName": "migrationConfigurationPage",
+      "Path": "/migrationConfigurationPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SalesforceCases",
+      "DisplayName": "SalesforceCases",
+      "Path": "/SalesforceCases",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "JDPropertyInsuranceCase",
+      "DisplayName": "JDPropertyInsuranceCase",
+      "Path": "/JDPropertyInsuranceCase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BCBSOMData4",
+      "DisplayName": "BCBSOMData4",
+      "Path": "/BCBSOMData4",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGWasteDiversionSite",
+      "DisplayName": "ESGWasteDiversionSite",
+      "Path": "/ESGWasteDiversionSite",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "calocationcountry",
+      "DisplayName": "calocationcountry",
+      "Path": "/calocationcountry",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SalesforceAccounts",
+      "DisplayName": "SalesforceAccounts",
+      "Path": "/SalesforceAccounts",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecordOwner",
+      "DisplayName": "RecordOwner",
+      "Path": "/RecordOwner",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "design-entity-dataservicestable"
+    },
+    {
+      "Name": "GetEntityRecord_V3",
+      "DisplayName": "Get Entity Record by ID (V3)",
+      "Path": "/v3/GetEntityRecord/read",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "processingMessage",
+      "DisplayName": "processingMessage",
+      "Path": "/processingMessage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGWasteDiversionType",
+      "DisplayName": "ESGWasteDiversionType",
+      "Path": "/ESGWasteDiversionType",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestDS",
+      "DisplayName": "TestDS",
+      "Path": "/TestDS",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PanamaCompra",
+      "DisplayName": "PanamaCompra",
+      "Path": "/PanamaCompra",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "APInvoices",
+      "DisplayName": "APInvoices",
+      "Path": "/APInvoices",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "KDRMicronTest",
+      "DisplayName": "KDRMicronTest",
+      "Path": "/KDRMicronTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestTrainingTestdata",
+      "DisplayName": "TestTrainingTestdata",
+      "Path": "/TestTrainingTestdata",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SearchIndex",
+      "DisplayName": "SearchIndex",
+      "Path": "/SearchIndex",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSIngestionSource",
+      "DisplayName": "MRSIngestionSource",
+      "Path": "/MRSIngestionSource",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HomeClaims",
+      "DisplayName": "HomeClaims",
+      "Path": "/HomeClaims",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DecisionModels",
+      "DisplayName": "DecisionModels",
+      "Path": "/DecisionModels",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "saarDocumentReview",
+      "DisplayName": "saarDocumentReview",
+      "Path": "/saarDocumentReview",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AAEmployee",
+      "DisplayName": "AAEmployee",
+      "Path": "/AAEmployee",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "markdownForm",
+      "DisplayName": "markdownForm",
+      "Path": "/markdownForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PDFmeeting",
+      "DisplayName": "PDFmeeting",
+      "Path": "/PDFmeeting",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Series",
+      "DisplayName": "Series",
+      "Path": "/Series",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DemoHTSClassification",
+      "DisplayName": "DemoHTSClassification",
+      "Path": "/DemoHTSClassification",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TicketsTest",
+      "DisplayName": "TicketsTest",
+      "Path": "/TicketsTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TargetInvestigation",
+      "DisplayName": "TargetInvestigation",
+      "Path": "/TargetInvestigation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGScopeType",
+      "DisplayName": "ESGScopeType",
+      "Path": "/ESGScopeType",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BambooHRData",
+      "DisplayName": "BambooHRData",
+      "Path": "/BambooHRData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "patientRegistrationForm",
+      "DisplayName": "patientRegistrationForm",
+      "Path": "/patientRegistrationForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Department",
+      "DisplayName": "Department",
+      "Path": "/Department",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MENJCollegePOCHours",
+      "DisplayName": "MENJCollegePOCHours",
+      "Path": "/MENJCollegePOCHours",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UsersDB",
+      "DisplayName": "UsersDB",
+      "Path": "/UsersDB",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ResidentialLeaseAgreement",
+      "DisplayName": "ResidentialLeaseAgreement",
+      "Path": "/ResidentialLeaseAgreement",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "JuvenileCaseManagement",
+      "DisplayName": "JuvenileCaseManagement",
+      "Path": "/JuvenileCaseManagement",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "VAContractCloseout",
+      "DisplayName": "VAContractCloseout",
+      "Path": "/VAContractCloseout",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionIssues",
+      "DisplayName": "DSFProvisionIssues",
+      "Path": "/DSFProvisionIssues",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGCurrency",
+      "DisplayName": "ESGCurrency",
+      "Path": "/ESGCurrency",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PaymentApplicationItem",
+      "DisplayName": "PaymentApplicationItem",
+      "Path": "/PaymentApplicationItem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CABankLocations",
+      "DisplayName": "CABankLocations",
+      "Path": "/CABankLocations",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AMDVendorCertificateDetails",
+      "DisplayName": "AMDVendorCertificateDetails",
+      "Path": "/AMDVendorCertificateDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MBTraining",
+      "DisplayName": "MBTraining",
+      "Path": "/MBTraining",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FinancialAuditGS",
+      "DisplayName": "FinancialAuditGS",
+      "Path": "/FinancialAuditGS",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ServiceRequest",
+      "DisplayName": "ServiceRequest",
+      "Path": "/ServiceRequest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TrackingDetailsTable",
+      "DisplayName": "TrackingDetailsTable",
+      "Path": "/TrackingDetailsTable",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TOCITDEMO",
+      "DisplayName": "TOCITDEMO",
+      "Path": "/TOCITDEMO",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UploadFileToRecordField_V3",
+      "DisplayName": "Upload File to Record Field (V3)",
+      "Path": "/v3/UploadFileToRecordField/upload",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MenuDay",
+      "DisplayName": "MenuDay",
+      "Path": "/MenuDay",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RFPRequirementList",
+      "DisplayName": "RFPRequirementList",
+      "Path": "/RFPRequirementList",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsRestaurantDataAG",
+      "DisplayName": "HealthBrandsRestaurantDataAG",
+      "Path": "/HealthBrandsRestaurantDataAG",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "travelVoucherSubmission",
+      "DisplayName": "travelVoucherSubmission",
+      "Path": "/travelVoucherSubmission",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitActivities",
+      "DisplayName": "RecruitActivities",
+      "Path": "/RecruitActivities",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ProbeSummary",
+      "DisplayName": "ProbeSummary",
+      "Path": "/ProbeSummary",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UILPMAHJIRASTATUSMAP",
+      "DisplayName": "UILPMAHJIRASTATUSMAP",
+      "Path": "/UILPMAHJIRASTATUSMAP",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "actionAppPage",
+      "DisplayName": "actionAppPage",
+      "Path": "/actionAppPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SHTDSAILTDemo",
+      "DisplayName": "SHTDSAILTDemo",
+      "Path": "/SHTDSAILTDemo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CitizenInvestigation",
+      "DisplayName": "CitizenInvestigation",
+      "Path": "/CitizenInvestigation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CreateEntityRecordCurated",
+      "DisplayName": "Create Entity Record - /v2/{entityName}/CreateEntityRecord",
+      "Path": "/v2/{entityName}/CreateEntityRecord",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "StateCity",
+      "DisplayName": "StateCity",
+      "Path": "/StateCity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MedicalDenialV2",
+      "DisplayName": "MedicalDenialV2",
+      "Path": "/MedicalDenialV2",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionTech",
+      "DisplayName": "DSFProvisionTech",
+      "Path": "/DSFProvisionTech",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DoDInvoices",
+      "DisplayName": "DoDInvoices",
+      "Path": "/DoDInvoices",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "NYCDDCDemo",
+      "DisplayName": "NYCDDCDemo",
+      "Path": "/NYCDDCDemo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FlipInvoices",
+      "DisplayName": "FlipInvoices",
+      "Path": "/FlipInvoices",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "editSpeakersForm",
+      "DisplayName": "editSpeakersForm",
+      "Path": "/editSpeakersForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DLADataService",
+      "DisplayName": "DLADataService",
+      "Path": "/DLADataService",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSTemplate",
+      "DisplayName": "MRSTemplate",
+      "Path": "/MRSTemplate",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDataWaste",
+      "DisplayName": "ESGDataWaste",
+      "Path": "/ESGDataWaste",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CPASUserInputLLMTest",
+      "DisplayName": "CPASUserInputLLMTest",
+      "Path": "/CPASUserInputLLMTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FileAttachment",
+      "DisplayName": "FileAttachment",
+      "Path": "/FileAttachment",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "demoentity",
+      "DisplayName": "demoentity",
+      "Path": "/demoentity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PayerGroupAuditEventDemo",
+      "DisplayName": "PayerGroupAuditEventDemo",
+      "Path": "/PayerGroupAuditEventDemo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AppUser",
+      "DisplayName": "AppUser",
+      "Path": "/AppUser",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "IndustrySaarForm",
+      "DisplayName": "IndustrySaarForm",
+      "Path": "/IndustrySaarForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HollardAccountDemo",
+      "DisplayName": "HollardAccountDemo",
+      "Path": "/HollardAccountDemo",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PatientData",
+      "DisplayName": "PatientData",
+      "Path": "/PatientData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Tickets",
+      "DisplayName": "Tickets",
+      "Path": "/Tickets",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "BCBSOUserProfile",
+      "DisplayName": "BCBSOUserProfile",
+      "Path": "/BCBSOUserProfile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsConsolidatedDataRD",
+      "DisplayName": "HealthBrandsConsolidatedDataRD",
+      "Path": "/HealthBrandsConsolidatedDataRD",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_Portfolio",
+      "DisplayName": "PLDQ_Portfolio",
+      "Path": "/PLDQ_Portfolio",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UiLabsTemplateGroup",
+      "DisplayName": "UiLabsTemplateGroup",
+      "Path": "/UiLabsTemplateGroup",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestMaestroTrigger",
+      "DisplayName": "TestMaestroTrigger",
+      "Path": "/TestMaestroTrigger",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "formDesign",
+      "DisplayName": "formDesign",
+      "Path": "/formDesign",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthcareUsers",
+      "DisplayName": "HealthcareUsers",
+      "Path": "/HealthcareUsers",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "transformationReviewApp",
+      "DisplayName": "transformationReviewApp",
+      "Path": "/transformationReviewApp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TestUploadAttachmentMaestro",
+      "DisplayName": "TestUploadAttachmentMaestro",
+      "Path": "/TestUploadAttachmentMaestro",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "jobApplicationForm",
+      "DisplayName": "jobApplicationForm",
+      "Path": "/jobApplicationForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CustomerAttachment",
+      "DisplayName": "CustomerAttachment",
+      "Path": "/CustomerAttachment",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "accountsPayableDashboard",
+      "DisplayName": "accountsPayableDashboard",
+      "Path": "/accountsPayableDashboard",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CampusSurveyUserBase",
+      "DisplayName": "CampusSurveyUserBase",
+      "Path": "/CampusSurveyUserBase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FNOLHighLevel",
+      "DisplayName": "FNOLHighLevel",
+      "Path": "/FNOLHighLevel",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "JuvenileCaseEvents",
+      "DisplayName": "JuvenileCaseEvents",
+      "Path": "/JuvenileCaseEvents",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DownloadFileFromRecordField_V3",
+      "DisplayName": "Download File from Record Field (V3)",
+      "Path": "/v3/DownloadFileFromRecordField/download",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2IngestionFile",
+      "DisplayName": "MRS2IngestionFile",
+      "Path": "/MRS2IngestionFile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "datesForm",
+      "DisplayName": "datesForm",
+      "Path": "/datesForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UploadForm",
+      "DisplayName": "UploadForm",
+      "Path": "/UploadForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionUiTech",
+      "DisplayName": "DSFProvisionUiTech",
+      "Path": "/DSFProvisionUiTech",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsEmployeeData",
+      "DisplayName": "HealthBrandsEmployeeData",
+      "Path": "/HealthBrandsEmployeeData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGEmissionsSource",
+      "DisplayName": "ESGEmissionsSource",
+      "Path": "/ESGEmissionsSource",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EYDigitalTwinProcess",
+      "DisplayName": "EYDigitalTwinProcess",
+      "Path": "/EYDigitalTwinProcess",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2OutputAssignment",
+      "DisplayName": "MRS2OutputAssignment",
+      "Path": "/MRS2OutputAssignment",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "applicationForm1",
+      "DisplayName": "applicationForm1",
+      "Path": "/applicationForm1",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_ControlDefinition",
+      "DisplayName": "PLDQ_ControlDefinition",
+      "Path": "/PLDQ_ControlDefinition",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "meetingFormPage",
+      "DisplayName": "meetingFormPage",
+      "Path": "/meetingFormPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Treatments",
+      "DisplayName": "Treatments",
+      "Path": "/Treatments",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360Provider",
+      "DisplayName": "PI360Provider",
+      "Path": "/PI360Provider",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MenuItem",
+      "DisplayName": "MenuItem",
+      "Path": "/MenuItem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "actionCenterTask",
+      "DisplayName": "actionCenterTask",
+      "Path": "/actionCenterTask",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "documentReview",
+      "DisplayName": "documentReview",
+      "Path": "/documentReview",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "dhsHqAppsOrgs",
+      "DisplayName": "dhsHqAppsOrgs",
+      "Path": "/dhsHqAppsOrgs",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "chatInterface",
+      "DisplayName": "chatInterface",
+      "Path": "/chatInterface",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_ReviewDecision",
+      "DisplayName": "PLDQ_ReviewDecision",
+      "Path": "/PLDQ_ReviewDecision",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_LoanPackage",
+      "DisplayName": "PLDQ_LoanPackage",
+      "Path": "/PLDQ_LoanPackage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AMSUSERID",
+      "DisplayName": "AMSUSERID",
+      "Path": "/AMSUSERID",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Sellerprofile",
+      "DisplayName": "Sellerprofile",
+      "Path": "/Sellerprofile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "HealthBrandsFullData",
+      "DisplayName": "HealthBrandsFullData",
+      "Path": "/HealthBrandsFullData",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "passportDetails",
+      "DisplayName": "passportDetails",
+      "Path": "/passportDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "temporaryPage",
+      "DisplayName": "temporaryPage",
+      "Path": "/temporaryPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "LaptopRequestEntity",
+      "DisplayName": "LaptopRequestEntity",
+      "Path": "/LaptopRequestEntity",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MedicalDenialIngest",
+      "DisplayName": "MedicalDenialIngest",
+      "Path": "/MedicalDenialIngest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDataEnergy",
+      "DisplayName": "ESGDataEnergy",
+      "Path": "/ESGDataEnergy",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "biggerStrongerBetterTogether",
+      "DisplayName": "biggerStrongerBetterTogether",
+      "Path": "/biggerStrongerBetterTogether",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2PacketSamples",
+      "DisplayName": "MRS2PacketSamples",
+      "Path": "/MRS2PacketSamples",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDataInformation",
+      "DisplayName": "ESGDataInformation",
+      "Path": "/ESGDataInformation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteFileFromRecordFieldV2",
+      "DisplayName": "Delete File from Record Field",
+      "Path": "/v2/Attachment/{entityName}/DeleteFile",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "uploadDocuments",
+      "DisplayName": "uploadDocuments",
+      "Path": "/uploadDocuments",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PackingListLineitem",
+      "DisplayName": "PackingListLineitem",
+      "Path": "/PackingListLineitem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "userInformation",
+      "DisplayName": "userInformation",
+      "Path": "/userInformation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Complaints",
+      "DisplayName": "Complaints",
+      "Path": "/Complaints",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "temperatureApp",
+      "DisplayName": "temperatureApp",
+      "Path": "/temperatureApp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MachinesIncidentSpecs",
+      "DisplayName": "MachinesIncidentSpecs",
+      "Path": "/MachinesIncidentSpecs",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AOHROApplicantInformation",
+      "DisplayName": "AOHROApplicantInformation",
+      "Path": "/AOHROApplicantInformation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "uipathDocumentUnderstandingDem",
+      "DisplayName": "uipathDocumentUnderstandingDem",
+      "Path": "/uipathDocumentUnderstandingDem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AWPMdatabase",
+      "DisplayName": "AWPMdatabase",
+      "Path": "/AWPMdatabase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SKUs",
+      "DisplayName": "SKUs",
+      "Path": "/SKUs",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionResources",
+      "DisplayName": "DSFProvisionResources",
+      "Path": "/DSFProvisionResources",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "VAICN",
+      "DisplayName": "VAICN",
+      "Path": "/VAICN",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AuditEntry",
+      "DisplayName": "AuditEntry",
+      "Path": "/AuditEntry",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "imageUploadForm",
+      "DisplayName": "imageUploadForm",
+      "Path": "/imageUploadForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MedicalDenialV2Prevention",
+      "DisplayName": "MedicalDenialV2Prevention",
+      "Path": "/MedicalDenialV2Prevention",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PdfPackets",
+      "DisplayName": "PdfPackets",
+      "Path": "/PdfPackets",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRSOutput",
+      "DisplayName": "MRSOutput",
+      "Path": "/MRSOutput",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "onboardingELearningPage",
+      "DisplayName": "onboardingELearningPage",
+      "Path": "/onboardingELearningPage",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "NewFeaturesMaestro",
+      "DisplayName": "NewFeaturesMaestro",
+      "Path": "/NewFeaturesMaestro",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PabloIRDS",
+      "DisplayName": "PabloIRDS",
+      "Path": "/PabloIRDS",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360EvidenceDocument",
+      "DisplayName": "PI360EvidenceDocument",
+      "Path": "/PI360EvidenceDocument",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "pdfToDocConverter",
+      "DisplayName": "pdfToDocConverter",
+      "Path": "/pdfToDocConverter",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "codingagentsautoclaim",
+      "DisplayName": "codingagentsautoclaim",
+      "Path": "/codingagentsautoclaim",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GreatEasternLifeQuotationDocument",
+      "DisplayName": "GreatEasternLifeQuotationDocument",
+      "Path": "/GreatEasternLifeQuotationDocument",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SourcingSectionStatus",
+      "DisplayName": "SourcingSectionStatus",
+      "Path": "/SourcingSectionStatus",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitDocuments",
+      "DisplayName": "RecruitDocuments",
+      "Path": "/RecruitDocuments",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "workshopRegistration",
+      "DisplayName": "workshopRegistration",
+      "Path": "/workshopRegistration",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteEntityRecord",
+      "DisplayName": "Delete Entity Record - /{objectName}/{id}",
+      "Path": "/{objectName}/{id}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "contactForm",
+      "DisplayName": "contactForm",
+      "Path": "/contactForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "questionSubmissionForm",
+      "DisplayName": "questionSubmissionForm",
+      "Path": "/questionSubmissionForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGDownstreamActCtg",
+      "DisplayName": "ESGDownstreamActCtg",
+      "Path": "/ESGDownstreamActCtg",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "volunteerTemplate1",
+      "DisplayName": "volunteerTemplate1",
+      "Path": "/volunteerTemplate1",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGEmissionsSubSActTy",
+      "DisplayName": "ESGEmissionsSubSActTy",
+      "Path": "/ESGEmissionsSubSActTy",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PLDQ_Document",
+      "DisplayName": "PLDQ_Document",
+      "Path": "/PLDQ_Document",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "RecruitDegree",
+      "DisplayName": "RecruitDegree",
+      "Path": "/RecruitDegree",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UpdateEntityRecordV2",
+      "DisplayName": "Update Entity Record - /v2/{entityName}/UpdateEntityRecord",
+      "Path": "/v2/{entityName}/UpdateEntityRecord",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGGHGEmissionsType",
+      "DisplayName": "ESGGHGEmissionsType",
+      "Path": "/ESGGHGEmissionsType",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AMDAuditLog",
+      "DisplayName": "AMDAuditLog",
+      "Path": "/AMDAuditLog",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGMetricUoMMapping",
+      "DisplayName": "ESGMetricUoMMapping",
+      "Path": "/ESGMetricUoMMapping",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EventTest",
+      "DisplayName": "EventTest",
+      "Path": "/EventTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "SupportTicketPriority",
+      "DisplayName": "SupportTicketPriority",
+      "Path": "/SupportTicketPriority",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ssTQLPayment",
+      "DisplayName": "ssTQLPayment",
+      "Path": "/ssTQLPayment",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TAO",
+      "DisplayName": "TAO",
+      "Path": "/TAO",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "IndependenceDropDown",
+      "DisplayName": "IndependenceDropDown",
+      "Path": "/IndependenceDropDown",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGEmissionsSubSource",
+      "DisplayName": "ESGEmissionsSubSource",
+      "Path": "/ESGEmissionsSubSource",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "GetEntityRecordById",
+      "DisplayName": "Get Entity Record by ID - /{objectName}/{id}",
+      "Path": "/{objectName}/{id}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PackingList",
+      "DisplayName": "PackingList",
+      "Path": "/PackingList",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "applicationForm",
+      "DisplayName": "applicationForm",
+      "Path": "/applicationForm",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGMetricCategory",
+      "DisplayName": "ESGMetricCategory",
+      "Path": "/ESGMetricCategory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MedicalDenialFeedbackV2",
+      "DisplayName": "MedicalDenialFeedbackV2",
+      "Path": "/MedicalDenialFeedbackV2",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AXATransactionTable",
+      "DisplayName": "AXATransactionTable",
+      "Path": "/AXATransactionTable",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360Decision",
+      "DisplayName": "PI360Decision",
+      "Path": "/PI360Decision",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Tasks",
+      "DisplayName": "Tasks",
+      "Path": "/Tasks",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "invoiceValidationStation",
+      "DisplayName": "invoiceValidationStation",
+      "Path": "/invoiceValidationStation",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DownloadSystemFile",
+      "DisplayName": "DownloadSystemFile",
+      "Path": "/file/{fileId}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGWasteOperationsTyp",
+      "DisplayName": "ESGWasteOperationsTyp",
+      "Path": "/ESGWasteOperationsTyp",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DataIngestionRuns",
+      "DisplayName": "DataIngestionRuns",
+      "Path": "/DataIngestionRuns",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "LoanerKitPrefCards",
+      "DisplayName": "LoanerKitPrefCards",
+      "Path": "/LoanerKitPrefCards",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "InvoiceMatt",
+      "DisplayName": "InvoiceMatt",
+      "Path": "/InvoiceMatt",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DeleteEntityRecordCurated",
+      "DisplayName": "Delete Entity Record - /v2/{entityName}/DeleteEntityRecord",
+      "Path": "/v2/{entityName}/DeleteEntityRecord",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "FOIAPII",
+      "DisplayName": "FOIAPII",
+      "Path": "/FOIAPII",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2IngestionState",
+      "DisplayName": "MRS2IngestionState",
+      "Path": "/MRS2IngestionState",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2IngestionSource",
+      "DisplayName": "MRS2IngestionSource",
+      "Path": "/MRS2IngestionSource",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Invice",
+      "DisplayName": "Invice",
+      "Path": "/Invice",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "InsuranceCRM",
+      "DisplayName": "InsuranceCRM",
+      "Path": "/InsuranceCRM",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MRS2AssignmentHistory",
+      "DisplayName": "MRS2AssignmentHistory",
+      "Path": "/MRS2AssignmentHistory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "MenuAdmin",
+      "DisplayName": "MenuAdmin",
+      "Path": "/MenuAdmin",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "PI360RiskSignal",
+      "DisplayName": "PI360RiskSignal",
+      "Path": "/PI360RiskSignal",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DSFProvisionTechAud",
+      "DisplayName": "DSFProvisionTechAud",
+      "Path": "/DSFProvisionTechAud",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGEnergySoldCategory",
+      "DisplayName": "ESGEnergySoldCategory",
+      "Path": "/ESGEnergySoldCategory",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "poSystem",
+      "DisplayName": "poSystem",
+      "Path": "/poSystem",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "LinkedInFinley",
+      "DisplayName": "LinkedInFinley",
+      "Path": "/LinkedInFinley",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "UploadSystemFile",
+      "DisplayName": "UploadSystemFile",
+      "Path": "/file/{collectionIdentifier}",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "no",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "CABANKLEADS",
+      "DisplayName": "CABANKLEADS",
+      "Path": "/CABANKLEADS",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "DoDInvLineItems",
+      "DisplayName": "DoDInvLineItems",
+      "Path": "/DoDInvLineItems",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "TESTCB2",
+      "DisplayName": "TESTCB2",
+      "Path": "/TESTCB2",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "clientOnboarding",
+      "DisplayName": "clientOnboarding",
+      "Path": "/clientOnboarding",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "EmployeeDataTest",
+      "DisplayName": "EmployeeDataTest",
+      "Path": "/EmployeeDataTest",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "ESGUpstreamActivityCt",
+      "DisplayName": "ESGUpstreamActivityCt",
+      "Path": "/ESGUpstreamActivityCt",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "createAndFindCampaigns",
+      "DisplayName": "createAndFindCampaigns",
+      "Path": "/createAndFindCampaigns",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "InventoryDetails",
+      "DisplayName": "InventoryDetails",
+      "Path": "/InventoryDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "AgenticWorkflowDataBase",
+      "DisplayName": "AgenticWorkflowDataBase",
+      "Path": "/AgenticWorkflowDataBase",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "Bloodtests",
+      "DisplayName": "Bloodtests",
+      "Path": "/Bloodtests",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    },
+    {
+      "Name": "memberDetails",
+      "DisplayName": "memberDetails",
+      "Path": "/memberDetails",
+      "Type": "standard",
+      "SubType": "standard",
+      "Custom": "yes",
+      "ElementKey": "uipath-uipath-dataservice"
+    }
+  ]
+}

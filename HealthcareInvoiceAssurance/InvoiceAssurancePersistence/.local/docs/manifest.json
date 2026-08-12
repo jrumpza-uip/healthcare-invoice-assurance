@@ -1,0 +1,5 @@
+{
+  "UiPath.DataService.Activities": "26.4.5-preview",
+  "UiPath.System.Activities": "26.6.2",
+  "UiPath.WebAPI.Activities": "2.5.2"
+}

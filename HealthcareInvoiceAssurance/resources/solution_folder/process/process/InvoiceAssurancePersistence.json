@@ -1,0 +1,45 @@
+{
+  "docVersion": "1.0.0",
+  "resource": {
+    "name": "InvoiceAssurancePersistence",
+    "kind": "process",
+    "type": "process",
+    "apiVersion": "orchestrator.uipath.com/v1",
+    "projectKey": "195cca7e-da3a-4dfe-9844-a9f4a142fb8e",
+    "isOverridable": true,
+    "dependencies": [
+      {
+        "kind": "package",
+        "name": "InvoiceAssurancePersistence"
+      }
+    ],
+    "runtimeDependencies": [],
+    "folders": [
+      {
+        "fullyQualifiedName": "solution_folder"
+      }
+    ],
+    "spec": {
+      "type": "Process",
+      "name": "InvoiceAssurancePersistence",
+      "package": {
+        "key": "291b7762-0b5f-49eb-9f5f-6af603887c9c"
+      },
+      "packageName": "HealthcareInvoiceAssurance.process.InvoiceAssurancePersistence",
+      "jobPriority": "Medium",
+      "jobRecording": "Disabled",
+      "targetFrameworkValue": "Portable",
+      "duration": 40,
+      "frequency": 500,
+      "quality": 100,
+      "remoteControlAccess": "None",
+      "retentionAction": "Delete",
+      "retentionPeriod": 30,
+      "staleRetentionAction": "Delete",
+      "staleRetentionPeriod": 180
+    },
+    "locks": [],
+    "key": "b6bc029e-188f-4f7b-85ef-fb8e2895fe50",
+    "files": []
+  }
+}

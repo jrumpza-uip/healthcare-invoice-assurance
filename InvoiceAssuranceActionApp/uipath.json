@@ -1,0 +1,8 @@
+{
+  "scope": "OR.Buckets DataFabric.Schema.Read DataFabric.Data.Read",
+  "clientId": "57201488-1566-4f9b-a696-1b3773c2af33",
+  "orgName": "uipathlabs",
+  "tenantName": "Playground",
+  "baseUrl": "https://api.uipath.com",
+  "redirectUri": ""
+}
