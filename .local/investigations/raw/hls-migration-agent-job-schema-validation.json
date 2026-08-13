@@ -1,0 +1,7 @@
+{
+  "schema": "HealthcareInvoiceAssurance/ContractComplianceAgent/agent.json#/outputSchema",
+  "output": ".local/investigations/raw/hls-migration-agent-job-output.json",
+  "valid": true,
+  "errorCount": 0,
+  "errors": []
+}

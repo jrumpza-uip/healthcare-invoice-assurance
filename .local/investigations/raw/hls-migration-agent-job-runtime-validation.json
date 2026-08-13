@@ -1,0 +1,49 @@
+{
+  "input": {
+    "sourceEvaluation": "A-01-canonical-grounded-analysis",
+    "exactEqualToPersistedJobInput": false,
+    "equalAfterTopLevelNullPrune": true,
+    "platformPrunedNullFields": [
+      "humanOverride",
+      "changedFindingIds"
+    ]
+  },
+  "job": {
+    "key": "8dc4d66c-37b7-4a93-adee-e88387e70ada",
+    "state": "Successful",
+    "process": "ContractComplianceAgent",
+    "processType": "Agent",
+    "targetRuntime": "pythonAgent",
+    "runtimeType": "Serverless",
+    "serverlessJobType": "PythonAgent",
+    "folderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+    "reference": "HLS-MIGRATION-AGENT-A01",
+    "traceId": "11e40708-a1d4-4321-9e2c-74fdf1e9395e",
+    "startTime": "2026-08-13T19:05:01.093Z",
+    "endTime": "2026-08-13T19:05:23.003Z"
+  },
+  "output": {
+    "schemaValid": true,
+    "schemaErrorCount": 0,
+    "schemaVersion": "1.0",
+    "governingDocumentCount": 5,
+    "normalizedRuleCount": 7,
+    "proposedFindingCount": 6,
+    "ambiguityCount": 0,
+    "everyRuleHasCitation": true,
+    "everyFindingHasCitation": true,
+    "governingDocuments": [
+      "02_Revised_and_Restated_Agreement.pdf",
+      "03_Amendment_01_Labor_Rates.pdf",
+      "04_Amendment_02_Equipment_Rates.pdf",
+      "05_Amendment_03_Evidence_and_Eligibility.pdf"
+    ]
+  },
+  "grounding": {
+    "selectedContractIndexSuccessfulSpanCount": 2,
+    "exactHlsIndexLookupHttp200Count": 1,
+    "exactHlsIndexSearchHttp200Count": 1,
+    "errorLogCount": 0,
+    "missingIndexOrResourceErrorCount": 0
+  }
+}

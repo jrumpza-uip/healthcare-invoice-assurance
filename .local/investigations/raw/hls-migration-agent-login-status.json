@@ -1,0 +1,14 @@
+{
+  "Result": "Success",
+  "Code": "LoginStatus",
+  "Data": {
+    "Status": "Logged in",
+    "Provider": "File",
+    "BaseUrl": "https://cloud.uipath.com",
+    "Organization": "uipathlabs",
+    "OrganizationId": "a17c9af1-091d-4dd2-9cec-ed787c6601c8",
+    "Tenant": "Playground",
+    "TenantId": "15eb07e5-edfb-4fcc-9229-7681ff056ff0",
+    "ExpirationDate": "2026-08-13T18:56:01.000Z"
+  }
+}

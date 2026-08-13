@@ -1,0 +1,262 @@
+{
+  "Result": "Success",
+  "Code": "JobLogs",
+  "Pagination": {
+    "Returned": 50,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": true
+  },
+  "Data": [
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.863Z",
+      "Message": "Transmission succeeded: Item received: 14. Items accepted: 14"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.787Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.609Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.577Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Warn",
+      "TimeStamp": "2026-08-13T19:05:22.544Z",
+      "Message": "Calling end() on an ended span."
+    },
+    {
+      "Level": "Warn",
+      "TimeStamp": "2026-08-13T19:05:22.544Z",
+      "Message": "Calling end() on an ended span."
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.542Z",
+      "Message": "_track_event completed for: AgentRun.End"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.542Z",
+      "Message": "track_event called: AgentRun.End, properties: {'Status': 'Completed', 'ErrorMessage': '', 'AgentName': 'ContractComplianceAgent', 'AgentId': 'd20a8ae8-5b5d-4719-8d75-aaf41355730a', 'DurationMs': 20290, 'TraceId': '75d7ac7dd545df528cc2d31640adbf02', 'AgentRunId': '3d71a6cf-287b-4a00-b542-4e8d3d737303', 'Model': 'gpt-5.4', 'MaxTokens': '12000', 'Temperature': '0.0', 'Engine': 'basic-v2', 'MaxIterations': '12', 'IsConversational': 'False', 'AgentVersion': '1.1.0', 'Mode': 'standard', 'AgentRunSource': 'runtime', 'ApplicationName': 'UiPath.AgentService', 'Runtime': 'URT', 'UiPathAgentsPackageVersion': '198.3.0', 'CloudOrganizationId': 'a17c9af1-091d-4dd2-9cec-ed787c6601c8', 'CloudTenantId': '15eb07e5-edfb-4fcc-9229-7681ff056ff0', 'JobId': '8dc4d66c-37b7-4a93-adee-e88387e70ada', 'CloudUserId': 'f28fa8ea-4bf0-4e52-9cf9-957f7979719a', 'AgentType': 'LowCode', 'FolderKey': '79d872b0-bee1-4264-a6de-3e780f4e4239', 'JobKey': '8dc4d66c-37b7-4a93-adee-e88387e70ada', 'ProcessUuid': '11a6efba-5201-4cc5-bd97-01d760ec872f', 'ProcessVersion': '1.0.2', 'ImageVersion': '26.1.0-s198.11189-ccd9df-f200f6'}"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.523Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/operation/end \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.461Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/transaction/end \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Warn",
+      "TimeStamp": "2026-08-13T19:05:22.388Z",
+      "Message": "Deserializing unregistered type uipath_langchain.agent.react.types.InnerAgentGraphState from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('uipath_langchain.agent.react.types', 'InnerAgentGraphState')]"
+    },
+    {
+      "Level": "Warn",
+      "TimeStamp": "2026-08-13T19:05:22.388Z",
+      "Message": "Deserializing unregistered type jsonschema_pydantic_converter._type_converters.DynamicEnum from checkpoint. This will be blocked in a future version. Set LANGGRAPH_STRICT_MSGPACK=true to block now, or add to allowed_msgpack_modules to allow explicitly: [('jsonschema_pydantic_converter._type_converters', 'DynamicEnum')]"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.344Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.331Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:22.267Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agenthub_/llm/raw/vendor/openai/model/gpt-5.4/completions \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:11.908Z",
+      "Message": "Transmission succeeded: Item received: 14. Items accepted: 14"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.942Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/operation/start \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.942Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/operation/end \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.939Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.885Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.883Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.854Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.849Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.817Z",
+      "Message": "Transmission succeeded: Item received: 22. Items accepted: 22"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.804Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/ecs_/v1.2/search/5eaf632f-2960-4ea7-82eb-08def3f771f8 \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:06.075Z",
+      "Message": "HTTP Request: GET https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/ecs_/v2/indexes?%24filter=Name+eq+%27healthcare-invoice-assurance-contractsIndex%27&%24expand=dataSource \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.822Z",
+      "Message": "No resource overwrite matched for index key='index.healthcare-invoice-assurance-contractsIndex' on unified_search_async"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.822Z",
+      "Message": "No resource overwrite matched for index key='index.healthcare-invoice-assurance-contractsIndex' on retrieve_async"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.815Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.777Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.710Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.645Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:05.210Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agenthub_/llm/raw/vendor/openai/model/gpt-5.4/completions \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:03.075Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agenthub_/llm/api/execution-cost-tmp?modelName=gpt-5.4 \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.895Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/operation/start \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.894Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/automationtracker_/track/transaction/start \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.652Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.614Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.515Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=CodedAgents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.411Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/llmopstenant_/api/Traces/v3/spans?traceId=11e40708a1d443219e2c74fdf1e9395e&source=Agents \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.260Z",
+      "Message": "_track_event completed for: AgentRun.Start"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.259Z",
+      "Message": "track_event called: AgentRun.Start, properties: {'AgentName': 'ContractComplianceAgent', 'AgentId': 'd20a8ae8-5b5d-4719-8d75-aaf41355730a', 'TraceId': '75d7ac7dd545df528cc2d31640adbf02', 'AgentRunId': '3d71a6cf-287b-4a00-b542-4e8d3d737303', 'Model': 'gpt-5.4', 'MaxTokens': '12000', 'Temperature': '0.0', 'Engine': 'basic-v2', 'MaxIterations': '12', 'IsConversational': 'False', 'AgentVersion': '1.1.0', 'Mode': 'standard', 'AgentRunSource': 'runtime', 'ApplicationName': 'UiPath.AgentService', 'Runtime': 'URT', 'UiPathAgentsPackageVersion': '198.3.0', 'CloudOrganizationId': 'a17c9af1-091d-4dd2-9cec-ed787c6601c8', 'CloudTenantId': '15eb07e5-edfb-4fcc-9229-7681ff056ff0', 'JobId': '8dc4d66c-37b7-4a93-adee-e88387e70ada', 'CloudUserId': 'f28fa8ea-4bf0-4e52-9cf9-957f7979719a', 'AgentType': 'LowCode', 'FolderKey': '79d872b0-bee1-4264-a6de-3e780f4e4239', 'JobKey': '8dc4d66c-37b7-4a93-adee-e88387e70ada', 'ProcessUuid': '11a6efba-5201-4cc5-bd97-01d760ec872f', 'ProcessVersion': '1.0.2', 'ImageVersion': '26.1.0-s198.11189-ccd9df-f200f6'}"
+    },
+    {
+      "Level": "Warn",
+      "TimeStamp": "2026-08-13T19:05:02.257Z",
+      "Message": "'id' field not present in uipath.json"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.236Z",
+      "Message": "LicensedRuntime initialized: model='gpt-5.4', is_conversational=False, is_resume=False, licensing_context=None"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.143Z",
+      "Message": "Creating tools for agent 'ContractComplianceAgent' from resources"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.143Z",
+      "Message": "RunAsMe decision: is_conversational=False, is_user_token=False, run_as_me=False"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.143Z",
+      "Message": "Creating tool for resource 'SelectedContractIndex' of type 'AgentContextResourceConfig'"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.142Z",
+      "Message": "Token sub_type='robot.user'"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:02.068Z",
+      "Message": "HTTP Request: GET https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agenthub_/llm/api/capabilities \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.991Z",
+      "Message": "HTTP Request: GET https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agenthub_/llm/api/discovery \"HTTP/1.1 200 OK\""
+    }
+  ]
+}

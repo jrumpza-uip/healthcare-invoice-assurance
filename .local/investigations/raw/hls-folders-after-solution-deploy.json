@@ -1,0 +1,412 @@
+{
+  "Result": "Success",
+  "Code": "FolderList",
+  "Pagination": {
+    "Returned": 50,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": true
+  },
+  "Data": [
+    {
+      "Key": "b5bc4bb5-b6bd-4704-a12e-801d5bef14cf",
+      "Name": "joseph.rumpza@uipath.com's workspace",
+      "Path": "joseph.rumpza@uipath.com's workspace",
+      "Description": "",
+      "Type": "Personal",
+      "ParentKey": ""
+    },
+    {
+      "Key": "09a1d184-ada3-456f-8bf9-e48d1ad266fe",
+      "Name": "Debug_HealthcareInvoiceAssurance",
+      "Path": "joseph.rumpza@uipath.com's workspace/Debug_HealthcareInvoiceAssurance",
+      "Description": "",
+      "Type": "DebugSolution",
+      "ParentKey": "b5bc4bb5-b6bd-4704-a12e-801d5bef14cf"
+    },
+    {
+      "Key": "a1c7df0e-2ee2-4fb5-98dd-e735782fa20d",
+      "Name": "Maestro L300",
+      "Path": "A4E/Maestro L300",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "30044d10-d822-4a0d-b851-d38a9dad0aad"
+    },
+    {
+      "Key": "1bb3bbfa-fdd1-477b-abe2-cd13173482ab",
+      "Name": "Claim Agent",
+      "Path": "A4E/Maestro L300/Claim Agent",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "a1c7df0e-2ee2-4fb5-98dd-e735782fa20d"
+    },
+    {
+      "Key": "3aca70b6-8504-46be-acc4-5e2c81df5eb6",
+      "Name": "RPA_Project_ReadApplication",
+      "Path": "A4E/Maestro L300/RPA_Project_ReadApplication",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "a1c7df0e-2ee2-4fb5-98dd-e735782fa20d"
+    },
+    {
+      "Key": "0d87a461-63c9-4275-ad60-9240ee740e3e",
+      "Name": "[CM] Property insurance claims",
+      "Path": "A4E/Maestro L300/[CM] Property insurance claims",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "a1c7df0e-2ee2-4fb5-98dd-e735782fa20d"
+    },
+    {
+      "Key": "db2f192c-5bff-4edf-9389-2534dca34e8a",
+      "Name": "AI Enablement",
+      "Path": "AI Enablement",
+      "Description": "AI Enablement workshop apps and resources",
+      "Type": "Standard",
+      "ParentKey": ""
+    },
+    {
+      "Key": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "Name": "HLS",
+      "Path": "AMER Presales/HLS",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "8c19eac9-14be-4021-a784-70e216fd684f"
+    },
+    {
+      "Key": "cf2a4739-044e-4677-88fa-e5b63ebab560",
+      "Name": "HealthcareInvoiceAssurance",
+      "Path": "AMER Presales/HLS/HealthcareInvoiceAssurance",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "79d872b0-bee1-4264-a6de-3e780f4e4239"
+    },
+    {
+      "Key": "9f15de7c-3392-4ca3-bddd-a71aae130354",
+      "Name": "benefit configuration",
+      "Path": "AMER Presales/HLS/benefit configuration",
+      "Description": "New Group Benefit Configuration demo",
+      "Type": "Standard",
+      "ParentKey": "79d872b0-bee1-4264-a6de-3e780f4e4239"
+    },
+    {
+      "Key": "20153070-69bf-42c9-8aef-fe46a7cbcbf0",
+      "Name": "Autopilot",
+      "Path": "Autopilot",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": ""
+    },
+    {
+      "Key": "14dffd04-8b59-4e9e-8ff1-be14cce9b43d",
+      "Name": "Healthcare Denial Coded",
+      "Path": "Healthcare Denial Coded",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": ""
+    },
+    {
+      "Key": "701f511b-30be-4220-963a-7bbc0b434d2b",
+      "Name": "AO_HRO_HR_Onboarding",
+      "Path": "InternalDemos/AO_HRO_HR_Onboarding",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "e237e302-b81f-46ce-a3c6-13401082a2d0"
+    },
+    {
+      "Key": "2bf0cf98-fcf9-4b50-b035-997a33210dcf",
+      "Name": "SendSlackMessageToUserSolution",
+      "Path": "InternalDemos/AO_HRO_HR_Onboarding/SendSlackMessageToUserSolution",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "701f511b-30be-4220-963a-7bbc0b434d2b"
+    },
+    {
+      "Key": "cc5cdadf-7b50-4e6c-b524-bed4f02ef541",
+      "Name": "JRumpza_Sandbox",
+      "Path": "JRumpza_Sandbox",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": ""
+    },
+    {
+      "Key": "b6bd9631-89a0-4fc8-ab7d-2da3c280e4cc",
+      "Name": "Inquiry Responses_JMR",
+      "Path": "JRumpza_Sandbox/Inquiry Responses_JMR",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "cc5cdadf-7b50-4e6c-b524-bed4f02ef541"
+    },
+    {
+      "Key": "ef32d13c-7939-4376-b9d0-dc353d47cd4c",
+      "Name": "MRS Vertical Solution",
+      "Path": "MRS Vertical Solution",
+      "Description": "Vertical solution folder",
+      "Type": "Standard",
+      "ParentKey": ""
+    },
+    {
+      "Key": "118c297f-66bc-40dc-bb8c-d1496369695b",
+      "Name": "MRS",
+      "Path": "MRS Vertical Solution/MRS",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "ef32d13c-7939-4376-b9d0-dc353d47cd4c"
+    },
+    {
+      "Key": "819c2203-ad0a-436c-a459-283682c8fd27",
+      "Name": "Shared",
+      "Path": "Shared",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": ""
+    },
+    {
+      "Key": "836f062c-c67b-4440-bc43-8c5b5c70a8f2",
+      "Name": "0_JoseAguirre_POCFolder",
+      "Path": "Shared/0_JoseAguirre_POCFolder",
+      "Description": "Folder to deploy training practices or POCs for projects or clients",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "c4f936f6-d06d-465e-b423-6de1fba78ce9",
+      "Name": "Inbound_Delivery_Notes",
+      "Path": "Shared/0_JoseAguirre_POCFolder/Inbound_Delivery_Notes",
+      "Description": "Wurth project",
+      "Type": "Standard",
+      "ParentKey": "836f062c-c67b-4440-bc43-8c5b5c70a8f2"
+    },
+    {
+      "Key": "d62dd763-621c-4a18-8b4b-80b0a90b62a8",
+      "Name": "TestUiPathLabVM",
+      "Path": "Shared/0_JoseAguirre_POCFolder/TestUiPathLabVM",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "836f062c-c67b-4440-bc43-8c5b5c70a8f2"
+    },
+    {
+      "Key": "2b49fc4a-5518-4019-a66c-8ad09b56e315",
+      "Name": "AAZ",
+      "Path": "Shared/AAZ",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "e35d5e32-6907-41d9-80e5-06fa11d9c929",
+      "Name": "AMAT-SAP-Triage-POC-Design",
+      "Path": "Shared/AMAT-SAP-Triage-POC-Design",
+      "Description": "Isolated design-time resources for the AMAT SAP triage POC",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "b8fafbe7-cd10-48df-9f02-22db4bef65ee",
+      "Name": "AO_APIA_EnhancedDemo",
+      "Path": "Shared/AO_APIA_EnhancedDemo",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "c07d8135-49a0-4a7f-9a24-bd95823a967a",
+      "Name": "AO_APIA_EnhancedDemo-RK",
+      "Path": "Shared/AO_APIA_EnhancedDemo-RK",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "2304a73b-7be3-400a-af38-3d201b6089bc",
+      "Name": "AgedDebtPOC",
+      "Path": "Shared/AgedDebtPOC",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "86fe060e-9c72-4c18-b859-5850017288b2",
+      "Name": "AgroLendingReview",
+      "Path": "Shared/AgroLendingReview",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "b9f7ba4d-5e9e-4d21-89e1-16374c084e98",
+      "Name": "Aman",
+      "Path": "Shared/Aman",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "9f352c31-e15f-42e6-b90c-e0010106c7e3",
+      "Name": "AmritKaur",
+      "Path": "Shared/AmritKaur",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "dfb50051-b8f5-4cb4-8ff5-c7776d04db78",
+      "Name": "Andu",
+      "Path": "Shared/Andu",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "eae1626b-09f0-4d75-bcf4-ee4c52d31e32",
+      "Name": "NVS_CS_Assistant",
+      "Path": "Shared/Andu/NVS_CS_Assistant",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "dfb50051-b8f5-4cb4-8ff5-c7776d04db78"
+    },
+    {
+      "Key": "9dde4c1d-e506-4b5b-8f4f-7d04adeafc46",
+      "Name": "Automation Innovation Lab - TMR",
+      "Path": "Shared/Automation Innovation Lab - TMR",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "cff87d5d-b49d-4760-8341-f2ba352a3c94",
+      "Name": "AutomationFoundry",
+      "Path": "Shared/AutomationFoundry",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "0f12adfe-c628-4ea0-9af3-21e984d5c5f2",
+      "Name": "BDR",
+      "Path": "Shared/BDR",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "88a80f77-e957-42a4-ad35-93ebd5cc74ce",
+      "Name": "BDR 1",
+      "Path": "Shared/BDR 1",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "ad4fcba6-83a1-49a5-8bfb-031628790165",
+      "Name": "BDR 2",
+      "Path": "Shared/BDR 2",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "d0440ef8-4f7e-4238-8540-c6ad33e29ead",
+      "Name": "BDR 3",
+      "Path": "Shared/BDR 3",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "71e171cd-a669-4016-885c-507e16d8aaa7",
+      "Name": "BDR 4",
+      "Path": "Shared/BDR 4",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "92ea2564-5e00-48bf-8a21-919a29042d27",
+      "Name": "BDR_Agent",
+      "Path": "Shared/BDR_Agent",
+      "Description": "",
+      "Type": "Standard",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "45cd586c-e951-4d06-b053-53855e36f2de",
+      "Name": "BDR_Solution",
+      "Path": "Shared/BDR_Agent/BDR_Solution",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "92ea2564-5e00-48bf-8a21-919a29042d27"
+    },
+    {
+      "Key": "d5c00545-865f-4a41-82ba-6a80e6fce03c",
+      "Name": "BDR_Solution",
+      "Path": "Shared/BDR_Solution",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "bd53592d-84da-43c4-afe9-7c5136741951",
+      "Name": "BDR_Solution 1",
+      "Path": "Shared/BDR_Solution 1",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "ca59566e-20fe-4173-b790-a6194e33049b",
+      "Name": "BDR_Solution 10",
+      "Path": "Shared/BDR_Solution 10",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "51c27d8d-9616-4328-a445-6cc01600a921",
+      "Name": "BDR_Solution 11",
+      "Path": "Shared/BDR_Solution 11",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "0cf49f39-ebc1-4fc4-9eea-a5ae44fb7d6e",
+      "Name": "BDR_Solution 12",
+      "Path": "Shared/BDR_Solution 12",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "b9870cfd-f752-4e1e-9c22-54837ff742d2",
+      "Name": "BDR_Solution 2",
+      "Path": "Shared/BDR_Solution 2",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "20a52d9c-bbd6-42a1-b696-aa14bc3700e7",
+      "Name": "BDR_Solution 3",
+      "Path": "Shared/BDR_Solution 3",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "33564638-db80-4ae9-af51-2a4b6d8bd1f1",
+      "Name": "BDR_Solution 4",
+      "Path": "Shared/BDR_Solution 4",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    },
+    {
+      "Key": "6f86a416-88fa-41db-817e-be3df0618205",
+      "Name": "BDR_Solution 5",
+      "Path": "Shared/BDR_Solution 5",
+      "Description": "",
+      "Type": "Solution",
+      "ParentKey": "819c2203-ad0a-436c-a459-283682c8fd27"
+    }
+  ]
+}

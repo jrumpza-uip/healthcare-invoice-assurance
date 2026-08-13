@@ -1,0 +1,1793 @@
+{
+  "Result": "Success",
+  "Code": "SolutionDeployList",
+  "Data": [
+    {
+      "Key": "cfb26299-138f-4001-80a6-d2467adcb128",
+      "InstallDeploymentKey": "058619c5-c80f-492c-a113-14bd24f47106",
+      "Name": "ResidentialSchedulingDemo",
+      "PackageName": "ResidentialSchedulingDemo",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/Commercial",
+      "FolderKey": "bdd55eb8-0540-4036-b895-106ac89a6df7",
+      "CreatedAt": "2026-08-13T20:03:48.916Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "cbda95d4-bd43-4ed6-96c4-e56c4fbc5547",
+      "InstallDeploymentKey": "cbda95d4-bd43-4ed6-96c4-e56c4fbc5547",
+      "Name": "HealthcareInvoiceAssurance",
+      "PackageName": "HealthcareInvoiceAssurance",
+      "PackageVersion": "1.0.2",
+      "CurrentPackageVersion": "1.0.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/HLS",
+      "FolderKey": "cf2a4739-044e-4677-88fa-e5b63ebab560",
+      "CreatedAt": "2026-08-13T20:00:55.259Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "66fed885-238b-4367-b5dd-edb25fc51f70",
+      "InstallDeploymentKey": "66fed885-238b-4367-b5dd-edb25fc51f70",
+      "Name": "HealthcareInvoiceAssurance",
+      "PackageName": "HealthcareInvoiceAssurance",
+      "PackageVersion": "1.0.2",
+      "CurrentPackageVersion": "1.0.2",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-08-12T17:20:26.126Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "bb6f420b-a990-409a-872c-0f2eb5fef417",
+      "InstallDeploymentKey": "7d7e65ef-2c15-44f2-abad-a544a7e581e8",
+      "Name": "SolicitationResponseSolution-1.0.0",
+      "PackageName": "SolicitationResponseSolution",
+      "PackageVersion": "1.0.12",
+      "CurrentPackageVersion": "1.0.12",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "b669b786-bc60-47b5-9d25-a718ca92de6e",
+      "CreatedAt": "2026-08-13T19:41:11.899Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "ac72e02f-bb53-4bc4-8e1c-baa9eabbb14c",
+      "InstallDeploymentKey": "ac72e02f-bb53-4bc4-8e1c-baa9eabbb14c",
+      "Name": "EquipmentRentalCaseSolution-v1.0.5-corrected",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.5",
+      "CurrentPackageVersion": "1.0.5",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "745dd533-8eed-4b8c-ab5a-3ac4dce6065c",
+      "CreatedAt": "2026-08-13T19:39:36.493Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "aeb93ccf-4c53-4f86-a964-563851474e00",
+      "InstallDeploymentKey": "7f49503d-481f-4a01-a625-3433f541d464",
+      "Name": "ProgramIntegrity360-cloud-0.5.1",
+      "PackageName": "ProgramIntegrity360",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/Public Sector",
+      "FolderKey": "5db31dd1-1073-4f9e-b44b-76f5484e03c4",
+      "CreatedAt": "2026-08-13T19:11:00.269Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "9e1be3fd-337e-4036-a1c3-1badaf6a228f",
+      "InstallDeploymentKey": "70e9a259-861f-42e9-95e7-89020065c4cd",
+      "Name": "Group_Benefit_Claims",
+      "PackageName": "Group_Benefit_Claims",
+      "PackageVersion": "1.0.10",
+      "CurrentPackageVersion": "1.0.10",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "fcab7142-da70-4b3d-a6db-1e91d76632db",
+      "CreatedAt": "2026-08-13T18:36:07.406Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "9bc9939f-e17f-4826-80b5-97fed570ce95",
+      "InstallDeploymentKey": "9bc9939f-e17f-4826-80b5-97fed570ce95",
+      "Name": "EquipmentRentalCaseSolution-v1.0.4-newconn",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.4",
+      "CurrentPackageVersion": "1.0.4",
+      "NewPackageVersionAvailable": "1.0.5",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "f3f792ed-9256-4e98-b28b-5c29e492b89f",
+      "CreatedAt": "2026-08-13T18:24:02.211Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "ca7eb8ad-7dc5-42ac-9e78-c85470e484b2",
+      "InstallDeploymentKey": "ca7eb8ad-7dc5-42ac-9e78-c85470e484b2",
+      "Name": "EquipmentRentalCaseSolution-v1.0.4-linked",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.4",
+      "CurrentPackageVersion": "1.0.4",
+      "NewPackageVersionAvailable": "1.0.5",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "cee87471-ef12-4328-9dbd-93649fcc5059",
+      "CreatedAt": "2026-08-13T17:22:59.641Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "8348d0c2-0b2c-4a5b-aabe-876d35aadb76",
+      "InstallDeploymentKey": "eb9cd780-268d-4876-96d8-27a7020820e8",
+      "Name": "EquipmentRentalCaseSolution-v1.0.3",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.4",
+      "CurrentPackageVersion": "1.0.4",
+      "NewPackageVersionAvailable": "1.0.5",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "755fef43-784e-4cf8-a839-887e88cdae90",
+      "CreatedAt": "2026-08-13T17:16:20.976Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "23c3c059-8925-4e11-a468-c85a85da7f21",
+      "InstallDeploymentKey": "07ce4bba-1508-43d8-98d9-df6666ece498",
+      "Name": "CMS-Post-Acute-Review-0.2.0",
+      "PackageName": "CMSPostAcuteComplianceSolution",
+      "PackageVersion": "0.3.5",
+      "CurrentPackageVersion": "0.3.5",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "4c4254d1-838a-4059-b02f-483831c34649",
+      "CreatedAt": "2026-08-13T15:17:01.467Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "78ef5923-db91-439d-96eb-27e378c30616",
+      "InstallDeploymentKey": "57040de2-fa78-46b0-8562-f8b736cd8756",
+      "Name": "AMNS HelpDesk",
+      "PackageName": "AMNS HelpDesk",
+      "PackageVersion": "1.0.5",
+      "CurrentPackageVersion": "1.0.5",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "nik",
+      "FolderKey": "4e60b851-db8f-407d-b64e-2f453e149cc9",
+      "CreatedAt": "2026-08-13T10:50:04.441Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c09ac6ff-839f-4588-9139-87f85fd951b3",
+      "InstallDeploymentKey": "c09ac6ff-839f-4588-9139-87f85fd951b3",
+      "Name": "GF Returns Golden Demo V3 Verified 1.0.6",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.6",
+      "CurrentPackageVersion": "1.0.6",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "FolderKey": "b0ff0215-436a-4218-85e3-8e178c68802b",
+      "CreatedAt": "2026-08-13T09:58:03.785Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "67c04403-4ef3-4e84-81fb-34612ca1663b",
+      "InstallDeploymentKey": "b0418997-f071-4e31-99e2-296a37c05e68",
+      "Name": "GF Returns Golden Demo V3 1.0.2 Verified",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.5",
+      "CurrentPackageVersion": "1.0.5",
+      "Operation": "Uninstall",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "Inactive",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "FolderKey": "d2297748-5a97-4e76-93fc-5a3b6bcea061",
+      "CreatedAt": "2026-08-13T07:50:27.181Z",
+      "Actions": [
+        "Uninstall"
+      ]
+    },
+    {
+      "Key": "8bae36f8-1cd2-496f-98ab-bb6a5afa1e7d",
+      "InstallDeploymentKey": "8bae36f8-1cd2-496f-98ab-bb6a5afa1e7d",
+      "Name": "GF Returns Golden Demo V3 1.0.3 Upgrade",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T03:20:00.926Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "9fcd5541-7ecf-47ba-9427-8d198231f1fd",
+      "InstallDeploymentKey": "9fcd5541-7ecf-47ba-9427-8d198231f1fd",
+      "Name": "GF Returns Golden Demo V3 1.0.3 Runtime",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T03:18:59.227Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "e39afe81-e1f1-4277-aead-ffee496ecd59",
+      "InstallDeploymentKey": "e39afe81-e1f1-4277-aead-ffee496ecd59",
+      "Name": "GF Returns Golden Demo V3 1.0.3 Final",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T03:17:26.988Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "bc07c16f-4c17-44fd-a3ad-5c32d8e9b74c",
+      "InstallDeploymentKey": "bc07c16f-4c17-44fd-a3ad-5c32d8e9b74c",
+      "Name": "GF Returns Golden Demo V3 1.0.3 Verified",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T03:06:56.629Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "c7d4ef33-d6ae-4cf4-beb1-f0db7e6d7b04",
+      "InstallDeploymentKey": "c7d4ef33-d6ae-4cf4-beb1-f0db7e6d7b04",
+      "Name": "GF Returns Golden Demo V3 1.0.1 Final",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T01:34:14.878Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "e69fce6b-f903-49e9-b02c-df818bf90dfe",
+      "InstallDeploymentKey": "e69fce6b-f903-49e9-b02c-df818bf90dfe",
+      "Name": "GF Returns Golden Demo V3 1.0.1",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.1",
+      "TargetPackageVersion": "1.0.1",
+      "Operation": "Install",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T01:28:32.780Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "2ca7364b-e523-4452-bcde-91b9c04007fc",
+      "InstallDeploymentKey": "2ca7364b-e523-4452-bcde-91b9c04007fc",
+      "Name": "GF_Returns_Golden_Demo_V3",
+      "PackageName": "GF_Returns_Golden_Demo_V3",
+      "PackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "CreatedAt": "2026-08-13T00:51:29.688Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "5e9555b1-abba-4cb7-bcca-61806d10d713",
+      "InstallDeploymentKey": "5e9555b1-abba-4cb7-bcca-61806d10d713",
+      "Name": "EquipmentRentalCaseSolution-v1.0.2",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.2",
+      "CurrentPackageVersion": "1.0.2",
+      "NewPackageVersionAvailable": "1.0.5",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "500e9a1d-0798-4bcb-bb0d-87b525ad6969",
+      "CreatedAt": "2026-08-12T20:07:41.860Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "496c5a67-8c6f-4e5e-ae78-825495b3270a",
+      "InstallDeploymentKey": "20f5afba-fd06-4971-9c50-71ecfef72b7a",
+      "Name": "EquipmentRentalCaseSolution-v1.0.1",
+      "PackageName": "EquipmentRentalCaseSolution",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "TargetPackageVersion": "1.0.1",
+      "NewPackageVersionAvailable": "1.0.5",
+      "Operation": "ConfigurationChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL-CodexDemo",
+      "FolderKey": "98ea96a0-733b-4a77-bc72-74f075d127d2",
+      "CreatedAt": "2026-08-12T19:52:50.245Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c92f047e-5c81-4f4a-808b-13a452132051",
+      "InstallDeploymentKey": "c92f047e-5c81-4f4a-808b-13a452132051",
+      "Name": "FNOL_Claims_Operations_Revamp",
+      "PackageName": "FNOL_Claims_Operations 1",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "FNOL Demo",
+      "FolderKey": "7dc35b2f-c987-4efc-81d0-1ce86a926bab",
+      "CreatedAt": "2026-08-12T19:51:26.354Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "5442318d-77ea-456b-a09e-0bbcacb35cbd",
+      "InstallDeploymentKey": "5442318d-77ea-456b-a09e-0bbcacb35cbd",
+      "Name": "EquipmentRENTAL-LCversion-1.0.0",
+      "PackageName": "EquipmentRENTAL_LCversion",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "EquipmentRENTAL",
+      "FolderKey": "5e6c96e4-ee96-4055-a02b-d62993318509",
+      "CreatedAt": "2026-08-12T17:59:00.761Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "d9eb6378-b605-4a32-9522-3e749e3117ed",
+      "InstallDeploymentKey": "a53084e3-c4a0-4a08-b675-6a0f0feca65d",
+      "Name": "FHWA-FOIA-Redaction-Demo-1.0.1",
+      "PackageName": "FHWAFOIARedaction",
+      "PackageVersion": "1.1.2",
+      "CurrentPackageVersion": "1.1.2",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/Public Sector",
+      "FolderKey": "46858157-c6cc-47b9-bd60-77b86f5677f0",
+      "CreatedAt": "2026-08-12T17:27:42.662Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "4d98ec6a-44a6-491d-be24-7f394bb51941",
+      "InstallDeploymentKey": "73c4e7a3-1997-4722-8a9e-c2414a8e0b96",
+      "Name": "GF_Returns_Golden_Demo_V2",
+      "PackageName": "GF_Returns_Golden_Demo_V2",
+      "PackageVersion": "1.0.11",
+      "CurrentPackageVersion": "1.0.11",
+      "NewPackageVersionAvailable": "1.0.12",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "FolderKey": "937fea0f-460f-4f38-ae43-cc8cec2c37f3",
+      "CreatedAt": "2026-08-12T13:52:51.282Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "324216b0-0b8d-48ae-b8c9-10dbf71d49e7",
+      "InstallDeploymentKey": "d90e7ae6-2b9e-460e-b0ad-ddbe9817d19c",
+      "Name": "WSIB Claims Demo 0.2.0",
+      "PackageName": "WSIB_Claims_Demo",
+      "PackageVersion": "0.2.1",
+      "CurrentPackageVersion": "0.2.1",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/Public Sector",
+      "CreatedAt": "2026-08-10T15:25:02.167Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "c23d9128-96d3-454d-8476-255d4d6dfd20",
+      "InstallDeploymentKey": "c23d9128-96d3-454d-8476-255d4d6dfd20",
+      "Name": "WSIB Claims Demo",
+      "PackageName": "WSIB Claims Demo",
+      "PackageVersion": "0.2.2",
+      "CurrentPackageVersion": "0.2.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/Public Sector",
+      "FolderKey": "021660a9-cbd9-4a39-8515-b5b79adab151",
+      "CreatedAt": "2026-08-11T20:13:32.932Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "ad37aee6-6661-482c-b63c-6b87bf1c9ee0",
+      "InstallDeploymentKey": "ad37aee6-6661-482c-b63c-6b87bf1c9ee0",
+      "Name": "WSIB Claims Demo Bootstrap",
+      "PackageName": "WSIB Claims Demo",
+      "PackageVersion": "0.1.1",
+      "CurrentPackageVersion": "0.1.1",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/Public Sector",
+      "CreatedAt": "2026-08-10T14:06:46.849Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "a6c892e6-b4f9-43c4-ab54-1e7e8d3ae855",
+      "InstallDeploymentKey": "a6c892e6-b4f9-43c4-ab54-1e7e8d3ae855",
+      "Name": "FHWA-FOIA-Redaction-Demo-1.0.0-r3",
+      "PackageName": "FHWAFOIARedaction",
+      "PackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/Public Sector",
+      "CreatedAt": "2026-08-11T15:45:45.619Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "d91893d1-e17e-4847-9232-a929a9f826b2",
+      "InstallDeploymentKey": "d91893d1-e17e-4847-9232-a929a9f826b2",
+      "Name": "FHWA-FOIA-Redaction-Demo-1.0.0-r2",
+      "PackageName": "FHWAFOIARedaction",
+      "PackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/Public Sector",
+      "CreatedAt": "2026-08-11T15:44:10.703Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "522052b8-c4a3-49e1-8142-901a8fc616e3",
+      "InstallDeploymentKey": "522052b8-c4a3-49e1-8142-901a8fc616e3",
+      "Name": "FHWA-FOIA-Redaction-Demo-1.0.0",
+      "PackageName": "FHWAFOIARedaction",
+      "PackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/Public Sector",
+      "CreatedAt": "2026-08-11T15:41:48.777Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "39db8037-4297-4b52-a84d-60ba0a88597c",
+      "InstallDeploymentKey": "39db8037-4297-4b52-a84d-60ba0a88597c",
+      "Name": "PurchasedLoanDataQuality-Demo-20260811",
+      "PackageName": "PurchasedLoanDataQuality",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "56786ef1-0731-42e7-81b6-b1af97bdf167",
+      "CreatedAt": "2026-08-11T14:28:07.360Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "53989513-d2a6-4dcd-98a5-f1295e4f90db",
+      "InstallDeploymentKey": "53989513-d2a6-4dcd-98a5-f1295e4f90db",
+      "Name": "RegulatoryPolicyManagementAgent",
+      "PackageName": "RegulatoryPolicyManagement",
+      "PackageVersion": "1.0.3",
+      "CurrentPackageVersion": "1.0.3",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS/Regulatory Policy Management",
+      "CreatedAt": "2026-08-10T19:57:37.358Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "4d10a0d0-0561-4845-ae02-aeb2d59dbeb4",
+      "InstallDeploymentKey": "4d10a0d0-0561-4845-ae02-aeb2d59dbeb4",
+      "Name": "G4S-Maestro-Workshop",
+      "PackageName": "G4S-Maestro-Workshop",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderKey": "a054a792-480a-419b-a136-7bd706965fdc",
+      "CreatedAt": "2026-08-10T17:22:24.857Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "e69211aa-f6a4-46df-943f-0b0b9b4b716f",
+      "InstallDeploymentKey": "e69211aa-f6a4-46df-943f-0b0b9b4b716f",
+      "Name": "RegulatoryPolicyManagement-1.1.2",
+      "PackageName": "RegulatoryPolicyManagement",
+      "PackageVersion": "1.1.2",
+      "CurrentPackageVersion": "1.1.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "f4d82b8d-c4ed-4f83-86bb-eea7fcf59581",
+      "CreatedAt": "2026-08-10T15:55:08.064Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "eab9cd65-53ea-46d0-8e91-7658d99c6956",
+      "InstallDeploymentKey": "eab9cd65-53ea-46d0-8e91-7658d99c6956",
+      "Name": "RegulatoryPolicyManagement-1.1.1",
+      "PackageName": "RegulatoryPolicyManagement",
+      "PackageVersion": "1.1.1",
+      "TargetPackageVersion": "1.1.1",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-08-10T15:03:05.223Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "37d78d91-abcd-4750-b92c-9353d5958d5b",
+      "InstallDeploymentKey": "37d78d91-abcd-4750-b92c-9353d5958d5b",
+      "Name": "RegulatoryPolicyManagement",
+      "PackageName": "RegulatoryPolicyManagement",
+      "PackageVersion": "1.1.0",
+      "CurrentPackageVersion": "1.1.0",
+      "NewPackageVersionAvailable": "1.1.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "3d8274db-3570-44ae-9388-a51872aef5e2",
+      "CreatedAt": "2026-08-10T14:08:50.365Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "145addf9-d8fc-4a53-9ca6-63fb22e2d0d5",
+      "InstallDeploymentKey": "58b36bdb-e685-4017-83c6-4b1c6c8390d6",
+      "Name": "ARInterlockSolution-0.3.1-SUMMIT",
+      "PackageName": "ARInterlockSolution",
+      "PackageVersion": "0.3.2",
+      "CurrentPackageVersion": "0.3.2",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/SUMMIT",
+      "FolderKey": "1eec7350-7c2a-4542-ac53-839f88af5c2e",
+      "CreatedAt": "2026-08-08T20:42:07.741Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "e2440b42-6a8a-41b7-9bc0-941627798f7d",
+      "InstallDeploymentKey": "29102c24-2748-41de-9359-11a696d3763d",
+      "Name": "Comcast B2B Order Management",
+      "PackageName": "Comcast_Order_Management_Demo",
+      "PackageVersion": "1.0.3",
+      "CurrentPackageVersion": "1.0.3",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/Commercial/B2B Order Management",
+      "FolderKey": "b790dca1-7657-447f-baff-924a1324dcac",
+      "CreatedAt": "2026-08-07T19:42:29.865Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "3b0cfe19-8e82-433b-83f4-9579137654ff",
+      "InstallDeploymentKey": "58cc0868-3c8d-4ed3-b0cf-95c73cdc07aa",
+      "Name": "MRS",
+      "PackageName": "MRS",
+      "PackageVersion": "2.0.201001",
+      "CurrentPackageVersion": "2.0.201001",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "MRS Vertical Solution",
+      "FolderKey": "118c297f-66bc-40dc-bb8c-d1496369695b",
+      "CreatedAt": "2026-08-07T19:18:43.365Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "9b7bfaa1-a15f-40ab-b914-9e28a38180e7",
+      "InstallDeploymentKey": "9b7bfaa1-a15f-40ab-b914-9e28a38180e7",
+      "Name": "FNOL_Claims_Operations",
+      "PackageName": "FNOL_Claims_Operations",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-08-07T16:56:58.414Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "24f253ae-d4b2-4f0f-be43-df8ffeec6993",
+      "InstallDeploymentKey": "24f253ae-d4b2-4f0f-be43-df8ffeec6993",
+      "Name": "FNOL_Claims_Operations-1.0.3-FINS",
+      "PackageName": "FNOL_Claims_Operations",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-08-07T16:55:01.828Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "59fe55a0-0cd9-4d34-9bd2-155b22517e2c",
+      "InstallDeploymentKey": "59fe55a0-0cd9-4d34-9bd2-155b22517e2c",
+      "Name": "FNOL_Claims_Operations-1.0.3",
+      "PackageName": "FNOL_Claims_Operations",
+      "PackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-08-07T16:46:29.937Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "52646bd1-5467-4f0d-8160-f02a73d9a4e2",
+      "InstallDeploymentKey": "52646bd1-5467-4f0d-8160-f02a73d9a4e2",
+      "Name": "CMS-Post-Acute-Review",
+      "PackageName": "CMSPostAcuteComplianceSolution",
+      "PackageVersion": "0.1.0",
+      "TargetPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-08-07T16:39:23.870Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "232c7d24-a329-485c-958c-acde3e76044d",
+      "InstallDeploymentKey": "8eeecd54-e13b-4187-9912-6d41aac20ac6",
+      "Name": "Customer Feedback Analyzer",
+      "PackageName": "Customer Feedback Analyzer",
+      "PackageVersion": "1.0.3",
+      "CurrentPackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "NewPackageVersionAvailable": "1.0.4",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "46a5d197-282f-4281-b288-f1ecfc71ddaa",
+      "CreatedAt": "2026-08-07T16:07:40.920Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "738c6c1f-257c-4fcf-bb6e-6e815f8d39df",
+      "InstallDeploymentKey": "ea144674-eb89-4ca7-af9c-b976b9a503e2",
+      "Name": "RegulatoryPolicyManagement",
+      "PackageName": "RegulatoryPolicyManagement",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS/Regulatory Policy Management",
+      "CreatedAt": "2026-08-07T15:57:24.712Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "cf0abd78-deca-4683-8c89-fdaea3402db5",
+      "InstallDeploymentKey": "7e16cfb1-e498-4664-a56a-f00935fc46f1",
+      "Name": "ARCollectionsDemo-1-0-0",
+      "PackageName": "ARCollectionsDemo",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "JD_Demos/demos",
+      "FolderKey": "bbe64c10-b957-4adf-a535-77109c673e5a",
+      "CreatedAt": "2026-08-07T14:54:32.541Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "44409df0-821b-4bbd-865c-32f75c3eda1f",
+      "InstallDeploymentKey": "44409df0-821b-4bbd-865c-32f75c3eda1f",
+      "Name": "SourcingAgenticAutomation-MVP-Recovery-20260807",
+      "PackageName": "SourcingAgenticAutomation",
+      "PackageVersion": "3.2.6",
+      "CurrentPackageVersion": "3.2.6",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/Sourcing Agentic Automation",
+      "FolderKey": "afcf969c-73b8-425b-a1c8-bb9f08804d92",
+      "CreatedAt": "2026-08-07T09:11:54.679Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "b3b9d001-f3da-4b3c-bb5b-bb790641f814",
+      "InstallDeploymentKey": "4277b1cc-2914-4165-beb5-37f4b20e9efd",
+      "Name": "PocDcsmAccountInterventionCase",
+      "PackageName": "PocDcsmAccountInterventionCase",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "7437f9bb-50d9-40c0-b3eb-c94759cf92c5",
+      "CreatedAt": "2026-08-07T03:25:26.769Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "ec700aea-be26-4306-9155-0a75b745fd54",
+      "InstallDeploymentKey": "ec700aea-be26-4306-9155-0a75b745fd54",
+      "Name": "PocDcsmAccountInterventionCase",
+      "PackageName": "PocDcsmAccountInterventionCase",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-08-07T03:00:57.305Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "67a18da0-91ef-4dc1-beb0-864b71f1d00f",
+      "InstallDeploymentKey": "cce04f3c-b1c7-4c7c-b2b1-38b4dc265ca8",
+      "Name": "SE360Dashboard",
+      "PackageName": "se-360-dashboard",
+      "PackageVersion": "1.2.2",
+      "CurrentPackageVersion": "1.2.2",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "e82981da-c22b-4f0b-ae75-b78ad25d010e",
+      "CreatedAt": "2026-08-04T22:46:54.327Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "de9cb8a1-8925-43bf-b1d8-ce68107548dd",
+      "InstallDeploymentKey": "59d442fa-0213-416c-af22-c5c17922b3b0",
+      "Name": "POC_DCSM_AskDigitalCsmCoreRpa",
+      "PackageName": "POC_DCSM_AskDigitalCsmCoreRpa",
+      "PackageVersion": "0.1.4",
+      "CurrentPackageVersion": "0.1.4",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "99057b32-14f9-40bb-89c2-1519936cbb37",
+      "CreatedAt": "2026-08-04T00:53:42.044Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c9c6546e-be13-4774-8aa7-96d5ae86ef9b",
+      "InstallDeploymentKey": "c9c6546e-be13-4774-8aa7-96d5ae86ef9b",
+      "Name": "POC_DCSM_InterventionPlanDraftAgent",
+      "PackageName": "POC_DCSM_InterventionPlanDraftAgent",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "6be46e5e-3558-48be-8cca-d42f1f15b7b4",
+      "CreatedAt": "2026-08-04T00:00:01.464Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "a6a8bbf9-096d-4c53-bc3c-464796d3dc7f",
+      "InstallDeploymentKey": "a6a8bbf9-096d-4c53-bc3c-464796d3dc7f",
+      "Name": "POC_DCSM_Backend",
+      "PackageName": "POC_DCSM_Backend",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "ReadyToActivate",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "fffeeb90-747d-4ea3-ae14-6875574dd619",
+      "CreatedAt": "2026-08-03T22:09:48.604Z",
+      "Actions": [
+        "Activate",
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "642b5115-572b-419c-ab17-2b3a34a4eff4",
+      "InstallDeploymentKey": "642b5115-572b-419c-ab17-2b3a34a4eff4",
+      "Name": "POC_DCSM_AskDigitalCsmCoreRpa_EvalCanary_20260731",
+      "PackageName": "POC_DCSM_AskDigitalCsmCoreRpa_EvalCanary_20260731",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "34bec286-82d5-46f0-bae0-1ab39c0ad5a2",
+      "CreatedAt": "2026-07-31T07:49:07.584Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "e7265fc4-7aac-4071-ba90-e32d65878989",
+      "InstallDeploymentKey": "e7265fc4-7aac-4071-ba90-e32d65878989",
+      "Name": "POC_DCSM_AskDigitalCsmApiWorkflowCanary-0.1.0",
+      "PackageName": "POC_DCSM_AskDigitalCsmApiWorkflowCanary",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "2cd1b4f6-1792-490d-bc82-dc14ca1d27c8",
+      "CreatedAt": "2026-07-31T02:54:45.987Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "08e3ad96-bf03-4342-b2cc-920927677d52",
+      "InstallDeploymentKey": "08e3ad96-bf03-4342-b2cc-920927677d52",
+      "Name": "POC_DCSM_AskDigitalCsmCanary-0.1.0",
+      "PackageName": "POC_DCSM_AskDigitalCsmCanary",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "389fda0c-2836-4ec0-b76f-a61eafc0f0af",
+      "CreatedAt": "2026-07-31T02:34:22.789Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "712755bc-7e5c-40f5-9903-057bd0360aa0",
+      "InstallDeploymentKey": "023deda7-5903-4699-8e56-ef2de10eddca",
+      "Name": "POC_DCSM_RbacCanary-0.1.0",
+      "PackageName": "POC_DCSM_RbacCanary",
+      "PackageVersion": "0.1.1",
+      "CurrentPackageVersion": "0.1.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "40e5959d-6cbb-4c43-ba7b-d9774be821f7",
+      "CreatedAt": "2026-07-30T23:39:04.941Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c7141830-ea59-4313-9c00-98d63abb4f28",
+      "InstallDeploymentKey": "c7141830-ea59-4313-9c00-98d63abb4f28",
+      "Name": "POC_DCSM_AgentTools-0.1.0",
+      "PackageName": "POC_DCSM_AgentTools",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "POC - Digital CSM",
+      "FolderKey": "ca77d7dc-1fa6-4200-a01b-ccfdc543141a",
+      "CreatedAt": "2026-07-30T22:01:39.509Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "8bc67e60-3ef8-4d08-a2ec-7ef35dac5fe4",
+      "InstallDeploymentKey": "8bc67e60-3ef8-4d08-a2ec-7ef35dac5fe4",
+      "Name": "InsuranceSubmissionPacketExtraction",
+      "PackageName": "InsuranceSubmissionPacketExtraction",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/KS-Projects",
+      "FolderKey": "13f0c920-c3b6-4a19-90e9-ce62db60d79f",
+      "CreatedAt": "2026-07-30T18:48:44.126Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c6e09333-303c-4bdc-b723-5974cdbaba32",
+      "InstallDeploymentKey": "c6e09333-303c-4bdc-b723-5974cdbaba32",
+      "Name": "Payer Correspondence - Staging",
+      "PackageName": "PayerCorrespondenceStaging",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "e6418a20-7827-4175-9fbb-ddf0169b934e",
+      "CreatedAt": "2026-07-29T13:54:34.164Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "4c299948-67e4-4766-8e2a-eff45d9cc493",
+      "InstallDeploymentKey": "4c299948-67e4-4766-8e2a-eff45d9cc493",
+      "Name": "Kaiser Medication Exception Command Center 0.2.0",
+      "PackageName": "KaiserMedicationExceptionCommandCenter",
+      "PackageVersion": "0.2.0",
+      "CurrentPackageVersion": "0.2.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "1258194d-8c08-4925-97e3-5a15a0c57527",
+      "CreatedAt": "2026-07-29T13:27:28.541Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "fc41e092-4ffb-425e-93e6-b14f28cf23bb",
+      "InstallDeploymentKey": "7f3d82ca-94f0-4759-99bb-846a3df6fde2",
+      "Name": "MR_FileRequestWorkflow",
+      "PackageName": "MR_FileRequestWorkflow",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/Gayathri_N",
+      "FolderKey": "8e57f8e5-21da-4ef1-b001-b2c35c8b368c",
+      "CreatedAt": "2026-07-29T07:31:40.257Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "5e9ad192-1a0b-41db-872b-a9ad53c39cb0",
+      "InstallDeploymentKey": "8c75b901-cbd6-49e9-ab24-19e6edf433b8",
+      "Name": "BrokerageStatementValidation-LewBot-1.0.6",
+      "PackageName": "BrokerageStatementValidation",
+      "PackageVersion": "1.0.14",
+      "CurrentPackageVersion": "1.0.14",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "LewBot",
+      "FolderKey": "ac85084a-e4b8-456f-9b89-404c508819a9",
+      "CreatedAt": "2026-07-28T21:09:29.130Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c8203292-9f1d-4157-9631-b6599228cd48",
+      "InstallDeploymentKey": "81514e58-dacd-48c4-9dbe-098512207eb7",
+      "Name": "OshkoshPpapEvidencePoc",
+      "PackageName": "OshkoshPpapEvidencePoc",
+      "PackageVersion": "1.1.6",
+      "CurrentPackageVersion": "1.1.6",
+      "NewPackageVersionAvailable": "1.1.7",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "lewis.bell@uipath.com's workspace",
+      "FolderKey": "4b86f1a6-baa9-463d-9296-d9a037697f5e",
+      "CreatedAt": "2026-07-28T20:40:59.905Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "a7941a0a-e0f1-453b-b1ec-7785bd6a623f",
+      "InstallDeploymentKey": "a7941a0a-e0f1-453b-b1ec-7785bd6a623f",
+      "Name": "BrokerageStatementValidation-Personal-1.0.6",
+      "PackageName": "BrokerageStatementValidation",
+      "PackageVersion": "1.0.6",
+      "CurrentPackageVersion": "1.0.6",
+      "NewPackageVersionAvailable": "1.0.14",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "lewis.bell@uipath.com's workspace",
+      "FolderKey": "b7de59ef-48f0-42a5-9af0-1367cc0686c3",
+      "CreatedAt": "2026-07-28T19:48:25.968Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "5c868314-dd30-40db-a02f-0476cf94bc1e",
+      "InstallDeploymentKey": "5c868314-dd30-40db-a02f-0476cf94bc1e",
+      "Name": "equipment-valuation-orchestration-deployment",
+      "PackageName": "equipment-valuation-orchestration-solution",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-07-28T16:59:00.939Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "6faab5ca-4c15-424c-b9fc-9b7f1a0639e4",
+      "InstallDeploymentKey": "6faab5ca-4c15-424c-b9fc-9b7f1a0639e4",
+      "Name": "AgroLendingReviewDeployment",
+      "PackageName": "AgroLendingReview",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "86fe060e-9c72-4c18-b859-5850017288b2",
+      "CreatedAt": "2026-07-28T15:04:19.454Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "378c4ca0-8bfa-4c56-9d4a-d0f7ddccd7a2",
+      "InstallDeploymentKey": "378c4ca0-8bfa-4c56-9d4a-d0f7ddccd7a2",
+      "Name": "FarmerMacLendingReviewDeployment",
+      "PackageName": "FarmerMacLendingReview",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "26134a66-10ee-438a-8c27-335ad7dd4008",
+      "CreatedAt": "2026-07-28T15:01:07.477Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "b7ecc907-faa8-4c1b-ab14-8613e706fd5f",
+      "InstallDeploymentKey": "7b41bfa8-494b-4874-81e1-9ba82209a22f",
+      "Name": "Element_Conversational Agent",
+      "PackageName": "Element_Conversational Agent",
+      "PackageVersion": "1.0.3",
+      "CurrentPackageVersion": "1.0.3",
+      "TargetPackageVersion": "1.0.3",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/Gayathri_N",
+      "FolderKey": "21f361fc-ce08-449e-9203-902a7f5d17ff",
+      "CreatedAt": "2026-07-28T09:26:58.103Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "07119fe8-57ac-4184-b10f-fbda5808485d",
+      "InstallDeploymentKey": "054ecb1e-d75c-489c-b044-5f1a274597de",
+      "Name": "n8n-Migration-Workflow-Deploy",
+      "PackageName": "n8n-Migration-Workflow",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "TargetPackageVersion": "1.0.0",
+      "Operation": "ConfigurationChange",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "NeedsSetupToActivate",
+      "FolderKey": "64bfb807-1779-4235-bee6-0e59aea44ae2",
+      "CreatedAt": "2026-07-28T09:23:03.806Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "59ebda0c-8e5a-49f4-93ff-3a531d7a666e",
+      "InstallDeploymentKey": "59ebda0c-8e5a-49f4-93ff-3a531d7a666e",
+      "Name": "n8n-Demo-3-Deploy",
+      "PackageName": "n8n-Demo-3",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "NeedsSetupToActivate",
+      "FolderKey": "493bb1ad-2da4-43f0-95d6-dc44bdd712c2",
+      "CreatedAt": "2026-07-28T08:23:08.606Z",
+      "Actions": [
+        "SetupActivation",
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "405de430-369d-48c2-89e7-217a89da3a5d",
+      "InstallDeploymentKey": "79ab08bc-d368-4ccd-ac98-2603dc9bc9d3",
+      "Name": "AutomationFoundry",
+      "PackageName": "Foundry_Factory",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "cff87d5d-b49d-4760-8341-f2ba352a3c94",
+      "CreatedAt": "2026-07-25T08:23:11.904Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "0c83854b-7962-46a9-92c7-75f68a24bb40",
+      "InstallDeploymentKey": "0fffe7c8-dff1-4682-a86b-2149e0074eeb",
+      "Name": "AO_APIA_EnhancedDemo-RK",
+      "PackageName": "AO_APIA_EnhancedDemo-RK",
+      "PackageVersion": "1.1.1",
+      "CurrentPackageVersion": "1.1.1",
+      "TargetPackageVersion": "1.1.1",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "c07d8135-49a0-4a7f-9a24-bd95823a967a",
+      "CreatedAt": "2026-07-24T21:49:02.455Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "54cb925f-72fc-4401-9040-ae31cd40f785",
+      "InstallDeploymentKey": "368c98fd-8421-4b16-ab3b-fddd24187433",
+      "Name": "AO_APIA_EnhancedDemo-RK",
+      "PackageName": "AO_APIA_EnhancedDemo-RK",
+      "PackageVersion": "1.1.0",
+      "CurrentPackageVersion": "1.1.0",
+      "TargetPackageVersion": "1.1.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-07-24T18:41:28.044Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "54427798-f609-4c84-8ce2-632dbda652e8",
+      "InstallDeploymentKey": "54427798-f609-4c84-8ce2-632dbda652e8",
+      "Name": "AO_APIA_EnhancedDemo-RK",
+      "PackageName": "AO_APIA_EnhancedDemo-RK",
+      "PackageVersion": "1.1.0",
+      "CurrentPackageVersion": "1.1.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-07-24T17:22:06.249Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "32573cde-d4b5-42e8-b174-c3a04d9469ae",
+      "InstallDeploymentKey": "32573cde-d4b5-42e8-b174-c3a04d9469ae",
+      "Name": "CambiaClaimReviewBriefAgentSolution",
+      "PackageName": "CambiaClaimReviewBriefAgentSolution",
+      "PackageVersion": "1.2.0",
+      "TargetPackageVersion": "1.2.0",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "Shared",
+      "CreatedAt": "2026-07-24T03:29:27.237Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "fb061843-2a53-4bb1-ab19-94b934897574",
+      "InstallDeploymentKey": "fb061843-2a53-4bb1-ab19-94b934897574",
+      "Name": "PurchaseOrderTeamsDemo-1.0.0",
+      "PackageName": "PurchaseOrderTeamsDemo",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/MB_Shared",
+      "FolderKey": "84862f2e-26b6-4d52-8251-4c7510255380",
+      "CreatedAt": "2026-07-23T16:35:51.328Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "ccb2e504-01a3-4710-84f6-7de525f237fe",
+      "InstallDeploymentKey": "ccb2e504-01a3-4710-84f6-7de525f237fe",
+      "Name": "CambiaClaimReviewBriefAgentPilot",
+      "PackageName": "CambiaClaimReviewBriefAgentSolution",
+      "PackageVersion": "1.2.0",
+      "CurrentPackageVersion": "1.2.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS/Cambia Claims Evidence Readjustment Pilot",
+      "FolderKey": "a7f9f46e-8da3-422d-a0d9-86cc5c4c1c16",
+      "CreatedAt": "2026-07-23T14:18:12.021Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "04dc0522-2c72-4658-bf08-f99a95d6a9cf",
+      "InstallDeploymentKey": "04dc0522-2c72-4658-bf08-f99a95d6a9cf",
+      "Name": "n8n-Demo-Deploy",
+      "PackageName": "n8n-Demo",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "NeedsSetupToActivate",
+      "FolderKey": "ff31fef9-f8fa-4152-a4a0-26f30eabe2d3",
+      "CreatedAt": "2026-07-23T08:13:07.216Z",
+      "Actions": [
+        "SetupActivation",
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "c7a6da3d-643b-4b19-a9ed-93acf06d482d",
+      "InstallDeploymentKey": "c7a6da3d-643b-4b19-a9ed-93acf06d482d",
+      "Name": "Securitas_MDM",
+      "PackageName": "Securitas_MDM",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "a8ebf1ab-0177-410c-9746-59b395ce7d76",
+      "CreatedAt": "2026-07-22T11:39:34.663Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "689c141c-d582-417d-98e1-2441f72a2646",
+      "InstallDeploymentKey": "423405ec-a888-4496-808a-6d3b550041dd",
+      "Name": "Benefit_Claims",
+      "PackageName": "Benefit_Claims",
+      "PackageVersion": "1.0.7",
+      "CurrentPackageVersion": "1.0.7",
+      "TargetPackageVersion": "1.0.7",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "36492652-0a02-433f-a3b4-16451fa5c9bb",
+      "CreatedAt": "2026-07-21T16:44:50.529Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "e7f70595-5f06-44a9-92a5-bd8ec88d5f34",
+      "InstallDeploymentKey": "e7f70595-5f06-44a9-92a5-bd8ec88d5f34",
+      "Name": "VSP Service Bus API Demo",
+      "PackageName": "VSPServiceBusDemo",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "c1a59953-b892-4c06-b247-c83f8e2e6937",
+      "CreatedAt": "2026-07-21T02:28:43.755Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "7a958811-d9d3-4517-a70b-d0a986026437",
+      "InstallDeploymentKey": "7a958811-d9d3-4517-a70b-d0a986026437",
+      "Name": "K2 Vendor Evaluation Demo - Playground",
+      "PackageName": "K2VendorEvaluationSolution",
+      "PackageVersion": "0.5.9",
+      "CurrentPackageVersion": "0.5.9",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "16ce88b2-2fc7-4e87-9ccd-5c0888ad1be4",
+      "CreatedAt": "2026-07-21T02:14:58.404Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "3914bba1-4b1c-4ff5-815d-b013590644eb",
+      "InstallDeploymentKey": "49c83b50-cb5f-40bd-a065-8aeb423a9b1e",
+      "Name": "Great Eastern POC new",
+      "PackageName": "Great Eastern POC",
+      "PackageVersion": "1.0.13",
+      "CurrentPackageVersion": "1.0.13",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "50aec40d-154a-4bc2-9385-d2372ddd6e55",
+      "CreatedAt": "2026-07-20T14:07:25.088Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "9eae7df8-31ab-4797-a6fa-bb645327522a",
+      "InstallDeploymentKey": "4fbca6cc-b2e6-4127-8dde-a5e2d3755684",
+      "Name": "Great Eastern POC",
+      "PackageName": "Great Eastern POC",
+      "PackageVersion": "1.0.10",
+      "CurrentPackageVersion": "1.0.6",
+      "TargetPackageVersion": "1.0.10",
+      "NewPackageVersionAvailable": "1.0.13",
+      "Operation": "VersionChange",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared",
+      "FolderKey": "90fd88eb-e9ce-422c-bd13-7485292538c5",
+      "CreatedAt": "2026-07-20T06:44:12.113Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "1e53c195-e012-491a-9b68-a8c91b884d56",
+      "InstallDeploymentKey": "1e53c195-e012-491a-9b68-a8c91b884d56",
+      "Name": "Targeting360-1-0-33-index",
+      "PackageName": "Targeting360",
+      "PackageVersion": "1.0.33",
+      "CurrentPackageVersion": "1.0.33",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales",
+      "FolderKey": "765435a2-481a-4e59-a717-914b2c4ffe66",
+      "CreatedAt": "2026-07-17T17:14:28.259Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "afecac6b-ba18-41f5-b765-6ef405bb54df",
+      "InstallDeploymentKey": "afecac6b-ba18-41f5-b765-6ef405bb54df",
+      "Name": "Targeting360-1-0-33",
+      "PackageName": "Targeting360",
+      "PackageVersion": "1.0.33",
+      "CurrentPackageVersion": "1.0.33",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "ReadyToActivate",
+      "FolderPath": "AMER Presales",
+      "FolderKey": "409c833c-427f-4e51-b4b6-8ec9b35071ba",
+      "CreatedAt": "2026-07-17T17:13:48.141Z",
+      "Actions": [
+        "Activate",
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "56a155e2-fe3f-47ed-b811-5938627100e1",
+      "InstallDeploymentKey": "56a155e2-fe3f-47ed-b811-5938627100e1",
+      "Name": "Targeting360-1-0-32",
+      "PackageName": "Targeting360",
+      "PackageVersion": "1.0.31",
+      "TargetPackageVersion": "1.0.31",
+      "Operation": "Install",
+      "OperationStatus": "Draft",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales",
+      "CreatedAt": "2026-07-17T17:09:24.674Z",
+      "Actions": [
+        "Install",
+        "Delete"
+      ]
+    },
+    {
+      "Key": "21c97588-e121-4326-b73b-7fa9561359ee",
+      "InstallDeploymentKey": "21c97588-e121-4326-b73b-7fa9561359ee",
+      "Name": "FlightOptimizerEmailAgentLive",
+      "PackageName": "seats-aero-award-solution",
+      "PackageVersion": "0.3.15",
+      "CurrentPackageVersion": "0.3.15",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "54d794ae-a33a-47b3-a54b-27175d2109a5",
+      "CreatedAt": "2026-07-16T23:01:13.430Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "4b5e189e-0229-49cf-a221-96fa5b4b2582",
+      "InstallDeploymentKey": "52ccf07c-24d1-4f7f-9c5b-2b011fb93cf3",
+      "Name": "FlightOptimizerEmailAgent",
+      "PackageName": "seats-aero-award-solution",
+      "PackageVersion": "0.3.15",
+      "CurrentPackageVersion": "0.3.15",
+      "TargetPackageVersion": "0.3.15",
+      "Operation": "ActivationSetup",
+      "OperationStatus": "Failed",
+      "ActivationStatus": "Inactive",
+      "FolderPath": "Shared/HLS",
+      "FolderKey": "2f78713d-2d8d-467f-867e-6d5deb2deb25",
+      "CreatedAt": "2026-07-16T22:34:48.317Z",
+      "Actions": [
+        "Uninstall"
+      ]
+    },
+    {
+      "Key": "acfe20f6-4f7f-40c9-92dc-c8d9c01e9e96",
+      "InstallDeploymentKey": "acfe20f6-4f7f-40c9-92dc-c8d9c01e9e96",
+      "Name": "Treasury ACH Research Debug Runtime 1.0.2",
+      "PackageName": "Flow - Treasury ACH Research",
+      "PackageVersion": "1.0.2",
+      "CurrentPackageVersion": "1.0.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "stephen.fowler@uipath.com's workspace",
+      "FolderKey": "6b30a2c6-4d67-47ef-abd8-2a0c9609d099",
+      "CreatedAt": "2026-07-16T19:14:45.488Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "351a61f2-587b-4e21-b8d4-46e4961f260f",
+      "InstallDeploymentKey": "351a61f2-587b-4e21-b8d4-46e4961f260f",
+      "Name": "Treasury ACH Research Debug Runtime",
+      "PackageName": "Flow - Treasury ACH Research",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "NewPackageVersionAvailable": "1.0.2",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "stephen.fowler@uipath.com's workspace",
+      "FolderKey": "cfdc8f85-1f7f-4070-92b2-09e3686d610f",
+      "CreatedAt": "2026-07-16T18:59:46.690Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "3559ea94-8b20-4b7b-9dfc-3e5dba93fbaa",
+      "InstallDeploymentKey": "3559ea94-8b20-4b7b-9dfc-3e5dba93fbaa",
+      "Name": "Treasury Client Servicing Solution",
+      "PackageName": "Treasury Client Servicing Solution",
+      "PackageVersion": "1.0.1",
+      "CurrentPackageVersion": "1.0.1",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "a9ee5e05-7175-47ea-85bd-1ffb2b15fdea",
+      "CreatedAt": "2026-07-15T20:54:36.321Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "1027cca2-c9a0-4c01-8d0e-d79625b725d6",
+      "InstallDeploymentKey": "1027cca2-c9a0-4c01-8d0e-d79625b725d6",
+      "Name": "Treasury Client Servicing Solution",
+      "PackageName": "Treasury Client Servicing Solution",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-07-15T19:56:06.864Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "4253213a-03e7-4c4a-b306-efa9aa88e028",
+      "InstallDeploymentKey": "e191b6c9-736b-4337-9fae-daa291b0aedc",
+      "Name": "FNOL High Level AC",
+      "PackageName": "FNOL High Level AC",
+      "PackageVersion": "1.0.4",
+      "CurrentPackageVersion": "1.0.4",
+      "Operation": "VersionChange",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "f9dad4e6-68e5-469a-bd3c-507ac8420dee",
+      "CreatedAt": "2026-07-15T16:41:40.203Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    },
+    {
+      "Key": "8682ee83-a355-44ef-843e-5acb0f3f8c2e",
+      "InstallDeploymentKey": "8682ee83-a355-44ef-843e-5acb0f3f8c2e",
+      "Name": "ACH Payment Research Agent T3 Test",
+      "PackageName": "ACH Payment Research Agent T3 Test",
+      "PackageVersion": "0.1.0",
+      "CurrentPackageVersion": "0.1.0",
+      "Operation": "Uninstall",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "None",
+      "FolderPath": "AMER Presales/FINS",
+      "CreatedAt": "2026-07-14T18:36:48.846Z",
+      "Actions": [
+        "Delete"
+      ]
+    },
+    {
+      "Key": "478ad298-209d-4b27-8981-0d09bdce9878",
+      "InstallDeploymentKey": "478ad298-209d-4b27-8981-0d09bdce9878",
+      "Name": "ACH Payment Research Agent",
+      "PackageName": "ACH Payment Research Agent",
+      "PackageVersion": "1.0.0",
+      "CurrentPackageVersion": "1.0.0",
+      "Operation": "Install",
+      "OperationStatus": "Successful",
+      "ActivationStatus": "Active",
+      "FolderPath": "AMER Presales/FINS",
+      "FolderKey": "1607558d-186f-47f0-a403-930927c7e008",
+      "CreatedAt": "2026-07-15T16:04:14.873Z",
+      "Actions": [
+        "Uninstall",
+        "Upgrade"
+      ]
+    }
+  ],
+  "Pagination": {
+    "Returned": 100,
+    "Limit": 100,
+    "Offset": 0,
+    "Total": 441,
+    "HasMore": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Result": "Success",
+  "Code": "BucketList",
+  "Pagination": {
+    "Returned": 8,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Name": "healthcare-invoice-assurance-uploadedInvoices",
+      "Key": "11c5ae0b-2ef6-495a-b6b7-d79e7e6f7633"
+    }
+  ]
+}

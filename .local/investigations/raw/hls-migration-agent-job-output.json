@@ -1,0 +1,302 @@
+{
+  "governingDocumentStack": [
+    {
+      "sourceDocumentId": "03_Amendment_01_Labor_Rates.pdf",
+      "documentTitle": "Amendment 01 - Labor Rate Schedule",
+      "effectiveDate": "2026-03-01",
+      "topicScope": [
+        "carpenter-labor",
+        "labor-rate"
+      ],
+      "reason": "Effective on invoice date and specifically governs direct labor rate schedule for carpenter classification."
+    },
+    {
+      "sourceDocumentId": "02_Revised_and_Restated_Agreement.pdf",
+      "documentTitle": "Revised and Restated Construction Services Agreement",
+      "effectiveDate": "2026-01-01",
+      "topicScope": [
+        "small-tools",
+        "percentage-cap",
+        "eligible-craft-labor-base"
+      ],
+      "reason": "Effective on invoice date and governs the small-tools allowance cap and eligible direct craft labor base."
+    },
+    {
+      "sourceDocumentId": "04_Amendment_02_Equipment_Rates.pdf",
+      "documentTitle": "Amendment 02 - Equipment Rate Schedule",
+      "effectiveDate": "2026-05-01",
+      "topicScope": [
+        "scissor-lift",
+        "equipment-unit-cap"
+      ],
+      "reason": "Effective on invoice date and specifically governs scissor lift operating-day cap and application rules."
+    },
+    {
+      "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+      "documentTitle": "Amendment 03 - Evidence and Cost Eligibility",
+      "effectiveDate": "2026-07-01",
+      "topicScope": [
+        "equipment-evidence",
+        "ppe-evidence",
+        "invoice-register-reconciliation",
+        "alcohol"
+      ],
+      "reason": "Effective on invoice date and specifically governs July 2026 evidence requirements, alcohol reaffirmation, and invoice-register reconciliation."
+    },
+    {
+      "sourceDocumentId": "02_Revised_and_Restated_Agreement.pdf",
+      "documentTitle": "Revised and Restated Construction Services Agreement",
+      "effectiveDate": "2026-01-01",
+      "topicScope": [
+        "ppe",
+        "alcohol"
+      ],
+      "reason": "Effective on invoice date and provides base cost-eligibility terms for PPE reimbursement and alcohol exclusion."
+    }
+  ],
+  "normalizedRules": [
+    {
+      "ruleId": "rule-carpenter-rate",
+      "ruleType": "LaborRateLimit",
+      "scope": {
+        "chargeIds": [
+          "charge-carpenter"
+        ],
+        "category": "carpenter-labor",
+        "unit": "hour"
+      },
+      "operands": {
+        "maximumUnitRate": 115,
+        "currency": "USD"
+      },
+      "effectivePeriod": {
+        "start": "2026-03-01",
+        "end": null
+      },
+      "sourceDocumentId": "03_Amendment_01_Labor_Rates.pdf",
+      "sourceClause": "1. Replacement schedule - Classification Carpenter effective rate $115.00/hr; straight time unless written premium approval applies.",
+      "confidence": 0.98
+    },
+    {
+      "ruleId": "rule-small-tools-cap",
+      "ruleType": "PercentageCap",
+      "scope": {
+        "chargeIds": [
+          "charge-small-tools"
+        ],
+        "category": "small-tools"
+      },
+      "operands": {
+        "maximumPercentage": 0.03,
+        "eligibleSubmittedBaseChargeIds": [
+          "charge-carpenter",
+          "charge-other-eligible-craft-labor"
+        ],
+        "eligibleSubmittedBaseAmount": 34048,
+        "currency": "USD"
+      },
+      "effectivePeriod": {
+        "start": "2026-01-01",
+        "end": null
+      },
+      "sourceDocumentId": "02_Revised_and_Restated_Agreement.pdf",
+      "sourceClause": "5.1 Small tools - not exceeding 3.0% of submitted eligible direct craft labor charges; excludes superintendent time, overtime premiums, subcontractor labor, equipment, materials, PPE, and other reimbursables.",
+      "confidence": 0.95
+    },
+    {
+      "ruleId": "rule-scissor-lift-cap",
+      "ruleType": "EquipmentUnitCap",
+      "scope": {
+        "chargeIds": [
+          "charge-scissor-lift"
+        ],
+        "category": "scissor-lift",
+        "unit": "day"
+      },
+      "operands": {
+        "maximumUnitRate": 375,
+        "pricingBasis": "lower of actual documented cost or schedule cap",
+        "currency": "USD"
+      },
+      "effectivePeriod": {
+        "start": "2026-05-01",
+        "end": null
+      },
+      "sourceDocumentId": "04_Amendment_02_Equipment_Rates.pdf",
+      "sourceClause": "1. Daily equipment caps - 19-26 ft scissor lift; unit operating day; maximum rate $375.00.",
+      "confidence": 0.98
+    },
+    {
+      "ruleId": "rule-scissor-lift-evidence",
+      "ruleType": "EvidenceRequirement",
+      "scope": {
+        "chargeIds": [
+          "charge-scissor-lift"
+        ],
+        "category": "equipment"
+      },
+      "operands": {
+        "requiredEvidenceTypes": [
+          "rental-invoice-or-ownership-log",
+          "operating-dates"
+        ],
+        "threshold": "every equipment charge"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-01",
+        "end": null
+      },
+      "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+      "sourceClause": "2. Category requirements - Equipment requires rental invoice or ownership log plus operating dates for every equipment charge.",
+      "confidence": 0.98
+    },
+    {
+      "ruleId": "rule-ppe-evidence",
+      "ruleType": "EvidenceRequirement",
+      "scope": {
+        "chargeIds": [
+          "charge-ppe"
+        ],
+        "category": "ppe"
+      },
+      "operands": {
+        "requiredEvidenceTypes": [
+          "itemized-vendor-receipt"
+        ],
+        "amountThreshold": 250,
+        "currency": "USD"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-01",
+        "end": null
+      },
+      "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+      "sourceClause": "2. Category requirements - PPE and safety consumables require an itemized vendor receipt when the charge exceeds $250.",
+      "confidence": 0.98
+    },
+    {
+      "ruleId": "rule-alcohol-exclusion",
+      "ruleType": "CategoryExclusion",
+      "scope": {
+        "chargeIds": [
+          "charge-alcohol"
+        ],
+        "category": "alcohol"
+      },
+      "operands": {
+        "exclusion": "never reimbursable"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-01",
+        "end": null
+      },
+      "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+      "sourceClause": "3. Prohibited-cost reaffirmation - Alcohol remains nonreimbursable without exception.",
+      "confidence": 0.99
+    },
+    {
+      "ruleId": "rule-invoice-register-tieout",
+      "ruleType": "InvoiceRegisterTieOut",
+      "scope": {
+        "invoiceRecordId": "11111111-1111-4111-8111-111111111111"
+      },
+      "operands": {
+        "mustMatchExactly": true,
+        "invoiceTotal": 63024.9,
+        "registerTotal": 62874.9,
+        "variance": 150,
+        "currency": "USD"
+      },
+      "effectivePeriod": {
+        "start": "2026-07-01",
+        "end": null
+      },
+      "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+      "sourceClause": "4. Invoice-register reconciliation - The invoice cover total must match the detailed cost-register total before final approval.",
+      "confidence": 0.99
+    }
+  ],
+  "proposedFindings": [
+    {
+      "findingId": "finding-carpenter-rate-exceeded",
+      "chargeId": "charge-carpenter",
+      "ruleId": "rule-carpenter-rate",
+      "evidenceState": "exceededLimit",
+      "explanation": "Submitted carpenter unit rate of $130.00/hr exceeds the grounded maximum straight-time carpenter rate of $115.00/hr.",
+      "citations": [
+        {
+          "sourceDocumentId": "03_Amendment_01_Labor_Rates.pdf",
+          "sourceClause": "1. Replacement schedule - Classification Carpenter effective rate $115.00/hr; straight time unless written premium approval applies."
+        }
+      ]
+    },
+    {
+      "findingId": "finding-small-tools-cap-exceeded",
+      "chargeId": "charge-small-tools",
+      "ruleId": "rule-small-tools-cap",
+      "evidenceState": "exceededCap",
+      "explanation": "Submitted small-tools amount of $1,702.40 exceeds the contract cap of 3.0% of the supplied eligible submitted direct craft labor base of $34,048.00.",
+      "citations": [
+        {
+          "sourceDocumentId": "02_Revised_and_Restated_Agreement.pdf",
+          "sourceClause": "5.1 Small tools - not exceeding 3.0% of submitted eligible direct craft labor charges; excludes superintendent time, overtime premiums, subcontractor labor, equipment, materials, PPE, and other reimbursables."
+        }
+      ]
+    },
+    {
+      "findingId": "finding-scissor-lift-cap-exceeded",
+      "chargeId": "charge-scissor-lift",
+      "ruleId": "rule-scissor-lift-cap",
+      "evidenceState": "exceededCap",
+      "explanation": "Submitted scissor lift unit rate of $425.00 per day exceeds the grounded contract maximum of $375.00 per operating day.",
+      "citations": [
+        {
+          "sourceDocumentId": "04_Amendment_02_Equipment_Rates.pdf",
+          "sourceClause": "1. Daily equipment caps - 19-26 ft scissor lift; unit operating day; maximum rate $375.00."
+        }
+      ]
+    },
+    {
+      "findingId": "finding-ppe-missing-evidence",
+      "chargeId": "charge-ppe",
+      "ruleId": "rule-ppe-evidence",
+      "evidenceState": "missingEvidence",
+      "explanation": "PPE charge exceeds the $250 evidence threshold but no itemized vendor receipt was supplied in the charge evidence types.",
+      "citations": [
+        {
+          "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+          "sourceClause": "2. Category requirements - PPE and safety consumables require an itemized vendor receipt when the charge exceeds $250."
+        }
+      ]
+    },
+    {
+      "findingId": "finding-alcohol-excluded",
+      "chargeId": "charge-alcohol",
+      "ruleId": "rule-alcohol-exclusion",
+      "evidenceState": "excludedCategory",
+      "explanation": "Alcoholic beverages are contractually nonreimbursable without exception, even if part of an otherwise allowable meal.",
+      "citations": [
+        {
+          "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+          "sourceClause": "3. Prohibited-cost reaffirmation - Alcohol remains nonreimbursable without exception."
+        }
+      ]
+    },
+    {
+      "findingId": "finding-invoice-register-variance",
+      "chargeId": "charge-compliant-remainder",
+      "ruleId": "rule-invoice-register-tieout",
+      "evidenceState": "reconciliationException",
+      "explanation": "Invoice cover total and detailed cost-register total do not reconcile; reported variance is $150.00.",
+      "citations": [
+        {
+          "sourceDocumentId": "05_Amendment_03_Evidence_and_Eligibility.pdf",
+          "sourceClause": "4. Invoice-register reconciliation - The invoice cover total must match the detailed cost-register total before final approval."
+        }
+      ]
+    }
+  ],
+  "ambiguities": [],
+  "analysisSummary": "Retrieved governing July 2026 contract clauses from the selected indexed contract family only. Exceptions supported by retrieved clauses are: carpenter labor rate above the effective straight-time cap; small-tools charge above the 3% cap applied to the supplied eligible direct craft labor base; scissor-lift daily rate above the equipment cap; PPE charge missing the required itemized receipt because it exceeds the evidence threshold; alcohol is excluded from reimbursement; and the invoice/register totals show a non-zero reconciliation variance. No ambiguity blocks these determinations, and no finding was emitted for the scissor-lift evidence because the required evidence types were supplied.",
+  "schemaVersion": "1.0"
+}

@@ -1,0 +1,28 @@
+{
+  "Result": "Success",
+  "Code": "JobHistory",
+  "Pagination": {
+    "Returned": 3,
+    "Limit": 3,
+    "Offset": 0,
+    "Total": 3,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "State": "Successful",
+      "Timestamp": "2026-08-13T19:05:23.013Z",
+      "JobId": 634393903
+    },
+    {
+      "State": "Running",
+      "Timestamp": "2026-08-13T19:05:01.100Z",
+      "JobId": 634393903
+    },
+    {
+      "State": "Pending",
+      "Timestamp": "2026-08-13T19:05:00.580Z",
+      "JobId": 634393903
+    }
+  ]
+}

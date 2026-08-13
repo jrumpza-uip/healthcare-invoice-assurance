@@ -1,0 +1,44 @@
+{
+  "Result": "Success",
+  "Code": "BucketList",
+  "Pagination": {
+    "Returned": 8,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Name": "healthcare-invoice-assurance-uploadedInvoices",
+      "Key": "11c5ae0b-2ef6-495a-b6b7-d79e7e6f7633"
+    },
+    {
+      "Name": "healthcare-invoice-assurance-contractFiles",
+      "Key": "6dfc0608-733a-4465-9811-59e87d5095cb"
+    },
+    {
+      "Name": "Shared_LifeScience_AddressMatch",
+      "Key": "d86621f0-b276-4300-a090-cf91e983a208"
+    },
+    {
+      "Name": "Referrals Payer Policies",
+      "Key": "c4f94c19-2782-4e98-b029-49f68c793705"
+    },
+    {
+      "Name": "LTAC Referrals",
+      "Key": "e9d98ac2-fd0c-4e5c-8771-72b6ba391225"
+    },
+    {
+      "Name": "du_storage_bucket",
+      "Key": "cfeb4107-f5dd-4b72-807f-1e4adbb20f69"
+    },
+    {
+      "Name": "DU Extraction Evaluation Bucket",
+      "Key": "232437cb-72f3-44eb-ab07-611e323b099c"
+    },
+    {
+      "Name": "MRS Index Storage Bucket",
+      "Key": "85c1335f-248b-4caa-bd76-284c50c68b99"
+    }
+  ]
+}

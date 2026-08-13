@@ -1,0 +1,67 @@
+{
+  "Result": "Success",
+  "Code": "JobLogs",
+  "Pagination": {
+    "Returned": 11,
+    "Limit": 50,
+    "Offset": 50,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.931Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agentsruntime_/api/featureFlags \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.842Z",
+      "Message": "UiPathConfig: ConfigurationManager(project_id=None, folder_key='79d872b0-bee1-4264-a6de-3e780f4e4239', folder_path=None, base_url='https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0', tenant_id='15eb07e5-edfb-4fcc-9229-7681ff056ff0', organization_id='a17c9af1-091d-4dd2-9cec-ed787c6601c8', job_key='8dc4d66c-37b7-4a93-adee-e88387e70ada', process_uuid='11a6efba-5201-4cc5-bd97-01d760ec872f', process_version='1.0.2')"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.842Z",
+      "Message": "Prefetched feature flags: {'EnableTraceContextHeaders': True, 'FilePiiMaskingEnabled': True, 'DataFabricOntologyEnabled': False, 'EnableAgentDefinitionSpan': True, 'EnableAgentObsAgent365Integration': None, 'EnablePythonGovernanceChecker': False}"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.842Z",
+      "Message": "Prefetched feature flags: {'EnableTraceContextHeaders': True, 'FilePiiMaskingEnabled': True, 'DataFabricOntologyEnabled': False, 'EnableAgentDefinitionSpan': True, 'EnableAgentObsAgent365Integration': None, 'EnablePythonGovernanceChecker': False}"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.841Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agentsruntime_/api/featureFlags \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.770Z",
+      "Message": "HTTP Request: POST https://cloud.uipath.com/a17c9af1-091d-4dd2-9cec-ed787c6601c8/15eb07e5-edfb-4fcc-9229-7681ff056ff0/agentsruntime_/api/featureFlags \"HTTP/1.1 200 OK\""
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.636Z",
+      "Message": "Initializing AgentsRuntimeFactory for command run"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.636Z",
+      "Message": "Agent builder directory not found at .local/build or .agent-builder"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.539Z",
+      "Message": "Starting job execution ..."
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.140Z",
+      "Message": "Download and extract package - finished in 00:00:00.1093114"
+    },
+    {
+      "Level": "Info",
+      "TimeStamp": "2026-08-13T19:05:01.030Z",
+      "Message": "Download and extract package"
+    }
+  ]
+}

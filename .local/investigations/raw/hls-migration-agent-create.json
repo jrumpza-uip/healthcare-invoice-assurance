@@ -1,0 +1,16 @@
+{
+  "Result": "Success",
+  "Code": "ProcessCreated",
+  "Data": {
+    "Key": "11a6efba-5201-4cc5-bd97-01d760ec872f",
+    "Name": "ContractComplianceAgent",
+    "ProcessKey": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+    "ProcessVersion": "1.0.2",
+    "Description": "",
+    "IsLatestVersion": false,
+    "RetentionPeriod": 30,
+    "RetentionAction": "Delete",
+    "FolderKey": "",
+    "FolderPath": "AMER Presales/HLS"
+  }
+}

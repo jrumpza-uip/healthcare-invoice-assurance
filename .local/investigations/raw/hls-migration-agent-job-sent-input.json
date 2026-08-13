@@ -1,0 +1,83 @@
+{
+  "correlationId": "corr-a01",
+  "invoiceRecordId": "11111111-1111-4111-8111-111111111111",
+  "contractProfileId": "profile-west-pavilion",
+  "invoiceDate": "2026-07-31",
+  "canonicalCharges": [
+    {
+      "chargeId": "charge-carpenter",
+      "category": "carpenter-labor",
+      "description": "Carpenter labor",
+      "serviceDate": "2026-07-15",
+      "quantity": 160,
+      "unit": "hour",
+      "unitRate": 130,
+      "submittedAmount": 20800,
+      "evidenceTypes": []
+    },
+    {
+      "chargeId": "charge-other-eligible-craft-labor",
+      "category": "eligible-craft-labor",
+      "description": "Other submitted eligible direct craft labor included in the small-tools base",
+      "submittedAmount": 13248,
+      "evidenceTypes": []
+    },
+    {
+      "chargeId": "charge-small-tools",
+      "category": "small-tools",
+      "description": "Small tools",
+      "submittedAmount": 1702.4,
+      "evidenceTypes": []
+    },
+    {
+      "chargeId": "charge-scissor-lift",
+      "category": "scissor-lift",
+      "description": "Scissor lift rental",
+      "quantity": 10,
+      "unit": "day",
+      "unitRate": 425,
+      "submittedAmount": 4250,
+      "evidenceTypes": [
+        "rental-invoice-or-ownership-log",
+        "operating-dates"
+      ]
+    },
+    {
+      "chargeId": "charge-ppe",
+      "category": "ppe",
+      "description": "PPE supplies",
+      "submittedAmount": 915,
+      "evidenceTypes": []
+    },
+    {
+      "chargeId": "charge-alcohol",
+      "category": "alcohol",
+      "description": "Alcoholic beverage portion of approved meal",
+      "submittedAmount": 68.5,
+      "evidenceTypes": [
+        "itemized-receipt"
+      ]
+    },
+    {
+      "chargeId": "charge-compliant-remainder",
+      "category": "compliant",
+      "description": "Other submitted compliant work",
+      "submittedAmount": 22041,
+      "evidenceTypes": []
+    }
+  ],
+  "reconciliationSummary": {
+    "searchStatus": "Found",
+    "invoiceRegisterComparison": {
+      "status": "Variance",
+      "invoiceTotal": 63024.9,
+      "registerTotal": 62874.9,
+      "variance": 150
+    },
+    "supportingDocumentComparisons": []
+  },
+  "precedencePolicy": {
+    "mode": "topic-specific",
+    "effectiveOnOrBeforeInvoiceDate": true
+  }
+}

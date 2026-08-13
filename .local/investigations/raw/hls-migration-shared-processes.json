@@ -1,0 +1,72 @@
+{
+  "Result": "Success",
+  "Code": "ProcessList",
+  "Pagination": {
+    "Returned": 5,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Key": "1F3579CA-60CD-4164-BAC6-D60C6296BA60",
+      "Name": "FinancialRulesEvaluator",
+      "ProcessKey": "FinancialRulesEvaluator",
+      "ProcessVersion": "0.0.1",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d",
+      "FolderPath": "Shared/HealthcareInvoiceAssurance"
+    },
+    {
+      "Key": "3E825499-924B-484C-8AF0-D7A4E4E63DA5",
+      "Name": "ContractComplianceAgent",
+      "ProcessKey": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d",
+      "FolderPath": "Shared/HealthcareInvoiceAssurance"
+    },
+    {
+      "Key": "B1C90FB6-A362-4575-93F1-1B99FE5F78DE",
+      "Name": "ProjectCostLookupApi",
+      "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d",
+      "FolderPath": "Shared/HealthcareInvoiceAssurance"
+    },
+    {
+      "Key": "797DF5EF-E920-4E72-A3B5-95CCC19C0ED5",
+      "Name": "InvoiceAssuranceFlow",
+      "ProcessKey": "HealthcareInvoiceAssurance.flow.InvoiceAssuranceFlow",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d",
+      "FolderPath": "Shared/HealthcareInvoiceAssurance"
+    },
+    {
+      "Key": "B1F456AD-2259-47D1-8A33-1E7CB277E306",
+      "Name": "InvoiceAssurancePersistence",
+      "ProcessKey": "HealthcareInvoiceAssurance.process.InvoiceAssurancePersistence",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d",
+      "FolderPath": "Shared/HealthcareInvoiceAssurance"
+    }
+  ]
+}

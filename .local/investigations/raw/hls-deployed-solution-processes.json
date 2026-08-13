@@ -1,0 +1,42 @@
+{
+  "Result": "Success",
+  "Code": "ProcessList",
+  "Pagination": {
+    "Returned": 5,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Name": "ProjectCostLookupApi",
+      "Type": null,
+      "Version": "1.0.2",
+      "Key": "DA030F9B-2E78-4262-9845-99EF6FCD4803"
+    },
+    {
+      "Name": "InvoiceAssuranceFlow",
+      "Type": null,
+      "Version": "1.0.2",
+      "Key": "5FB19049-1FDE-4521-817C-173E392186CB"
+    },
+    {
+      "Name": "ContractComplianceAgent",
+      "Type": null,
+      "Version": "1.0.2",
+      "Key": "D699396D-9235-4A07-BC73-6717338E7781"
+    },
+    {
+      "Name": "InvoiceAssurancePersistence",
+      "Type": null,
+      "Version": "1.0.2",
+      "Key": "F0E28EC7-DA0D-4EA1-9D0C-A891D0ABC26E"
+    },
+    {
+      "Name": "FinancialRulesEvaluator",
+      "Type": null,
+      "Version": "0.0.1",
+      "Key": "A11407AC-91AA-43DF-926E-A4B8633D7FA9"
+    }
+  ]
+}

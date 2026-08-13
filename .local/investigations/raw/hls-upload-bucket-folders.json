@@ -1,0 +1,14 @@
+{
+  "Result": "Success",
+  "Code": "BucketFolders",
+  "Data": {
+    "AccessibleFolders": [
+      {
+        "DisplayName": "HLS",
+        "FullyQualifiedName": "AMER Presales/HLS",
+        "Id": 2036001
+      }
+    ],
+    "TotalFoldersCount": 1
+  }
+}

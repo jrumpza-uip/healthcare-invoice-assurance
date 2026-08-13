@@ -1,0 +1,7 @@
+{
+  "Result": "Failure",
+  "Message": "Error listing packages",
+  "Instructions": "The request failed and the interceptors did not return an alternative response: getaddrinfo ENOTFOUND cloud.uipath.com",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix"
+}

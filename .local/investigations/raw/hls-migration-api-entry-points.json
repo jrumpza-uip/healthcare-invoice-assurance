@@ -1,0 +1,13 @@
+{
+  "Result": "Success",
+  "Code": "PackageEntryPoints",
+  "Data": [
+    {
+      "UniqueId": "ac8791cf-5cf0-4a53-a43b-6ef3039f2440",
+      "Path": "content/Workflow.json",
+      "DisplayName": "",
+      "InputArguments": "",
+      "OutputArguments": ""
+    }
+  ]
+}

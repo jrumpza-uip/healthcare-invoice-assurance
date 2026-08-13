@@ -1,0 +1,7 @@
+{
+  "Result": "ValidationError",
+  "ErrorCode": "invalid_argument",
+  "Message": "Filter '[?contains(FullyQualifiedName, 'Debug_HealthcareInvoiceAssurance')].{Name:FullyQualifiedName,Key:Key}' failed to evaluate: Invalid type: contains() expected argument 1 to be type (string | array) but received type null instead.",
+  "Instructions": "The --output-filter expression '[?contains(FullyQualifiedName, 'Debug_HealthcareInvoiceAssurance')].{Name:FullyQualifiedName,Key:Key}' failed at evaluation time. Note that --output-filter operates on the 'Data' field of the envelope, not the full object. For example, on a list result use 'length(@)' instead of 'Data | length(@)'.",
+  "Retry": "RetryWillNotFix"
+}

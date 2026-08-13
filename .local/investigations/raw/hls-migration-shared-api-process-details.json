@@ -1,0 +1,57 @@
+{
+  "Result": "Success",
+  "Code": "ProcessGet",
+  "Data": {
+    "RetentionAction": "Delete",
+    "RetentionPeriod": 30,
+    "StaleRetentionAction": "Delete",
+    "StaleRetentionPeriod": 180,
+    "SupportsJsonSchemaEntryPoints": true,
+    "EntryPointV2": {
+      "UniqueId": "ac8791cf-5cf0-4a53-a43b-6ef3039f2440",
+      "Path": "content/Workflow.json",
+      "InputArguments": "",
+      "OutputArguments": "",
+      "Id": 4004538
+    },
+    "ArgumentsV2": {
+      "Input": "",
+      "Output": ""
+    },
+    "Key": "b1c90fb6-a362-4575-93f1-1b99fe5f78de",
+    "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+    "ProcessVersion": "1.0.2",
+    "ProjectKey": "165ba60c-c2f2-4cb8-8225-52f58e9b09ab",
+    "IsLatestVersion": false,
+    "IsProcessDeleted": false,
+    "Name": "ProjectCostLookupApi",
+    "EntryPointId": 4004538,
+    "EntryPoint": {
+      "UniqueId": "ac8791cf-5cf0-4a53-a43b-6ef3039f2440",
+      "Path": "content/Workflow.json",
+      "Id": 4004538
+    },
+    "EnvironmentVariables": "",
+    "ProcessType": "Api",
+    "SupportsMultipleEntryPoints": true,
+    "RequiresUserInteraction": false,
+    "IsConversational": false,
+    "IsAttended": false,
+    "IsCompiled": true,
+    "Arguments": {},
+    "AutoUpdate": false,
+    "HiddenForAttendedUser": false,
+    "FeedId": "93949a13-9388-45bb-af90-5783a67e1b33",
+    "JobPriority": "Normal",
+    "SpecificPriorityValue": 45,
+    "OrganizationUnitId": 2184242,
+    "TargetFramework": "Portable",
+    "Tags": [],
+    "ResourceOverwrites": [],
+    "AutoCreateConnectedTriggers": true,
+    "RemoteControlAccess": "None",
+    "PublisherLicense": "Production",
+    "CreationTime": "2026-08-12T17:20:38.210Z",
+    "Id": 462735
+  }
+}

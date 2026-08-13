@@ -1,0 +1,16 @@
+{
+  "Result": "Success",
+  "Code": "ProcessCreated",
+  "Data": {
+    "Key": "59cc5f4c-132b-4d69-a50a-5f7d308bd322",
+    "Name": "ProjectCostLookupApi",
+    "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+    "ProcessVersion": "1.0.2",
+    "Description": "",
+    "IsLatestVersion": false,
+    "RetentionPeriod": 30,
+    "RetentionAction": "Delete",
+    "FolderKey": "",
+    "FolderPath": "AMER Presales/HLS"
+  }
+}

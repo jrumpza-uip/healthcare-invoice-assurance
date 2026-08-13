@@ -1,0 +1,96 @@
+{
+  "Result": "Success",
+  "Code": "ProcessList",
+  "Pagination": {
+    "Returned": 7,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Key": "11A6EFBA-5201-4CC5-BD97-01D760EC872F",
+      "Name": "ContractComplianceAgent",
+      "ProcessKey": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "59CC5F4C-132B-4D69-A50A-5F7D308BD322",
+      "Name": "ProjectCostLookupApi",
+      "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+      "ProcessVersion": "1.0.2",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "1B10B0C1-A12A-4FDA-B5B4-4AACD45CDF27",
+      "Name": "LifeScienceAddressMatchingCsvFlow",
+      "ProcessKey": "LifeScienceAddressMatchingCsvFlow.flow.Flow",
+      "ProcessVersion": "0.1.0",
+      "Description": "Life science address matching flow with HITL review action app",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "27D5AEDD-46F5-4714-A8C3-38E4FFA9687F",
+      "Name": "InvoiceAssuranceFlow",
+      "ProcessKey": "InvoiceAssuranceFlow.flow.Flow",
+      "ProcessVersion": "1.0.2",
+      "Description": "Healthcare Invoice Assurance Maestro Flow",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "DD273B1C-D925-45D0-B1B6-B719CD972819",
+      "Name": "InvoiceAssurancePersistence",
+      "ProcessKey": "HealthcareInvoiceAssurance.process.InvoiceAssurancePersistence",
+      "ProcessVersion": "1.0.2",
+      "Description": "Folder-scoped Data Fabric persistence adapter for Healthcare Invoice Assurance",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "88EF616E-4E9D-4DBA-90B3-BEB53B5581D2",
+      "Name": "FinancialRulesEvaluator",
+      "ProcessKey": "FinancialRulesEvaluator",
+      "ProcessVersion": "0.0.1",
+      "Description": "",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    },
+    {
+      "Key": "7AC416DC-91E1-413A-B1C9-6B2C1EB1B0F4",
+      "Name": "CenterWell.Pharmacy.Registration.and.order.form",
+      "ProcessKey": "CenterWell.Pharmacy.Registration.and.order.form",
+      "ProcessVersion": "1.0.1",
+      "Description": "Added Document Viewer",
+      "IsLatestVersion": true,
+      "RetentionPeriod": 30,
+      "RetentionAction": "Delete",
+      "FolderKey": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+      "FolderPath": "AMER Presales/HLS"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "5eaf632f-2960-4ea7-82eb-08def3f771f8",
+  "name": "healthcare-invoice-assurance-contractsIndex",
+  "description": null,
+  "is_encrypted": false,
+  "folder_fully_qualified_name": null,
+  "memory_usage": 37880,
+  "disk_usage": 159935,
+  "extraction_strategy": "LLMV4",
+  "embeddings_enabled": true,
+  "data_source": {
+    "id": "83a62f78-39a8-4dbb-4f71-08def447647c",
+    "folder": "AMER Presales/HLS",
+    "bucketName": "healthcare-invoice-assurance-contractFiles",
+    "@odata.type": "#UiPath.Vdbs.Domain.Api.V20Models.StorageBucketDataSource",
+    "fileNameGlob": "**/*",
+    "directoryPath": "/",
+    "bucketId": "00000000-0000-0000-0000-000000000000"
+  },
+  "last_ingestion_status": "Successful",
+  "last_ingestion_failure_reason": null,
+  "last_ingested": "2026-08-08T21:37:15.551907+00:00",
+  "last_queried": "2026-08-10T03:19:34.136666+00:00",
+  "folder_key": "79d872b0-bee1-4264-a6de-3e780f4e4239",
+  "index_health": {
+    "schema_id": "5eaf632f-2960-4ea7-82eb-08def3f771f8",
+    "ingestion_reliability_score": 100.0,
+    "utilization_score": 96.62910860805299,
+    "overall_health_score": 98.3145543040265,
+    "health_status": null,
+    "calculatedDate": "2026-08-13T04:08:14.6513045Z"
+  }
+}

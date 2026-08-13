@@ -1,0 +1,68 @@
+{
+  "shared": {
+    "baselinePath": ".local/investigations/raw/hls-migration-shared-processes.json",
+    "postTaskPath": ".local/investigations/raw/hls-migration-shared-processes-post-task3.json",
+    "baselineCount": 5,
+    "postTaskCount": 5,
+    "exactFullInventoryEqual": true,
+    "exactRelevantInventoryEqual": true,
+    "baselineRelevant": [
+      {
+        "Key": "3E825499-924B-484C-8AF0-D7A4E4E63DA5",
+        "Name": "ContractComplianceAgent",
+        "ProcessKey": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+        "ProcessVersion": "1.0.2",
+        "FolderPath": "Shared/HealthcareInvoiceAssurance",
+        "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d"
+      },
+      {
+        "Key": "B1C90FB6-A362-4575-93F1-1B99FE5F78DE",
+        "Name": "ProjectCostLookupApi",
+        "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+        "ProcessVersion": "1.0.2",
+        "FolderPath": "Shared/HealthcareInvoiceAssurance",
+        "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d"
+      }
+    ],
+    "postTaskRelevant": [
+      {
+        "Key": "3E825499-924B-484C-8AF0-D7A4E4E63DA5",
+        "Name": "ContractComplianceAgent",
+        "ProcessKey": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+        "ProcessVersion": "1.0.2",
+        "FolderPath": "Shared/HealthcareInvoiceAssurance",
+        "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d"
+      },
+      {
+        "Key": "B1C90FB6-A362-4575-93F1-1B99FE5F78DE",
+        "Name": "ProjectCostLookupApi",
+        "ProcessKey": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+        "ProcessVersion": "1.0.2",
+        "FolderPath": "Shared/HealthcareInvoiceAssurance",
+        "FolderKey": "8dea0fa0-e3aa-4880-856e-dd3c4103b79d"
+      }
+    ]
+  },
+  "logs": {
+    "combinedPath": ".local/investigations/raw/hls-migration-agent-job-logs-complete.json",
+    "pages": [
+      {
+        "Offset": 0,
+        "Returned": 50,
+        "HasMore": true
+      },
+      {
+        "Offset": 50,
+        "Returned": 11,
+        "HasMore": false
+      }
+    ],
+    "completeCount": 61,
+    "infoCount": 56,
+    "warningCount": 5,
+    "errorLevelCount": 0,
+    "missingIndexOrResourceFailureCount": 0,
+    "exactHlsIndexLookupHttp200Count": 1,
+    "exactHlsIndexSearchHttp200Count": 1
+  }
+}

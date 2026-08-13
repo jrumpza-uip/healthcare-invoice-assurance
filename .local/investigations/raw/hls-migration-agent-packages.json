@@ -1,0 +1,25 @@
+{
+  "Result": "Success",
+  "Code": "PackageList",
+  "Pagination": {
+    "Returned": 1,
+    "Limit": 50,
+    "Offset": 0,
+    "HasMore": false
+  },
+  "Data": [
+    {
+      "Key": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent:1.0.2",
+      "Title": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+      "Version": "1.0.2",
+      "Description": "Created by UiPath",
+      "IsLatestVersion": true,
+      "IsActive": false,
+      "PackageType": "Agent",
+      "TargetFramework": "Portable",
+      "Authors": "Joe Rumpza",
+      "Published": "2026-08-12T17:20:33.577Z",
+      "Id": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent"
+    }
+  ]
+}

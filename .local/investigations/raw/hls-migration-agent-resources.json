@@ -1,0 +1,7 @@
+{
+  "Result": "Failure",
+  "Message": "Error listing process resources",
+  "Instructions": "Verify the process key exists with 'uip or processes get <process-key>' and that you have access to its folder, then retry.",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix"
+}
