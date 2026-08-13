@@ -1,10 +1,47 @@
-# Healthcare Invoice Assurance Runtime Investigation
+# Investigation: solution debug provisioning failure
 
-- Anchor: `uipathlabs / Playground / AMER Presales/HLS`, folder key `79d872b0-bee1-4264-a6de-3e780f4e4239`; process `InvoiceAssurancePersistence`, release key `dd273b1c-d925-45d0-b1b6-b719cd972819`.
-- Expected outcome: run the contracted live persistence suite and then the authenticated end-to-end demo.
-- Reproduction: starting the release with `--runtime-type Serverless` returned HTTP 409: `Cloud - Serverless runtime license selected. There are no Cloud - Serverless runtimes configured on the templates in this folder.` No job was created.
-- Runtime evidence: `hia-runtime-machine-list.json` reports zero machine templates in HLS. `hia-runtime-license-info.json` reports spare tenant Unattended and NonProduction capacity, separating tenant licensing from folder host assignment.
-- Cause: the selected HLS folder has no execution template supporting the explicitly selected Cloud Serverless runtime.
-- Documented alternative: the persistence SDD permits Studio Web serverless debug with folder entity scope for development verification.
-- Browser evidence: Chrome is running, but `hia-browser-extension-check.json` reports the ChatGPT browser extension is not installed/enabled in the active Default profile, so Codex cannot operate the already-authenticated Studio Web tab.
-- Temporary-data disposition: seed Main record `c934bc6c-6e94-f111-9b33-7c1e522150ac` was deleted with SuccessCount 1; fresh post-cleanup queries returned Main 0, LineItems 0, Activity 0.
+## Anchor
+
+- Environment: UiPath Automation Cloud, Studio Web solution `HealthcareInvoiceAssurance`.
+- Debug folder from error: `joseph.rumpza@uipath.com's workspace/Debug_HealthcareInvoiceAssurance`.
+- Failed resources: `ContractComplianceAgent` and `ProjectCostLookupApi`.
+- Exact server message: `This process's package is not available anymore. Changes are not possible.`
+
+## Signals
+
+- Failure occurs during solution debug creation/resource provisioning, before Flow execution.
+- `HealthcareInvoiceAssurance.uipx` still registers both source projects.
+- Both generated package resources have empty `files` arrays and their process resources reference generated package keys.
+- The API workflow was successfully run directly earlier, so an existing HLS platform deployment is available independently of the stale debug-folder resource.
+
+## Candidate assessment
+
+1. Stale debug-folder process resources reference backing package revisions that have been removed.
+   - Supported by the exact Orchestrator error for both processes.
+   - Supported by the failure being scoped to `Debug_HealthcareInvoiceAssurance`, not `AMER Presales/HLS`.
+2. Missing solution source projects.
+   - Contradicted: both projects remain registered in `HealthcareInvoiceAssurance.uipx` and their source directories exist.
+3. Flow logic/runtime defect.
+   - Contradicted: provisioning failed before the Flow instance was created.
+
+## Resolution alignment
+
+- UiPath Studio Web documentation states solution debugging provisions resources into `Debug_[Solution Name]` and that Debug configuration can bind a solution resource to an existing UiPath Platform resource in another folder.
+- Minimal non-destructive resolution: override the two debug resources to use the existing `AMER Presales/HLS` deployments, then retry provisioning.
+- Destructive cleanup of the debug folder is not the first action; official documentation confirms debug deployments and their resources are ephemeral and subject to cleanup, but override avoids deletion.
+
+## Verification checklist
+
+- Cause named: stale debug process references whose backing packages are unavailable.
+- Evidence pinned: exact error names both processes and the `Debug_HealthcareInvoiceAssurance` folder.
+- Runtime/platform evidence: Studio Web provisioning error screenshot supplied by user.
+- Resolution aligned: Debug configuration supports selecting existing Platform resources for debugging.
+- Causal precedence: the debug deployment attempted to upgrade pre-existing resources; Orchestrator rejected the update because each process's package was unavailable; therefore Flow startup never occurred.
+- Fix scope: change only the debug bindings for the two named resources.
+
+## Self-verify
+
+- Specific cause: pass.
+- Evidence distinguishes source absence: pass; source projects exist.
+- Resolution alignment: pass against official Studio Web debugging documentation.
+- Causal precedence: pass; no Flow execution occurred before provisioning failure.

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "$id": "entry-points.json",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "8622e496-a60e-48ff-8828-79fc50cafb6d",
+      "type": "Process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_InvoiceRecordId": {
+            "type": "string",
+            "description": "System GUID of the existing Main record"
+          },
+          "in_LineRecordsJson": {
+            "type": "string",
+            "description": "Line items to create or update; use [] when none"
+          },
+          "in_ActivityRecordJson": {
+            "type": "string",
+            "description": "Activity-history record to append"
+          },
+          "in_MainRecordUpdatesJson": {
+            "type": "string",
+            "description": "Main fields to update"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "out_Success": {
+            "type": "boolean",
+            "description": "True only when all requested writes succeed"
+          },
+          "out_ErrorCode": {
+            "type": "string",
+            "description": "Short category such as ValidationError or PersistenceError"
+          },
+          "out_ErrorMessage": {
+            "type": "string",
+            "description": "Readable failure detail"
+          }
+        }
+      }
+    }
+  ]
+}

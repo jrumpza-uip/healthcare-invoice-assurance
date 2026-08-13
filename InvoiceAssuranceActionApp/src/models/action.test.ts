@@ -55,4 +55,23 @@ describe('normalizeTaskData', () => {
       evaluationStatus: 'Submitted',
     });
   });
+
+  it('starts an evidence-dependent Reviewer task in AwaitingEvidence when no explicit status exists', () => {
+    const data = normalizeTaskData({
+      taskMode: 'Reviewer',
+      invoiceSummary: { awaitingEvidence: true },
+    });
+
+    expect(data.evidenceStatus).toBe('AwaitingEvidence');
+  });
+
+  it('preserves an explicit evidence status when a saved task is reopened', () => {
+    const data = normalizeTaskData({
+      taskMode: 'Reviewer',
+      invoiceSummary: { awaitingEvidence: true },
+      evidenceStatus: 'Resolved',
+    });
+
+    expect(data.evidenceStatus).toBe('Resolved');
+  });
 });

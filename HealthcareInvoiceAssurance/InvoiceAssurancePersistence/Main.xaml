@@ -1,256 +1,544 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="Main"
- xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
- xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
- xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json"
- xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
- xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
- xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
- xmlns:sc="clr-namespace:System.Collections;assembly=System.Private.CoreLib"
- xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
- xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core"
- xmlns:udacsdeb="clr-namespace:UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle;assembly=DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02"
- xmlns:ui="http://schemas.uipath.com/workflow/activities"
- xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uda="clr-namespace:UiPath.DataService.Activities;assembly=UiPath.DataService.Activities.Core" xmlns:udacsdeb="clr-namespace:UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle;assembly=DataFabric.Entities.f5cUJ3mfGGR1t5pkiXqrbT2" xmlns:udam="clr-namespace:UiPath.DataService.Activities.Models;assembly=UiPath.DataService.Activities.Core" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_Operation" Type="InArgument(x:String)" />
-    <x:Property Name="in_InvoiceRecordId" Type="InArgument(x:String)" />
-    <x:Property Name="in_CorrelationId" Type="InArgument(x:String)" />
-    <x:Property Name="in_MainRecordJson" Type="InArgument(x:String)" />
-    <x:Property Name="in_LineRecordsJson" Type="InArgument(x:String)" />
-    <x:Property Name="in_ActivityRecordJson" Type="InArgument(x:String)" />
-    <x:Property Name="out_Success" Type="OutArgument(x:Boolean)" />
-    <x:Property Name="out_InvoiceRecordId" Type="OutArgument(x:String)" />
-    <x:Property Name="out_CorrelationId" Type="OutArgument(x:String)" />
-    <x:Property Name="out_Operation" Type="OutArgument(x:String)" />
-    <x:Property Name="out_ActivityRecordId" Type="OutArgument(x:String)" />
-    <x:Property Name="out_CreatedCount" Type="OutArgument(x:Int32)" />
-    <x:Property Name="out_UpdatedCount" Type="OutArgument(x:Int32)" />
-    <x:Property Name="out_ErrorCode" Type="OutArgument(x:String)" />
-    <x:Property Name="out_ErrorMessage" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="System GUID of the existing Main record" Name="in_InvoiceRecordId" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Line items to create or update; use [] when none" Name="in_LineRecordsJson" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Activity-history record to append" Name="in_ActivityRecordJson" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="True only when all requested writes succeed" Name="out_Success" Type="OutArgument(x:Boolean)" />
+    <x:Property sap2010:Annotation.AnnotationText="Short category such as ValidationError or PersistenceError" Name="out_ErrorCode" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Readable failure detail" Name="out_ErrorMessage" Type="OutArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="Main fields to update" Name="in_MainRecordUpdatesJson" Type="InArgument(x:String)" />
   </x:Members>
+  <this:Main.in_InvoiceRecordId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_InvoiceRecordId>
+  <this:Main.in_LineRecordsJson>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_LineRecordsJson>
+  <this:Main.in_ActivityRecordJson>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_ActivityRecordJson>
+  <this:Main.in_MainRecordUpdatesJson>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_MainRecordUpdatesJson>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System</x:String>
-      <x:String>System.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Activities.Statements</x:String>
-      <x:String>System.Collections</x:String>
-      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Activities</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Globalization</x:String>
-      <x:String>System.Linq</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>UiPath.DataService.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
-      <x:String>Newtonsoft.Json</x:String>
-      <x:String>Newtonsoft.Json.Linq</x:String>
-      <x:String>UiPath.Core</x:String>
-      <x:String>UiPath.Core.Activities</x:String>
-      <x:String>UiPath.DataService.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle</x:String>
-      <x:String>UiPath.DataService.Activities.Models</x:String>
-      <x:String>UiPath.DataService.Definition</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
-      <AssemblyReference>DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02</AssemblyReference>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>DataFabric.Entities.f5cUJ3mfGGR1t5pkiXqrbT2</AssemblyReference>
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
       <AssemblyReference>System.Linq</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Runtime</AssemblyReference>
-      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Activities.Core</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Definition</AssemblyReference>
       <AssemblyReference>UiPath.DataService.Core</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Annotations</AssemblyReference>
+      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Invoice Assurance Persistence" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="s:Guid" Name="invoiceGuid" />
-      <Variable x:TypeArguments="njl:JObject" Name="mainPayload" />
-      <Variable x:TypeArguments="njl:JArray" Name="linePayload" />
-      <Variable x:TypeArguments="njl:JObject" Name="activityPayload" />
-      <Variable x:TypeArguments="x:Boolean" Name="writesStarted" Default="False" />
-      <Variable x:TypeArguments="x:String" Name="errorStage" Default="Validation" />
-      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" Name="mainRecord" />
-      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="existingLines" />
-      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Name="lineRecord" />
-      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Name="existingLine" />
-      <Variable x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="linesToCreate" />
-      <Variable x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="linesToUpdate" />
-      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="createdLineRecords" />
-      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="updatedLineRecords" />
-      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" Name="activityRecord" />
-      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4)" Name="createdActivityRecords" />
+      <Variable x:TypeArguments="njl:JObject" Default="[new Newtonsoft.Json.Linq.JObject From {  }]" Name="mainUpdatesPayload" />
+      <Variable x:TypeArguments="njl:JArray" Default="[new Newtonsoft.Json.Linq.JArray From {  }]" Name="lineRecordsPayload" />
+      <Variable x:TypeArguments="njl:JObject" Default="[new Newtonsoft.Json.Linq.JObject From {  }]" Name="activityPayload" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" Default="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4]" Name="mainRecord" />
+      <Variable x:TypeArguments="scg:IList(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" Name="existingLineRecords" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Default="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4]" Name="lineRecord" />
+      <Variable x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" Default="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4]" Name="existingLineRecord" />
     </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
     <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
-    <Assign x:TypeArguments="x:Boolean" DisplayName="Initialize Success" To="[out_Success]" Value="False" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Invoice Id" To="[out_InvoiceRecordId]" Value="[in_InvoiceRecordId]" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Correlation Id" To="[out_CorrelationId]" Value="[in_CorrelationId]" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Operation" To="[out_Operation]" Value="[in_Operation]" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Activity Id" To="[out_ActivityRecordId]" Value="[String.Empty]" />
-    <Assign x:TypeArguments="x:Int32" DisplayName="Initialize Created Count" To="[out_CreatedCount]" Value="0" />
-    <Assign x:TypeArguments="x:Int32" DisplayName="Initialize Updated Count" To="[out_UpdatedCount]" Value="0" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Error Code" To="[out_ErrorCode]" Value="[String.Empty]" />
-    <Assign x:TypeArguments="x:String" DisplayName="Initialize Error Message" To="[out_ErrorMessage]" Value="[String.Empty]" />
-    <TryCatch DisplayName="Validate and Persist">
+    <TryCatch DisplayName="Try Catch" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Try Persistence">
-          <If DisplayName="Validate Operation" Condition="[String.IsNullOrWhiteSpace(in_Operation) OrElse Not New String() { &quot;MarkProcessing&quot;, &quot;PersistInitial&quot;, &quot;PersistReviewer&quot;, &quot;PersistReevaluation&quot;, &quot;Finalize&quot; }.Contains(in_Operation)]">
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Deserialize Input JSONs" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize Main Record Updates" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[mainUpdatesPayload]" JsonString="[string.Format(&quot;{0}&quot;, in_MainRecordUpdatesJson)]" />
+            <ui:DeserializeJsonArray DisplayName="Deserialize Line Records" sap2010:WorkflowViewState.IdRef="DeserializeJsonArray_1" JsonArray="[lineRecordsPayload]" JsonString="[string.Format(&quot;{0}&quot;, in_LineRecordsJson)]" />
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize Activity Record" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[activityPayload]" JsonString="[string.Format(&quot;{0}&quot;, in_ActivityRecordJson)]" />
+          </Sequence>
+          <If Condition="[lineRecordsPayload.Cast(Of JObject)().&#xA;    GroupBy(Function(item) item(&quot;ExternalRecordId&quot;).ToString).&#xA;    Any(Function(group) group.Count() &gt; 1)]" DisplayName="Validate Unique Line Keys" sap2010:WorkflowViewState.IdRef="If_3">
             <If.Then>
-              <Sequence DisplayName="Reject Unsupported Operation">
-                <Throw DisplayName="Unsupported Operation" Exception="[New ArgumentException(&quot;ValidationError: unsupported operation&quot;)]" />
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Throw DisplayName="Throw Duplicate Record Error" Exception="[New InvalidOperationException(&#xA;    &quot;Duplicate ExternalRecordId in line records.&quot;&#xA;)]" sap2010:WorkflowViewState.IdRef="Throw_2" />
               </Sequence>
             </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_18" />
+            </If.Else>
           </If>
-          <If DisplayName="Validate Identifiers" Condition="[String.IsNullOrWhiteSpace(in_InvoiceRecordId) OrElse Not Guid.TryParse(in_InvoiceRecordId, invoiceGuid) OrElse String.IsNullOrWhiteSpace(in_CorrelationId) OrElse in_CorrelationId.Length &gt; 100]">
+          <If Condition="[activityPayload(&quot;PayloadJson&quot;) IsNot Nothing AndAlso&#xA;activityPayload(&quot;PayloadJson&quot;).ToString.Length &gt; 10000]" DisplayName="Validate Activity Payload Size" sap2010:WorkflowViewState.IdRef="If_4">
             <If.Then>
-              <Sequence DisplayName="Reject Invalid Identifiers">
-                <Throw DisplayName="Invalid Identifiers" Exception="[New ArgumentException(&quot;ValidationError: invalid invoiceRecordId or correlationId&quot;)]" />
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_19">
+                <Throw DisplayName="Throw Payload Limit Error" Exception="[New InvalidOperationException(&#xA;    &quot;Activity PayloadJson exceeds the 10000-character limit.&quot;&#xA;)]" sap2010:WorkflowViewState.IdRef="Throw_3" />
               </Sequence>
             </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_20" />
+            </If.Else>
           </If>
-          <Assign x:TypeArguments="s:Guid" DisplayName="Parse Invoice Record Id" To="[invoiceGuid]" Value="[Guid.Parse(in_InvoiceRecordId)]" />
-          <Assign x:TypeArguments="njl:JObject" DisplayName="Parse Main Payload" To="[mainPayload]" Value="[JObject.Parse(in_MainRecordJson)]" />
-          <Assign x:TypeArguments="njl:JArray" DisplayName="Parse Line Payload" To="[linePayload]" Value="[JArray.Parse(in_LineRecordsJson)]" />
-          <Assign x:TypeArguments="njl:JObject" DisplayName="Parse Activity Payload" To="[activityPayload]" Value="[JObject.Parse(in_ActivityRecordJson)]" />
-          <If DisplayName="Validate Main Payload" Condition="[Not mainPayload.Properties().Any() OrElse mainPayload.Properties().Any(Function(p) Not New String() { &quot;OpenFindingCount&quot;, &quot;DocumentReferencesJson&quot;, &quot;InvoiceNumber&quot;, &quot;AccountId&quot;, &quot;SubmittedTotal&quot;, &quot;ProjectId&quot;, &quot;ProcessInstanceId&quot;, &quot;ProcessingStatus&quot;, &quot;CorrelationId&quot;, &quot;AdjustmentTotal&quot;, &quot;AwaitingEvidence&quot;, &quot;InvoiceDate&quot;, &quot;AnalysisVersion&quot;, &quot;PayableTotal&quot;, &quot;FindingsJson&quot;, &quot;SupplierName&quot;, &quot;ContractProfileId&quot; }.Contains(p.Name)) OrElse (mainPayload(&quot;FindingsJson&quot;) IsNot Nothing AndAlso mainPayload(&quot;FindingsJson&quot;).ToString.Length &gt; 10000) OrElse (mainPayload(&quot;DocumentReferencesJson&quot;) IsNot Nothing AndAlso mainPayload(&quot;DocumentReferencesJson&quot;).ToString.Length &gt; 10000)]">
+          <uda:GetEntityRecordById x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Get Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="GetEntityRecordById`1_1" OutputEntity="[mainRecord]" RecordId="[Guid.Parse(in_InvoiceRecordId)]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000" />
+          <If Condition="[mainRecord Is Nothing]" DisplayName="Validate Main Record Exists" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence DisplayName="Reject Invalid Main Payload">
-                <Throw DisplayName="Invalid Main Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid mainRecordJson&quot;)]" />
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_15">
+                <Throw DisplayName="Throw Main Record Not Found Error" Exception="[New InvalidOperationException(&#xA;    &quot;Main record not found: &quot; &amp; in_InvoiceRecordId&#xA;)]" sap2010:WorkflowViewState.IdRef="Throw_1" />
               </Sequence>
             </If.Then>
+            <If.Else>
+              <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16" />
+            </If.Else>
           </If>
-          <If DisplayName="Validate Line Payload" Condition="[linePayload.Cast(Of JObject)().Any(Function(item) String.IsNullOrWhiteSpace(If(item(&quot;ExternalRecordId&quot;) Is Nothing, String.Empty, item(&quot;ExternalRecordId&quot;).ToString)) OrElse (item(&quot;SourceCoordinatesJson&quot;) IsNot Nothing AndAlso item(&quot;SourceCoordinatesJson&quot;).ToString.Length &gt; 10000))]">
-            <If.Then>
-              <Sequence DisplayName="Reject Invalid Line Payload">
-                <Throw DisplayName="Invalid Line Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid lineRecordsJson&quot;)]" />
-              </Sequence>
-            </If.Then>
-          </If>
-          <If DisplayName="Reject Duplicate Line Keys" Condition="[linePayload.Cast(Of JObject)().GroupBy(Function(item) in_InvoiceRecordId &amp; &quot;|&quot; &amp; item(&quot;ExternalRecordId&quot;).ToString).Any(Function(group) group.Count() &gt; 1)]">
-            <If.Then>
-              <Sequence DisplayName="Duplicate Line Key">
-                <Throw DisplayName="DuplicateLineKey" Exception="[New ArgumentException(&quot;DuplicateLineKey: duplicate InvoiceRecordId and ExternalRecordId&quot;)]" />
-              </Sequence>
-            </If.Then>
-          </If>
-          <If DisplayName="Validate Activity Payload" Condition="[New String() { &quot;InvoiceRecordId&quot;, &quot;CorrelationId&quot;, &quot;EventTimestamp&quot;, &quot;EventName&quot;, &quot;EventType&quot;, &quot;EventSource&quot;, &quot;Summary&quot; }.Any(Function(fieldName) activityPayload(fieldName) Is Nothing OrElse String.IsNullOrWhiteSpace(activityPayload(fieldName).ToString)) OrElse activityPayload(&quot;InvoiceRecordId&quot;).ToString &lt;&gt; in_InvoiceRecordId OrElse activityPayload(&quot;CorrelationId&quot;).ToString &lt;&gt; in_CorrelationId OrElse activityPayload(&quot;InvoiceRecordId&quot;).ToString.Length &gt; 36 OrElse activityPayload(&quot;CorrelationId&quot;).ToString.Length &gt; 100 OrElse activityPayload(&quot;EventName&quot;).ToString.Length &gt; 80 OrElse activityPayload(&quot;EventType&quot;).ToString.Length &gt; 80 OrElse activityPayload(&quot;EventSource&quot;).ToString.Length &gt; 200 OrElse activityPayload(&quot;Summary&quot;).ToString.Length &gt; 1000 OrElse (activityPayload(&quot;PayloadJson&quot;) IsNot Nothing AndAlso activityPayload(&quot;PayloadJson&quot;).ToString.Length &gt; 10000)]">
-            <If.Then>
-              <Sequence DisplayName="Reject Invalid Activity Payload">
-                <Throw DisplayName="Invalid Activity Payload" Exception="[New ArgumentException(&quot;ValidationError: invalid activityRecordJson&quot;)]" />
-              </Sequence>
-            </If.Then>
-          </If>
-          <Assign x:TypeArguments="x:String" DisplayName="Set Main Lookup Stage" To="[errorStage]" Value="[&quot;MainLookup&quot;]" />
-          <uda:GetEntityRecordById x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" ContinueOnError="False" DisplayName="Get Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" OutputEntity="[mainRecord]" RecordId="[invoiceGuid]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000" />
-          <Assign x:TypeArguments="x:String" DisplayName="Set Write Stage" To="[errorStage]" Value="[&quot;DataFabricWrite&quot;]" />
-          <Assign x:TypeArguments="x:Boolean" DisplayName="Mark Writes Started" To="[writesStarted]" Value="True" />
-          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply OpenFindingCount" To="[mainRecord.OpenFindingCount]" Value="[If(mainPayload(&quot;OpenFindingCount&quot;) Is Nothing, mainRecord.OpenFindingCount, mainPayload.Value(Of Decimal)(&quot;OpenFindingCount&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply DocumentReferencesJson" To="[mainRecord.DocumentReferencesJson]" Value="[If(mainPayload(&quot;DocumentReferencesJson&quot;) Is Nothing, mainRecord.DocumentReferencesJson, mainPayload.Value(Of String)(&quot;DocumentReferencesJson&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply InvoiceNumber" To="[mainRecord.InvoiceNumber]" Value="[If(mainPayload(&quot;InvoiceNumber&quot;) Is Nothing, mainRecord.InvoiceNumber, mainPayload.Value(Of String)(&quot;InvoiceNumber&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply AccountId" To="[mainRecord.AccountId]" Value="[If(mainPayload(&quot;AccountId&quot;) Is Nothing, mainRecord.AccountId, mainPayload.Value(Of String)(&quot;AccountId&quot;))]" />
-          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply SubmittedTotal" To="[mainRecord.SubmittedTotal]" Value="[If(mainPayload(&quot;SubmittedTotal&quot;) Is Nothing, mainRecord.SubmittedTotal, mainPayload.Value(Of Decimal)(&quot;SubmittedTotal&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply ProjectId" To="[mainRecord.ProjectId]" Value="[If(mainPayload(&quot;ProjectId&quot;) Is Nothing, mainRecord.ProjectId, mainPayload.Value(Of String)(&quot;ProjectId&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply ProcessInstanceId" To="[mainRecord.ProcessInstanceId]" Value="[If(mainPayload(&quot;ProcessInstanceId&quot;) Is Nothing, mainRecord.ProcessInstanceId, mainPayload.Value(Of String)(&quot;ProcessInstanceId&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply ProcessingStatus" To="[mainRecord.ProcessingStatus]" Value="[If(mainPayload(&quot;ProcessingStatus&quot;) Is Nothing, mainRecord.ProcessingStatus, mainPayload.Value(Of String)(&quot;ProcessingStatus&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply CorrelationId" To="[mainRecord.CorrelationId]" Value="[If(mainPayload(&quot;CorrelationId&quot;) Is Nothing, mainRecord.CorrelationId, mainPayload.Value(Of String)(&quot;CorrelationId&quot;))]" />
-          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply AdjustmentTotal" To="[mainRecord.AdjustmentTotal]" Value="[If(mainPayload(&quot;AdjustmentTotal&quot;) Is Nothing, mainRecord.AdjustmentTotal, mainPayload.Value(Of Decimal)(&quot;AdjustmentTotal&quot;))]" />
-          <Assign x:TypeArguments="x:Boolean" DisplayName="Apply AwaitingEvidence" To="[mainRecord.AwaitingEvidence]" Value="[If(mainPayload(&quot;AwaitingEvidence&quot;) Is Nothing, mainRecord.AwaitingEvidence, mainPayload.Value(Of Boolean)(&quot;AwaitingEvidence&quot;))]" />
-          <Assign x:TypeArguments="s:DateTime" DisplayName="Apply InvoiceDate" To="[mainRecord.InvoiceDate]" Value="[If(mainPayload(&quot;InvoiceDate&quot;) Is Nothing, mainRecord.InvoiceDate, mainPayload.Value(Of DateTime)(&quot;InvoiceDate&quot;))]" />
-          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply AnalysisVersion" To="[mainRecord.AnalysisVersion]" Value="[If(mainPayload(&quot;AnalysisVersion&quot;) Is Nothing, mainRecord.AnalysisVersion, mainPayload.Value(Of Decimal)(&quot;AnalysisVersion&quot;))]" />
-          <Assign x:TypeArguments="x:Decimal" DisplayName="Apply PayableTotal" To="[mainRecord.PayableTotal]" Value="[If(mainPayload(&quot;PayableTotal&quot;) Is Nothing, mainRecord.PayableTotal, mainPayload.Value(Of Decimal)(&quot;PayableTotal&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply FindingsJson" To="[mainRecord.FindingsJson]" Value="[If(mainPayload(&quot;FindingsJson&quot;) Is Nothing, mainRecord.FindingsJson, mainPayload.Value(Of String)(&quot;FindingsJson&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply SupplierName" To="[mainRecord.SupplierName]" Value="[If(mainPayload(&quot;SupplierName&quot;) Is Nothing, mainRecord.SupplierName, mainPayload.Value(Of String)(&quot;SupplierName&quot;))]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Apply ContractProfileId" To="[mainRecord.ContractProfileId]" Value="[If(mainPayload(&quot;ContractProfileId&quot;) Is Nothing, mainRecord.ContractProfileId, mainPayload.Value(Of String)(&quot;ContractProfileId&quot;))]" />
-          <uda:UpdateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Update Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[New List(Of HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4) From { mainRecord }]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000" />
-          <uda:QueryEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueOnError="False" DisplayName="Query Entity Records for Invoice Lines" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" OutputRecords="[existingLines]" QueriedEntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ScopeValue="Folder" Skip="0" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" SortAscending="True" TimeoutInMs="30000" Top="1000">
-            <uda:QueryEntityRecords.FilterArguments>
-              <uda:FilterArgument FilterActivityType="{x:Null}">
-                <uda:FilterArgument.Filter>
-                  <uda:GroupFilter Index="0" Operator="AND">
-                    <uda:GroupFilter.Filters>
-                      <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="1">
-                        <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="InvoiceRecordId" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="=" ValueIndex="0" />
-                      </scg:List>
-                    </uda:GroupFilter.Filters>
-                    <uda:GroupFilter.Groups>
-                      <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
-                    </uda:GroupFilter.Groups>
-                  </uda:GroupFilter>
-                </uda:FilterArgument.Filter>
-              </uda:FilterArgument>
-            </uda:QueryEntityRecords.FilterArguments>
-            <uda:QueryEntityRecords.FilterValues>
-              <scg:List x:TypeArguments="InArgument" Capacity="1">
-                <InArgument x:TypeArguments="x:String">[in_InvoiceRecordId]</InArgument>
-              </scg:List>
-            </uda:QueryEntityRecords.FilterValues>
-            <uda:QueryEntityRecords.RequiredForReadFieldNames>
-              <scg:List x:TypeArguments="x:String" Capacity="0" />
-            </uda:QueryEntityRecords.RequiredForReadFieldNames>
-          </uda:QueryEntityRecords>
-          <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Initialize Lines to Create" To="[linesToCreate]" Value="[New List(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)]" />
-          <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Initialize Lines to Update" To="[linesToUpdate]" Value="[New List(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)]" />
-          <ui:ForEach x:TypeArguments="njl:JToken" DisplayName="Upsert Line Records">
-            <ui:ForEach.Values>
-              <InArgument x:TypeArguments="sc:IEnumerable">[linePayload]</InArgument>
-            </ui:ForEach.Values>
-            <ui:ForEach.Body>
-              <ActivityAction x:TypeArguments="njl:JToken">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="njl:JToken" Name="lineToken" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Upsert One Line">
-                  <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Deserialize Line Record" To="[lineRecord]" Value="[Newtonsoft.Json.JsonConvert.DeserializeObject(Of HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)(lineToken.ToString)]" />
-                  <Assign x:TypeArguments="x:String" DisplayName="Set Line Invoice Id" To="[lineRecord.InvoiceRecordId]" Value="[in_InvoiceRecordId]" />
-                  <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Find Existing Line" To="[existingLine]" Value="[existingLines.FirstOrDefault(Function(candidate) candidate.InvoiceRecordId = in_InvoiceRecordId AndAlso candidate.ExternalRecordId = lineRecord.ExternalRecordId)]" />
-                  <If DisplayName="Create or Update Line" Condition="[existingLine Is Nothing]">
-                    <If.Then>
-                      <Sequence DisplayName="Create Line">
-                        <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Queue Missing Line" To="[linesToCreate]" Value="[linesToCreate.Concat(New HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() { lineRecord }).ToList]" />
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence DisplayName="Update Line">
-                        <Assign x:TypeArguments="s:Guid" DisplayName="Preserve Line Record Id" To="[lineRecord.Id]" Value="[existingLine.Id]" />
-                        <Assign x:TypeArguments="scg:List(udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4)" DisplayName="Queue Existing Line" To="[linesToUpdate]" Value="[linesToUpdate.Concat(New HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() { lineRecord }).ToList]" />
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ActivityAction>
-            </ui:ForEach.Body>
-          </ui:ForEach>
-          <If DisplayName="Create Missing Line Records" Condition="[linesToCreate.Any]">
-            <If.Then>
-              <Sequence DisplayName="Create Line Batch">
-                <uda:CreateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Create Missing Line Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[linesToCreate]" OutputRecords="[createdLineRecords]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000" />
-                <Assign x:TypeArguments="x:Int32" DisplayName="Return Created Count" To="[out_CreatedCount]" Value="[createdLineRecords.Count]" />
-              </Sequence>
-            </If.Then>
-          </If>
-          <If DisplayName="Update Existing Line Records" Condition="[linesToUpdate.Any]">
-            <If.Then>
-              <Sequence DisplayName="Update Line Batch">
-                <uda:UpdateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Update Existing Line Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[linesToUpdate]" OutputRecords="[updatedLineRecords]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000" />
-                <Assign x:TypeArguments="x:Int32" DisplayName="Return Updated Count" To="[out_UpdatedCount]" Value="[updatedLineRecords.Count]" />
-              </Sequence>
-            </If.Then>
-          </If>
-          <Assign x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" DisplayName="Deserialize Activity Record" To="[activityRecord]" Value="[Newtonsoft.Json.JsonConvert.DeserializeObject(Of HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4)(activityPayload.ToString)]" />
-          <uda:CreateMultipleEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" ContinueBatchOnFailure="False" ContinueOnError="False" DisplayName="Append Activity Record" EntityId="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" InputRecords="[New List(Of HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4) From { activityRecord }]" OutputRecords="[createdActivityRecords]" ScopeValue="Folder" SolutionEntityKey="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Activity" TimeoutInMs="30000" />
-          <Assign x:TypeArguments="x:String" DisplayName="Return Activity Record Id" To="[out_ActivityRecordId]" Value="[createdActivityRecords.First.Id.ToString]" />
-          <Assign x:TypeArguments="x:Boolean" DisplayName="Return Success" To="[out_Success]" Value="True" />
-          <Assign x:TypeArguments="x:String" DisplayName="Clear Error Code" To="[out_ErrorCode]" Value="[String.Empty]" />
-          <Assign x:TypeArguments="x:String" DisplayName="Clear Error Message" To="[out_ErrorMessage]" Value="[String.Empty]" />
+          <uda:UpdateEntityRecord x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Main Record" EntityId="d0fed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_1" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_Main_d0fed526_9d93_f111_9b32_000d3ab5d4c4() With {  .AdjustmentTotal = If(mainUpdatesPayload(&quot;AdjustmentTotal&quot;) Is Nothing, mainRecord.AdjustmentTotal, mainUpdatesPayload.Value(Of Decimal)(&quot;AdjustmentTotal&quot;)),  .AnalysisVersion = If(mainUpdatesPayload(&quot;AnalysisVersion&quot;) Is Nothing, mainRecord.AnalysisVersion, mainUpdatesPayload.Value(Of Decimal)(&quot;AnalysisVersion&quot;)),  .AwaitingEvidence = If(mainUpdatesPayload(&quot;AwaitingEvidence&quot;) Is Nothing, mainRecord.AwaitingEvidence, mainUpdatesPayload.Value(Of Boolean)(&quot;AwaitingEvidence&quot;)),  .CorrelationId = If(mainUpdatesPayload(&quot;CorrelationId&quot;) Is Nothing, mainRecord.CorrelationId, mainUpdatesPayload(&quot;CorrelationId&quot;).ToString),  .FindingsJson = If(mainUpdatesPayload(&quot;FindingsJson&quot;) Is Nothing,&#xA;   mainRecord.FindingsJson,&#xA;   mainUpdatesPayload(&quot;FindingsJson&quot;).ToString),  .InvoiceDate = mainRecord.InvoiceDate,  .OpenFindingCount = If(mainUpdatesPayload(&quot;OpenFindingCount&quot;) Is Nothing, mainRecord.OpenFindingCount, mainUpdatesPayload.Value(Of Decimal?)(&quot;OpenFindingCount&quot;).GetValueOrDefault()),  .PayableTotal = If(mainUpdatesPayload(&quot;PayableTotal&quot;) Is Nothing, mainRecord.PayableTotal, mainUpdatesPayload.Value(Of Decimal)(&quot;PayableTotal&quot;)),  .ProcessingStatus = If(mainUpdatesPayload(&quot;ProcessingStatus&quot;) Is Nothing,&#xA;   mainRecord.ProcessingStatus,&#xA;   mainUpdatesPayload(&quot;ProcessingStatus&quot;).ToString),  .SubmittedTotal = If(mainUpdatesPayload(&quot;SubmittedTotal&quot;) Is Nothing, mainRecord.SubmittedTotal, mainUpdatesPayload.Value(Of Decimal)(&quot;SubmittedTotal&quot;)), .Id = Guid.Parse(in_InvoiceRecordId) }]" RecordId="[Guid.Parse(in_InvoiceRecordId)]" ScopeValue="Folder" SolutionEntityKey="d0fed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Main" TimeoutInMs="30000">
+            <uda:UpdateEntityRecord.State>
+              <udam:RecordState RequiredFieldCount="15">
+                <udam:RecordState.SelectedFields>
+                  <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="10">
+                    <udam:DynamicEntityField Id="e4fed526-9d93-f111-9b32-000d3ab5d4c4" Name="AdjustmentTotal">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Decimal">[If(mainUpdatesPayload("AdjustmentTotal") Is Nothing, mainRecord.AdjustmentTotal, mainUpdatesPayload.Value(Of Decimal)("AdjustmentTotal"))]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="eafed526-9d93-f111-9b32-000d3ab5d4c4" Name="AnalysisVersion">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Decimal">[If(mainUpdatesPayload("AnalysisVersion") Is Nothing, mainRecord.AnalysisVersion, mainUpdatesPayload.Value(Of Decimal)("AnalysisVersion"))]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e7fed526-9d93-f111-9b32-000d3ab5d4c4" Name="AwaitingEvidence">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Boolean">[If(mainUpdatesPayload("AwaitingEvidence") Is Nothing, mainRecord.AwaitingEvidence, mainUpdatesPayload.Value(Of Boolean)("AwaitingEvidence"))]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="dafed526-9d93-f111-9b32-000d3ab5d4c4" Name="CorrelationId">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[If(mainUpdatesPayload("CorrelationId") Is Nothing, mainRecord.CorrelationId, mainUpdatesPayload("CorrelationId").ToString)]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e8fed526-9d93-f111-9b32-000d3ab5d4c4" Name="FindingsJson">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(mainUpdatesPayload("FindingsJson") Is Nothing,
+   mainRecord.FindingsJson,
+   mainUpdatesPayload("FindingsJson").ToString)]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="defed526-9d93-f111-9b32-000d3ab5d4c4" Name="InvoiceDate">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="s:DateTime">[mainRecord.InvoiceDate]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e6fed526-9d93-f111-9b32-000d3ab5d4c4" Name="OpenFindingCount">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Decimal">[If(mainUpdatesPayload("OpenFindingCount") Is Nothing, mainRecord.OpenFindingCount, mainUpdatesPayload.Value(Of Decimal?)("OpenFindingCount").GetValueOrDefault())]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e5fed526-9d93-f111-9b32-000d3ab5d4c4" Name="PayableTotal">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Decimal">[If(mainUpdatesPayload("PayableTotal") Is Nothing, mainRecord.PayableTotal, mainUpdatesPayload.Value(Of Decimal)("PayableTotal"))]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e2fed526-9d93-f111-9b32-000d3ab5d4c4" Name="ProcessingStatus">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(mainUpdatesPayload("ProcessingStatus") Is Nothing,
+   mainRecord.ProcessingStatus,
+   mainUpdatesPayload("ProcessingStatus").ToString)]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="e3fed526-9d93-f111-9b32-000d3ab5d4c4" Name="SubmittedTotal">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:Decimal">[If(mainUpdatesPayload("SubmittedTotal") Is Nothing, mainRecord.SubmittedTotal, mainUpdatesPayload.Value(Of Decimal)("SubmittedTotal"))]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                  </scg:List>
+                </udam:RecordState.SelectedFields>
+              </udam:RecordState>
+            </uda:UpdateEntityRecord.State>
+          </uda:UpdateEntityRecord>
+          <Sequence DisplayName="Update Line Item Records" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <uda:QueryEntityRecords x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" RequiredForReadInput="{x:Null}" SortByField="{x:Null}" TotalRecords="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" ContinueOnError="False" DisplayName="Query Existing Line Items" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="QueryEntityRecords`1_1" OutputRecords="[existingLineRecords]" QueriedEntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ScopeValue="Folder" Skip="0" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" SortAscending="True" TimeoutInMs="30000" Top="100">
+              <uda:QueryEntityRecords.FilterArguments>
+                <uda:FilterArgument FilterActivityType="{x:Null}">
+                  <uda:FilterArgument.Filter>
+                    <uda:GroupFilter Index="0" Operator="AND">
+                      <uda:GroupFilter.Filters>
+                        <scg:List x:TypeArguments="uda:SimpleFilter" Capacity="4">
+                          <uda:SimpleFilter ExpressionValue="{x:Null}" FieldName="InvoiceRecordId" FieldType="UiPath.DataService.Core.Models.EntityField" Operator="contains" ValueIndex="0" />
+                        </scg:List>
+                      </uda:GroupFilter.Filters>
+                      <uda:GroupFilter.Groups>
+                        <scg:List x:TypeArguments="uda:GroupFilter" Capacity="0" />
+                      </uda:GroupFilter.Groups>
+                    </uda:GroupFilter>
+                  </uda:FilterArgument.Filter>
+                </uda:FilterArgument>
+              </uda:QueryEntityRecords.FilterArguments>
+              <uda:QueryEntityRecords.FilterValues>
+                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                  <InArgument x:TypeArguments="x:String">[in_InvoiceRecordId]</InArgument>
+                </scg:List>
+              </uda:QueryEntityRecords.FilterValues>
+              <uda:QueryEntityRecords.RequiredForReadFieldNames>
+                <scg:List x:TypeArguments="x:String" Capacity="0" />
+              </uda:QueryEntityRecords.RequiredForReadFieldNames>
+            </uda:QueryEntityRecords>
+            <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="Process Line Records Payload" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[lineRecordsPayload]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="njl:JToken">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <ui:DeserializeJson x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" JsonSample="{x:Null}" Settings="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="Deserialize Incoming Line Item" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_4" JsonObject="[lineRecord]" JsonString="[currentItem.ToString]" />
+                    <Assign DisplayName="Set Parent Invoice ID" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[lineRecord.InvoiceRecordId]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[string.Format("{0}", in_InvoiceRecordId)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign DisplayName="Check for Existing Line Item Record" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4">[existingLineRecord]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4">[existingLineRecords.FirstOrDefault(Function(candidate)candidate.ExternalRecordId = lineRecord.ExternalRecordId)]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <If Condition="[existingLineRecord Is Nothing]" DisplayName="Create/Update Line Item Record" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <uda:CreateEntityRecord x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Create New Line Item Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_1" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() With {  .AnalysisVersion = lineRecord.AnalysisVersion,  .Category = lineRecord.Category,  .Description = lineRecord.Description,  .EvaluationStatus = lineRecord.EvaluationStatus,  .InvoiceRecordId = lineRecord.InvoiceRecordId,  .SourceDocumentId = lineRecord.SourceDocumentId,  .SourceDocumentType = lineRecord.SourceDocumentType,  .SubmittedAmount = lineRecord.SubmittedAmount,  .Adjustment = lineRecord.Adjustment,  .AllowedAmount = lineRecord.AllowedAmount,  .ExternalAmount = lineRecord.ExternalAmount,  .ExternalMatchStatus = lineRecord.ExternalMatchStatus,  .ExternalRecordId = lineRecord.ExternalRecordId,  .IxpConfidence = lineRecord.IxpConfidence,  .Quantity = lineRecord.Quantity,  .SourceCoordinatesJson = lineRecord.SourceCoordinatesJson,  .SubmittedRate = lineRecord.SubmittedRate,  .Unit = lineRecord.Unit,  .Variance = lineRecord.Variance }]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000">
+                            <uda:CreateEntityRecord.State>
+                              <udam:RecordState RequiredFieldCount="8">
+                                <udam:RecordState.SelectedFields>
+                                  <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="19">
+                                    <udam:DynamicEntityField Id="08ffd526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="AnalysisVersion">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.AnalysisVersion]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fafed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="Category">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Category]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="f9fed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="Description">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Description]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="07ffd526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="EvaluationStatus">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.EvaluationStatus]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="f6fed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="InvoiceRecordId">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.InvoiceRecordId]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="f7fed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="SourceDocumentId">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.SourceDocumentId]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="f8fed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="SourceDocumentType">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.SourceDocumentType]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fefed526-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="SubmittedAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.SubmittedAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="06ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="Adjustment">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Adjustment]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="05ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="AllowedAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.AllowedAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="03ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="ExternalAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.ExternalAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="02ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="ExternalMatchStatus">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.ExternalMatchStatus]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="01ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="ExternalRecordId">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.ExternalRecordId]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fffed526-9d93-f111-9b32-000d3ab5d4c4" Name="IxpConfidence">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.IxpConfidence]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fbfed526-9d93-f111-9b32-000d3ab5d4c4" Name="Quantity">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Quantity]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="00ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="SourceCoordinatesJson">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.SourceCoordinatesJson]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fdfed526-9d93-f111-9b32-000d3ab5d4c4" Name="SubmittedRate">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.SubmittedRate]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fcfed526-9d93-f111-9b32-000d3ab5d4c4" Name="Unit">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Unit]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="04ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="Variance">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Variance]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                  </scg:List>
+                                </udam:RecordState.SelectedFields>
+                              </udam:RecordState>
+                            </uda:CreateEntityRecord.State>
+                          </uda:CreateEntityRecord>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <uda:UpdateEntityRecord x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Update Existing Line Item Record" EntityId="ecfed526-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="UpdateEntityRecord`1_2" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_LineItems_ecfed526_9d93_f111_9b32_000d3ab5d4c4() With {  .Adjustment = lineRecord.Adjustment,  .AllowedAmount = lineRecord.AllowedAmount,  .AnalysisVersion = lineRecord.AnalysisVersion,  .Category = lineRecord.Category,  .Description = lineRecord.Description,  .EvaluationStatus = lineRecord.EvaluationStatus,  .ExternalAmount = lineRecord.ExternalAmount,  .ExternalMatchStatus = lineRecord.ExternalMatchStatus,  .IxpConfidence = lineRecord.IxpConfidence,  .Quantity = lineRecord.Quantity,  .SourceCoordinatesJson = lineRecord.SourceCoordinatesJson,  .SubmittedAmount = lineRecord.SubmittedAmount,  .SubmittedRate = lineRecord.SubmittedRate,  .Unit = lineRecord.Unit,  .Variance = lineRecord.Variance, .Id = existingLineRecord.Id }]" RecordId="[existingLineRecord.Id]" ScopeValue="Folder" SolutionEntityKey="ecfed526-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_LineItems" TimeoutInMs="30000">
+                            <uda:UpdateEntityRecord.State>
+                              <udam:RecordState RequiredFieldCount="8">
+                                <udam:RecordState.SelectedFields>
+                                  <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="15">
+                                    <udam:DynamicEntityField Id="06ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="Adjustment">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Adjustment]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="05ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="AllowedAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.AllowedAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="08ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="AnalysisVersion">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.AnalysisVersion]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fafed526-9d93-f111-9b32-000d3ab5d4c4" Name="Category">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Category]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="f9fed526-9d93-f111-9b32-000d3ab5d4c4" Name="Description">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Description]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="07ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="EvaluationStatus">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.EvaluationStatus]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="03ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="ExternalAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.ExternalAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="02ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="ExternalMatchStatus">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.ExternalMatchStatus]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fffed526-9d93-f111-9b32-000d3ab5d4c4" Name="IxpConfidence">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.IxpConfidence]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fbfed526-9d93-f111-9b32-000d3ab5d4c4" Name="Quantity">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Quantity]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="00ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="SourceCoordinatesJson">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.SourceCoordinatesJson]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fefed526-9d93-f111-9b32-000d3ab5d4c4" Name="SubmittedAmount">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.SubmittedAmount]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fdfed526-9d93-f111-9b32-000d3ab5d4c4" Name="SubmittedRate">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.SubmittedRate]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="fcfed526-9d93-f111-9b32-000d3ab5d4c4" Name="Unit">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:String">[lineRecord.Unit]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                    <udam:DynamicEntityField Id="04ffd526-9d93-f111-9b32-000d3ab5d4c4" Name="Variance">
+                                      <udam:DynamicEntityField.ArgumentValue>
+                                        <InArgument x:TypeArguments="x:Decimal">[lineRecord.Variance]</InArgument>
+                                      </udam:DynamicEntityField.ArgumentValue>
+                                    </udam:DynamicEntityField>
+                                  </scg:List>
+                                </udam:RecordState.SelectedFields>
+                              </udam:RecordState>
+                            </uda:UpdateEntityRecord.State>
+                          </uda:UpdateEntityRecord>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+          <uda:CreateEntityRecord x:TypeArguments="udacsdeb:HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4" InputEntity="{x:Null}" IsInRecordView="{x:Null}" OutputEntity="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" VisibleDynamicPropertiesInfo="{x:Null}" ContinueOnError="False" DisplayName="Append Activity Record" EntityId="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" ExpansionDepth="2" sap2010:WorkflowViewState.IdRef="CreateEntityRecord`1_2" InputEntityInFieldView="[new UiPath.DataService.Activities.Core.SWEntities.DataFabric.Entities.Bundle.HLS_InvoiceAssurance_Activity_c5d31b2f_9d93_f111_9b32_000d3ab5d4c4() With {  .CorrelationId = activityPayload(&quot;CorrelationId&quot;).ToString,  .EventName = activityPayload(&quot;EventName&quot;).ToString,  .EventSource = activityPayload(&quot;EventSource&quot;).ToString,  .EventTimestamp = DateTimeOffset.Parse(activityPayload(&quot;EventTimestamp&quot;).ToString),  .EventType = activityPayload(&quot;EventType&quot;).ToString,  .InvoiceRecordId = in_InvoiceRecordId,  .Summary = activityPayload(&quot;Summary&quot;).ToString,  .PayloadJson = If(activityPayload(&quot;PayloadJson&quot;) Is Nothing, Nothing, activityPayload(&quot;PayloadJson&quot;).ToString) }]" ScopeValue="Folder" SolutionEntityKey="c5d31b2f-9d93-f111-9b32-000d3ab5d4c4" SolutionEntityName="HLS_InvoiceAssurance_Activity" TimeoutInMs="30000">
+            <uda:CreateEntityRecord.State>
+              <udam:RecordState RequiredFieldCount="7">
+                <udam:RecordState.SelectedFields>
+                  <scg:List x:TypeArguments="udam:DynamicEntityField" Capacity="8">
+                    <udam:DynamicEntityField Id="d0d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="CorrelationId">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[activityPayload("CorrelationId").ToString]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d2d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="EventName">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[activityPayload("EventName").ToString]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d4d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="EventSource">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[activityPayload("EventSource").ToString]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d1d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="EventTimestamp">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="s:DateTimeOffset">[DateTimeOffset.Parse(activityPayload("EventTimestamp").ToString)]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d3d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="EventType">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[activityPayload("EventType").ToString]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="cfd31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="InvoiceRecordId">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[in_InvoiceRecordId]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d5d31b2f-9d93-f111-9b32-000d3ab5d4c4" IsRequired="True" Name="Summary">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[activityPayload("Summary").ToString]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                    <udam:DynamicEntityField Id="d6d31b2f-9d93-f111-9b32-000d3ab5d4c4" Name="PayloadJson">
+                      <udam:DynamicEntityField.ArgumentValue>
+                        <InArgument x:TypeArguments="x:String">[If(activityPayload("PayloadJson") Is Nothing, Nothing, activityPayload("PayloadJson").ToString)]</InArgument>
+                      </udam:DynamicEntityField.ArgumentValue>
+                    </udam:DynamicEntityField>
+                  </scg:List>
+                </udam:RecordState.SelectedFields>
+              </udam:RecordState>
+            </uda:CreateEntityRecord.State>
+          </uda:CreateEntityRecord>
+          <Sequence DisplayName="Output Results" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <Assign DisplayName="Set Output as Success" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Clear Error Code" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_ErrorCode]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[String.Empty]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Clear Error Message" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[out_ErrorMessage]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[String.Empty]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
@@ -259,15 +547,38 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Return Typed Failure">
-              <Assign x:TypeArguments="x:Boolean" DisplayName="Return Failure" To="[out_Success]" Value="False" />
-              <Assign x:TypeArguments="x:String" DisplayName="Classify Error" To="[out_ErrorCode]" Value="[If(exception.Message.StartsWith(&quot;DuplicateLineKey:&quot;), &quot;DuplicateLineKey&quot;, If(errorStage = &quot;MainLookup&quot;, &quot;MainNotFound&quot;, If(writesStarted, &quot;DataFabricWriteFailed&quot;, &quot;ValidationError&quot;)))]" />
-              <Assign x:TypeArguments="x:String" DisplayName="Return Safe Error" To="[out_ErrorMessage]" Value="[If(String.IsNullOrWhiteSpace(exception.Message), out_ErrorCode, exception.Message)]" />
-              <ui:LogMessage DisplayName="Log Persistence Failure" Level="Error" Message="[String.Format(&quot;Invoice persistence failed. CorrelationId={0}; Operation={1}; Code={2}&quot;, in_CorrelationId, in_Operation, out_ErrorCode)]" />
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_14">
+              <Assign DisplayName="Set Output as Error" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[out_Success]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Update Error Code" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_ErrorCode]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["PersistenceError"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Update Error Message" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_ErrorMessage]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[exception.Message]</InArgument>
+                </Assign.Value>
+              </Assign>
             </Sequence>
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11" />
+      </TryCatch.Finally>
     </TryCatch>
   </Sequence>
 </Activity>

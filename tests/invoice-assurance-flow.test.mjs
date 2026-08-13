@@ -35,9 +35,7 @@ test('Every state-changing Flow subflow prepares a header update and activity ev
   const flow = JSON.parse(await readFile(flowPath, 'utf8'));
 
   for (const subflowName of [
-    'markProcessing',
     'persistInitialAnalysis',
-    'persistReviewerWork',
     'reevaluateAffectedFindings',
     'finalizeOutcome',
   ]) {
@@ -51,12 +49,23 @@ test('Every state-changing Flow subflow prepares a header update and activity ev
   }
 });
 
-test('Technical paths persist a review package before creating the Reviewer task', async () => {
+test('Technical failures fault visibly instead of creating misleading human-review branches', async () => {
   const flow = JSON.parse(await readFile(flowPath, 'utf8'));
-  const targets = new Map(flow.edges.map((edge) => [edge.id, edge.targetNodeId]));
+  const automatedNodeIds = [
+    'extractDocument',
+    'lookupProjectCost',
+    'analyzeContract',
+    'evaluateFinancials',
+  ];
 
-  for (const edgeId of ['e08', 'e21', 'e22', 'e23']) {
-    assert.equal(targets.get(edgeId), 'persistInitialAnalysis', `${edgeId} must record its technical-review state first`);
+  for (const nodeId of automatedNodeIds) {
+    const node = flow.nodes.find((candidate) => candidate.id === nodeId);
+    assert.equal(node?.inputs?.errorHandlingEnabled, false, `${nodeId} must fault on technical failure`);
+    assert.equal(
+      flow.edges.some((edge) => edge.sourceNodeId === nodeId && edge.sourcePort === 'error'),
+      false,
+      `${nodeId} must not route a technical failure into a human task`,
+    );
   }
 });
 
@@ -83,40 +92,26 @@ test('Every state-changing subflow synchronously calls the published HLS persist
   const persistenceType =
     'uipath.core.rpa-workflow.dd273b1c-d925-45d0-b1b6-b719cd972819';
   const cases = {
-    markProcessing: {
-      prepareId: 'prepareProcessingRecords',
-      processId: 'persistProcessingRecords',
-      confirmId: 'confirmProcessingPersistence',
-      endId: 'markProcessingEnd',
-      operation: 'MarkProcessing',
-    },
     persistInitialAnalysis: {
       prepareId: 'prepareInitialPersistence',
       processId: 'persistInitialRecords',
       confirmId: 'confirmInitialPersistence',
       endId: 'persistInitialEnd',
-      operation: 'PersistInitial',
-    },
-    persistReviewerWork: {
-      prepareId: 'prepareReviewerPersistence',
-      processId: 'persistReviewerRecords',
-      confirmId: 'confirmReviewerPersistence',
-      endId: 'persistReviewerEnd',
-      operation: 'PersistReviewer',
+      lineRecordsExpression: '=js:JSON.stringify($vars.prepareInitialPersistence.output.lineRecords ?? [])',
     },
     reevaluateAffectedFindings: {
       prepareId: 'assessReadiness',
       processId: 'persistReevaluationRecords',
       confirmId: 'confirmReevaluationPersistence',
       endId: 'reevaluateEnd',
-      operation: 'PersistReevaluation',
+      lineRecordsExpression: '=js:JSON.stringify($vars.assessReadiness.output.lineRecords ?? [])',
     },
     finalizeOutcome: {
       prepareId: 'prepareFinalRecords',
       processId: 'persistFinalRecords',
       confirmId: 'confirmFinalPersistence',
       endId: 'finalizeEnd',
-      operation: 'Finalize',
+      lineRecordsExpression: '=js:JSON.stringify([])',
     },
   };
 
@@ -130,21 +125,13 @@ test('Every state-changing subflow synchronously calls the published HLS persist
     'AMER Presales/HLS.InvoiceAssurancePersistence',
   );
   assert.deepEqual(Object.keys(persistenceDefinition.inputDefinition.properties), [
-    'in_Operation',
     'in_InvoiceRecordId',
-    'in_CorrelationId',
-    'in_MainRecordJson',
     'in_LineRecordsJson',
     'in_ActivityRecordJson',
+    'in_MainRecordUpdatesJson',
   ]);
   assert.deepEqual(Object.keys(persistenceDefinition.outputDefinition.output.schema.properties), [
     'out_Success',
-    'out_InvoiceRecordId',
-    'out_CorrelationId',
-    'out_Operation',
-    'out_ActivityRecordId',
-    'out_CreatedCount',
-    'out_UpdatedCount',
     'out_ErrorCode',
     'out_ErrorMessage',
   ]);
@@ -162,22 +149,17 @@ test('Every state-changing subflow synchronously calls the published HLS persist
     }));
 
     assert.equal(processNode?.type, persistenceType, `${subflowName} must call persistence`);
-    assert.equal(processNode.inputs.in_Operation, expected.operation);
     assert.equal(
       processNode.inputs.in_InvoiceRecordId,
       `=js:$vars.${expected.prepareId}.output.invoiceRecordId`,
     );
     assert.equal(
-      processNode.inputs.in_CorrelationId,
-      `=js:$vars.${expected.prepareId}.output.correlationId`,
-    );
-    assert.equal(
-      processNode.inputs.in_MainRecordJson,
+      processNode.inputs.in_MainRecordUpdatesJson,
       `=js:JSON.stringify($vars.${expected.prepareId}.output.mainRecord ?? {})`,
     );
     assert.equal(
       processNode.inputs.in_LineRecordsJson,
-      `=js:JSON.stringify($vars.${expected.prepareId}.output.lineRecords ?? [])`,
+      expected.lineRecordsExpression,
     );
     assert.equal(
       processNode.inputs.in_ActivityRecordJson,

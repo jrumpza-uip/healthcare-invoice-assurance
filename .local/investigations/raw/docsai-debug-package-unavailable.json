@@ -1,0 +1,7 @@
+{
+  "Result": "Failure",
+  "Message": "No compatible version of '@uipath/docsai-tool' found for the CLI's 1.198.x line on npm or GitHub Packages.",
+  "Instructions": "Run 'uip tools install <tool>' to install manually.",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix"
+}

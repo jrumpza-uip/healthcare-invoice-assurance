@@ -1,14 +1,14 @@
 {
   "version": "3.0.0.0",
-  "bundleHash": "AJkirxJpQVvWJFqJL9zPgxtT1ZixXiJcffgZXv1bYM",
+  "bundleHash": "vedgqMaGr2RHwJvYk8tlb6NuBs6KVobGq1phkY",
   "addedAssemblyNames": [],
   "discardedAssemblyNames": [
-    "DataFabric.Entities.mhDMt38qjGN1Z3f6v3IJlAC1",
-    "DataFabric.Entities.Zru1tdeh2P1J4v7r3NKH8V3"
+    "DataFabric.Entities.dHBWY2nb7nO1D4jDqJnoBM1",
+    "DataFabric.Entities.HxoUdzvBQH1Iis3K1oXoXf3"
   ],
   "discardedAssemblyReplacements": {
-    "DataFabric.Entities.mhDMt38qjGN1Z3f6v3IJlAC1": "DataFabric.Entities.Zru1tdeh2P1J4v7r3NKH8V3",
-    "DataFabric.Entities.Zru1tdeh2P1J4v7r3NKH8V3": "DataFabric.Entities.cLYKn3wHvbD18z5DKW7VU02"
+    "DataFabric.Entities.dHBWY2nb7nO1D4jDqJnoBM1": "DataFabric.Entities.HxoUdzvBQH1Iis3K1oXoXf3",
+    "DataFabric.Entities.HxoUdzvBQH1Iis3K1oXoXf3": "DataFabric.Entities.f5cUJ3mfGGR1t5pkiXqrbT2"
   },
   "assembliesJitInfo": {}
 }

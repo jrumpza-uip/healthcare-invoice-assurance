@@ -1,0 +1,11 @@
+{
+  "Result": "Success",
+  "Code": "LoginStatus",
+  "Data": {
+    "Status": "Refresh Failed",
+    "Provider": "N/A",
+    "Organization": "N/A",
+    "Tenant": "N/A",
+    "Hint": "Could not acquire the auth-file lock — too many concurrent `uip` processes, or a permission issue on the auth directory. Retry, or run 'uip login' to re-authenticate."
+  }
+}

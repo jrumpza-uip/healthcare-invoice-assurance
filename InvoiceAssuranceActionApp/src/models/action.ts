@@ -231,10 +231,19 @@ const normalizeCharge = (value: unknown, index: number): Charge => {
 export function normalizeTaskData(value: unknown): ActionFormData {
   const data = isRecord(value) ? value : {};
   const invoiceSummary = isRecord(data.invoiceSummary) ? data.invoiceSummary : {};
+  const normalizedInvoiceSummary = {
+    ...defaultActionFormData.invoiceSummary,
+    ...invoiceSummary,
+  };
+  const evidenceStatus = text(
+    data.evidenceStatus,
+    normalizedInvoiceSummary.awaitingEvidence ? 'AwaitingEvidence' : 'Resolved',
+  );
   return {
     ...defaultActionFormData,
     ...data,
-    invoiceSummary: { ...defaultActionFormData.invoiceSummary, ...invoiceSummary },
+    invoiceSummary: normalizedInvoiceSummary,
+    evidenceStatus,
     findings: Array.isArray(data.findings) ? data.findings.map(normalizeFinding) : [],
     charges: Array.isArray(data.charges) ? data.charges.map(normalizeCharge) : [],
     documents: Array.isArray(data.documents) ? data.documents as DocumentReference[] : [],
