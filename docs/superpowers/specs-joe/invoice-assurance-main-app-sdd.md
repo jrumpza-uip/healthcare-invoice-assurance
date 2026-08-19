@@ -102,7 +102,7 @@ Use these values to configure OAuth in the coded app. This is a shared, non-conf
 
 ### Application
 
-- Application ID (client ID): 57201488-1566-4f9b-a696-1b3773c2af33
+- Application ID (client ID): e61c56c4-633e-4ad5-a98a-83dc682f4c0d
 - Application name: UiPathLabs-ExternalApp-SDKforUsers_2
 - Application type: non-confidential / public client (PKCE, no client secret)
 - UiPath organization: uipathlabs

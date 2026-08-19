@@ -1,0 +1,13 @@
+{
+  "resourceKey": "bce5cd65-5b89-4cfa-a0e4-c6cf3023521e",
+  "name": "invoiceassuranceactionapp",
+  "externalClientId": "e61c56c4-633e-4ad5-a98a-83dc682f4c0d",
+  "appSystemName": "IDc76351697dff430c8b619fa684f5d96e",
+  "version": "1.0.1",
+  "packageKey": "invoiceassuranceactionapp:1.0.1",
+  "folders": [
+    {
+      "fullyQualifiedName": "solution_folder"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "Result": "Failure",
+  "Message": "Error connecting to Action Center",
+  "Instructions": "Could not acquire the auth-file lock — too many concurrent `uip` processes, or a permission issue on the auth directory. Retry, or run 'uip login' to re-authenticate.",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix"
+}

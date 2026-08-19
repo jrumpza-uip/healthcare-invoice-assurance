@@ -1,0 +1,59 @@
+{
+  "Result": "Success",
+  "Code": "Help",
+  "Data": {
+    "Command": "init",
+    "Description": "Initialize a new empty UiPath solution. Creates a directory named after the solution containing a .uipx manifest file with an empty Projects array, plus AGENTS.md and CLAUDE.md briefing files that orient AI coding agents to the solution. Use 'solution projects add' to add projects afterward.",
+    "Usage": "uip solution init [options] <solutionName>",
+    "Arguments": [
+      {
+        "Name": "solutionName",
+        "Description": "Solution name or path. Creates a directory with this name containing a .uipx manifest file.",
+        "Required": true
+      }
+    ],
+    "Options": [
+      {
+        "Flags": "-h, --help",
+        "Description": "display help for command"
+      }
+    ],
+    "Examples": [
+      {
+        "Description": "Initialize a new empty UiPath solution",
+        "Command": "uip solution init my-solution",
+        "Output": {
+          "Code": "SolutionInit",
+          "Data": {
+            "Status": "Created successfully",
+            "Path": "/workspace/my-solution/my-solution.uipx",
+            "NextSteps": "Read /workspace/my-solution/AGENTS.md or /workspace/my-solution/CLAUDE.md to understand the solution lifecycle, project types that can be used inside a solution, and related uip command references."
+          }
+        }
+      }
+    ],
+    "Subcommands": [],
+    "GlobalOptions": [
+      {
+        "Flags": "--output <table|json|yaml|plain>",
+        "Description": "Output format (default: json)"
+      },
+      {
+        "Flags": "--output-filter <expression>",
+        "Description": "JMESPath expression applied to the Data field of the response envelope"
+      },
+      {
+        "Flags": "--log-level <debug|info|warn|error>",
+        "Description": "Log level threshold (default: info)"
+      },
+      {
+        "Flags": "--log-file <path>",
+        "Description": "Write logs to file instead of stderr"
+      },
+      {
+        "Flags": "--profile <name>",
+        "Description": "Use a named login profile"
+      }
+    ]
+  }
+}

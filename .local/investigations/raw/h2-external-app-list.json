@@ -1,0 +1,7 @@
+{
+  "Result": "Failure",
+  "Message": "Forbidden (403). Ensure the account has the required permissions.",
+  "Instructions": "Verify you are logged in. Run 'external-apps list --help' for options.",
+  "ErrorCode": "unknown_error",
+  "Retry": "RetryWillNotFix"
+}
