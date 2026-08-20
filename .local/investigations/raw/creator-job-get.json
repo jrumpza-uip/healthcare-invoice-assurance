@@ -1,0 +1,14 @@
+{
+  "Result": "Success",
+  "Code": "JobGet",
+  "Data": {
+    "Key": "02969ad1-bf60-42f4-ba11-4f36525f9133",
+    "State": "Running",
+    "StartTime": "2026-08-19T15:23:12.783Z",
+    "EndTime": null,
+    "Info": "Job running in workflow-id: 02969ad1-bf60-42f4-ba11-4f36525f9133, attempt:1",
+    "JobError": null,
+    "InputArguments": "{\"invoiceRecordId\":\"CF32DD4C-B494-F111-9B33-7C1E522150AC\",\"correlationId\":\"hls-deployed-smoke-20260813-01\",\"contractProfileId\":\"profile-west-pavilion\",\"sourceDocumentIds\":[\"01_Northbridge_GC_Invoice_NBG-0726-01.pdf\"],\"accountId\":\"account-lakeshore-regional-health-system\",\"projectId\":\"project-west-pavilion-renovation\",\"simulateSearchUnavailable\":false}",
+    "OutputArguments": null
+  }
+}

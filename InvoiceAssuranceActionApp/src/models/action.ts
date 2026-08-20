@@ -207,6 +207,26 @@ const normalizeFinding = (value: unknown, index: number): Finding => {
   };
 };
 
+export const normalizeDocument = (value: unknown, index: number): DocumentReference => {
+  const document = isRecord(value) ? value : {};
+  const documentId = text(document.documentId, `document-${index + 1}`);
+  const rawBucketId = document.bucketId;
+  const bucketId = typeof rawBucketId === 'number' && Number.isFinite(rawBucketId)
+    ? rawBucketId
+    : typeof rawBucketId === 'string' && rawBucketId.trim() && Number.isFinite(Number(rawBucketId))
+      ? Number(rawBucketId)
+      : NaN;
+
+  return {
+    documentId,
+    bucketId,
+    bucketPath: text(document.bucketPath, documentId),
+    displayName: text(document.displayName, documentId),
+    documentType: text(document.documentType, 'invoice-support'),
+    checksum: text(document.checksum),
+  };
+};
+
 const normalizeCharge = (value: unknown, index: number): Charge => {
   const charge = isRecord(value) ? value : {};
   const submittedAmount = amount(charge.submittedAmount);
@@ -246,7 +266,7 @@ export function normalizeTaskData(value: unknown): ActionFormData {
     evidenceStatus,
     findings: Array.isArray(data.findings) ? data.findings.map(normalizeFinding) : [],
     charges: Array.isArray(data.charges) ? data.charges.map(normalizeCharge) : [],
-    documents: Array.isArray(data.documents) ? data.documents as DocumentReference[] : [],
+    documents: Array.isArray(data.documents) ? data.documents.map(normalizeDocument) : [],
     activity: Array.isArray(data.activity) ? data.activity as ActivityEvent[] : [],
     uploadedEvidence: Array.isArray(data.uploadedEvidence) ? data.uploadedEvidence as EvidenceReference[] : [],
     findingDispositions: Array.isArray(data.findingDispositions) ? data.findingDispositions as FindingDisposition[] : [],

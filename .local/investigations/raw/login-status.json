@@ -2,10 +2,13 @@
   "Result": "Success",
   "Code": "LoginStatus",
   "Data": {
-    "Status": "Refresh Failed",
-    "Provider": "N/A",
-    "Organization": "N/A",
-    "Tenant": "N/A",
-    "Hint": "Could not acquire the auth-file lock — too many concurrent `uip` processes, or a permission issue on the auth directory. Retry, or run 'uip login' to re-authenticate."
+    "Status": "Logged in",
+    "Provider": "File",
+    "BaseUrl": "https://cloud.uipath.com",
+    "Organization": "uipathlabs",
+    "OrganizationId": "a17c9af1-091d-4dd2-9cec-ed787c6601c8",
+    "Tenant": "Playground",
+    "TenantId": "15eb07e5-edfb-4fcc-9229-7681ff056ff0",
+    "ExpirationDate": "2026-08-19T16:27:26.000Z"
   }
 }

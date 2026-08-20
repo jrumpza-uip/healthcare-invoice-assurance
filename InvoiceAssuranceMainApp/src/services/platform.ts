@@ -22,7 +22,9 @@ export const PLATFORM = {
   folderId: 2036001,
   folderKey: '79d872b0-bee1-4264-a6de-3e780f4e4239',
   uploadBucketName: 'healthcare-invoice-assurance-uploadedInvoices',
-  flowName: 'InvoiceAssuranceFlow',
+  flowName: 'Process Invoice',
+  flowFolderId: 2184646,
+  flowFolderKey: '0e94dc5e-161a-44c8-8a42-2bb571b8d353',
   entities: {
     main: 'd0fed526-9d93-f111-9b32-000d3ab5d4c4',
     lineItems: 'ecfed526-9d93-f111-9b32-000d3ab5d4c4',
@@ -123,8 +125,8 @@ export function createPlatformServices(sdk: UiPath) {
       return { id: created.Id };
     },
     startFlow: async (input) => {
-      const release = await processes.getByName(PLATFORM.flowName, { folderKey: PLATFORM.folderKey });
-      const jobs = await processes.start({ processKey: release.key, inputArguments: serializeFlowInput(input) }, PLATFORM.folderId);
+      const release = await processes.getByName(PLATFORM.flowName, { folderKey: PLATFORM.flowFolderKey });
+      const jobs = await processes.start({ processKey: release.key, inputArguments: serializeFlowInput(input) }, PLATFORM.flowFolderId);
       const started = jobs[0];
       if (!started) throw new Error('UiPath did not return a started Flow instance.');
       return { instanceId: String(started.id) };

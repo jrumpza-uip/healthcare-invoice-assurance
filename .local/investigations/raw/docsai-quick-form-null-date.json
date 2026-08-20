@@ -1,0 +1,18 @@
+{
+  "Result": "Success",
+  "Code": "DocsAIAsk",
+  "Data": {
+    "QueryId": "e6d7b429-2f05-4078-a226-b3b530eb6979",
+    "Text": "In a Maestro Flow **Human Task** (Quick form):\n\n1. **What extraction returns**\n   * For [Extract](https://docs.uipath.com/maestro/automation-cloud/latest/user-guide/node-extract) models, field values are always **strings** on `Values[0].Value`, even for dates and numbers, and they can be empty/null.\n\n2. **Handling a required date when extraction is null**\n   * Treat the extracted value as **optional input context**, not as a guaranteed date.\n   * If `Values[0].Value` is null/empty, you should:\n     - Leave the Quick form date field **empty** and mark it as **required** so the assignee must fill it, or\n     - Provide a safe default date (for example, today) as the field’s initial value.\n   * The Human Task node supports `date`-type fields, but the docs do not define automatic null handling; you must design the schema and any pre-processing logic to avoid passing an invalid date string.\n\n3. **Can a Quick form date field accept null without error?**\n   * The documentation for [Human Task](https://docs.uipath.com/maestro/automation-cloud/latest/user-guide/node-human-task) only states that `date` is a supported field type; it does **not** specify runtime behavior for null vs. invalid values (such as “Invalid time value”).\n   * To avoid such errors, ensure that:\n     - You only bind **valid date strings** to `date` fields, and\n     - When extraction is null, you either keep the field unbound/empty or set a valid default, then rely on the **required** setting to force user input.\n",
+    "Sources": [
+      "https://docs.uipath.com/maestro/automation-cloud/latest/user-guide/node-human-task",
+      "https://docs.uipath.com/maestro/automation-cloud/latest/user-guide/node-extract"
+    ],
+    "Disclaimers": [],
+    "Followups": [
+      "How do I define a date field as required in a Human Task Quick form schema?",
+      "What is the best way to map Extract node outputs into Human Task fields in Maestro?",
+      "How can I branch my flow based on whether a user provided a date in the Human Task?"
+    ]
+  }
+}

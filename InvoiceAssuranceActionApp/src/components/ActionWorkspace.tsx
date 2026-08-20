@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
-import type { ChangeEvent } from 'react';
+import type { ChangeEvent, KeyboardEvent as ReactKeyboardEvent, PointerEvent as ReactPointerEvent } from 'react';
 import { MessageSeverity, Theme } from '@uipath/coded-action-app';
 import {
   Alert,
@@ -70,6 +70,67 @@ export default function ActionWorkspace({
   const [selectedDocumentId, setSelectedDocumentId] = useState('');
   const submissionLock = useRef(false);
 
+  const DOC_WIDTH_KEY = 'ia-review-doc-width';
+  const DOC_WIDTH_MIN = 320;
+  const DOC_WIDTH_MAX_RATIO = 0.7;
+  const gridRef = useRef<HTMLDivElement>(null);
+  const [docWidth, setDocWidth] = useState(() => {
+    const stored = Number(localStorage.getItem(DOC_WIDTH_KEY));
+    return Number.isFinite(stored) && stored >= DOC_WIDTH_MIN ? stored : 480;
+  });
+  const [isResizing, setIsResizing] = useState(false);
+
+  const clampDocWidth = (width: number) => {
+    const containerWidth = gridRef.current?.getBoundingClientRect().width ?? width;
+    const maxWidth = Math.max(DOC_WIDTH_MIN, containerWidth * DOC_WIDTH_MAX_RATIO);
+    return Math.min(Math.max(width, DOC_WIDTH_MIN), maxWidth);
+  };
+
+  const handleResizerPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    const container = gridRef.current;
+    if (!container) return;
+    const target = event.currentTarget;
+    target.setPointerCapture(event.pointerId);
+    setIsResizing(true);
+
+    const onPointerMove = (moveEvent: PointerEvent) => {
+      const { right } = container.getBoundingClientRect();
+      const nextWidth = clampDocWidth(right - moveEvent.clientX);
+      setDocWidth(nextWidth);
+    };
+    const onPointerUp = () => {
+      setIsResizing(false);
+      window.removeEventListener('pointermove', onPointerMove);
+      window.removeEventListener('pointerup', onPointerUp);
+      setDocWidth((current) => {
+        localStorage.setItem(DOC_WIDTH_KEY, String(current));
+        return current;
+      });
+    };
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+  };
+
+  const handleResizerKeyDown = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    const step = event.shiftKey ? 48 : 16;
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setDocWidth((current) => {
+        const next = clampDocWidth(current + step);
+        localStorage.setItem(DOC_WIDTH_KEY, String(next));
+        return next;
+      });
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setDocWidth((current) => {
+        const next = clampDocWidth(current - step);
+        localStorage.setItem(DOC_WIDTH_KEY, String(next));
+        return next;
+      });
+    }
+  };
+
   useEffect(() => {
     let active = true;
     services.getTask()
@@ -87,7 +148,7 @@ export default function ActionWorkspace({
         }
 
         let merged = initial;
-        if (initial.findings.length === 0 || initial.documents.length === 0 || initial.charges.length === 0) {
+        if (initial.documents.length === 0 || initial.charges.length === 0) {
           const fallback = await services.loadFallbackRecords(initial.invoiceRecordId);
           if (fallback) {
             merged = normalizeTaskData({
@@ -265,8 +326,8 @@ export default function ActionWorkspace({
           </p>
         </div>
         <div className="review-header__actions">
-          <Badge variant={isReviewer ? 'outline' : 'secondary'}>{data.taskMode}</Badge>
-          <Badge variant="outline">{data.processingStatus}</Badge>
+          <Badge variant={isReviewer ? 'outline' : 'secondary'} className="review-badge">{data.taskMode}</Badge>
+          <Badge variant="outline" className="review-badge">{data.processingStatus}</Badge>
           {isReadOnly && <Badge variant="destructive">Read only</Badge>}
           <Button
             type="button"
@@ -295,7 +356,7 @@ export default function ActionWorkspace({
         </Alert>
       )}
 
-      <div className="action-grid">
+      <div className={`action-grid${isResizing ? ' action-grid--resizing' : ''}`} ref={gridRef}>
         <div className="action-primary-column">
           <section className="action-panel" aria-labelledby="findings-title">
             <div className="panel-heading">
@@ -326,8 +387,14 @@ export default function ActionWorkspace({
                     <div className="clause-evidence">
                       <strong title={finding.contractDocumentTitle}>{finding.contractDocumentTitle}</strong>
                       <span>{finding.contractClause}</span>
-                      <p>{finding.contractExcerptSummary}</p>
-                      <small>{finding.applicabilityExplanation}</small>
+                      {finding.contractExcerptSummary !== finding.contractClause && (
+                        <p>{finding.contractExcerptSummary}</p>
+                      )}
+                      {finding.applicabilityExplanation !== finding.contractExcerptSummary
+                        && finding.applicabilityExplanation !== finding.contractClause
+                        && finding.applicabilityExplanation !== finding.explanation && (
+                        <small>{finding.applicabilityExplanation}</small>
+                      )}
                     </div>
                     {isReviewer && (
                       <div className="disposition-grid">
@@ -531,7 +598,21 @@ export default function ActionWorkspace({
           </section>
         </div>
 
-        <aside className="action-document-column" aria-label="Document evidence">
+        <div
+          className="pane-resizer"
+          role="separator"
+          aria-orientation="vertical"
+          aria-label="Resize document panel"
+          aria-valuenow={Math.round(docWidth)}
+          aria-valuemin={DOC_WIDTH_MIN}
+          tabIndex={0}
+          onPointerDown={handleResizerPointerDown}
+          onKeyDown={handleResizerKeyDown}
+        >
+          <span className="pane-resizer__handle" aria-hidden="true" />
+        </div>
+
+        <aside className="action-document-column" aria-label="Document evidence" style={{ width: docWidth }}>
           <div className="document-picker">
             <Label htmlFor="document-select">Document</Label>
             <select

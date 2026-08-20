@@ -1,0 +1,7 @@
+{
+  "Result": "ValidationError",
+  "ErrorCode": "invalid_argument",
+  "Message": "error: unknown command 'process-instances'",
+  "Instructions": "Run 'uip --help' to list available commands.",
+  "Retry": "RetryWillNotFix"
+}

@@ -1,92 +1,69 @@
-# Investigation: solution debug provisioning failure
+# Quick Form task 19678238 investigation
 
-## Anchor
+- Expected outcome: identify why the task fails to open with `Invalid time value`; no source or cloud changes authorized yet.
+- Anchor: Action Center task ID `19678238`, title shown as `Correct invoice fields #19678238`, status Pending.
+- Reported signal: Quick Form host toast says `An unexpected error has occured. Please try again later (Invalid time value)` on 2026-08-19.
+- Environment to verify: production UiPath Cloud, organization `uipathlabs`, tenant `Playground`.
 
-- Environment: UiPath Automation Cloud, Studio Web solution `HealthcareInvoiceAssurance`.
-- Debug folder from error: `joseph.rumpza@uipath.com's workspace/Debug_HealthcareInvoiceAssurance`.
-- Failed resources: `ContractComplianceAgent` and `ProjectCostLookupApi`.
-- Exact server message: `This process's package is not available anymore. Changes are not possible.`
+## Correlated runtime signals
 
-## Signals
+- `raw/login-status.json`: active org `uipathlabs`, tenant `Playground`.
+- `raw/task-19678238-form.json`: task `19678238`, `QuickFormTask`, folder `AMER Presales/HLS/HealthcareInvoiceAssurance`, created `2026-08-19T15:23:38.033Z`; payload contains `Invoicedate: null`. It is the only date-like field and only null in the four-field task payload.
+- `raw/creator-job-traces.json`: creator instance `02969ad1-bf60-42f4-ba11-4f36525f9133` completed `Normalize extracted package`, branched through `Required fields complete?`, then entered `Correct required invoice fields` / element `correctRequiredFields`; trace links that node directly to task `19678238`.
+- `raw/extraction-job-get.json`: correlated child job `5a8b69f6-35f2-4976-b4aa-8749e03a6434` successfully processed `01_Northbridge_GC_Invoice_NBG-0726-01.pdf`; its Invoice Header `Invoice Date` field was `missing: true`, `value: null`, `confidence: 0.0`.
+- `raw/normalize-syntax-instance-asset.json`: deployed node `correctRequiredFields` defines field `invoicedate` as `Type: date`, `Required: true`, bound directly to `$vars.normalizePackage.output.invoice.date`.
+- `raw/docsai-quick-form-null-date.json`: UiPath documentation guidance says extracted values may be null/empty and date fields should receive only valid date strings; when missing, leave the field unbound/empty or provide a valid default.
 
-- Failure occurs during solution debug creation/resource provisioning, before Flow execution.
-- `HealthcareInvoiceAssurance.uipx` still registers both source projects.
-- Both generated package resources have empty `files` arrays and their process resources reference generated package keys.
-- The API workflow was successfully run directly earlier, so an existing HLS platform deployment is available independently of the stale debug-folder resource.
+## Escalation candidates
 
-## Candidate assessment
+1. Upstream extraction returned no invoice date and the value propagated unchanged into the task. Confirm: correlated extraction output and task payload both null. Eliminate: extraction contains a valid date or task contains a different date value.
+2. The Quick Form boundary binds a nullable extraction value directly into a required `date` control. Confirm: deployed node definition and task payload pairing. Eliminate: deployed field is not date-typed, not bound to the extracted date, or the task contains a valid date.
+3. Originating fault is elsewhere (another malformed time field or the Action App/client ID). Confirm: another date/time value in this exact Quick Form payload or trace enters the coded Action App. Eliminate: sole date-like field is `Invoicedate`, task type is `QuickFormTask`, and trace stops in the native Quick Form node.
 
-1. Stale debug-folder process resources reference backing package revisions that have been removed.
-   - Supported by the exact Orchestrator error for both processes.
-   - Supported by the failure being scoped to `Debug_HealthcareInvoiceAssurance`, not `AMER Presales/HLS`.
-2. Missing solution source projects.
-   - Contradicted: both projects remain registered in `HealthcareInvoiceAssurance.uipx` and their source directories exist.
-3. Flow logic/runtime defect.
-   - Contradicted: provisioning failed before the Flow instance was created.
+## Probe h1 — null propagation
 
-## Resolution alignment
+- Task identity/environment/time: supported by `raw/task-19678238.json` and `raw/task-19678238-form.json` (`Id=19678238`, `Type=QuickFormTask`, `CreatedTime=2026-08-19T15:23:38.033Z`, creator key matches).
+- Task date null: supported by `raw/task-19678238-form.json` (`Data.Data.Invoicedate=null`).
+- Upstream extraction null: supported by `raw/extraction-job-get.json` (`Invoice Date`, `missing=true`, `value=null`, `confidence=0.0`).
+- Competing malformed time value: contradicted; no other date/time field exists in the four-field Quick Form payload.
+- Gap: no browser stack is exposed by the CLI, so the renderer call throwing `Invalid time value` is correlated rather than stack-level evidence.
 
-- UiPath Studio Web documentation states solution debugging provisions resources into `Debug_[Solution Name]` and that Debug configuration can bind a solution resource to an existing UiPath Platform resource in another folder.
-- Minimal non-destructive resolution: override the two debug resources to use the existing `AMER Presales/HLS` deployments, then retry provisioning.
-- Destructive cleanup of the debug folder is not the first action; official documentation confirms debug deployments and their resources are ephemeral and subject to cleanup, but override avoids deletion.
+## Probe h2 — deployed source boundary
+
+- Deployed node identity: supported by `raw/creator-job-traces.json` (`correctRequiredFields`, task link `19678238`).
+- Direct nullable-to-date binding: supported by `raw/normalize-syntax-instance-asset.json` (`invoicedate`, `Type=date`, `Required=true`, binding to normalized invoice date).
+- Local editable match: contradicted. `HealthcareInvoiceAssurance/InvoiceAssuranceFlow/InvoiceAssuranceFlow.flow` contains no `correctRequiredFields` node or equivalent correction variables.
+- Gap: the deployed Flow definition and local source are out of sync; an exact source edit is blocked until the deployed Flow is pulled/exported or reconciled.
+
+## Adjudication
+
+- Candidate 1 survives: runtime evidence proves the extractor emitted a missing/null Invoice Date; the deployed normalizer converted the missing value to an empty string, and the task boundary materialized it as null.
+- Candidate 2 survives as the propagation defect: the deployed Quick Form binds that nullable value directly into a required date control.
+- Candidate 3 is eliminated: this is a native `QuickFormTask`, not the coded Action App, and no other date/time payload value exists.
+- Conclusion confidence: medium. The full data path is correlated, but browser stack-level proof or a controlled valid-date comparison is unavailable; a host-renderer regression cannot be fully eliminated.
 
 ## Verification checklist
 
-- Cause named: stale debug process references whose backing packages are unavailable.
-- Evidence pinned: exact error names both processes and the `Debug_HealthcareInvoiceAssurance` folder.
-- Runtime/platform evidence: Studio Web provisioning error screenshot supplied by user.
-- Resolution aligned: Debug configuration supports selecting existing Platform resources for debugging.
-- Causal precedence: the debug deployment attempted to upgrade pre-existing resources; Orchestrator rejected the update because each process's package was unavailable; therefore Flow startup never occurred.
-- Fix scope: change only the debug bindings for the two named resources.
+1. Cause named: no exact installed playbook matched. Evidence-supported trigger is a missing extracted invoice date propagated as an empty/null date value across the boundary into a required Quick Form date binding.
+2. Evidence pinned: extraction `Invoice Date missing=true/value=null`; task `Invoicedate=null`; deployed field `Type=date/Required=true` with direct binding.
+3. Runtime evidence: task, creator Flow trace, and child extraction job all share the same tenant, folder/instance chain, document, and 2026-08-19 15:23 UTC window.
+4. Resolution aligned: official docs confirm date fields are supported and extraction values may be null/empty; DocsAI-derived mitigation is to leave a missing date unbound or supply a valid default rather than bind an invalid/empty date. The docs do not explicitly guarantee null runtime behavior.
+5. Causal precedence: IXP did not extract Invoice Date; the normalizer propagated null; the required-fields gateway intentionally opened the correction task; the Quick Form received null in its date control and failed while rendering.
+6. Fix scope: adjust only the `correctRequiredFields.invoicedate` input boundary once matching deployed source is available. No Action App/client ID change is implicated.
 
-## Self-verify
+## Fresh-eyes verification
 
-- Specific cause: pass.
-- Evidence distinguishes source absence: pass; source projects exist.
-- Resolution alignment: pass against official Studio Web debugging documentation.
-- Causal precedence: pass; no Flow execution occurred before provisioning failure.
+- Verdict: shallow because the original wording overstated proof, not because the correlated data chain was contradicted.
+- Factual correction applied: extraction null became an empty string in the deployed normalizer and later appeared as null in task data; it was not propagated unchanged.
+- Remaining factual gap: no browser stack, renderer instrumentation, or controlled valid-date comparison is exposed. The null/empty date is the sole correlated trigger, but the exact throw site remains an inference.
+- Documentation correction applied: the Human Task docs do not specify null rendering behavior; the mitigation is DocsAI-derived from supported field/extraction contracts.
+- Source blocker verified: local `InvoiceAssuranceFlow.flow` does not contain deployed node `correctRequiredFields`, so no exact edit is safe until deployed source is recovered/reconciled.
 
-## 2026-08-18 coded Action App upgrade InstallError
-- Anchor: app key ba95adf6-2114-4243-800c-64d39269658e; folder key 0e94dc5e-161a-44c8-8a42-2bb571b8d353; error Failed to update external client redirect URI, HTTP 400.
-- H1: requested/deployment-derived redirect URI is invalid or conflicts with registered redirect URIs. Source: coded-app redirect-uri playbook. Confirm: source app config and external-app redirect list mismatch or invalid URI. Eliminate: exact required URI already valid and registered.
-- H2: backing External Application is stale, inaccessible, or rejects updates independently of the URI. Source: upstream Identity dependency from coded-app overview. Confirm: external-app get failure/missing client or state indicating non-updatable client. Eliminate: client resolves and exposes expected public-client configuration.
-- H3: solution app resource identity/binding is stale or duplicated, so upgrade targets the wrong app/client association. Source: upstream/elsewhere candidate from solution deployment context. Confirm: resource key/package/client mappings disagree across solution files. Eliminate: one consistent app resource and client mapping.
+---
 
-## Probe h1 — redirect configuration
-- Confirm requested/deployment URI mismatch: no data. `uip admin external-apps get e61c56c4-633e-4ad5-a98a-83dc682f4c0d` was attempted three times; each was intercepted by the CLI self-updater and left `.local/investigations/raw/h1-external-app-get.json` empty.
-- Eliminate exact URI already registered: no data for the same reason.
-- Correlated source datum: `HealthcareInvoiceAssurance/resources/solution_folder/app/CodedAction/invoiceassuranceactionapp.json` names external client `e61c56c4-633e-4ad5-a98a-83dc682f4c0d` and app system name `IDc76351697dff430c8b619fa684f5d96e`.
+# Initial persistence failure investigation
 
-## Probe h2 — external client updateability
-- Confirm missing/stale/inaccessible client: no data; external-app read unavailable because CLI updater intercepted all permitted attempts.
-- Eliminate by resolving client: no data.
-- Open gap: current external client type, redirectUris, scopes, and existence.
-
-## Probe h3 — stale/duplicate solution app binding
-- Supported signal: failed deployment reports installed app key `ba95adf6-2114-4243-800c-64d39269658e` in child folder `0e94dc5e-161a-44c8-8a42-2bb571b8d353`, while source solution app resource key is `bce5cd65-5b89-4cfa-a0e4-c6cf3023521e` and debug overwrite references the parent HLS app. This is a mapping difference, but deployment-generated keys can differ, so it does not confirm a stale binding.
-- Contradiction/elimination: none decisive.
-- Open gap: failed deployment configuration and persistent deployment record were unavailable because `uip solution` commands were also intercepted by the CLI updater.
-
-## Adjudication
-- No candidate is confirmed. The HTTP 400 proves Identity rejected the redirect-URI update, but does not distinguish invalid requested URI, missing/non-updatable external client, or stale solution app mapping.
-- Required discriminator: current `uip admin external-apps get e61c56c4-633e-4ad5-a98a-83dc682f4c0d --output json` response, especially client type/status, redirectUris, and resources/scopes.
-
-## New evidence — external-app authorization
-- User-provided `external-apps get e61c56c4-633e-4ad5-a98a-83dc682f4c0d` returned Forbidden 403.
-- Independent `uip admin external-apps list --output json` also returned Forbidden 403 in `.local/investigations/raw/h2-external-app-list.json`, so the get failure is not evidence that this specific ID is invalid; the current account cannot enumerate the external-app catalog at all.
-- `.local/investigations/raw/h1-login-status.json` confirms the session is logged into cloud.uipath.com, organization uipathlabs, tenant Playground.
-
-## Updated adjudication
-- H2 permission/access limitation is supported for the current user: list and get both return 403.
-- It remains unconfirmed as the deployment root cause because the Apps installer surfaced HTTP 400 while updating the URI; available evidence does not show whether the installer executes with the initiating user's permission or a service identity.
-- H1 invalid/conflicting redirect and H3 stale client binding remain viable because current client state cannot be read.
-- Required discriminator: an organization administrator with External Applications access must run `uip admin external-apps get e61c56c4-633e-4ad5-a98a-83dc682f4c0d --output json` and provide client existence/type/status/redirectUris.
-
-## Self-verify
-1. Cause named: no single root cause; reduced-confidence terminal.
-2. Evidence pinned: 403 from both ID-specific get and catalog list proves a broad read-permission gap, not an invalid ID.
-3. Runtime evidence: user deployment InstallError HTTP 400 plus captured live admin 403.
-4. Resolution alignment: diagnostic recommendation only; no mutation proposed.
-5. Causal precedence: why redirect update returned 400 remains unanswered because client state is inaccessible.
-6. Fix scope: request admin read only; do not update redirect URI yet.
-Verdict: shallow by design; root cause unconfirmed, factual discriminator named.
+- Expected outcome: determine why initial persistence cannot find Main record `CF32DD4C-B494-F111-9B33-7C1E522150AC`; no source or cloud mutation authorized.
+- Anchor: same running Flow instance `02969ad1-bf60-42f4-ba11-4f36525f9133`, folder key `0e94dc5e-161a-44c8-8a42-2bb571b8d353`, after resolving Quick Form task `19678238`.
+- User-provided step variables: `persistInitialAnalysis.output.out_Success=false`, `out_ErrorCode=PersistenceError`, `out_ErrorMessage="Main record not found: CF32DD4C-B494-F111-9B33-7C1E522150AC"`.
+- Source signal: `InvoiceAssurancePersistence/Main.xaml` calls `GetEntityRecordById` against entity `d0fed526-9d93-f111-9b32-000d3ab5d4c4`, `RecordId=Guid.Parse(in_InvoiceRecordId)`, `ScopeValue=Folder`, then throws when `mainRecord Is Nothing`.

@@ -2,6 +2,7 @@ import type { MessageSeverity, Task, TaskCompleteResponse } from '@uipath/coded-
 import { LogicalOperator, QueryFilterOperator } from '@uipath/uipath-typescript/entities';
 import type { EntityQueryRecordsOptions, EntityRecord } from '@uipath/uipath-typescript/entities';
 import type { ActionFormData, ActivityEvent, Charge, DocumentReference, Finding } from '../models/action';
+import { normalizeDocument } from '../models/action';
 import { codedActionAppService, getBuckets, getEntities } from '../uipath';
 import { uploadEvidence as uploadEvidenceFile } from './evidence';
 
@@ -81,7 +82,7 @@ async function loadFallbackRecords(invoiceRecordId: string): Promise<Partial<Act
   ]);
 
   const findings = parseArray<Finding>(main.FindingsJson);
-  const documents = parseArray<DocumentReference>(main.DocumentReferencesJson);
+  const documents = parseArray<Record<string, unknown>>(main.DocumentReferencesJson).map(normalizeDocument);
   const charges: Charge[] = lineRows.map((row) => ({
     chargeId: String(row.Id ?? row.ExternalRecordId ?? ''),
     sourceDocumentId: String(row.SourceDocumentId ?? ''),
@@ -133,6 +134,11 @@ export const actionWorkspaceServices: ActionWorkspaceServices = {
   completeTask: (outcome, data) => codedActionAppService.completeTask(outcome, data),
   showMessage: (message, severity) => codedActionAppService.showMessage(message, severity),
   async getDocumentUrl(document, folderId) {
+    if (!Number.isFinite(document.bucketId)) {
+      throw new Error(
+        `"${document.displayName || document.documentId}" has no storage bucket reference from the analysis flow, so it cannot be downloaded.`,
+      );
+    }
     const buckets = getBuckets();
     const result = await buckets.getReadUri(document.bucketId, document.bucketPath, { folderId });
     const response = await fetch(result.uri, { method: result.httpMethod ?? 'GET', headers: result.headers });

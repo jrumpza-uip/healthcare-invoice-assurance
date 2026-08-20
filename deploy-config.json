@@ -1,0 +1,368 @@
+{
+  "resources": [
+    {
+      "kind": "index",
+      "name": "healthcare-invoice-assurance-contractsIndex",
+      "resourceKey": "5eaf632f-2960-4ea7-82eb-08def3f771f8",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "dataSourceType": "StorageBucket",
+        "storageBucketReference": {
+          "name": "healthcare-invoice-assurance-contractFiles",
+          "key": "6dfc0608-733a-4465-9811-59e87d5095cb",
+          "folderKey": "9fbe9d39-9450-4a10-443d-45c988c0529f"
+        },
+        "connectionReference": null,
+        "fileNameGlob": "All",
+        "includeSubfolders": true,
+        "ingestionType": "Advanced"
+      }
+    },
+    {
+      "kind": "ixpDeployment",
+      "name": "Healthcare Invoice Assurance",
+      "resourceKey": "3994ca7a-2b93-807c-8f96-75602d7b1c47",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "fileReference": "7fcdf06079a5c3fc"
+      }
+    },
+    {
+      "kind": "entity",
+      "name": "HLS_InvoiceAssurance_Main",
+      "resourceKey": "d0fed526-9d93-f111-9b32-000d3ab5d4c4",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": "Current header, workflow state, and financial snapshot for one invoice-assurance package."
+      },
+      "linkToResource": {
+        "name": "HLS_InvoiceAssurance_Main",
+        "folderPath": "AMER Presales/HLS"
+      }
+    },
+    {
+      "kind": "entity",
+      "name": "HLS_InvoiceAssurance_Activity",
+      "resourceKey": "c5d31b2f-9d93-f111-9b32-000d3ab5d4c4",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": "Append-only timeline of automation and human events for invoice-assurance packages."
+      },
+      "linkToResource": {
+        "name": "HLS_InvoiceAssurance_Activity",
+        "folderPath": "AMER Presales/HLS"
+      }
+    },
+    {
+      "kind": "entity",
+      "name": "HLS_InvoiceAssurance_LineItems",
+      "resourceKey": "ecfed526-9d93-f111-9b32-000d3ab5d4c4",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": "Current extracted, reconciled, and evaluated charge-line view for invoice-assurance packages."
+      },
+      "linkToResource": {
+        "name": "HLS_InvoiceAssurance_LineItems",
+        "folderPath": "AMER Presales/HLS"
+      }
+    },
+    {
+      "kind": "app",
+      "name": "invoiceassuranceactionapp",
+      "resourceKey": "bce5cd65-5b89-4cfa-a0e4-c6cf3023521e",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "routingName": null,
+        "externalClientId": "e61c56c4-633e-4ad5-a98a-83dc682f4c0d",
+        "actionSchema": "{\"key\":\"86c10440-bb6b-41aa-b797-c5965a16e70a\",\"version\":3,\"description\":\"Action Schema\",\"id\":\"ID2e6b27846393469082f83f21514adcf5\",\"name\":\"ActionSchema\",\"inOuts\":[{\"name\":\"correctedRegisterAmount\",\"key\":\"b5c609b8-eebe-4cd5-9f06-e969d3ebfda0\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"registerCorrectionReason\",\"key\":\"4ebcd01d-d663-48aa-bd49-6b271984c6a7\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"evidenceRequestNote\",\"key\":\"c2567a4e-267b-4b89-9ff1-a4d49215a288\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"evidenceStatus\",\"key\":\"2fd10929-30a3-4d8b-8840-b0fbab2e5556\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"uploadedEvidence\",\"key\":\"e64f9cd4-0190-4f26-bf99-ea076a10877a\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"evidenceId\",\"key\":\"d7475213-eb74-4217-aa29-f8a49c58feb5\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"bucketPath\",\"key\":\"34eccb0e-f05e-4d43-a1e5-589e61cffda3\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"displayName\",\"key\":\"99d1fe25-3ffe-4fee-bed4-da9a3a5375ae\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"contentType\",\"key\":\"abdaa88d-6766-4d9d-b1b3-36d36703d341\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"size\",\"key\":\"1983a6aa-8438-4352-a4fb-d52a1f3d5a33\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Int64\",\"properties\":[]},{\"name\":\"checksum\",\"key\":\"4a3c3ecb-9105-4a2d-9a6f-afc4aeebee0e\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"uploadedAt\",\"key\":\"1a492502-a746-424c-a8da-a4c6207d97a0\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"findingDispositions\",\"key\":\"cd3f3a18-726a-4f17-802e-87f067f9affb\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"findingId\",\"key\":\"786b4f35-fef2-4499-bb4d-d3f73ff6a7b6\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"status\",\"key\":\"9c9db443-5dd8-4a2d-ba88-ccf1507286c8\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"notes\",\"key\":\"87b48a6a-a74d-4342-ad9a-235bd79e68e0\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"reviewerNotes\",\"key\":\"22bcc204-98df-4392-96bb-e0eb3e892688\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"managerRationale\",\"key\":\"50487188-9ba7-45a1-9c25-01be950c4a87\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"changedFindingIds\",\"key\":\"a7356572-4d86-4885-b733-2c33f7845ee2\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.String\",\"properties\":[]}],\"inputs\":[{\"name\":\"taskMode\",\"key\":\"3c868a32-1632-4b56-a21c-692f1b380c8b\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"invoiceRecordId\",\"key\":\"95b1a52f-fde0-4f7d-9ca7-1dc67617ecf6\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"correlationId\",\"key\":\"80a720eb-eb09-44da-8547-332c9d0fa0c4\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"analysisVersion\",\"key\":\"9fd39990-5a52-4b1c-8414-e5912025b745\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Int64\",\"properties\":[]},{\"name\":\"reviewCycle\",\"key\":\"2b9c459a-8077-4fc1-9a9b-9876eeabfbaf\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Int64\",\"properties\":[]},{\"name\":\"processingStatus\",\"key\":\"3ed8660d-78e7-4b1c-b2d0-1feb608d0d00\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"invoiceSummary\",\"key\":\"aa756932-6b49-4e61-9e8e-3213a71f2d5d\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Object\",\"properties\":[{\"name\":\"invoiceNumber\",\"key\":\"4480a21e-dae2-4b79-8c7c-3d545b2c1fe5\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"invoiceDate\",\"key\":\"fd51cdf2-5b41-4dd7-b931-1d27ad7a9c87\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.DateOnly\",\"properties\":[]},{\"name\":\"supplierName\",\"key\":\"d4e7414a-ab7f-4a2b-a425-8dab4dde4898\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"accountName\",\"key\":\"208a2b52-9cf8-4b23-8f96-a50567643c53\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"projectName\",\"key\":\"a5193cb2-7627-49d4-8485-9cb4a24f210c\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"contractProfileId\",\"key\":\"c092118a-7287-41dc-bfc4-9eac48b1d737\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"submittedTotal\",\"key\":\"22944565-4404-408d-ba6c-eb45b4d54078\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"currentAdjustment\",\"key\":\"58721ecd-db53-488a-a298-84706406251d\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"currentPayable\",\"key\":\"77e82d4f-b5e9-4dac-989e-163a285373b4\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"openFindingCount\",\"key\":\"b0472e87-a023-49c2-bdab-60226363e089\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Int64\",\"properties\":[]},{\"name\":\"awaitingEvidence\",\"key\":\"e6476148-a494-4f95-887e-1ec6412f01c4\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Boolean\",\"properties\":[]}]},{\"name\":\"findings\",\"key\":\"848179d3-def1-4524-8493-2c4df22d3476\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"findingId\",\"key\":\"4593bb5d-15c9-4369-b69b-9293b7f1616f\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"chargeId\",\"key\":\"130e045a-8562-4135-9c48-27a5ed840ef9\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"ruleId\",\"key\":\"bf93c9b7-ae36-400f-91bc-59742739eb79\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"severity\",\"key\":\"da0b7675-1abb-4864-be18-2fd4104c80dd\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"category\",\"key\":\"4c133ede-0328-4520-8fca-5df99d0ece26\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"title\",\"key\":\"7d679201-d33a-430d-a663-780a1abc88e6\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"explanation\",\"key\":\"381eda64-c094-45c4-ab24-a8c567c89931\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"financialEffect\",\"key\":\"75eb4738-b25e-4a97-a613-6975390456e7\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"status\",\"key\":\"cfd5ec47-2573-4bba-be3a-3c586f7d443f\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"confidence\",\"key\":\"d7a6ca2e-e92c-47d4-9668-32c89c358537\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"evidenceState\",\"key\":\"f893ceb7-59a4-434c-8bde-94cadc8bbf4d\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"contractDocumentTitle\",\"key\":\"4a4ee89a-50de-4a3c-a3a6-24e96f9b76d9\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"contractClause\",\"key\":\"afdfde17-86e0-4a1f-952b-868879274353\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"contractExcerptSummary\",\"key\":\"373cdedd-6312-4746-ac81-1e6f4a4822e6\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"applicabilityExplanation\",\"key\":\"92ff0976-a16e-4217-a63f-b2bd888a8cc5\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"sourceDocumentId\",\"key\":\"29ff295d-700f-4c05-b27b-45592cd1337b\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"charges\",\"key\":\"5e13a465-912b-43a8-b35e-02c07c28b48a\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"chargeId\",\"key\":\"bf1c4a3c-7cce-4d27-905c-814777f18e91\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"sourceDocumentId\",\"key\":\"180b2b13-7435-4871-b623-6996b5775aec\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"category\",\"key\":\"806bd0c8-b0f5-4854-a676-fd9592e122f7\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"description\",\"key\":\"1930260a-3318-4e73-89ad-364726407796\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"quantity\",\"key\":\"50eeae27-1396-48c2-8e97-7b1c6d517d2f\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"unit\",\"key\":\"9c145556-9def-4a17-ae6c-380a8ce6ee13\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"submittedRate\",\"key\":\"7ef156af-5bcd-42dc-bf11-477ebc7286b8\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"submittedAmount\",\"key\":\"dd748be8-d55f-4619-b408-3698d6380c78\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"allowedAmount\",\"key\":\"85ece50c-5b77-42cb-a0a0-5825d1de7dae\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"adjustment\",\"key\":\"05a09b9d-d816-4342-9bfb-238ac8006272\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Decimal\",\"properties\":[]},{\"name\":\"evaluationStatus\",\"key\":\"3455dabf-0ff3-41e6-ad46-ab741c8f8c22\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"sourceReference\",\"key\":\"347da04e-3045-466f-8ecc-7c2eb5eeb8c9\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"documents\",\"key\":\"41686ebb-5682-4805-b7ec-2a83a60c941e\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"documentId\",\"key\":\"76993df9-8d96-4fe1-9555-c402b795f167\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"bucketId\",\"key\":\"5d2cbb1d-7c58-42b4-b501-859d435b5209\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Int64\",\"properties\":[]},{\"name\":\"bucketPath\",\"key\":\"27f1b978-32d6-4557-b68a-aa0c1b6ff17a\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"displayName\",\"key\":\"dded559d-1188-433e-93a9-e152638ea47d\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"documentType\",\"key\":\"4e075bc1-0c15-487d-9eb1-742c258feae2\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"checksum\",\"key\":\"536017d7-cf39-40e1-bde5-0591600c67ae\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"activity\",\"key\":\"86ac7852-3645-4cc4-bc3a-196a8de23a3a\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":true,\"collectionDataType\":\"Array\",\"type\":\"System.Object\",\"properties\":[{\"name\":\"eventTimestamp\",\"key\":\"cf7585c2-a242-4d20-81e1-b46e8a1fe6ac\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"eventName\",\"key\":\"d0d8a2de-bcce-47ac-8be3-93740ca454de\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"eventType\",\"key\":\"dc7fb3fc-a079-4492-9952-1782409884b0\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"summary\",\"key\":\"a470cdda-b42e-4482-b04f-417fe3de9349\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}]},{\"name\":\"priorManagerRationale\",\"key\":\"23c46027-4b92-4ffe-b380-d427d937e561\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}],\"outputs\":[{\"name\":\"submittedMode\",\"key\":\"6fc091ec-bec4-4b7e-bd37-2f1dbe8edcc8\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"reviewReady\",\"key\":\"502c1038-62f7-4330-ab2f-b2509a1d697e\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Boolean\",\"properties\":[]},{\"name\":\"correctionApplied\",\"key\":\"f12704b0-1bab-437e-8689-3cfb2a7c9204\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.Boolean\",\"properties\":[]},{\"name\":\"completedAt\",\"key\":\"4741180b-92fe-4d28-b5bb-d44b5bc3e6e8\",\"required\":true,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]},{\"name\":\"decisionSummary\",\"key\":\"41b437a9-4847-4603-ac5c-1c1e22927598\",\"required\":false,\"version\":0,\"typeNamespace\":\"system\",\"isList\":false,\"collectionDataType\":null,\"type\":\"System.String\",\"properties\":[]}],\"outcomes\":[{\"name\":\"SubmitReview\",\"key\":\"e69ba3f7-3523-449c-8f17-17141245f805\",\"required\":false,\"type\":\"System.String\",\"typeNamespace\":\"system\",\"isList\":false,\"properties\":[],\"version\":0},{\"name\":\"Approve\",\"key\":\"4a2f2dcc-7bc7-4aa3-8d1e-371a7a28ba67\",\"required\":false,\"type\":\"System.String\",\"typeNamespace\":\"system\",\"isList\":false,\"properties\":[],\"version\":0},{\"name\":\"ReturnToReviewer\",\"key\":\"7523dbe8-6c2f-4f68-b002-570b87b2e1cb\",\"required\":false,\"type\":\"System.String\",\"typeNamespace\":\"system\",\"isList\":false,\"properties\":[],\"version\":0},{\"name\":\"Reject\",\"key\":\"a1251114-e8fc-4d74-b324-097a1c666298\",\"required\":false,\"type\":\"System.String\",\"typeNamespace\":\"system\",\"isList\":false,\"properties\":[],\"version\":0}],\"__isDeleted\":false,\"dateLastModified\":\"2026-08-12T20:18:40.727Z\"}"
+      }
+    },
+    {
+      "kind": "bucket",
+      "name": "healthcare-invoice-assurance-contractFiles",
+      "resourceKey": "6dfc0608-733a-4465-9811-59e87d5095cb",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "options": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "bucket",
+      "name": "healthcare-invoice-assurance-uploadedInvoices",
+      "resourceKey": "11c5ae0b-2ef6-495a-b6b7-d79e7e6f7633",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "options": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "ProjectCostLookupApi",
+      "resourceKey": "8cb92544-1799-40af-91b2-6e2f3085fe69",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "ProjectCostLookupApi_1",
+      "resourceKey": "b1c90fb6-a362-4575-93f1-1b99fe5f78de",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.api.ProjectCostLookupApi",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "ContractComplianceAgent",
+      "resourceKey": "7147dad8-2ef2-4d99-9af6-bafbc4c24a91",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "targetRuntime": null,
+        "referencedAssets": null,
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "agentMemory": false,
+        "environmentVariables": null,
+        "isConversational": false,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "ContractComplianceAgent_1",
+      "resourceKey": "3e825499-924b-484c-8af0-d7a4e4e63da5",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "targetRuntime": "pythonAgent",
+        "referencedAssets": null,
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.agent.ContractComplianceAgent",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "agentMemory": false,
+        "environmentVariables": null,
+        "isConversational": false,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "InvoiceAssurancePersistence",
+      "resourceKey": "a51cd4dc-1afa-4073-987d-7665e197140d",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.process.InvoiceAssurancePersistence",
+        "inputArguments": null,
+        "jobPriority": "Medium",
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "jobRecording": "Disabled",
+        "duration": 40,
+        "frequency": 500,
+        "quality": 100,
+        "remoteControlAccess": "None",
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "Extract Uploaded Document",
+      "resourceKey": "2e195266-9c2d-47e8-8667-9b741cfe3fb2",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.process.Extract.Uploaded.Document",
+        "inputArguments": null,
+        "jobPriority": "Medium",
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "jobRecording": "Disabled",
+        "duration": 40,
+        "frequency": 500,
+        "quality": 100,
+        "remoteControlAccess": "None",
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "InvoiceAssurancePersistence_1",
+      "resourceKey": "dd273b1c-d925-45d0-b1b6-b719cd972819",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": "Folder-scoped Data Fabric persistence adapter for Healthcare Invoice Assurance",
+        "packageName": "HealthcareInvoiceAssurance.process.InvoiceAssurancePersistence",
+        "inputArguments": null,
+        "jobPriority": "Medium",
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "jobRecording": "Disabled",
+        "duration": 40,
+        "frequency": 500,
+        "quality": 100,
+        "remoteControlAccess": "None",
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "FinancialRulesEvaluator",
+      "resourceKey": "88ef616e-4e9d-4dba-90b3-beb53b5581d2",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "referencedAssets": null,
+        "description": null,
+        "packageName": "FinancialRulesEvaluator",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "environmentVariables": null,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    },
+    {
+      "kind": "process",
+      "name": "Process Invoice",
+      "resourceKey": "b32f2a54-dc2e-4ccd-ba2c-1f41d484f566",
+      "folderPaths": [
+        "solution_folder"
+      ],
+      "configuration": {
+        "description": null,
+        "packageName": "HealthcareInvoiceAssurance.flow.Process.Invoice",
+        "inputArguments": null,
+        "hiddenForAttendedUser": false,
+        "alwaysRunning": false,
+        "autoStartProcess": false,
+        "retentionAction": "Delete",
+        "retentionPeriod": 30,
+        "retentionBucketRef": null,
+        "staleRetentionAction": "Delete",
+        "staleRetentionPeriod": 180,
+        "staleRetentionBucketRef": null,
+        "connections": null,
+        "tags": []
+      }
+    }
+  ]
+}
