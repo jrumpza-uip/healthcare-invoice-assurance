@@ -316,38 +316,40 @@ export default function ActionWorkspace({
 
   return (
     <main className="review-app">
-      <header className="review-header action-header">
-        <div className="review-header__icon" aria-hidden="true">IA</div>
-        <div className="review-header__titles">
-          <p className="action-eyebrow">Healthcare Invoice Assurance</p>
-          <h1 className="review-header__title">{isReviewer ? 'Review invoice' : 'Approve invoice'}</h1>
-          <p className="review-header__subtitle">
-            {data.invoiceSummary.invoiceNumber} · {data.invoiceSummary.supplierName} · Analysis v{data.analysisVersion}
-          </p>
-        </div>
-        <div className="review-header__actions">
-          <Badge variant={isReviewer ? 'outline' : 'secondary'} className="review-badge">{data.taskMode}</Badge>
-          <Badge variant="outline" className="review-badge">{data.processingStatus}</Badge>
-          {isReadOnly && <Badge variant="destructive">Read only</Badge>}
-          <Button
-            type="button"
-            variant="ghost"
-            size="sm"
-            onClick={onToggleTheme}
-            aria-label={darkTheme ? 'Switch to light mode' : 'Switch to dark mode'}
-          >
-            {darkTheme ? 'Light' : 'Dark'}
-          </Button>
-        </div>
-      </header>
+      <div className="action-header">
+        <header className="review-header">
+          <div className="review-header__icon" aria-hidden="true">IA</div>
+          <div className="review-header__titles">
+            <p className="action-eyebrow">Healthcare Invoice Assurance</p>
+            <h1 className="review-header__title">{isReviewer ? 'Review invoice' : 'Approve invoice'}</h1>
+            <p className="review-header__subtitle">
+              {data.invoiceSummary.invoiceNumber} · {data.invoiceSummary.supplierName} · Analysis v{data.analysisVersion}
+            </p>
+          </div>
+          <div className="review-header__actions">
+            <Badge variant={isReviewer ? 'outline' : 'secondary'} className="review-badge">{data.taskMode}</Badge>
+            <Badge variant="outline" className="review-badge">{data.processingStatus}</Badge>
+            {isReadOnly && <Badge variant="destructive">Read only</Badge>}
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={onToggleTheme}
+              aria-label={darkTheme ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {darkTheme ? 'Light' : 'Dark'}
+            </Button>
+          </div>
+        </header>
 
-      <section className="summary-strip" aria-label="Invoice summary">
-        <div><span>Submitted</span><strong>{formatCurrency(data.invoiceSummary.submittedTotal)}</strong></div>
-        <div><span>Adjustment</span><strong>{formatCurrency(data.invoiceSummary.currentAdjustment)}</strong></div>
-        <div><span>Payable</span><strong>{formatCurrency(data.invoiceSummary.currentPayable)}</strong></div>
-        <div><span>Open findings</span><strong>{data.invoiceSummary.openFindingCount}</strong></div>
-        <div><span>Evidence</span><strong>{data.invoiceSummary.awaitingEvidence ? 'Required' : 'Complete'}</strong></div>
-      </section>
+        <section className="summary-strip" aria-label="Invoice summary">
+          <div><span>Submitted</span><strong>{formatCurrency(data.invoiceSummary.submittedTotal)}</strong></div>
+          <div><span>Adjustment</span><strong>{formatCurrency(data.invoiceSummary.currentAdjustment)}</strong></div>
+          <div><span>Payable</span><strong>{formatCurrency(data.invoiceSummary.currentPayable)}</strong></div>
+          <div><span>Open findings</span><strong>{data.invoiceSummary.openFindingCount}</strong></div>
+          <div><span>Evidence</span><strong>{data.invoiceSummary.awaitingEvidence ? 'Required' : 'Complete'}</strong></div>
+        </section>
+      </div>
 
       {data.priorManagerRationale && (
         <Alert className="manager-return-alert">

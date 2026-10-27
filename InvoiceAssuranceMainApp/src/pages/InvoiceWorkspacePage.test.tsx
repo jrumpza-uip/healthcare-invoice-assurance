@@ -22,6 +22,7 @@ describe('InvoiceWorkspacePage', () => {
       isLoading={false}
       error={null}
       onRetry={() => {}}
+      getDocumentUrl={async () => 'blob:mock-url'}
     />);
 
     expect(screen.getByText('Unsupported charge')).toBeInTheDocument();

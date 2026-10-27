@@ -7,6 +7,7 @@ describe('new analysis validation', () => {
     accountId: 'ACCT-1007',
     projectId: 'PRJ-HEALTH-204',
     contractProfileId: 'CP-HEALTH-FACILITY-2026',
+    forceManagerReview: true,
   };
 
   it('accepts a complete supported package', () => {

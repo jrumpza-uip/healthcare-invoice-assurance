@@ -15,8 +15,8 @@ export function AppShell({ children, onLogout }: { children: ReactNode; onLogout
   const [mobileOpen, setMobileOpen] = useState(false);
   return <div className="app-shell">
     <header className="topbar">
-      <div className="brand-lockup"><span className="brand-symbol"><ShieldCheck className="h-5 w-5" /></span><span><strong>Healthcare Invoice Assurance</strong><small>UiPath governed review</small></span></div>
-      <div className="topbar-actions"><span className="environment-pill">Playground · HLS</span><ThemeToggle /><Button variant="ghost" size="sm" onClick={onLogout}><LogOut className="h-4 w-4" /><span className="hide-mobile">Sign out</span></Button><Button variant="ghost" size="icon" className="mobile-menu" aria-label="Toggle navigation" onClick={() => setMobileOpen((open) => !open)}>{mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</Button></div>
+      <div className="brand-lockup"><span className="brand-symbol"><ShieldCheck className="h-5 w-5" /></span><span><strong>Healthcare Invoice Assurance</strong><small>Extraction and cognitive analysis</small></span></div>
+      <div className="topbar-actions"><ThemeToggle /><Button variant="ghost" size="sm" onClick={onLogout}><LogOut className="h-4 w-4" /><span className="hide-mobile">Sign out</span></Button><Button variant="ghost" size="icon" className="mobile-menu" aria-label="Toggle navigation" onClick={() => setMobileOpen((open) => !open)}>{mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</Button></div>
     </header>
     <aside className={`sidebar ${mobileOpen ? 'sidebar-open' : ''}`}>
       <div className="sidebar-context"><span>Workspace</span><strong>AMER Presales / HLS</strong></div>

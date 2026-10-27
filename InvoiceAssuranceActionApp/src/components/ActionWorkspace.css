@@ -16,6 +16,7 @@
   position: sticky;
   top: 0;
   z-index: 20;
+  background: var(--bg-primary);
 }
 
 .action-eyebrow,
@@ -374,6 +375,9 @@
 @media (max-width: 640px) {
   .action-header {
     position: relative;
+  }
+
+  .action-header .review-header {
     flex-wrap: wrap;
   }
 

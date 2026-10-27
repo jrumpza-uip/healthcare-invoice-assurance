@@ -2,8 +2,8 @@ import { serializeFlowInput, submitAnalysis } from './live-submission';
 
 describe('live submission orchestration', () => {
   it('serializes the exact Flow input contract for the Orchestrator SDK', () => {
-    expect(serializeFlowInput({ invoiceRecordId: 'record-1', correlationId: 'corr-1', contractProfileId: 'profile-1', sourceDocumentIds: ['a.pdf'] }))
-      .toBe('{"invoiceRecordId":"record-1","correlationId":"corr-1","contractProfileId":"profile-1","sourceDocumentIds":["a.pdf"]}');
+    expect(serializeFlowInput({ invoiceRecordId: 'record-1', correlationId: 'corr-1', contractProfileId: 'profile-1', sourceDocumentIds: ['a.pdf'], forceManagerReview: true }))
+      .toBe('{"invoiceRecordId":"record-1","correlationId":"corr-1","contractProfileId":"profile-1","sourceDocumentIds":["a.pdf"],"forceManagerReview":true}');
   });
 
   it('uploads the package, creates one record, starts one Flow, and links the instance', async () => {
@@ -16,6 +16,7 @@ describe('live submission orchestration', () => {
       accountId: 'account-1',
       projectId: 'project-1',
       contractProfileId: 'profile-1',
+      forceManagerReview: true,
     }, {
       createCorrelationId: () => 'corr-123',
       uploadDocument: async ({ path }) => {

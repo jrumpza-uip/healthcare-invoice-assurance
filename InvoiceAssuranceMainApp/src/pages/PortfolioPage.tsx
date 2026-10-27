@@ -5,6 +5,7 @@ import { Skeleton } from '@uipath/apollo-wind/components/ui/skeleton';
 import { ArrowRight, CircleDollarSign, FileWarning, ReceiptText, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { InvoiceRecord } from '../services/invoice-records';
+import { formatStatusLabel, statusVariant } from '../utils/status';
 
 interface PortfolioPageProps {
   invoices: InvoiceRecord[];
@@ -55,9 +56,9 @@ export function PortfolioPage({ invoices, isLoading, error, onRetry }: Portfolio
               <thead><tr><th>Invoice</th><th>Supplier</th><th>Status</th><th>Submitted</th><th>Payable</th><th>Findings</th><th><span className="sr-only">Open</span></th></tr></thead>
               <tbody>{invoices.map((invoice) => (
                 <tr key={invoice.id}>
-                  <td><strong>{invoice.invoiceNumber}</strong><span>{invoice.invoiceDate}</span></td>
+                  <td><strong>{invoice.processInstanceId ?? invoice.invoiceNumber}</strong><span>{invoice.invoiceDate}</span></td>
                   <td>{invoice.supplierName}</td>
-                  <td><Badge variant="secondary">{invoice.processingStatus}</Badge></td>
+                  <td><Badge variant={statusVariant(invoice.processingStatus)}>{formatStatusLabel(invoice.processingStatus)}</Badge></td>
                   <td>{currency.format(invoice.submittedTotal)}</td>
                   <td>{currency.format(invoice.payableTotal)}</td>
                   <td>{invoice.openFindingCount}</td>

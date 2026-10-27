@@ -13,6 +13,7 @@ export interface FlowInput {
   correlationId: string;
   contractProfileId: string;
   sourceDocumentIds: string[];
+  forceManagerReview: boolean;
 }
 
 export function serializeFlowInput(input: FlowInput): string {
@@ -69,6 +70,7 @@ export async function submitAnalysis(
     correlationId,
     contractProfileId: draft.contractProfileId,
     sourceDocumentIds: documentReferences.map((document) => document.path),
+    forceManagerReview: draft.forceManagerReview,
   });
   await dependencies.linkProcessInstance(created.id, started.instanceId);
 

@@ -12,7 +12,7 @@ interface NewAnalysisPageProps {
   onSubmit: (draft: SubmissionDraft) => Promise<void>;
 }
 
-const initialDraft: SubmissionDraft = { invoiceFiles: [], supportFiles: [], accountId: '', projectId: '', contractProfileId: '' };
+const initialDraft: SubmissionDraft = { invoiceFiles: [], supportFiles: [], accountId: '', projectId: '', contractProfileId: '', forceManagerReview: true };
 
 export function NewAnalysisPage({ isSubmitting, error, onSubmit }: NewAnalysisPageProps) {
   const [draft, setDraft] = useState(initialDraft);
@@ -48,7 +48,18 @@ export function NewAnalysisPage({ isSubmitting, error, onSubmit }: NewAnalysisPa
             </div>
           </div>
         </div>
-        <div className="form-actions"><p>UiPath creates the record, uploads the files, then starts one Maestro instance.</p><Button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Starting…' : 'Start analysis'} <Play className="h-4 w-4" /></Button></div>
+        <div className="form-actions">
+          <p>UiPath creates the record, uploads the files, then starts one Maestro instance.</p>
+          <label className="checkbox-field">
+            <input
+              type="checkbox"
+              checked={draft.forceManagerReview}
+              onChange={(event) => setDraft((current) => ({ ...current, forceManagerReview: event.target.checked }))}
+            />
+            <span>Optimize for demo</span>
+          </label>
+          <Button type="submit" disabled={isSubmitting}>{isSubmitting ? 'Starting…' : 'Start analysis'} <Play className="h-4 w-4" /></Button>
+        </div>
       </form>
     </div>
   );

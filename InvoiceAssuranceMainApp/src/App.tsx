@@ -44,8 +44,8 @@ function AuthenticatedRoutes({ sdk, onLogout }: { sdk: ReturnType<typeof useAuth
   return <AppShell onLogout={onLogout}><Routes>
     <Route path="/" element={<PortfolioPage invoices={invoices} isLoading={portfolioLoading} error={portfolioError} onRetry={() => void loadPortfolio()} />} />
     <Route path="/new" element={<NewAnalysisRoute submit={services.submit} afterSubmit={loadPortfolio} />} />
-    <Route path="/invoices/:invoiceId" element={<WorkspaceRoute loadWorkspace={services.loadWorkspace} />} />
-    <Route path="/contracts" element={<ContractLibraryPage />} />
+    <Route path="/invoices/:invoiceId" element={<WorkspaceRoute loadWorkspace={services.loadWorkspace} getDocumentUrl={services.getDocumentUrl} />} />
+    <Route path="/contracts" element={<ContractLibraryPage getDocumentUrl={services.getDocumentUrl} />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes></AppShell>;
 }
@@ -65,7 +65,7 @@ function NewAnalysisRoute({ submit, afterSubmit }: { submit: (draft: SubmissionD
 
 interface WorkspaceData { invoice: InvoiceRecord; lineItems: InvoiceLineItem[]; activities: ActivityEvent[]; processVariables: ProcessVariable[]; taskEmbedUrl: string | null }
 
-function WorkspaceRoute({ loadWorkspace }: { loadWorkspace: (id: string, previous?: ProcessVariable[]) => Promise<WorkspaceData> }) {
+function WorkspaceRoute({ loadWorkspace, getDocumentUrl }: { loadWorkspace: (id: string, previous?: ProcessVariable[]) => Promise<WorkspaceData>; getDocumentUrl: (bucketName: string, path: string) => Promise<string> }) {
   const { invoiceId = '' } = useParams();
   const [data, setData] = useState<WorkspaceData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -85,7 +85,7 @@ function WorkspaceRoute({ loadWorkspace }: { loadWorkspace: (id: string, previou
     return () => window.clearInterval(interval);
   }, [refresh]);
 
-  return <InvoiceWorkspacePage invoice={data?.invoice ?? null} lineItems={data?.lineItems ?? []} activities={data?.activities ?? []} taskEmbedUrl={data?.taskEmbedUrl ?? null} processVariables={data?.processVariables ?? []} isLoading={isLoading} error={error} onRetry={() => void refresh(!data)} />;
+  return <InvoiceWorkspacePage invoice={data?.invoice ?? null} lineItems={data?.lineItems ?? []} activities={data?.activities ?? []} taskEmbedUrl={data?.taskEmbedUrl ?? null} processVariables={data?.processVariables ?? []} isLoading={isLoading} error={error} onRetry={() => void refresh(!data)} getDocumentUrl={getDocumentUrl} />;
 }
 
 export default function App() { return <AuthProvider><AppContent /><Toaster /></AuthProvider>; }

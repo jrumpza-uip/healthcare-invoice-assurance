@@ -22,6 +22,7 @@ export const PLATFORM = {
   folderId: 2036001,
   folderKey: '79d872b0-bee1-4264-a6de-3e780f4e4239',
   uploadBucketName: 'healthcare-invoice-assurance-uploadedInvoices',
+  contractBucketName: 'healthcare-invoice-assurance-contractFiles',
   flowName: 'Process Invoice',
   flowFolderId: 2184646,
   flowFolderKey: '0e94dc5e-161a-44c8-8a42-2bb571b8d353',
@@ -56,6 +57,23 @@ export function createPlatformServices(sdk: UiPath) {
   const processInstances = new ProcessInstances(sdk);
   const tasks = new Tasks(sdk);
   let uploadBucketId: number | null = null;
+  const bucketIdsByName = new Map<string, number>();
+
+  const resolveBucketId = async (bucketName: string): Promise<number> => {
+    const cached = bucketIdsByName.get(bucketName);
+    if (cached !== undefined) return cached;
+    const bucket = await buckets.getByName(bucketName, { folderKey: PLATFORM.folderKey });
+    bucketIdsByName.set(bucketName, bucket.id);
+    return bucket.id;
+  };
+
+  const getDocumentUrl = async (bucketName: string, path: string): Promise<string> => {
+    const bucketId = await resolveBucketId(bucketName);
+    const result = await buckets.getReadUri(bucketId, path, { folderId: PLATFORM.folderId });
+    const response = await fetch(result.uri, { method: result.httpMethod ?? 'GET', headers: result.headers });
+    if (!response.ok) throw new Error(`Document download failed with status ${response.status}.`);
+    return URL.createObjectURL(await response.blob());
+  };
 
   const queryEntity = async (entityId: string, fieldName?: string, value?: string) => collectCursorPages(async (cursor?: PaginationCursor) => {
     const page = await entities.queryRecordsById(entityId, {
@@ -136,5 +154,5 @@ export function createPlatformServices(sdk: UiPath) {
     },
   });
 
-  return { listInvoices, loadWorkspace, submit };
+  return { listInvoices, loadWorkspace, submit, getDocumentUrl };
 }

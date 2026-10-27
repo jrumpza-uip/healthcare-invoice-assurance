@@ -4,6 +4,7 @@ export interface SubmissionDraft {
   accountId: string;
   projectId: string;
   contractProfileId: string;
+  forceManagerReview: boolean;
 }
 
 export type SubmissionErrors = Partial<Record<keyof SubmissionDraft, string>>;
